@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { ugcNetConfig, ugcNetQuestions } from "$lib/data/ugc-net-cs";
+  import { gateConfig, gateQuestions } from "$lib/data/gate-cs";
   import type { QuizMode } from "$lib/types";
   import QuizShell from "$lib/components/quiz/QuizShell.svelte";
   import AppHeader from "$lib/components/app-header.svelte";
@@ -10,20 +10,19 @@
 
   let isQuizActive = $state(false);
   let selectedMode = $state<QuizMode>("practice");
-  let selectedQuestions = $state(ugcNetQuestions);
+  let selectedQuestions = $state(gateQuestions);
   
   // Clone config so we can dynamically adjust duration if needed
-  let activeConfig = $state({ ...ugcNetConfig });
+  let activeConfig = $state({ ...gateConfig });
 
   function startPractice(count: number, mode: QuizMode) {
     selectedMode = mode;
     // For demonstration, we just take the first N questions from our mock data
-    // In a real app, this would fetch random questions from the database
-    selectedQuestions = ugcNetQuestions.slice(0, count);
+    selectedQuestions = gateQuestions.slice(0, count);
     
     // Adjust duration based on mode
     if (mode === "timed") {
-       activeConfig.defaultDuration = 60; // 60 mins for mock test
+       activeConfig.defaultDuration = 180; // 180 mins for GATE Mock
     }
     
     isQuizActive = true;
@@ -50,13 +49,13 @@
       <section class="bg-card border-b py-12 md:py-16">
         <div class="container mx-auto px-4 max-w-5xl text-center">
           <div class="inline-block px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium mb-6">
-            Exam Preparation
+            Advanced Preparation
           </div>
           <h1 class="text-4xl md:text-5xl font-bold tracking-tight mb-4">
-            {ugcNetConfig.name}
+            {gateConfig.name}
           </h1>
           <p class="text-xl text-muted-foreground max-w-2xl mx-auto">
-            {ugcNetConfig.description}
+            {gateConfig.description}
           </p>
         </div>
       </section>
@@ -77,7 +76,7 @@
                 <Card.Description>10 questions</Card.Description>
               </Card.Header>
               <Card.Content>
-                <p class="text-sm text-muted-foreground mb-4">A fast revision session to keep your concepts sharp.</p>
+                <p class="text-sm text-muted-foreground mb-4">Warm up with a fast conceptual revision.</p>
                 <Button class="w-full" variant="secondary" onclick={() => startPractice(10, "practice")}>Start Quick</Button>
               </Card.Content>
             </Card.Root>
@@ -89,7 +88,7 @@
                 <Card.Description>25 questions</Card.Description>
               </Card.Header>
               <Card.Content>
-                <p class="text-sm text-muted-foreground mb-4">A balanced session for thorough topic coverage.</p>
+                <p class="text-sm text-muted-foreground mb-4">A balanced session for deep analytical problem solving.</p>
                 <Button class="w-full" variant="secondary" onclick={() => startPractice(25, "practice")}>Start Focused</Button>
               </Card.Content>
             </Card.Root>
@@ -101,7 +100,7 @@
                 <Card.Description>50 questions</Card.Description>
               </Card.Header>
               <Card.Content>
-                <p class="text-sm text-muted-foreground mb-4">Comprehensive untimed practice across all subjects.</p>
+                <p class="text-sm text-muted-foreground mb-4">Comprehensive untimed practice across core GATE subjects.</p>
                 <Button class="w-full" variant="secondary" onclick={() => startPractice(50, "practice")}>Start Full</Button>
               </Card.Content>
             </Card.Root>
@@ -113,11 +112,11 @@
               <Card.Header>
                 <Clock class="h-8 w-8 text-primary mb-2" />
                 <Card.Title>Mock Test</Card.Title>
-                <Card.Description>Timed · 50 questions</Card.Description>
+                <Card.Description>Timed · 65 questions</Card.Description>
               </Card.Header>
               <Card.Content>
-                <p class="text-sm text-muted-foreground mb-4">Simulate the real exam environment with a timer.</p>
-                <Button class="w-full" onclick={() => startPractice(50, "timed")}>Start Mock Test</Button>
+                <p class="text-sm text-muted-foreground mb-4">Simulate the real GATE exam environment (3 hours).</p>
+                <Button class="w-full" onclick={() => startPractice(65, "timed")}>Start Mock Test</Button>
               </Card.Content>
             </Card.Root>
 
@@ -132,7 +131,7 @@
             </h2>
           </div>
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {#each ugcNetConfig.subjects as subject}
+            {#each gateConfig.subjects as subject}
               <Card.Root class="hover:bg-accent/50 cursor-pointer transition-colors" onclick={() => startPractice(10, "practice")}>
                 <Card.Content class="p-4 flex items-center justify-between">
                   <div>

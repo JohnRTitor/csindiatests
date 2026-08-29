@@ -5,6 +5,8 @@
   import * as DropdownMenu from "$lib/components/ui/dropdown-menu/index.js";
   
   let { 
+    examName,
+    examShortName,
     currentIndex, 
     totalQuestions, 
     timeRemaining, 
@@ -31,10 +33,10 @@
     <!-- Left: Title -->
     <div class="flex items-center gap-3 overflow-hidden">
       <div class="hidden sm:block font-semibold text-sm truncate">
-        UGC NET · Computer Science
+        {examName}
       </div>
       <div class="sm:hidden font-semibold text-sm truncate">
-        UGC NET CS
+        {examShortName}
       </div>
       <div class="hidden md:block h-4 w-px bg-border"></div>
       <div class="text-xs text-muted-foreground whitespace-nowrap">

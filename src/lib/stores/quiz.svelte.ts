@@ -1,12 +1,13 @@
-import type { Question, QuizState } from "$lib/types";
+import type { Question, QuizState, QuizMode, ExamConfig } from "$lib/types";
 
-export function createQuizStore(initialQuestions: Question[] = [], isTimed: boolean = false, durationMinutes: number = 45) {
+export function createQuizStore(initialQuestions: Question[] = [], mode: QuizMode = "practice", durationMinutes: number = 45) {
   let state = $state<QuizState>({
     questions: initialQuestions,
     currentIndex: 0,
     answers: {},
     status: "idle",
-    timeRemaining: isTimed ? durationMinutes * 60 : null,
+    mode: mode,
+    timeRemaining: mode === "timed" ? durationMinutes * 60 : null,
     isTimerPaused: false,
     score: 0,
     startTime: 0,
@@ -21,7 +22,7 @@ export function createQuizStore(initialQuestions: Question[] = [], isTimed: bool
     state.startTime = Date.now();
     state.isTimerPaused = false;
     
-    if (state.timeRemaining !== null) {
+    if (state.mode === "timed" && state.timeRemaining !== null) {
       startTimer();
     }
   }
@@ -107,7 +108,8 @@ export function createQuizStore(initialQuestions: Question[] = [], isTimed: bool
     state.currentIndex = 0;
     state.answers = {};
     state.status = "idle";
-    state.timeRemaining = isTimed ? durationMinutes * 60 : null;
+    state.mode = mode;
+    state.timeRemaining = mode === "timed" ? durationMinutes * 60 : null;
     state.isTimerPaused = false;
     state.score = 0;
     state.startTime = 0;

@@ -1,7 +1,20 @@
+export type QuizMode = "practice" | "timed" | "review";
+
+export interface ExamConfig {
+  id: string;
+  name: string;
+  shortName: string;
+  description: string;
+  subjects: Subject[];
+  defaultQuestionCount: number;
+  defaultDuration?: number; // in minutes
+}
+
 export interface Question {
   id: string;
+  examId?: string;
   subjectId: string;
-  topic: string;
+  topic?: string;
   difficulty: "Easy" | "Medium" | "Hard";
   text: string;
   options: {
@@ -10,6 +23,7 @@ export interface Question {
   }[];
   correctOptionId: string;
   explanation: string;
+  tags?: string[];
 }
 
 export interface Subject {
@@ -27,6 +41,7 @@ export interface QuizState {
   currentIndex: number;
   answers: Record<string, string>; // questionId -> selectedOptionId
   status: "idle" | "in-progress" | "completed";
+  mode: QuizMode;
   timeRemaining: number | null; // null if untimed, seconds otherwise
   isTimerPaused: boolean;
   score: number;

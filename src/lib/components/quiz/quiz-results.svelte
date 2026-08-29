@@ -5,7 +5,7 @@
   import type { Question, QuizState } from "$lib/types";
   import { mockSubjects } from "$lib/data/subjects";
 
-  let { state }: { state: QuizState } = $props();
+  let { state, onReviewMistakes, onExit }: { state: QuizState, onReviewMistakes: () => void, onExit: () => void } = $props();
 
   const formatDuration = (ms: number) => {
     const seconds = Math.floor(ms / 1000);
@@ -39,7 +39,7 @@
 
     return Object.entries(stats).map(([subjectId, data]) => {
       return {
-        name: mockSubjects.find(s => s.id === subjectId)?.name || "Unknown Subject",
+        name: mockSubjects.find(s => s.id === subjectId)?.name || subjectId,
         accuracy: data.total > 0 ? Math.round((data.correct / data.total) * 100) : 0,
         correct: data.correct,
         total: data.total
@@ -147,14 +147,14 @@
   </div>
 
   <div class="flex flex-col sm:flex-row justify-center gap-4">
-    <Button size="lg" class="w-full sm:w-auto font-medium" disabled>
+    <Button size="lg" class="w-full sm:w-auto font-medium" onclick={onReviewMistakes} disabled={incorrect === 0}>
       Review Mistakes
     </Button>
     <Button variant="outline" size="lg" class="w-full sm:w-auto font-medium" onclick={() => window.location.reload()}>
       <RotateCcw class="mr-2 h-4 w-4" />
       Retry Test
     </Button>
-    <Button variant="outline" size="lg" class="w-full sm:w-auto font-medium" href="/">
+    <Button variant="outline" size="lg" class="w-full sm:w-auto font-medium" onclick={onExit}>
       Return to Dashboard
       <ArrowRight class="ml-2 h-4 w-4" />
     </Button>
