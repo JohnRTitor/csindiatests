@@ -1,7 +1,8 @@
 <script lang="ts">
-  import { Search, Menu, User, BookOpen } from "@lucide/svelte";
+  import { Search, Menu, User, BookOpen, LineChart, Settings } from "@lucide/svelte";
   import { Button } from "$lib/components/ui/button/index.js";
   import * as Sheet from "$lib/components/ui/sheet/index.js";
+  import * as DropdownMenu from "$lib/components/ui/dropdown-menu/index.js";
   import ModeToggle from "$lib/components/layout/ModeToggle.svelte";
   import { page } from "$app/state";
 
@@ -11,8 +12,6 @@
     { href: "/", label: "Practice" },
     { href: "/mock-tests", label: "Mock Tests" },
     { href: "/subjects", label: "Subjects" },
-    { href: "/progress", label: "Progress" },
-    { href: "/settings", label: "Settings" },
   ];
 </script>
 
@@ -84,14 +83,38 @@
 
       <ModeToggle />
 
-      <Button variant="ghost" size="icon" class="rounded-full">
-        <div
-          class="h-8 w-8 rounded-full bg-muted flex items-center justify-center overflow-hidden border"
-        >
-          <User class="h-5 w-5 text-muted-foreground" />
-        </div>
-        <span class="sr-only">User menu</span>
-      </Button>
+      <DropdownMenu.Root>
+        <DropdownMenu.Trigger>
+          {#snippet child({ props })}
+            <Button variant="ghost" size="icon" class="rounded-full" {...props}>
+              <div
+                class="h-8 w-8 rounded-full bg-muted flex items-center justify-center overflow-hidden border"
+              >
+                <User class="h-5 w-5 text-muted-foreground" />
+              </div>
+              <span class="sr-only">User menu</span>
+            </Button>
+          {/snippet}
+        </DropdownMenu.Trigger>
+        <DropdownMenu.Content align="end" class="w-40">
+          <DropdownMenu.Item class={page.url.pathname === '/progress' ? 'bg-accent text-accent-foreground' : ''}>
+            {#snippet child({ props })}
+              <a href="/progress" {...props}>
+                <LineChart class="mr-2 h-4 w-4" />
+                <span>Progress</span>
+              </a>
+            {/snippet}
+          </DropdownMenu.Item>
+          <DropdownMenu.Item class={page.url.pathname === '/settings' ? 'bg-accent text-accent-foreground' : ''}>
+            {#snippet child({ props })}
+              <a href="/settings" {...props}>
+                <Settings class="mr-2 h-4 w-4" />
+                <span>Settings</span>
+              </a>
+            {/snippet}
+          </DropdownMenu.Item>
+        </DropdownMenu.Content>
+      </DropdownMenu.Root>
     </div>
   </div>
 </header>
