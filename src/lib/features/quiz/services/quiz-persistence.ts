@@ -27,7 +27,8 @@ export const quizPersistenceService = {
         if (session) {
           const updates: Partial<TestSession> = {
             answeredQuestions: session.answeredQuestions + 1,
-            score: answer.isCorrect ? session.score + 1 : session.score
+            score: answer.isCorrect ? session.score + 1 : session.score,
+            lastActiveAt: answer.answeredAt || new Date().toISOString()
           };
           if (answer.isCorrect === true) {
             updates.correctAnswers = session.correctAnswers + 1;

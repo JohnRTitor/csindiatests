@@ -20,15 +20,20 @@ import type { QuizMode } from "$lib/features/quiz/types";
   import * as Sheet from "$lib/components/ui/sheet/index.js";
   import { ArrowRight, LayoutGrid, CheckCircle2 } from "@lucide/svelte";
 
+  import { page } from "$app/state";
+  import { goto } from "$app/navigation";
+  
   let { 
     examConfig, 
     questions, 
     mode = "practice",
+    sessionId: initialSessionId,
     onExit
   }: { 
     examConfig: ExamConfig, 
     questions: Question[], 
     mode?: QuizMode,
+    sessionId?: string | null,
     onExit: () => void 
   } = $props();
 
@@ -45,70 +50,74 @@ import type { QuizMode } from "$lib/features/quiz/types";
     let isActive = true;
 
     const initSession = async () => {
-      // Check for an existing in-progress session for this exam, mode, and question count
-      const inProgressSessions = await testHistoryRepo.listInProgress();
-      const existingSession = inProgressSessions.find(s => 
-        s.examId === examConfig.id && 
-        s.mode === mode && 
-        s.totalQuestions === questions.length
-      );
-
       if (!isActive) return;
 
-      if (existingSession) {
-        sessionId = existingSession.id;
-        // Load answers
-        const savedAnswers = await testAnswersRepo.getForTest(sessionId);
-        const answerMap: Record<string, string> = {};
-        savedAnswers.forEach(a => {
-          if (a.selectedAnswer) {
-            answerMap[a.questionId] = a.selectedAnswer;
+      if (initialSessionId) {
+        sessionId = initialSessionId;
+        const existingSession = await testHistoryRepo.get(sessionId);
+        if (existingSession) {
+          // Load answers
+          const savedAnswers = await testAnswersRepo.getForTest(sessionId);
+          const answerMap: Record<string, string> = {};
+          savedAnswers.forEach(a => {
+            if (a.selectedAnswer) {
+              answerMap[a.questionId] = a.selectedAnswer;
+            }
+          });
+          
+          // Calculate remaining time
+          let timeRemaining = null;
+          if (mode === "timed" && existingSession.startedAt) {
+            const elapsedSeconds = Math.floor((Date.now() - new Date(existingSession.startedAt).getTime()) / 1000);
+            const totalDuration = durationMinutes * 60;
+            timeRemaining = Math.max(0, totalDuration - elapsedSeconds);
           }
-        });
-        
-        // Calculate remaining time
-        let timeRemaining = null;
-        if (mode === "timed" && existingSession.startedAt) {
-          const elapsedSeconds = Math.floor((Date.now() - new Date(existingSession.startedAt).getTime()) / 1000);
-          const totalDuration = durationMinutes * 60;
-          timeRemaining = Math.max(0, totalDuration - elapsedSeconds);
+          
+          quiz.restoreState(answerMap, timeRemaining);
+          quiz.start();
+          
+          // Restore currentIndex to the first unanswered question
+          const firstUnansweredIndex = questions.findIndex(q => !answerMap[q.id]);
+          if (firstUnansweredIndex !== -1) {
+            quiz.goToQuestion(firstUnansweredIndex);
+          } else {
+            quiz.goToQuestion(questions.length - 1);
+          }
+          return;
         }
-        
-        quiz.restoreState(answerMap, timeRemaining);
-        quiz.start();
-        
-        // Restore currentIndex to the first unanswered question
-        const firstUnansweredIndex = questions.findIndex(q => !answerMap[q.id]);
-        if (firstUnansweredIndex !== -1) {
-          quiz.goToQuestion(firstUnansweredIndex);
-        } else {
-          quiz.goToQuestion(questions.length - 1);
-        }
-      } else {
-        sessionId = crypto.randomUUID();
-        
-        // Create the test session
-        await testHistoryRepo.create({
-          id: sessionId,
-          examId: examConfig.id,
-          title: `${examConfig.shortName} Practice`,
-          mode: mode,
-          startedAt: new Date().toISOString(),
-          completedAt: null,
-          durationSeconds: null,
-          totalQuestions: questions.length,
-          answeredQuestions: 0,
-          correctAnswers: 0,
-          incorrectAnswers: 0,
-          skippedQuestions: 0,
-          score: 0,
-          percentage: 0,
-          status: 'in_progress',
-          metadata: null
-        });
+      } 
+      
+      // Create new session
+      sessionId = crypto.randomUUID();
+      
+      // Create the test session
+      await testHistoryRepo.create({
+        id: sessionId,
+        examId: examConfig.id,
+        title: `${examConfig.shortName} Practice`,
+        mode: mode,
+        startedAt: new Date().toISOString(),
+        lastActiveAt: new Date().toISOString(),
+        questionIds: questions.map(q => q.id),
+        completedAt: null,
+        durationSeconds: null,
+        totalQuestions: questions.length,
+        answeredQuestions: 0,
+        correctAnswers: 0,
+        incorrectAnswers: 0,
+        skippedQuestions: 0,
+        score: 0,
+        percentage: 0,
+        status: 'in_progress',
+        metadata: null
+      });
 
-        quiz.start();
-      }
+      quiz.start();
+
+      // Update URL to preserve session ID across refreshes
+      const url = new URL(page.url);
+      url.searchParams.set('session', sessionId);
+      goto(url, { replaceState: true, keepFocus: true });
     };
 
     initSession();
@@ -166,6 +175,14 @@ import type { QuizMode } from "$lib/features/quiz/types";
     }
   };
 
+  const handleCancelTest = async () => {
+    if (sessionId) {
+      await testHistoryRepo.delete(sessionId);
+      await testAnswersRepo.deleteForTest(sessionId);
+    }
+    onExit();
+  };
+
   const handleReviewMistakes = () => {
     reviewMode = true;
     quiz.state.mode = "review"; // Custom state for UI if needed
@@ -219,6 +236,7 @@ import type { QuizMode } from "$lib/features/quiz/types";
       isTimerPaused={quiz.state.isTimerPaused}
       onPauseTimer={() => quiz.pauseTimer()}
       onResumeTimer={() => quiz.resumeTimer()}
+      onCancelTest={handleCancelTest}
     />
 
     {#if quiz.state.isTimerPaused}

@@ -12,6 +12,10 @@ export interface TestSession {
   title: string;
   mode: string;
   startedAt: string;
+  lastActiveAt: string | null;
+  questionIds: string[];
+  subjectName?: string;
+  topicName?: string;
   completedAt: string | null;
   durationSeconds: number | null;
   totalQuestions: number;

@@ -14,6 +14,10 @@ export const testHistoryRepo = {
     return await db.testSessions.get(id);
   },
 
+  async delete(id: string): Promise<void> {
+    await db.testSessions.delete(id);
+  },
+
   async list(options?: ListTestSessionsOptions): Promise<TestSession[]> {
     let collection = db.testSessions.toCollection();
 

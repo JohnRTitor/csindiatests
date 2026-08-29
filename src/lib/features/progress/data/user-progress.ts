@@ -10,33 +10,7 @@ export const mockUserProgress: UserProgress = {
   questionsSolvedThisWeek: 154,
 };
 
-export const mockActivityFeed: ActivityItem[] = [
-  {
-    id: "act-1",
-    type: "practice",
-    title: "Completed Algorithms practice",
-    timestamp: new Date(Date.now() - 2 * 60 * 60 * 1000).toISOString(),
-  },
-  {
-    id: "act-2",
-    type: "test",
-    title: "Scored 82% on Operating Systems test",
-    timestamp: new Date(Date.now() - 24 * 60 * 60 * 1000).toISOString(),
-    score: "82%",
-  },
-  {
-    id: "act-3",
-    type: "practice",
-    title: "Practiced Computer Networks",
-    timestamp: new Date(Date.now() - 2 * 24 * 60 * 60 * 1000).toISOString(),
-  },
-  {
-    id: "act-4",
-    type: "mixed",
-    title: "Completed 25-question mixed quiz",
-    timestamp: new Date(Date.now() - 3 * 24 * 60 * 60 * 1000).toISOString(),
-  },
-];
+export const mockActivityFeed: ActivityItem[] = [];
 
 export const mockQuickPracticeOptions: QuickPracticeOption[] = [
   {

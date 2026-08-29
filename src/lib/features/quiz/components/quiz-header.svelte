@@ -3,6 +3,7 @@
   import { Button } from "$lib/components/ui/button/index.js";
   import { MoreVertical, Pause, Play, Settings } from "@lucide/svelte";
   import * as DropdownMenu from "$lib/components/ui/dropdown-menu/index.js";
+  import * as AlertDialog from "$lib/components/ui/alert-dialog/index.js";
 
   let {
     examName,
@@ -13,7 +14,10 @@
     isTimerPaused,
     onPauseTimer,
     onResumeTimer,
+    onCancelTest,
   } = $props();
+
+  let showDeleteDialog = $state(false);
 
   const progressValue = $derived((currentIndex / totalQuestions) * 100);
 
@@ -96,7 +100,10 @@
         </DropdownMenu.Trigger>
         <DropdownMenu.Content align="end">
           <DropdownMenu.Item onclick={() => (window.location.href = "/")}>
-            Exit Practice
+            Save & Exit
+          </DropdownMenu.Item>
+          <DropdownMenu.Item onclick={() => (showDeleteDialog = true)} class="text-destructive focus:bg-destructive/10 focus:text-destructive">
+            Delete Test
           </DropdownMenu.Item>
         </DropdownMenu.Content>
       </DropdownMenu.Root>
@@ -111,3 +118,18 @@
     ></div>
   </div>
 </header>
+
+<AlertDialog.Root bind:open={showDeleteDialog}>
+  <AlertDialog.Content>
+    <AlertDialog.Header>
+      <AlertDialog.Title>Delete this test?</AlertDialog.Title>
+      <AlertDialog.Description>
+        This action cannot be undone. This will permanently delete your progress for this test.
+      </AlertDialog.Description>
+    </AlertDialog.Header>
+    <AlertDialog.Footer>
+      <AlertDialog.Cancel>Cancel</AlertDialog.Cancel>
+      <AlertDialog.Action class="bg-destructive text-destructive-foreground hover:bg-destructive/90" onclick={() => onCancelTest?.()}>Delete Test</AlertDialog.Action>
+    </AlertDialog.Footer>
+  </AlertDialog.Content>
+</AlertDialog.Root>
