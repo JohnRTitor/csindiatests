@@ -67,7 +67,7 @@
 </script>
 
 <svelte:head>
-  <title>Contact csnetschool</title>
+  <title>Contact CS India Tests</title>
 </svelte:head>
 
 <InfoLayout maxWidth="max-w-5xl">
@@ -78,18 +78,18 @@
       <div>
         <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-4">Get in touch</h1>
         <p class="text-lg text-muted-foreground">
-          Have a question, found an issue, or have an idea for csnetschool? We'd like to hear from you.
+          Have a question, found an issue, or have an idea for CS India Tests? We'd like to hear from you.
         </p>
       </div>
 
       <div class="space-y-6">
         <div>
           <h3 class="font-bold text-lg mb-1">General enquiries</h3>
-          <p class="text-muted-foreground">hello@csnetschool.example</p>
+          <p class="text-muted-foreground">hello@csindiatests.example</p>
         </div>
         <div>
           <h3 class="font-bold text-lg mb-1">Feedback</h3>
-          <p class="text-muted-foreground">feedback@csnetschool.example</p>
+          <p class="text-muted-foreground">feedback@csindiatests.example</p>
         </div>
       </div>
     </div>

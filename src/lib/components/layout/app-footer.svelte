@@ -11,7 +11,7 @@
           <BookOpen class="h-4 w-4" />
         </div>
         <span class="font-semibold tracking-tight text-sm">
-          csnetschool
+          CS India Tests
         </span>
         <span class="text-sm text-muted-foreground ml-2">
           &copy; {new Date().getFullYear()} All rights reserved.

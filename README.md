@@ -15,7 +15,7 @@ To recreate this project with the same configuration:
 
 ```sh
 # recreate this project
-pnpm dlx sv@0.17.0 create --template minimal --types ts --add tailwindcss="plugins:none" --install pnpm csnetschool
+pnpm dlx sv@0.17.0 create --template minimal --types ts --add tailwindcss="plugins:none" --install pnpm csindiatests
 ```
 
 ## Developing

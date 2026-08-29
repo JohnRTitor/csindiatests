@@ -4,7 +4,7 @@
 <footer class="bg-zinc-950 text-zinc-400 relative">
   <div class="container mx-auto px-4 py-16 flex flex-col items-center">
     <div class="font-semibold text-zinc-200 tracking-tight text-base mb-8">
-      csnetschool
+      CS India Tests
     </div>
 
     <nav class="flex flex-wrap justify-center items-center gap-x-12 gap-y-6 text-sm font-medium">

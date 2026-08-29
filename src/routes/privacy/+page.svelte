@@ -3,7 +3,7 @@
 </script>
 
 <svelte:head>
-  <title>Privacy Policy — csnetschool</title>
+  <title>Privacy Policy — CS India Tests</title>
 </svelte:head>
 
 <InfoLayout>
@@ -16,9 +16,9 @@
     <section>
       <h2>Overview</h2>
       <p>
-        This Privacy Policy explains how csnetschool handles information when you use our exam-preparation platform. 
+        This Privacy Policy explains how CS India Tests handles information when you use our exam-preparation platform. 
         Our goal is to be transparent about what data is processed and how it is protected. 
-        Currently, csnetschool operates primarily as a frontend application, and your data handling is highly localized.
+        Currently, CS India Tests operates primarily as a frontend application, and your data handling is highly localized.
       </p>
     </section>
 
@@ -80,7 +80,7 @@
     <section>
       <h2>Changes to This Policy</h2>
       <p>
-        We may update this Privacy Policy from time to time as we add new features (such as cloud synchronization or user accounts) to csnetschool. 
+        We may update this Privacy Policy from time to time as we add new features (such as cloud synchronization or user accounts) to CS India Tests. 
         We encourage you to review this page periodically for any changes.
       </p>
     </section>

@@ -7,7 +7,7 @@ import type {
   UserStats 
 } from './db.types';
 
-export class CsnetschoolDB extends Dexie {
+export class CsIndiaTestsDB extends Dexie {
   preferences!: Table<Preference, string>;
   testSessions!: Table<TestSession, string>;
   testAnswers!: Table<TestAnswer, string>;
@@ -15,7 +15,7 @@ export class CsnetschoolDB extends Dexie {
   userStats!: Table<UserStats, number>;
 
   constructor() {
-    super('csnetschool-db');
+    super('csindiatests-db');
     
     this.version(1).stores({
       preferences: 'key',
@@ -27,4 +27,4 @@ export class CsnetschoolDB extends Dexie {
   }
 }
 
-export const db = new CsnetschoolDB();
+export const db = new CsIndiaTestsDB();

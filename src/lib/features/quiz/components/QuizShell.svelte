@@ -134,7 +134,7 @@ import type { QuizMode } from "$lib/features/quiz/types";
 </script>
 
 <svelte:head>
-  <title>{examConfig.shortName} Practice | csnetschool</title>
+  <title>{examConfig.shortName} Practice | CS India Tests</title>
 </svelte:head>
 
 <div class="min-h-screen bg-muted/10 flex flex-col">

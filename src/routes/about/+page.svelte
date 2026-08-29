@@ -3,7 +3,7 @@
 </script>
 
 <svelte:head>
-  <title>About csnetschool</title>
+  <title>About CS India Tests</title>
 </svelte:head>
 
 <InfoLayout>
@@ -11,18 +11,18 @@
     
     <!-- Hero Section -->
     <section class="text-center space-y-4 mb-16">
-      <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight">About csnetschool</h1>
+      <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight">About CS India Tests</h1>
       <p class="text-xl text-muted-foreground max-w-2xl mx-auto">
         A focused place to practice, understand, and improve.
       </p>
     </section>
 
     <div class="prose prose-zinc dark:prose-invert max-w-none space-y-12">
-      <!-- What is csnetschool? -->
+      <!-- What is CS India Tests? -->
       <section>
-        <h2 class="text-3xl font-bold tracking-tight mb-4">What is csnetschool?</h2>
+        <h2 class="text-3xl font-bold tracking-tight mb-4">What is CS India Tests?</h2>
         <p class="text-lg leading-relaxed text-muted-foreground">
-          csnetschool is an exam-preparation platform focused on helping students practice Computer Science questions and understand the reasoning behind answers. We believe that consistent practice combined with clear explanations is the key to success in competitive examinations.
+          CS India Tests is an exam-preparation platform focused on helping students practice Computer Science questions and understand the reasoning behind answers. We believe that consistent practice combined with clear explanations is the key to success in competitive examinations.
         </p>
         <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8 list-none pl-0">
           <li class="flex items-center gap-3">

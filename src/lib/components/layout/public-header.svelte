@@ -49,7 +49,7 @@
         <BookOpen class="h-5 w-5" />
       </div>
       <span class="font-bold tracking-tight text-lg hidden sm:inline-block">
-        csnetschool
+        CS India Tests
       </span>
     </a>
 
