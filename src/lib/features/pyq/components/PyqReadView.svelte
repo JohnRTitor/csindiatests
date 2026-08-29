@@ -41,7 +41,7 @@
           {#each question.options as option}
             <div class="flex items-start">
               <span class="font-semibold mr-3 mt-1 min-w-6"
-                >{option.label}.</span
+                >{option.id}.</span
               >
               <div class="grow">
                 <RichContentRenderer content={option.content} />

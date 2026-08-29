@@ -131,6 +131,18 @@ import type { QuizMode } from "$lib/features/quiz/types";
     }
   };
 
+  let forceShowAnswerForCurrent = $state(false);
+
+  $effect(() => {
+    // Reset force show when question changes
+    const _ = quiz.state.currentIndex;
+    forceShowAnswerForCurrent = false;
+  });
+
+  const handleShowAnswer = () => {
+    forceShowAnswerForCurrent = true;
+  };
+
 </script>
 
 <svelte:head>
@@ -189,7 +201,7 @@ import type { QuizMode } from "$lib/features/quiz/types";
                 <AnswerOption 
                   {option}
                   isSelected={quiz.state.answers[quiz.currentQuestion.id] === option.id}
-                  isEvaluated={reviewMode || quiz.state.answers[quiz.currentQuestion.id] !== undefined}
+                  isEvaluated={reviewMode || forceShowAnswerForCurrent || quiz.state.answers[quiz.currentQuestion.id] !== undefined}
                   isCorrect={option.id === quiz.currentQuestion.correctOptionId}
                   isAnswerUnavailable={quiz.currentQuestion.correctOptionId === null}
                   onSelect={handleAnswerSelect}
@@ -197,7 +209,15 @@ import type { QuizMode } from "$lib/features/quiz/types";
               {/each}
             </div>
 
-            {#if reviewMode || quiz.state.answers[quiz.currentQuestion.id]}
+            {#if !reviewMode && !forceShowAnswerForCurrent && !quiz.state.answers[quiz.currentQuestion.id]}
+              <div class="mt-8 flex justify-end">
+                <Button variant="outline" onclick={handleShowAnswer}>
+                  Show Answer
+                </Button>
+              </div>
+            {/if}
+
+            {#if reviewMode || forceShowAnswerForCurrent || quiz.state.answers[quiz.currentQuestion.id]}
               {#if quiz.currentQuestion.correctOptionId !== null || quiz.currentQuestion.explanation !== null}
                 <ExplanationCard 
                   isCorrect={quiz.state.answers[quiz.currentQuestion.id] === quiz.currentQuestion.correctOptionId}

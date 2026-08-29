@@ -1,68 +1,61 @@
 {
-  "schemaVersion": "1.0.0",
-  "datasetType": "ugc-net-pyq",
-  "paper": {
-    "id": "ugc-net-cs-2024-june-cancelled",
-    "examId": "ugc-net-cs",
+  "schemaVersion": "1.0",
+  "id": "ugc-net-cs-2024-june-cancelled",
+  "examId": "ugc-net-cs",
+  "metadata": {
     "year": 2024,
     "session": "June (Cancelled)",
-    "paper": null,
-    "shift": null
+    "paperNumber": 2,
+    "paperName": "Computer Science",
+    "shift": null,
+    "title": "UGC NET Computer Science \u2014 June (Cancelled) 2024",
+    "questionCount": 100
   },
   "source": {
     "files": [
       "UGC_Comp_June2024_Cancelled(1).pdf"
     ],
-    "pageCount": 47
-  },
-  "sourceAnalysis": {
-    "documentType": "mixed",
-    "layout": "two-column question pages + two-column solution pages",
-    "answerKey": {
-      "detected": true,
-      "type": "answer-key",
-      "pages": [
-        14,
-        15
-      ]
-    },
-    "solutions": {
-      "detected": true,
-      "pages": [
-        16,
-        17,
-        18,
-        19,
-        20,
-        21,
-        22,
-        23,
-        24,
-        25,
-        26,
-        27,
-        28,
-        29,
-        30,
-        31,
-        32,
-        33,
-        34,
-        35,
-        36,
-        37,
-        38,
-        39,
-        40,
-        41,
-        42,
-        43,
-        44,
-        45,
-        46,
-        47
-      ]
-    }
+    "pageCount": 47,
+    "answerKeyDetected": true,
+    "answerKeyPages": [
+      14,
+      15
+    ],
+    "solutionsDetected": true,
+    "solutionPages": [
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47
+    ]
   },
   "extraction": {
     "questionCountExpected": 100,
@@ -73,13 +66,8 @@
   "questions": [
     {
       "id": "ugc-net-cs-2024-june-cancelled-q-1",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Cancelled)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 1,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -143,8 +131,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "programming-data-structures",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_Cancelled(1).pdf",
         "page": 1,
@@ -152,22 +141,21 @@
           1
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pdf-text",
         "confidence": "high",
         "visualVerified": false
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-cancelled-q-2",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Cancelled)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 2,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -231,8 +219,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "discrete-structures",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_Cancelled(1).pdf",
         "page": 1,
@@ -240,22 +229,21 @@
           1
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pdf-text",
         "confidence": "high",
         "visualVerified": false
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-cancelled-q-3",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Cancelled)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 3,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -316,7 +304,7 @@
       "explanation": [
         {
           "type": "text",
-          "value": "To determine the least integer n such that f(x) is\nn\nO(x ) for each function f(x), let's analyze each\nfunction given:\n3\n4\nA. f(x)=3 x +(log x)\n4\nFor large x, (log x) grows much slower compared\n3\nto x Therefore, f(x) is asymptotically dominated by 3\n3\nx\nHence,\n3\nf(x)=O(x )\n5\n2\n3\nB. f(x)=(x +x +1) /(x +1)\nAs x→∞, the dominant term in the numerator and\n5 3\nthe denominator is x and x , respectively.\n2\nHence, f(x)∼x\n2\nThus, f(x)=O(x )\n3\n2\n2\nC. f(x)=(x +x +1) /(x +1)\nAs x→∞, the dominant term in the numerator and\n3 2\nthe denominator is x and x , respectively.\nHence, f(x)∼x.\nThus, f(x)=O(x).\n2\n2\nD. f(x)=(x +5 log x) /(x +1)\nFor large x, (log x) grows much slower compared\n2\nto x\nx2\nThe dominant terms are in both numerator\nand denominator.\nTherefore, f(x)∼1.\nThus,\nf(x) = O(1)\nSo, the correct order of increasing n is D,C,B,A.\nSo option B is the correct answer."
+          "value": "To determine the least integer n such that f(x) is\nn\nO(x ) for each function f(x), let's analyze each\nfunction given:\n3\n4\nA. f(x)=3 x +(log x)\n4\nFor large x, (log x) grows much slower compared\n3\nto x Therefore, f(x) is asymptotically dominated by 3\n3\nx\nHence,\n3\nf(x)=O(x )\n5\n2\n3\nB. f(x)=(x +x +1) /(x +1)\nAs x\u2192\u221e, the dominant term in the numerator and\n5 3\nthe denominator is x and x , respectively.\n2\nHence, f(x)\u223cx\n2\nThus, f(x)=O(x )\n3\n2\n2\nC. f(x)=(x +x +1) /(x +1)\nAs x\u2192\u221e, the dominant term in the numerator and\n3 2\nthe denominator is x and x , respectively.\nHence, f(x)\u223cx.\nThus, f(x)=O(x).\n2\n2\nD. f(x)=(x +5 log x) /(x +1)\nFor large x, (log x) grows much slower compared\n2\nto x\nx2\nThe dominant terms are in both numerator\nand denominator.\nTherefore, f(x)\u223c1.\nThus,\nf(x) = O(1)\nSo, the correct order of increasing n is D,C,B,A.\nSo option B is the correct answer."
         }
       ],
       "answerSource": {
@@ -332,8 +320,11 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "discrete-structures",
+      "topicId": null,
+      "assets": [
+        "assets/ugc-net-cs-2024-june-cancelled/q-003.png"
+      ],
       "source": {
         "file": "UGC_Comp_June2024_Cancelled(1).pdf",
         "page": 1,
@@ -341,24 +332,21 @@
           1
         ]
       },
-      "assets": [
-        "assets/ugc-net-cs-2024-june-cancelled/q-003.png"
-      ],
       "extraction": {
         "method": "pdf-text+visual-crop",
         "confidence": "medium",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-cancelled-q-4",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Cancelled)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 4,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -407,7 +395,7 @@
       "explanation": [
         {
           "type": "text",
-          "value": "The Software process framework is required for\nrepresenting common process activities. Five\nframework activities are described in a process\nframework for software engineering.\nCommunication: By communication, customer\nrequirement gathering is done. Communication\nwith consumers and stakeholders to determine\nthe system’s objectives and the software’s\nrequirements.\nPlanning: Establish engineering work plan,\ndescribe technical risk, list resources\nrequirements, work produced, and define work\nschedule.\nModeling: Architectural models and design to\nbetter understand the problem and to work\ntowards the best solution.\nConstruction: Creating code, testing the system,\nfixing bugs, and confirming that all criteria are | |\nmet.\nDeployment: In this activity, a complete or non-\ncomplete product or software is represented to\nthe customers to evaluate and give feedback. On\nthe basis of their feedback, we modify the\nproduct for the supply of better products.\nSo option B is the correct answer."
+          "value": "The Software process framework is required for\nrepresenting common process activities. Five\nframework activities are described in a process\nframework for software engineering.\nCommunication: By communication, customer\nrequirement gathering is done. Communication\nwith consumers and stakeholders to determine\nthe system\u2019s objectives and the software\u2019s\nrequirements.\nPlanning: Establish engineering work plan,\ndescribe technical risk, list resources\nrequirements, work produced, and define work\nschedule.\nModeling: Architectural models and design to\nbetter understand the problem and to work\ntowards the best solution.\nConstruction: Creating code, testing the system,\nfixing bugs, and confirming that all criteria are | |\nmet.\nDeployment: In this activity, a complete or non-\ncomplete product or software is represented to\nthe customers to evaluate and give feedback. On\nthe basis of their feedback, we modify the\nproduct for the supply of better products.\nSo option B is the correct answer."
         }
       ],
       "answerSource": {
@@ -422,8 +410,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": null,
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_Cancelled(1).pdf",
         "page": 1,
@@ -431,26 +420,25 @@
           1
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pdf-text",
         "confidence": "high",
         "visualVerified": false
+      },
+      "classification": {
+        "subjectConfidence": "low",
+        "topicConfidence": "low",
+        "reviewRequired": true
       }
     },
     {
       "id": "ugc-net-cs-2024-june-cancelled-q-5",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Cancelled)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 5,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
-          "value": "Match List-I with List-II: List - I List-II A. I. Recursive Descent A →aB ∣a, a ∈T, Parser A, B ∈V | | B. II. Turing Machine A →BC ∣a, a ∈T, A, B, C ∈V III. Choamsky Normal C. LL (1) grammar Form D. Halting problem IV. Finite Automate Choose the correct answer from the options given below :"
+          "value": "Match List-I with List-II: List - I List-II A. I. Recursive Descent A \u2192aB \u2223a, a \u2208T, Parser A, B \u2208V | | B. II. Turing Machine A \u2192BC \u2223a, a \u2208T, A, B, C \u2208V III. Choamsky Normal C. LL (1) grammar Form D. Halting problem IV. Finite Automate Choose the correct answer from the options given below :"
         },
         {
           "type": "image",
@@ -507,7 +495,7 @@
       "explanation": [
         {
           "type": "text",
-          "value": "A. A→aB∣a:\nThis form suggests productions where A can\nderive either a terminal symbol followed by a\nnon-terminal symbol or just a terminal symbol\nitself. This is typical of regular grammars or\nregular expressions, which can be recognized by\nfinite automata.\nMatches with IV. Finite Automaton: Regular\ngrammars are equivalent to regular languages,\nwhich can be recognized by finite automata.\nB. A→BC∣a:\nThis form suggests productions where A can\nderive either a combination of two non-terminal\nsymbols or a single terminal symbol. This form is\ncharacteristic of Chomsky Normal Form.\nC. LL(1) grammar:\nAn LL(1) grammar is a type of context-free\ngrammar that can be parsed by a recursive\ndescent parser without backtracking.\nD. Halting problem:\nThe halting problem is undecidable for Turing\nmachines.\nSo option A is the correct answer."
+          "value": "A. A\u2192aB\u2223a:\nThis form suggests productions where A can\nderive either a terminal symbol followed by a\nnon-terminal symbol or just a terminal symbol\nitself. This is typical of regular grammars or\nregular expressions, which can be recognized by\nfinite automata.\nMatches with IV. Finite Automaton: Regular\ngrammars are equivalent to regular languages,\nwhich can be recognized by finite automata.\nB. A\u2192BC\u2223a:\nThis form suggests productions where A can\nderive either a combination of two non-terminal\nsymbols or a single terminal symbol. This form is\ncharacteristic of Chomsky Normal Form.\nC. LL(1) grammar:\nAn LL(1) grammar is a type of context-free\ngrammar that can be parsed by a recursive\ndescent parser without backtracking.\nD. Halting problem:\nThe halting problem is undecidable for Turing\nmachines.\nSo option A is the correct answer."
         }
       ],
       "answerSource": {
@@ -522,8 +510,11 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "theory-of-computation",
+      "topicId": null,
+      "assets": [
+        "assets/ugc-net-cs-2024-june-cancelled/q-005.png"
+      ],
       "source": {
         "file": "UGC_Comp_June2024_Cancelled(1).pdf",
         "page": 1,
@@ -531,24 +522,21 @@
           1
         ]
       },
-      "assets": [
-        "assets/ugc-net-cs-2024-june-cancelled/q-005.png"
-      ],
       "extraction": {
         "method": "pdf-text+visual-crop",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-cancelled-q-6",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Cancelled)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 6,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -613,8 +601,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "artificial-intelligence",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_Cancelled(1).pdf",
         "page": 1,
@@ -622,22 +611,21 @@
           1
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pdf-text",
         "confidence": "high",
         "visualVerified": false
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-cancelled-q-7",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Cancelled)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 7,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -701,8 +689,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "artificial-intelligence",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_Cancelled(1).pdf",
         "page": 1,
@@ -710,22 +699,21 @@
           1
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pdf-text",
         "confidence": "high",
         "visualVerified": false
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-cancelled-q-8",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Cancelled)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 8,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -802,8 +790,11 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": null,
+      "topicId": null,
+      "assets": [
+        "assets/ugc-net-cs-2024-june-cancelled/q-008.png"
+      ],
       "source": {
         "file": "UGC_Comp_June2024_Cancelled(1).pdf",
         "page": 1,
@@ -812,24 +803,21 @@
           2
         ]
       },
-      "assets": [
-        "assets/ugc-net-cs-2024-june-cancelled/q-008.png"
-      ],
       "extraction": {
         "method": "pdf-text+visual-crop",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "low",
+        "topicConfidence": "low",
+        "reviewRequired": true
       }
     },
     {
       "id": "ugc-net-cs-2024-june-cancelled-q-9",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Cancelled)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 9,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -893,8 +881,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "operating-systems",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_Cancelled(1).pdf",
         "page": 2,
@@ -902,26 +891,25 @@
           2
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pdf-text",
         "confidence": "high",
         "visualVerified": false
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-cancelled-q-10",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Cancelled)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 10,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
-          "value": "is a If f(n) = 5f(n/2) + 3 and f(1) = 7 recurrence relation where K is positive integer, K then f(2 ) = (31/4) −3/4 5K (29/4) 5K"
+          "value": "is a If f(n) = 5f(n/2) + 3 and f(1) = 7 recurrence relation where K is positive integer, K then f(2 ) = (31/4) \u22123/4 5K (29/4) 5K"
         },
         {
           "type": "image",
@@ -978,7 +966,7 @@
       "explanation": [
         {
           "type": "text",
-          "value": "If f(n) = 5f(n/2) + 3 and f(1) = 7\nThen\nf ( ) = 5f ( ) + 3\nn\nn\n2\n4\nf(n) = 5(5f ( ) + 3) + 3\nn\n4\nf(n) = f( ) + 5. 3 + 3\n52\nn\n4\nf(n) = f( ) + 15 + 3\n52\nn\n4\nf(n) = f (\n) + 3(\n+\n+. . . 5\n5k\nn\n2k\n50\n51 )\nk−1\nf(n) = f (\n) + 3(\n)\n5k\nn\n2k\n−1\n5k\n4\nnow put n = 2k\nf(\n) = f(1) + 3(\n)\n2k\n5k\n−1\n5k\n4\n= . 7 + 3(\n)\n5k\n−1\n5k\n4\n=\n. 7 + (\n−1)\n5k\n3\n4 5k\n=\n. 7 +\n−\n5k\n3.5k\n3\n4\n4\n=\n.28 + .3−3\n5k\n5k\n4\n= (\n) −\n5k\n31\n3\n4\n4\nThus option A is the correct answer."
+          "value": "If f(n) = 5f(n/2) + 3 and f(1) = 7\nThen\nf ( ) = 5f ( ) + 3\nn\nn\n2\n4\nf(n) = 5(5f ( ) + 3) + 3\nn\n4\nf(n) = f( ) + 5. 3 + 3\n52\nn\n4\nf(n) = f( ) + 15 + 3\n52\nn\n4\nf(n) = f (\n) + 3(\n+\n+. . . 5\n5k\nn\n2k\n50\n51 )\nk\u22121\nf(n) = f (\n) + 3(\n)\n5k\nn\n2k\n\u22121\n5k\n4\nnow put n = 2k\nf(\n) = f(1) + 3(\n)\n2k\n5k\n\u22121\n5k\n4\n= . 7 + 3(\n)\n5k\n\u22121\n5k\n4\n=\n. 7 + (\n\u22121)\n5k\n3\n4 5k\n=\n. 7 +\n\u2212\n5k\n3.5k\n3\n4\n4\n=\n.28 + .3\u22123\n5k\n5k\n4\n= (\n) \u2212\n5k\n31\n3\n4\n4\nThus option A is the correct answer."
         }
       ],
       "answerSource": {
@@ -994,8 +982,11 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "discrete-structures",
+      "topicId": null,
+      "assets": [
+        "assets/ugc-net-cs-2024-june-cancelled/q-010.png"
+      ],
       "source": {
         "file": "UGC_Comp_June2024_Cancelled(1).pdf",
         "page": 2,
@@ -1003,28 +994,25 @@
           2
         ]
       },
-      "assets": [
-        "assets/ugc-net-cs-2024-june-cancelled/q-010.png"
-      ],
       "extraction": {
         "method": "pdf-text+visual-crop",
         "confidence": "medium",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-cancelled-q-11",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Cancelled)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 11,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
-          "value": "The instruction LD ADR (X) which is equivalent to AC M[ADR+XR] is in : ←"
+          "value": "The instruction LD ADR (X) which is equivalent to AC M[ADR+XR] is in : \u2190"
         }
       ],
       "options": [
@@ -1069,7 +1057,7 @@
       "explanation": [
         {
           "type": "text",
-          "value": "Option A) Direct Addressing Mode - In direct\naddressing mode, the address field in the\ninstruction contains the effective address of the\noperand.\nExample: Add the content of R1 and 1001 and\nstore back to R1:\nAdd R1, (1001)\nHere 1001 is the address where the operand is\nstored.\nOption B) In Indirect addressing mode, the\naddress field in the instruction contains the\nmemory location or register where the effective\naddress of the operand is present.\nLOAD R1, @500\nOption C) Index Addressing Mode - Index\naddressing mode involves adding an index\nregister (in this case, X) to a base address (in this\ncase, ADR) to form the effective address. | |\nThis matches the expression A←M[ADR+XR],\nwhere ADR acts as the base address and XR as\nthe index.\nOption D) Immediate Addressing Mode -\nImmediate addressing mode involves specifying\nthe operand directly in the instruction, such as\nLD #value, where #value is the immediate value\nto be loaded.\nSo option C is the correct answer."
+          "value": "Option A) Direct Addressing Mode - In direct\naddressing mode, the address field in the\ninstruction contains the effective address of the\noperand.\nExample: Add the content of R1 and 1001 and\nstore back to R1:\nAdd R1, (1001)\nHere 1001 is the address where the operand is\nstored.\nOption B) In Indirect addressing mode, the\naddress field in the instruction contains the\nmemory location or register where the effective\naddress of the operand is present.\nLOAD R1, @500\nOption C) Index Addressing Mode - Index\naddressing mode involves adding an index\nregister (in this case, X) to a base address (in this\ncase, ADR) to form the effective address. | |\nThis matches the expression A\u2190M[ADR+XR],\nwhere ADR acts as the base address and XR as\nthe index.\nOption D) Immediate Addressing Mode -\nImmediate addressing mode involves specifying\nthe operand directly in the instruction, such as\nLD #value, where #value is the immediate value\nto be loaded.\nSo option C is the correct answer."
         }
       ],
       "answerSource": {
@@ -1084,8 +1072,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "computer-architecture",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_Cancelled(1).pdf",
         "page": 2,
@@ -1093,22 +1082,21 @@
           2
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pdf-text",
         "confidence": "high",
         "visualVerified": false
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-cancelled-q-12",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Cancelled)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 12,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -1184,8 +1172,11 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": null,
+      "topicId": null,
+      "assets": [
+        "assets/ugc-net-cs-2024-june-cancelled/q-012.png"
+      ],
       "source": {
         "file": "UGC_Comp_June2024_Cancelled(1).pdf",
         "page": 2,
@@ -1193,24 +1184,21 @@
           2
         ]
       },
-      "assets": [
-        "assets/ugc-net-cs-2024-june-cancelled/q-012.png"
-      ],
       "extraction": {
         "method": "pdf-text+visual-crop",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "low",
+        "topicConfidence": "low",
+        "reviewRequired": true
       }
     },
     {
       "id": "ugc-net-cs-2024-june-cancelled-q-13",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Cancelled)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 13,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -1275,8 +1263,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "operating-systems",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_Cancelled(1).pdf",
         "page": 2,
@@ -1284,22 +1273,21 @@
           2
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pdf-text",
         "confidence": "high",
         "visualVerified": false
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-cancelled-q-14",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Cancelled)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 14,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -1375,8 +1363,11 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "discrete-structures",
+      "topicId": null,
+      "assets": [
+        "assets/ugc-net-cs-2024-june-cancelled/q-014.png"
+      ],
       "source": {
         "file": "UGC_Comp_June2024_Cancelled(1).pdf",
         "page": 2,
@@ -1384,24 +1375,21 @@
           2
         ]
       },
-      "assets": [
-        "assets/ugc-net-cs-2024-june-cancelled/q-014.png"
-      ],
       "extraction": {
         "method": "pdf-text+visual-crop",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-cancelled-q-15",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Cancelled)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 15,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -1465,8 +1453,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "operating-systems",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_Cancelled(1).pdf",
         "page": 2,
@@ -1475,22 +1464,21 @@
           3
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pdf-text",
         "confidence": "high",
         "visualVerified": false
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-cancelled-q-16",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Cancelled)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 16,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -1555,8 +1543,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "discrete-structures",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_Cancelled(1).pdf",
         "page": 3,
@@ -1564,22 +1553,21 @@
           3
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pdf-text",
         "confidence": "high",
         "visualVerified": false
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-cancelled-q-17",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Cancelled)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 17,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -1655,8 +1643,11 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "operating-systems",
+      "topicId": null,
+      "assets": [
+        "assets/ugc-net-cs-2024-june-cancelled/q-017.png"
+      ],
       "source": {
         "file": "UGC_Comp_June2024_Cancelled(1).pdf",
         "page": 3,
@@ -1664,24 +1655,21 @@
           3
         ]
       },
-      "assets": [
-        "assets/ugc-net-cs-2024-june-cancelled/q-017.png"
-      ],
       "extraction": {
         "method": "pdf-text+visual-crop",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-cancelled-q-18",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Cancelled)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 18,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -1745,8 +1733,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "discrete-structures",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_Cancelled(1).pdf",
         "page": 3,
@@ -1754,22 +1743,21 @@
           3
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pdf-text",
         "confidence": "high",
         "visualVerified": false
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-cancelled-q-19",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Cancelled)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 19,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -1833,8 +1821,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "theory-of-computation",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_Cancelled(1).pdf",
         "page": 3,
@@ -1842,22 +1831,21 @@
           3
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pdf-text",
         "confidence": "high",
         "visualVerified": false
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-cancelled-q-20",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Cancelled)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 20,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -1933,8 +1921,11 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "compiler-design",
+      "topicId": null,
+      "assets": [
+        "assets/ugc-net-cs-2024-june-cancelled/q-020.png"
+      ],
       "source": {
         "file": "UGC_Comp_June2024_Cancelled(1).pdf",
         "page": 3,
@@ -1942,28 +1933,25 @@
           3
         ]
       },
-      "assets": [
-        "assets/ugc-net-cs-2024-june-cancelled/q-020.png"
-      ],
       "extraction": {
         "method": "pdf-text+visual-crop",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-cancelled-q-21",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Cancelled)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 21,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
-          "value": "The output of the following C Program is: #include <stdio.h> int main (void) { int x, *p; x=30; p=x; print f (“%d\", *p); return 0; }"
+          "value": "The output of the following C Program is: #include <stdio.h> int main (void) { int x, *p; x=30; p=x; print f (\u201c%d\", *p); return 0; }"
         }
       ],
       "options": [
@@ -2023,8 +2011,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": null,
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_Cancelled(1).pdf",
         "page": 3,
@@ -2032,26 +2021,25 @@
           3
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pdf-text",
         "confidence": "high",
         "visualVerified": false
+      },
+      "classification": {
+        "subjectConfidence": "low",
+        "topicConfidence": "low",
+        "reviewRequired": true
       }
     },
     {
       "id": "ugc-net-cs-2024-june-cancelled-q-22",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Cancelled)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 22,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
-          "value": "Which of the following have truth values if the universe of discourse consists of all integers? n∃m ( < m) n2 A. ∃nm (n < ) m2 B. ∃n∃m ( + = 5) n2 m2 C. ∃n∃m ( + = 6) n2 m2 D. E. ∃n∃m(m + n = 4 ∧n −m = 1) Choose the correct answer from the options given below :"
+          "value": "Which of the following have truth values if the universe of discourse consists of all integers? n\u2203m ( < m) n2 A. \u2203nm (n < ) m2 B. \u2203n\u2203m ( + = 5) n2 m2 C. \u2203n\u2203m ( + = 6) n2 m2 D. E. \u2203n\u2203m(m + n = 4 \u2227n \u2212m = 1) Choose the correct answer from the options given below :"
         },
         {
           "type": "image",
@@ -2108,7 +2096,7 @@
       "explanation": [
         {
           "type": "text",
-          "value": "2\nStatement A: ∃n∃m(n <m)\nThis statement asserts the existence of integers n\n2\nand m such that n <m.\nFor integers, this statement is true because, for\n2\nexample, if n=0 and m=2, then 0 =0<2.\n2\nStatement B: ∃n∃m(n<m )\nThis statement asserts the existence of integers n\n2\nand m such that n<m .\nFor integers, this statement is true because, for\n2\nexample, if n=0 and m=2, then 0<2 =4.\n2\n2\nStatement C: ∃n∃m(n +m =5)\n2\n2\nSubstitute n=1 and m=2: 1 +2 =1+4=5 holds true.\n2\n2\nStatement D: ∃n∃m(n +m =6)\nThis statement asserts the existence of integers n 2\n2\nand m such that n +m =6.\nFor integers, this statement is false because, for\nexample, n=2 and m=2 it does not satisfy 2\n2\n2 +2 =4+4=8.\nStatement E: ∃n∃m((m+n=4)∧(n−m=1))\nThis statement asserts the existence of integers n\nand m such that:m+n=4 and n−m=1\nNow substitute n=3 and m =1\nm+n = 1+3 =4 but 3-1 =2 which is false. Therefore,\nwe cannot find integers n and m that satisfy both\nequations simultaneously.\nHence, Statement E ∃n∃m(m+n=4∧n−m=1) is false\nin the universe of discourse of all integers.\nSo Option A is the correct answer.​"
+          "value": "2\nStatement A: \u2203n\u2203m(n <m)\nThis statement asserts the existence of integers n\n2\nand m such that n <m.\nFor integers, this statement is true because, for\n2\nexample, if n=0 and m=2, then 0 =0<2.\n2\nStatement B: \u2203n\u2203m(n<m )\nThis statement asserts the existence of integers n\n2\nand m such that n<m .\nFor integers, this statement is true because, for\n2\nexample, if n=0 and m=2, then 0<2 =4.\n2\n2\nStatement C: \u2203n\u2203m(n +m =5)\n2\n2\nSubstitute n=1 and m=2: 1 +2 =1+4=5 holds true.\n2\n2\nStatement D: \u2203n\u2203m(n +m =6)\nThis statement asserts the existence of integers n 2\n2\nand m such that n +m =6.\nFor integers, this statement is false because, for\nexample, n=2 and m=2 it does not satisfy 2\n2\n2 +2 =4+4=8.\nStatement E: \u2203n\u2203m((m+n=4)\u2227(n\u2212m=1))\nThis statement asserts the existence of integers n\nand m such that:m+n=4 and n\u2212m=1\nNow substitute n=3 and m =1\nm+n = 1+3 =4 but 3-1 =2 which is false. Therefore,\nwe cannot find integers n and m that satisfy both\nequations simultaneously.\nHence, Statement E \u2203n\u2203m(m+n=4\u2227n\u2212m=1) is false\nin the universe of discourse of all integers.\nSo Option A is the correct answer.\u200b"
         }
       ],
       "answerSource": {
@@ -2123,8 +2111,11 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": null,
+      "topicId": null,
+      "assets": [
+        "assets/ugc-net-cs-2024-june-cancelled/q-022.png"
+      ],
       "source": {
         "file": "UGC_Comp_June2024_Cancelled(1).pdf",
         "page": 3,
@@ -2132,24 +2123,21 @@
           3
         ]
       },
-      "assets": [
-        "assets/ugc-net-cs-2024-june-cancelled/q-022.png"
-      ],
       "extraction": {
         "method": "pdf-text+visual-crop",
         "confidence": "medium",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "low",
+        "topicConfidence": "low",
+        "reviewRequired": true
       }
     },
     {
       "id": "ugc-net-cs-2024-june-cancelled-q-23",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Cancelled)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 23,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -2214,8 +2202,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "programming-data-structures",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_Cancelled(1).pdf",
         "page": 4,
@@ -2223,22 +2212,21 @@
           4
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pdf-text",
         "confidence": "high",
         "visualVerified": false
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-cancelled-q-24",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Cancelled)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 24,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -2302,8 +2290,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": null,
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_Cancelled(1).pdf",
         "page": 4,
@@ -2311,22 +2300,21 @@
           4
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pdf-text",
         "confidence": "high",
         "visualVerified": false
+      },
+      "classification": {
+        "subjectConfidence": "low",
+        "topicConfidence": "low",
+        "reviewRequired": true
       }
     },
     {
       "id": "ugc-net-cs-2024-june-cancelled-q-25",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Cancelled)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 25,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -2402,8 +2390,11 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "software-engineering",
+      "topicId": null,
+      "assets": [
+        "assets/ugc-net-cs-2024-june-cancelled/q-025.png"
+      ],
       "source": {
         "file": "UGC_Comp_June2024_Cancelled(1).pdf",
         "page": 4,
@@ -2411,24 +2402,21 @@
           4
         ]
       },
-      "assets": [
-        "assets/ugc-net-cs-2024-june-cancelled/q-025.png"
-      ],
       "extraction": {
         "method": "pdf-text+visual-crop",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-cancelled-q-26",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Cancelled)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 26,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -2505,8 +2493,11 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "discrete-structures",
+      "topicId": null,
+      "assets": [
+        "assets/ugc-net-cs-2024-june-cancelled/q-026.png"
+      ],
       "source": {
         "file": "UGC_Comp_June2024_Cancelled(1).pdf",
         "page": 4,
@@ -2514,24 +2505,21 @@
           4
         ]
       },
-      "assets": [
-        "assets/ugc-net-cs-2024-june-cancelled/q-026.png"
-      ],
       "extraction": {
         "method": "pdf-text+visual-crop",
         "confidence": "medium",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-cancelled-q-27",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Cancelled)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 27,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -2607,8 +2595,11 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "operating-systems",
+      "topicId": null,
+      "assets": [
+        "assets/ugc-net-cs-2024-june-cancelled/q-027.png"
+      ],
       "source": {
         "file": "UGC_Comp_June2024_Cancelled(1).pdf",
         "page": 4,
@@ -2616,24 +2607,21 @@
           4
         ]
       },
-      "assets": [
-        "assets/ugc-net-cs-2024-june-cancelled/q-027.png"
-      ],
       "extraction": {
         "method": "pdf-text+visual-crop",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-cancelled-q-28",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Cancelled)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 28,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -2697,8 +2685,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": null,
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_Cancelled(1).pdf",
         "page": 4,
@@ -2706,22 +2695,21 @@
           4
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pdf-text",
         "confidence": "high",
         "visualVerified": false
+      },
+      "classification": {
+        "subjectConfidence": "low",
+        "topicConfidence": "low",
+        "reviewRequired": true
       }
     },
     {
       "id": "ugc-net-cs-2024-june-cancelled-q-29",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Cancelled)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 29,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -2770,7 +2758,7 @@
       "explanation": [
         {
           "type": "text",
-          "value": "Asynchronous Transfer Mode(ATM) network is\nan International Telecommunication Union-\nTelecommunications Standards Section (ITU-T)\nefficient call relay system that sends all\ninformation, including multiple service kinds\nsuch as data, video, and voice, in small fixed-\nsize packets known as cell. Cells are\ntransmitted asynchronously, and the network\nis designed to facilitate connections. ATM cell consists of a 5-byte header and a\n48-byte payload.ATM defines two different\ncell formats: user–network interface (UNI) and\nnetwork–network interface (NNI)\nUNI- This is used within private networks of ATMs\nfor communication between ATM endpoints and\nATM switches. It includes the Generic Flow\nControl (GFC) field.\nNNI Header: is used for communication between\nATM switches, and it does not include the\nGeneric Flow Control(GFC) instead it includes a\nVirtual Path Identifier (VPI) which occupies the\nfirst 12 bits.\nSo option B is the correct answer."
+          "value": "Asynchronous Transfer Mode(ATM) network is\nan International Telecommunication Union-\nTelecommunications Standards Section (ITU-T)\nefficient call relay system that sends all\ninformation, including multiple service kinds\nsuch as data, video, and voice, in small fixed-\nsize packets known as cell. Cells are\ntransmitted asynchronously, and the network\nis designed to facilitate connections. ATM cell consists of a 5-byte header and a\n48-byte payload.ATM defines two different\ncell formats: user\u2013network interface (UNI) and\nnetwork\u2013network interface (NNI)\nUNI- This is used within private networks of ATMs\nfor communication between ATM endpoints and\nATM switches. It includes the Generic Flow\nControl (GFC) field.\nNNI Header: is used for communication between\nATM switches, and it does not include the\nGeneric Flow Control(GFC) instead it includes a\nVirtual Path Identifier (VPI) which occupies the\nfirst 12 bits.\nSo option B is the correct answer."
         }
       ],
       "answerSource": {
@@ -2786,8 +2774,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": null,
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_Cancelled(1).pdf",
         "page": 4,
@@ -2795,22 +2784,21 @@
           4
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pdf-text",
         "confidence": "high",
         "visualVerified": false
+      },
+      "classification": {
+        "subjectConfidence": "low",
+        "topicConfidence": "low",
+        "reviewRequired": true
       }
     },
     {
       "id": "ugc-net-cs-2024-june-cancelled-q-30",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Cancelled)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 30,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -2872,7 +2860,7 @@
       "explanation": [
         {
           "type": "text",
-          "value": "Given A =\n{(\n, 0. 3), (\n, 0. 7), (\n, 0. 4)}\nx1\nx2\nx3\n1 −μA\n{(\n, 0. 7), (\n, 0. 3), (\n, 0. 6)}\nx1\nx2\nx3\nThe complement of A would be =\nSo option C is the correct answer."
+          "value": "Given A =\n{(\n, 0. 3), (\n, 0. 7), (\n, 0. 4)}\nx1\nx2\nx3\n1 \u2212\u03bcA\n{(\n, 0. 7), (\n, 0. 3), (\n, 0. 6)}\nx1\nx2\nx3\nThe complement of A would be =\nSo option C is the correct answer."
         }
       ],
       "answerSource": {
@@ -2887,8 +2875,11 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "discrete-structures",
+      "topicId": null,
+      "assets": [
+        "assets/ugc-net-cs-2024-june-cancelled/q-030.png"
+      ],
       "source": {
         "file": "UGC_Comp_June2024_Cancelled(1).pdf",
         "page": 4,
@@ -2897,24 +2888,21 @@
           5
         ]
       },
-      "assets": [
-        "assets/ugc-net-cs-2024-june-cancelled/q-030.png"
-      ],
       "extraction": {
         "method": "pdf-text+visual-crop",
         "confidence": "medium",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-cancelled-q-31",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Cancelled)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 31,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -2978,8 +2966,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "computer-architecture",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_Cancelled(1).pdf",
         "page": 5,
@@ -2987,22 +2976,21 @@
           5
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pdf-text",
         "confidence": "high",
         "visualVerified": false
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-cancelled-q-32",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Cancelled)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 32,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -3051,7 +3039,7 @@
       "explanation": [
         {
           "type": "text",
-          "value": "A grammar is said to be ambiguous if there exists\nmore than one leftmost derivation or more than\none rightmost derivation or more than one parse\ntree for the given input string. If the grammar is\nnot ambiguous, then it is called unambiguous.\nLet us consider a grammar G with the production\nrule\nE → I\nE → E + E\nE → E * E\nE → (E)\nI → ε | 0 | 1 | 2 | ... | 9\nFor the string \"3 * 2 + 5\", the above grammar can\ngenerate two parse trees by leftmost derivation:\nSince there are two parse trees for a single string\n\"3 * 2 + 5\", the grammar G is ambiguous.\nSo option C is the correct answer.\nNOTE- Option B can also be the right answer\nbecause A grammar is said to be ambiguous if\nthere exists more than one leftmost derivation or\nmore than one rightmost derivation or more than\none parse tree for the given input string."
+          "value": "A grammar is said to be ambiguous if there exists\nmore than one leftmost derivation or more than\none rightmost derivation or more than one parse\ntree for the given input string. If the grammar is\nnot ambiguous, then it is called unambiguous.\nLet us consider a grammar G with the production\nrule\nE \u2192 I\nE \u2192 E + E\nE \u2192 E * E\nE \u2192 (E)\nI \u2192 \u03b5 | 0 | 1 | 2 | ... | 9\nFor the string \"3 * 2 + 5\", the above grammar can\ngenerate two parse trees by leftmost derivation:\nSince there are two parse trees for a single string\n\"3 * 2 + 5\", the grammar G is ambiguous.\nSo option C is the correct answer.\nNOTE- Option B can also be the right answer\nbecause A grammar is said to be ambiguous if\nthere exists more than one leftmost derivation or\nmore than one rightmost derivation or more than\none parse tree for the given input string."
         }
       ],
       "answerSource": {
@@ -3067,8 +3055,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "discrete-structures",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_Cancelled(1).pdf",
         "page": 5,
@@ -3076,22 +3065,21 @@
           5
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pdf-text",
         "confidence": "high",
         "visualVerified": false
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-cancelled-q-33",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Cancelled)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 33,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -3155,8 +3143,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "artificial-intelligence",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_Cancelled(1).pdf",
         "page": 5,
@@ -3164,26 +3153,25 @@
           5
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pdf-text",
         "confidence": "high",
         "visualVerified": false
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-cancelled-q-34",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Cancelled)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 34,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
-          "value": "The Boolean expression for the following would be : ∑ F(A, B, C)= (0,2,6) ∑ d(A, B, C)= (1,3,5)"
+          "value": "The Boolean expression for the following would be : \u2211 F(A, B, C)= (0,2,6) \u2211 d(A, B, C)= (1,3,5)"
         },
         {
           "type": "image",
@@ -3255,8 +3243,11 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": null,
+      "topicId": null,
+      "assets": [
+        "assets/ugc-net-cs-2024-june-cancelled/q-034.png"
+      ],
       "source": {
         "file": "UGC_Comp_June2024_Cancelled(1).pdf",
         "page": 5,
@@ -3264,24 +3255,21 @@
           5
         ]
       },
-      "assets": [
-        "assets/ugc-net-cs-2024-june-cancelled/q-034.png"
-      ],
       "extraction": {
         "method": "pdf-text+visual-crop",
         "confidence": "medium",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "low",
+        "topicConfidence": "low",
+        "reviewRequired": true
       }
     },
     {
       "id": "ugc-net-cs-2024-june-cancelled-q-35",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Cancelled)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 35,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -3345,8 +3333,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "software-engineering",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_Cancelled(1).pdf",
         "page": 5,
@@ -3354,22 +3343,21 @@
           5
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pdf-text",
         "confidence": "high",
         "visualVerified": false
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-cancelled-q-36",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Cancelled)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 36,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -3418,7 +3406,7 @@
       "explanation": [
         {
           "type": "text",
-          "value": "To calculate the average memory access time\ngiven the cache access time, main memory\naccess time, and hit ratio, we use the following\nformula:\nAverage Access Time (AAT) = Hit ratio×Cache\naccess time+(1−Hit ratio)×Main memory access\ntime\nGiven:\nCache access time = 100 ns\nMain memory access time = 1100 ns\nHit ratio = 0.9\nNow, substitute these values into the formula:\nAverage Access Time (AAT) = 0.9×100 ns +\n0.1×1100 ns\nCalculate each term: 0.9×100 ns = 90 ns\n0.1×1100 ns = 110 ns\nNow, sum these values to get the average access\ntime:\nAAT = 90 ns + 110 ns\nAAT = 200 ns\nTherefore, the average access time is 200 ns\nSo option A is the correct answer."
+          "value": "To calculate the average memory access time\ngiven the cache access time, main memory\naccess time, and hit ratio, we use the following\nformula:\nAverage Access Time (AAT) = Hit ratio\u00d7Cache\naccess time+(1\u2212Hit ratio)\u00d7Main memory access\ntime\nGiven:\nCache access time = 100 ns\nMain memory access time = 1100 ns\nHit ratio = 0.9\nNow, substitute these values into the formula:\nAverage Access Time (AAT) = 0.9\u00d7100 ns +\n0.1\u00d71100 ns\nCalculate each term: 0.9\u00d7100 ns = 90 ns\n0.1\u00d71100 ns = 110 ns\nNow, sum these values to get the average access\ntime:\nAAT = 90 ns + 110 ns\nAAT = 200 ns\nTherefore, the average access time is 200 ns\nSo option A is the correct answer."
         }
       ],
       "answerSource": {
@@ -3433,8 +3421,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "computer-architecture",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_Cancelled(1).pdf",
         "page": 5,
@@ -3442,22 +3431,21 @@
           5
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pdf-text",
         "confidence": "high",
         "visualVerified": false
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-cancelled-q-37",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Cancelled)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 37,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -3534,8 +3522,11 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "computer-networks",
+      "topicId": null,
+      "assets": [
+        "assets/ugc-net-cs-2024-june-cancelled/q-037.png"
+      ],
       "source": {
         "file": "UGC_Comp_June2024_Cancelled(1).pdf",
         "page": 5,
@@ -3543,24 +3534,21 @@
           5
         ]
       },
-      "assets": [
-        "assets/ugc-net-cs-2024-june-cancelled/q-037.png"
-      ],
       "extraction": {
         "method": "pdf-text+visual-crop",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-cancelled-q-38",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Cancelled)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 38,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -3621,7 +3609,7 @@
       "explanation": [
         {
           "type": "text",
-          "value": "To determine the number of spanning trees for\neach graph and arrange them accordingly:\nK (Complete Graph with 3 nodes):\n3\nK has 3 nodes and every pair of distinct nodes is\n3\nconnected by a unique edge.\n3\n3−2\nThe number of spanning trees in K is 3 =3\nbecause removing any one edge from K results\n3\nin a spanning tree.\nK (Complete Graph with 4 nodes):\n4\nK has 4 nodes, and the number of spanning\n4\n4\n(4−2)\ntrees in K is 4 =16. This follows from the\nMatrix-Tree Theorem or Cayley's formula, which\nstates that the number of spanning trees in a n−2\ncomplete graph with n\n.\nK (Complete bipartite graph with 2 nodes in\n2,2\neach partition):\nK has 4 nodes (2 nodes in each of 2 partitions),\n2,2\n2,2\n2−1\nand the number of spanning trees in K is 2\n2−1 ×2 =4. This can be calculated by considering\nspanning trees that cover each partition\nindependently.\nC (Cycle graph with 5 nodes):\n5\nC has 5 nodes arranged in a cycle, and the\n5\nnumber of spanning trees in C is 5, calculated\n5\nusing the formula for spanning trees in a cycle\ngraph n.\nNow, let's arrange them based on the number of\nspanning trees:\nTherefore, arranging them in increasing order of\nthe number of spanning trees gives us:\nA. K (3 spanning trees)\n3\nC. K (4 spanning trees)\n2,2\nD. C (5 spanning trees)\n5\nB. K (16 spanning trees)\n4\nSo, the correct answer is A, C, D, and B."
+          "value": "To determine the number of spanning trees for\neach graph and arrange them accordingly:\nK (Complete Graph with 3 nodes):\n3\nK has 3 nodes and every pair of distinct nodes is\n3\nconnected by a unique edge.\n3\n3\u22122\nThe number of spanning trees in K is 3 =3\nbecause removing any one edge from K results\n3\nin a spanning tree.\nK (Complete Graph with 4 nodes):\n4\nK has 4 nodes, and the number of spanning\n4\n4\n(4\u22122)\ntrees in K is 4 =16. This follows from the\nMatrix-Tree Theorem or Cayley's formula, which\nstates that the number of spanning trees in a n\u22122\ncomplete graph with n\n.\nK (Complete bipartite graph with 2 nodes in\n2,2\neach partition):\nK has 4 nodes (2 nodes in each of 2 partitions),\n2,2\n2,2\n2\u22121\nand the number of spanning trees in K is 2\n2\u22121 \u00d72 =4. This can be calculated by considering\nspanning trees that cover each partition\nindependently.\nC (Cycle graph with 5 nodes):\n5\nC has 5 nodes arranged in a cycle, and the\n5\nnumber of spanning trees in C is 5, calculated\n5\nusing the formula for spanning trees in a cycle\ngraph n.\nNow, let's arrange them based on the number of\nspanning trees:\nTherefore, arranging them in increasing order of\nthe number of spanning trees gives us:\nA. K (3 spanning trees)\n3\nC. K (4 spanning trees)\n2,2\nD. C (5 spanning trees)\n5\nB. K (16 spanning trees)\n4\nSo, the correct answer is A, C, D, and B."
         }
       ],
       "answerSource": {
@@ -3636,8 +3624,11 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "discrete-structures",
+      "topicId": null,
+      "assets": [
+        "assets/ugc-net-cs-2024-june-cancelled/q-038.png"
+      ],
       "source": {
         "file": "UGC_Comp_June2024_Cancelled(1).pdf",
         "page": 5,
@@ -3645,24 +3636,21 @@
           5
         ]
       },
-      "assets": [
-        "assets/ugc-net-cs-2024-june-cancelled/q-038.png"
-      ],
       "extraction": {
         "method": "pdf-text+visual-crop",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-cancelled-q-39",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Cancelled)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 39,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -3739,8 +3727,11 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "computer-architecture",
+      "topicId": null,
+      "assets": [
+        "assets/ugc-net-cs-2024-june-cancelled/q-039.png"
+      ],
       "source": {
         "file": "UGC_Comp_June2024_Cancelled(1).pdf",
         "page": 5,
@@ -3749,28 +3740,25 @@
           6
         ]
       },
-      "assets": [
-        "assets/ugc-net-cs-2024-june-cancelled/q-039.png"
-      ],
       "extraction": {
         "method": "pdf-text+visual-crop",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-cancelled-q-40",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Cancelled)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 40,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
-          "value": "What is the total delay (latency) for a frame size of 10 million bits that is being set up on a link with 20 routers, each having a queuing time of 2 s and a processing time of 1 ? The length of μ μs link 5000 km. The speed of light inside the link is 8 2 * 10 m /s. The link has bandwidth of 6 Mbps."
+          "value": "What is the total delay (latency) for a frame size of 10 million bits that is being set up on a link with 20 routers, each having a queuing time of 2 s and a processing time of 1 ? The length of \u03bc \u03bcs link 5000 km. The speed of light inside the link is 8 2 * 10 m /s. The link has bandwidth of 6 Mbps."
         },
         {
           "type": "image",
@@ -3827,7 +3815,7 @@
       "explanation": [
         {
           "type": "text",
-          "value": "(1) Propagation delay\nd= 5000km\n8\ns=2*10 m/s\nprop\n3\n8\nT = Distance/ speed = 5000*10 / 2*10\n= 0.025 sec\n(2) Transmission Time T\n= Frame\ntrans\nsize/Bandwidth\n6\n6\n= 10*10 / 6*10\n=10/6 = 1.6667 sec\n(3) Queuing delay T\n= 20*2 = 40 s =\nqueue\nμ\n0.04ms\n(4) Processing delay T\n= 20*1 =20 s = 0.02ms\nproc\nμ\n(5) Total delay = T + T + T + T\nprop\ntrans\nqueue\nproc\n= 0.025sec+1.6667sec+0.04ms+0.02ms\n=1.69176 sec.\nThus option B is the correct answer."
+          "value": "(1) Propagation delay\nd= 5000km\n8\ns=2*10 m/s\nprop\n3\n8\nT = Distance/ speed = 5000*10 / 2*10\n= 0.025 sec\n(2) Transmission Time T\n= Frame\ntrans\nsize/Bandwidth\n6\n6\n= 10*10 / 6*10\n=10/6 = 1.6667 sec\n(3) Queuing delay T\n= 20*2 = 40 s =\nqueue\n\u03bc\n0.04ms\n(4) Processing delay T\n= 20*1 =20 s = 0.02ms\nproc\n\u03bc\n(5) Total delay = T + T + T + T\nprop\ntrans\nqueue\nproc\n= 0.025sec+1.6667sec+0.04ms+0.02ms\n=1.69176 sec.\nThus option B is the correct answer."
         }
       ],
       "answerSource": {
@@ -3842,8 +3830,11 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "discrete-structures",
+      "topicId": null,
+      "assets": [
+        "assets/ugc-net-cs-2024-june-cancelled/q-040.png"
+      ],
       "source": {
         "file": "UGC_Comp_June2024_Cancelled(1).pdf",
         "page": 6,
@@ -3851,24 +3842,21 @@
           6
         ]
       },
-      "assets": [
-        "assets/ugc-net-cs-2024-june-cancelled/q-040.png"
-      ],
       "extraction": {
         "method": "pdf-text+visual-crop",
         "confidence": "medium",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-cancelled-q-41",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Cancelled)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 41,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -3917,7 +3905,7 @@
       "explanation": [
         {
           "type": "text",
-          "value": "To determine the total time required for an 50\nalgorithm performing 2 bit operations, where\n−38\neach bit operation takes 2 seconds, follow\nthese steps:\nCalculate the total time:T can be calculated as:\n50\n−38\nT=(2 )×2 seconds\n50−38\n12\nSimplify the exponentiation: =2 =2 =\n4096 seconds | |\nTherefore, the total time = 4096/60*60 =1.1389\nhours\nWhich nearly equal to 1 hour, so option A is the\ncorrect answer."
+          "value": "To determine the total time required for an 50\nalgorithm performing 2 bit operations, where\n\u221238\neach bit operation takes 2 seconds, follow\nthese steps:\nCalculate the total time:T can be calculated as:\n50\n\u221238\nT=(2 )\u00d72 seconds\n50\u221238\n12\nSimplify the exponentiation: =2 =2 =\n4096 seconds | |\nTherefore, the total time = 4096/60*60 =1.1389\nhours\nWhich nearly equal to 1 hour, so option A is the\ncorrect answer."
         }
       ],
       "answerSource": {
@@ -3932,8 +3920,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": null,
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_Cancelled(1).pdf",
         "page": 6,
@@ -3941,26 +3930,25 @@
           6
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pdf-text",
         "confidence": "high",
         "visualVerified": false
+      },
+      "classification": {
+        "subjectConfidence": "low",
+        "topicConfidence": "low",
+        "reviewRequired": true
       }
     },
     {
       "id": "ugc-net-cs-2024-june-cancelled-q-42",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Cancelled)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 42,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
-          "value": "Match List-I with List-II:. List-I (Boolean List-II (Dual of Boolean Expression) Expression) A. x.y+0 I. ( + 0) ⋅( ⋅z) x¯ y¯ B. II. x+y.1 ⋅1 + ( + z) x¯ y¯ C. III. ⋅( + 0) x¯ y¯ + ⋅1 x¯ y¯ D. IV. x ⋅1 + (y + ) z¯ (x + 0) ⋅(y ⋅) z¯ Choose the correct answer from the options given below :"
+          "value": "Match List-I with List-II:. List-I (Boolean List-II (Dual of Boolean Expression) Expression) A. x.y+0 I. ( + 0) \u22c5( \u22c5z) x\u00af y\u00af B. II. x+y.1 \u22c51 + ( + z) x\u00af y\u00af C. III. \u22c5( + 0) x\u00af y\u00af + \u22c51 x\u00af y\u00af D. IV. x \u22c51 + (y + ) z\u00af (x + 0) \u22c5(y \u22c5) z\u00af Choose the correct answer from the options given below :"
         },
         {
           "type": "image",
@@ -4017,7 +4005,7 @@
       "explanation": [
         {
           "type": "text",
-          "value": "Duality theorem states that the dual of the\nBoolean function is obtained by interchanging\nthe logical AND operator with logical OR\noperator and zeros with ones. Correct match for\nthe given List is as follows.\nA. x.y+0\nI. x+y.1\nB. II.\n⋅1 + ( + z)\nx¯\ny¯\n( + 0) ⋅( ⋅z)\nx¯\ny¯\nC. III.\n⋅( + 0)\nx¯\ny¯\n+\n⋅1\nx¯\ny¯\nD. IV.\nx ⋅1 + (y + )\nz¯\n(x + 0) ⋅(y ⋅)\nz¯\nSo option C is the correct answer."
+          "value": "Duality theorem states that the dual of the\nBoolean function is obtained by interchanging\nthe logical AND operator with logical OR\noperator and zeros with ones. Correct match for\nthe given List is as follows.\nA. x.y+0\nI. x+y.1\nB. II.\n\u22c51 + ( + z)\nx\u00af\ny\u00af\n( + 0) \u22c5( \u22c5z)\nx\u00af\ny\u00af\nC. III.\n\u22c5( + 0)\nx\u00af\ny\u00af\n+\n\u22c51\nx\u00af\ny\u00af\nD. IV.\nx \u22c51 + (y + )\nz\u00af\n(x + 0) \u22c5(y \u22c5)\nz\u00af\nSo option C is the correct answer."
         }
       ],
       "answerSource": {
@@ -4032,8 +4020,11 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": null,
+      "topicId": null,
+      "assets": [
+        "assets/ugc-net-cs-2024-june-cancelled/q-042.png"
+      ],
       "source": {
         "file": "UGC_Comp_June2024_Cancelled(1).pdf",
         "page": 6,
@@ -4041,24 +4032,21 @@
           6
         ]
       },
-      "assets": [
-        "assets/ugc-net-cs-2024-june-cancelled/q-042.png"
-      ],
       "extraction": {
         "method": "pdf-text+visual-crop",
         "confidence": "medium",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "low",
+        "topicConfidence": "low",
+        "reviewRequired": true
       }
     },
     {
       "id": "ugc-net-cs-2024-june-cancelled-q-43",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Cancelled)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 43,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -4134,8 +4122,11 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "discrete-structures",
+      "topicId": null,
+      "assets": [
+        "assets/ugc-net-cs-2024-june-cancelled/q-043.png"
+      ],
       "source": {
         "file": "UGC_Comp_June2024_Cancelled(1).pdf",
         "page": 6,
@@ -4143,24 +4134,21 @@
           6
         ]
       },
-      "assets": [
-        "assets/ugc-net-cs-2024-june-cancelled/q-043.png"
-      ],
       "extraction": {
         "method": "pdf-text+visual-crop",
         "confidence": "medium",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-cancelled-q-44",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Cancelled)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 44,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -4209,7 +4197,7 @@
       "explanation": [
         {
           "type": "text",
-          "value": "In computer networking, Point-to-Point Protocol\n(PPP) is a data link layer (layer 2) communication\nprotocol that connects two routers directly, with\nno host or other networking in between.\nThe main services provided by Point-to-Point\nProtocol are −\nDefining the frame format of the data to be\ntransmitted.\nDefining the procedure of establishing a link\nbetween two points and exchange of data.\nStating the method of encapsulation of\nnetwork layer data in the frame.\nStating authentication rules of the\ncommunicating devices.\nProviding an address for network\ncommunication.\nProviding connections over multiple links.\nSupporting a variety of network layer\nprotocols by providing a range of services.\nSo option A is the correct answer."
+          "value": "In computer networking, Point-to-Point Protocol\n(PPP) is a data link layer (layer 2) communication\nprotocol that connects two routers directly, with\nno host or other networking in between.\nThe main services provided by Point-to-Point\nProtocol are \u2212\nDefining the frame format of the data to be\ntransmitted.\nDefining the procedure of establishing a link\nbetween two points and exchange of data.\nStating the method of encapsulation of\nnetwork layer data in the frame.\nStating authentication rules of the\ncommunicating devices.\nProviding an address for network\ncommunication.\nProviding connections over multiple links.\nSupporting a variety of network layer\nprotocols by providing a range of services.\nSo option A is the correct answer."
         }
       ],
       "answerSource": {
@@ -4225,8 +4213,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "discrete-structures",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_Cancelled(1).pdf",
         "page": 6,
@@ -4234,22 +4223,21 @@
           6
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pdf-text",
         "confidence": "high",
         "visualVerified": false
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-cancelled-q-45",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Cancelled)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 45,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -4313,8 +4301,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "databases",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_Cancelled(1).pdf",
         "page": 6,
@@ -4322,22 +4311,21 @@
           6
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pdf-text",
         "confidence": "high",
         "visualVerified": false
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-cancelled-q-46",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Cancelled)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 46,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -4413,8 +4401,11 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "discrete-structures",
+      "topicId": null,
+      "assets": [
+        "assets/ugc-net-cs-2024-june-cancelled/q-046.png"
+      ],
       "source": {
         "file": "UGC_Comp_June2024_Cancelled(1).pdf",
         "page": 6,
@@ -4422,24 +4413,21 @@
           6
         ]
       },
-      "assets": [
-        "assets/ugc-net-cs-2024-june-cancelled/q-046.png"
-      ],
       "extraction": {
         "method": "pdf-text+visual-crop",
         "confidence": "medium",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-cancelled-q-47",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Cancelled)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 47,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -4503,8 +4491,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "discrete-structures",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_Cancelled(1).pdf",
         "page": 6,
@@ -4512,22 +4501,21 @@
           6
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pdf-text",
         "confidence": "high",
         "visualVerified": false
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-cancelled-q-48",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Cancelled)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 48,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -4576,7 +4564,7 @@
       "explanation": [
         {
           "type": "text",
-          "value": "Reverse Engineering Goals:\nCope with Complexity: Reverse engineering is\na common tool used to understand and\ncontrol system complexity. It gives engineers\nthe ability to analyze complex systems and\nreveal details about their architecture,\nrelationships and design patterns.\nRecover lost information: Reverse engineering\nseeks to retrieve as much information as\npossible in situations where source code or\ndocumentation are lost or unavailable.\nRebuilding source code, analyzing data\nstructures and retrieving design details are a\nfew examples of this.\nDetect side effects: Understanding a system\nor component’s behavior requires analyzing its\nside effects. Unintended implications,\ndependencies, and interactions that might not\nbe obvious from the system’s documentation\nor original source code can be found with the\nuse of reverse engineering.\nSynthesis higher abstraction: Abstracting low-\nlevel features in order to build higher-level\nrepresentations is a common practice in\nreverse engineering. This abstraction makes\ncommunication and analysis easier by\nfacilitating a greater understanding of the\nsystem’s functionality.\nFacilitate Reuse: Reverse engineering can be\nused to find reusable parts or modules in\nsystems that already exist. By understanding\nthe functionality and architecture of a system,\ndevelopers can extract and repurpose\ncomponents for use in other projects,\nimproving efficiency and decreasing\ndevelopment time.\nData flow is a testing method that is used to find\nthe test paths of a program according to the\nlocations of definitions and uses of variables in\nthe program.\nSo option D is the correct answer."
+          "value": "Reverse Engineering Goals:\nCope with Complexity: Reverse engineering is\na common tool used to understand and\ncontrol system complexity. It gives engineers\nthe ability to analyze complex systems and\nreveal details about their architecture,\nrelationships and design patterns.\nRecover lost information: Reverse engineering\nseeks to retrieve as much information as\npossible in situations where source code or\ndocumentation are lost or unavailable.\nRebuilding source code, analyzing data\nstructures and retrieving design details are a\nfew examples of this.\nDetect side effects: Understanding a system\nor component\u2019s behavior requires analyzing its\nside effects. Unintended implications,\ndependencies, and interactions that might not\nbe obvious from the system\u2019s documentation\nor original source code can be found with the\nuse of reverse engineering.\nSynthesis higher abstraction: Abstracting low-\nlevel features in order to build higher-level\nrepresentations is a common practice in\nreverse engineering. This abstraction makes\ncommunication and analysis easier by\nfacilitating a greater understanding of the\nsystem\u2019s functionality.\nFacilitate Reuse: Reverse engineering can be\nused to find reusable parts or modules in\nsystems that already exist. By understanding\nthe functionality and architecture of a system,\ndevelopers can extract and repurpose\ncomponents for use in other projects,\nimproving efficiency and decreasing\ndevelopment time.\nData flow is a testing method that is used to find\nthe test paths of a program according to the\nlocations of definitions and uses of variables in\nthe program.\nSo option D is the correct answer."
         }
       ],
       "answerSource": {
@@ -4592,8 +4580,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "discrete-structures",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_Cancelled(1).pdf",
         "page": 6,
@@ -4601,22 +4590,21 @@
           6
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pdf-text",
         "confidence": "high",
         "visualVerified": false
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-cancelled-q-49",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Cancelled)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 49,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -4665,7 +4653,7 @@
       "explanation": [
         {
           "type": "text",
-          "value": "To determine the maximum possible chairs that\ncan be labeled in the auditorium starting from\nA01 and following the format of a letter followed\nby a positive two-digit integer, we need to\nconsider the range of possible labels.\nThe format of the label is:\nA letter (A-Z)\nTwo digits (01-99)\nLet's calculate the total number of possible\nlabels:\nLetters (A-Z):\nThere are 26 letters in the English alphabet (A, B,\nC, ..., Z).\nTwo-digit numbers (01-99):\nThere are 99 possible two-digit numbers starting\nfrom 01 to 99.\nNow, multiply the number of options for letters\nby the number of options for two-digit\nnumbers:26×99=2574\nTherefore, the maximum number of possible\nchairs that can be labeled in this way, starting\nfrom A01 and following the given format, is\noption B, 2574."
+          "value": "To determine the maximum possible chairs that\ncan be labeled in the auditorium starting from\nA01 and following the format of a letter followed\nby a positive two-digit integer, we need to\nconsider the range of possible labels.\nThe format of the label is:\nA letter (A-Z)\nTwo digits (01-99)\nLet's calculate the total number of possible\nlabels:\nLetters (A-Z):\nThere are 26 letters in the English alphabet (A, B,\nC, ..., Z).\nTwo-digit numbers (01-99):\nThere are 99 possible two-digit numbers starting\nfrom 01 to 99.\nNow, multiply the number of options for letters\nby the number of options for two-digit\nnumbers:26\u00d799=2574\nTherefore, the maximum number of possible\nchairs that can be labeled in this way, starting\nfrom A01 and following the given format, is\noption B, 2574."
         }
       ],
       "answerSource": {
@@ -4680,8 +4668,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "computer-networks",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_Cancelled(1).pdf",
         "page": 7,
@@ -4689,26 +4678,25 @@
           7
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pdf-text",
         "confidence": "high",
         "visualVerified": false
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-cancelled-q-50",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Cancelled)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 50,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
-          "value": "Arrange in appropriate order, the construction of a finite automata : A. Minimum State DFA B. Regular Expression C. NFA- ∈ D. Problem Statement E. DFA Choose the correct answer from the options given below:"
+          "value": "Arrange in appropriate order, the construction of a finite automata : A. Minimum State DFA B. Regular Expression C. NFA- \u2208 D. Problem Statement E. DFA Choose the correct answer from the options given below:"
         }
       ],
       "options": [
@@ -4753,7 +4741,7 @@
       "explanation": [
         {
           "type": "text",
-          "value": "The correct order for constructing a finite\nautomaton progresses as follows:\nProblem Statement (D): Understand the problem\nthat the automaton needs to solve, including the\nlanguage it should accept or recognize. | |\nRegular Expression (B): Express the language that\nthe automaton should recognize using a regular\nexpression. Regular expressions are a concise\nway to describe patterns in strings.\nNFA- (C): Construct a nondeterministic finite\n∈\nautomaton (NFA) based on the regular\nexpression. NFAs allow multiple transitions from\na state on the same input symbol and can have ε-\ntransitions (epsilon transitions).\nNFA- to DFA Conversion: Convert the NFA to a\ndeterministic finite automaton (DFA). This\nconversion eliminates ε-transitions and\nnondeterminism, resulting in a DFA.\nMinimum State DFA (A): Minimize the DFA\nobtained from the previous step. Minimization\nreduces the number of states while preserving\nthe language recognized by the automaton.\nSo option B is the correct answer."
+          "value": "The correct order for constructing a finite\nautomaton progresses as follows:\nProblem Statement (D): Understand the problem\nthat the automaton needs to solve, including the\nlanguage it should accept or recognize. | |\nRegular Expression (B): Express the language that\nthe automaton should recognize using a regular\nexpression. Regular expressions are a concise\nway to describe patterns in strings.\nNFA- (C): Construct a nondeterministic finite\n\u2208\nautomaton (NFA) based on the regular\nexpression. NFAs allow multiple transitions from\na state on the same input symbol and can have \u03b5-\ntransitions (epsilon transitions).\nNFA- to DFA Conversion: Convert the NFA to a\ndeterministic finite automaton (DFA). This\nconversion eliminates \u03b5-transitions and\nnondeterminism, resulting in a DFA.\nMinimum State DFA (A): Minimize the DFA\nobtained from the previous step. Minimization\nreduces the number of states while preserving\nthe language recognized by the automaton.\nSo option B is the correct answer."
         }
       ],
       "answerSource": {
@@ -4768,8 +4756,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "theory-of-computation",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_Cancelled(1).pdf",
         "page": 7,
@@ -4777,22 +4766,21 @@
           7
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pdf-text",
         "confidence": "high",
         "visualVerified": false
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-cancelled-q-51",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Cancelled)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 51,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -4856,8 +4844,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": null,
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_Cancelled(1).pdf",
         "page": 7,
@@ -4865,26 +4854,25 @@
           7
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pdf-text",
         "confidence": "high",
         "visualVerified": false
+      },
+      "classification": {
+        "subjectConfidence": "low",
+        "topicConfidence": "low",
+        "reviewRequired": true
       }
     },
     {
       "id": "ugc-net-cs-2024-june-cancelled-q-52",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Cancelled)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 52,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
-          "value": "The following code : stmt if expr then stmt else stmt → | if expr then stmt suffers from :"
+          "value": "The following code : stmt if expr then stmt else stmt \u2192 | if expr then stmt suffers from :"
         },
         {
           "type": "image",
@@ -4932,7 +4920,7 @@
           "content": [
             {
               "type": "text",
-              "value": "moves\nλ"
+              "value": "moves\n\u03bb"
             }
           ]
         }
@@ -4941,7 +4929,7 @@
       "explanation": [
         {
           "type": "text",
-          "value": "A grammar that produces more than one parse\ntree for some sentence is ambiguous. Or:\n• If a grammar has more than one leftmost\nderivation for a single sentential form, the\ngrammar is ambiguous.\n• If a grammar has more than one rightmost\nderivation for a single sentential form, the\ngrammar is ambiguous.\nThe sentence if E1 then if E2 then S1 else S2 has\nthe following\ntwo different parse trees:\nLeft factoring: Left factoring is a technique used\nto eliminate common prefixes in productions to\nresolve potential conflicts in parsing. This\ngrammar does not exhibit left factoring issues\nbecause each production is distinct and does not\nshare common prefixes that would cause a\nparsing conflict.\nLeft recursion: Left recursion occurs when a non-\nterminal A directly or indirectly derives a string\nthat starts with itself, i.e.,\nA⇒ ∗ Aα for some string 𝛼. The given grammar\ndoes not have left recursion because the\nleftmost symbol in each production is a terminal\nsymbol (\"if\") or distinct non-terminals.\nλ-moves (epsilon moves): λ-moves are generally\nassociated with regular expressions and finite\nautomata rather than context-free grammars.\nThis option is not applicable to the context of\ncontext-free grammars and parsing ambiguities.\nSo option A is the correct answer."
+          "value": "A grammar that produces more than one parse\ntree for some sentence is ambiguous. Or:\n\u2022 If a grammar has more than one leftmost\nderivation for a single sentential form, the\ngrammar is ambiguous.\n\u2022 If a grammar has more than one rightmost\nderivation for a single sentential form, the\ngrammar is ambiguous.\nThe sentence if E1 then if E2 then S1 else S2 has\nthe following\ntwo different parse trees:\nLeft factoring: Left factoring is a technique used\nto eliminate common prefixes in productions to\nresolve potential conflicts in parsing. This\ngrammar does not exhibit left factoring issues\nbecause each production is distinct and does not\nshare common prefixes that would cause a\nparsing conflict.\nLeft recursion: Left recursion occurs when a non-\nterminal A directly or indirectly derives a string\nthat starts with itself, i.e.,\nA\u21d2 \u2217 A\u03b1 for some string \ud835\udefc. The given grammar\ndoes not have left recursion because the\nleftmost symbol in each production is a terminal\nsymbol (\"if\") or distinct non-terminals.\n\u03bb-moves (epsilon moves): \u03bb-moves are generally\nassociated with regular expressions and finite\nautomata rather than context-free grammars.\nThis option is not applicable to the context of\ncontext-free grammars and parsing ambiguities.\nSo option A is the correct answer."
         }
       ],
       "answerSource": {
@@ -4957,8 +4945,11 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "discrete-structures",
+      "topicId": null,
+      "assets": [
+        "assets/ugc-net-cs-2024-june-cancelled/q-052.png"
+      ],
       "source": {
         "file": "UGC_Comp_June2024_Cancelled(1).pdf",
         "page": 7,
@@ -4966,24 +4957,21 @@
           7
         ]
       },
-      "assets": [
-        "assets/ugc-net-cs-2024-june-cancelled/q-052.png"
-      ],
       "extraction": {
         "method": "pdf-text+visual-crop",
         "confidence": "medium",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-cancelled-q-53",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Cancelled)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 53,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -5032,7 +5020,7 @@
       "explanation": [
         {
           "type": "text",
-          "value": "Virtual Memory Segmentation in OS is a memory\nmanagement technique used in computer\nsystems. It divides processes into multiple\nsegments, with the number of segments\nrepresented by 'n'.\nVirtual Memory Segmentation refers to the\nprocess of loading a process by loading all of its\nsegments into dynamic partitions that need not\nbe contiguous. Virtual memory segmentation is\nthe partitioning of memory into various\nsegments. So option A is correct.\nVirtual memory allows a single process to have a\nvirtual address space that is not continuous and,\nin reality, is not entirely contained in physical\nmemory. The segments of virtual memory\ncorrespond to different parts of the process.\nThere is no internal fragmentation as the\nsegments are allocated the space as much as it\nrequire, provided the memory is big enough to\naccommodate that segment. Unlike fixed\npartitioning, memory is not wasted in\nsegmentation. So option B is correct.\nVirtual address space refers to the room of\naddresses which usually refers to the reference\nto the different slots of virtual memory allotted\nto different processes. Operating systems\nallocate this set of addresses for the processes to\nuse in order to access their designated virtual\nmemory. Virtual address space enables dynamic\nmemory allocation as it is mainly needed to carry\nout the task of assigning memory blocks to the\nprocesses when they request dynamically. So it\nhas a large virtual address space.\nVirtual address space avoids interference\nbetween processes’ memory spaces which helps\nto increase the stability of the system.It helps to\nmake efficient usage of the memory as it helps to\nshare the same memory space for two/more\nprocesses. so it can provide a higher degree of\nmultiprogramming.\nThus option D is the correct answer."
+          "value": "Virtual Memory Segmentation in OS is a memory\nmanagement technique used in computer\nsystems. It divides processes into multiple\nsegments, with the number of segments\nrepresented by 'n'.\nVirtual Memory Segmentation refers to the\nprocess of loading a process by loading all of its\nsegments into dynamic partitions that need not\nbe contiguous. Virtual memory segmentation is\nthe partitioning of memory into various\nsegments. So option A is correct.\nVirtual memory allows a single process to have a\nvirtual address space that is not continuous and,\nin reality, is not entirely contained in physical\nmemory. The segments of virtual memory\ncorrespond to different parts of the process.\nThere is no internal fragmentation as the\nsegments are allocated the space as much as it\nrequire, provided the memory is big enough to\naccommodate that segment. Unlike fixed\npartitioning, memory is not wasted in\nsegmentation. So option B is correct.\nVirtual address space refers to the room of\naddresses which usually refers to the reference\nto the different slots of virtual memory allotted\nto different processes. Operating systems\nallocate this set of addresses for the processes to\nuse in order to access their designated virtual\nmemory. Virtual address space enables dynamic\nmemory allocation as it is mainly needed to carry\nout the task of assigning memory blocks to the\nprocesses when they request dynamically. So it\nhas a large virtual address space.\nVirtual address space avoids interference\nbetween processes\u2019 memory spaces which helps\nto increase the stability of the system.It helps to\nmake efficient usage of the memory as it helps to\nshare the same memory space for two/more\nprocesses. so it can provide a higher degree of\nmultiprogramming.\nThus option D is the correct answer."
         }
       ],
       "answerSource": {
@@ -5047,8 +5035,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "operating-systems",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_Cancelled(1).pdf",
         "page": 7,
@@ -5056,22 +5045,21 @@
           7
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pdf-text",
         "confidence": "high",
         "visualVerified": false
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-cancelled-q-54",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Cancelled)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 54,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -5148,8 +5136,11 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "discrete-structures",
+      "topicId": null,
+      "assets": [
+        "assets/ugc-net-cs-2024-june-cancelled/q-054.png"
+      ],
       "source": {
         "file": "UGC_Comp_June2024_Cancelled(1).pdf",
         "page": 7,
@@ -5157,24 +5148,21 @@
           7
         ]
       },
-      "assets": [
-        "assets/ugc-net-cs-2024-june-cancelled/q-054.png"
-      ],
       "extraction": {
         "method": "pdf-text+visual-crop",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-cancelled-q-55",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Cancelled)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 55,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -5235,7 +5223,7 @@
       "explanation": [
         {
           "type": "text",
-          "value": "To determine which operation forms a group on\nthe set of integers Z, we need to check the group\naxioms:\nClosure: For all a,b∈Z, the operation a∗b must\nresult in another integer.\nAssociativity: The operation must be associative:\n(a∗b)∗c=a∗(b∗c) for all a,b,c∈Z.\nIdentity Element: There exists an identity\nelement e∈Z such that a∗e=e∗a=a for all a∈Z.\nInverse Element: For each a∈Z, there exists an\n−1\ninverse element a ∈Z such that\n−1\n−1\na∗a =a ∗a=e.\nLet's analyze each operation given:\n(1) ∗(a,b)=a+b+2\nClosure: a+b+2 is an integer for all a,b∈Z.\nAssociativity: (a+b+2)+c+2=a+(b+c+2)+2, which is\nassociative.\nIdentity Element: e=−2 because a+(−2)+2=a for all\na∈Z.\n−1\nInverse Element: a =−a−4 because a+\n(−a−4)+2=−2, the identity element.\nTherefore,\n⟨Z,∗⟩ forms a group with operation ∗(a,b)=a+b+2.\n(2) ∗(a,b)=2a+b\nClosure: 2a+b is an integer for all a,b∈Z.\nAssociativity: (2a+b)+c=2a+(b+c), which is\nassociative. | |\nIdentity Element: There is no integer e∈Z such\nthat\n2a+e=a for all a∈Z.\nInverse Element: There is no integer b∈Z such\nthat 2a+b=0 for all a∈Z.\nThus, ∗(a,b)=2a+b does not form a group because\nit lacks an identity element and inverses for all\nelements.\n(3) ∗(a,b)= (a+b)/2\nClosure: (a+b)/2 is not necessarily an integer for\nall a,b∈Z.\nAssociativity: (a+b)/2 + c/2 does not necessarily\nequal a/2 + (c+d)/2\n​so it is not associative.\nIdentity Element: There is no integer e∈Z such\nthat (a+e)/2 =a for all a∈Z.\nInverse Element: There is no integer b∈Z such\nthat (a+b)/2 =0 for all a∈Z.\nTherefore, ∗(a,b)= (a+b)/2 does not form a group\ndue to issues with closure and associativity.\n2\n(4) ∗(a,b)=a +b 2\nClosure: a +b is an integer for all a,b∈Z.\n2\n2\nAssociativity: (a +b)+c=a +(b+c), which is\nassociative.\nIdentity Element: There is no integer e∈Z such\n2\nthat a +e=a for all a∈Z.\nInverse Element: There is no integer b∈Z such\n2\nthat a +b=0 for all a∈Z.\n2\nTherefore, ∗(a,b)=a +b does not form a group\nbecause it lacks an identity element and inverses\nfor all elements.\nSo option A is the correct answer."
+          "value": "To determine which operation forms a group on\nthe set of integers Z, we need to check the group\naxioms:\nClosure: For all a,b\u2208Z, the operation a\u2217b must\nresult in another integer.\nAssociativity: The operation must be associative:\n(a\u2217b)\u2217c=a\u2217(b\u2217c) for all a,b,c\u2208Z.\nIdentity Element: There exists an identity\nelement e\u2208Z such that a\u2217e=e\u2217a=a for all a\u2208Z.\nInverse Element: For each a\u2208Z, there exists an\n\u22121\ninverse element a \u2208Z such that\n\u22121\n\u22121\na\u2217a =a \u2217a=e.\nLet's analyze each operation given:\n(1) \u2217(a,b)=a+b+2\nClosure: a+b+2 is an integer for all a,b\u2208Z.\nAssociativity: (a+b+2)+c+2=a+(b+c+2)+2, which is\nassociative.\nIdentity Element: e=\u22122 because a+(\u22122)+2=a for all\na\u2208Z.\n\u22121\nInverse Element: a =\u2212a\u22124 because a+\n(\u2212a\u22124)+2=\u22122, the identity element.\nTherefore,\n\u27e8Z,\u2217\u27e9 forms a group with operation \u2217(a,b)=a+b+2.\n(2) \u2217(a,b)=2a+b\nClosure: 2a+b is an integer for all a,b\u2208Z.\nAssociativity: (2a+b)+c=2a+(b+c), which is\nassociative. | |\nIdentity Element: There is no integer e\u2208Z such\nthat\n2a+e=a for all a\u2208Z.\nInverse Element: There is no integer b\u2208Z such\nthat 2a+b=0 for all a\u2208Z.\nThus, \u2217(a,b)=2a+b does not form a group because\nit lacks an identity element and inverses for all\nelements.\n(3) \u2217(a,b)= (a+b)/2\nClosure: (a+b)/2 is not necessarily an integer for\nall a,b\u2208Z.\nAssociativity: (a+b)/2 + c/2 does not necessarily\nequal a/2 + (c+d)/2\n\u200bso it is not associative.\nIdentity Element: There is no integer e\u2208Z such\nthat (a+e)/2 =a for all a\u2208Z.\nInverse Element: There is no integer b\u2208Z such\nthat (a+b)/2 =0 for all a\u2208Z.\nTherefore, \u2217(a,b)= (a+b)/2 does not form a group\ndue to issues with closure and associativity.\n2\n(4) \u2217(a,b)=a +b 2\nClosure: a +b is an integer for all a,b\u2208Z.\n2\n2\nAssociativity: (a +b)+c=a +(b+c), which is\nassociative.\nIdentity Element: There is no integer e\u2208Z such\n2\nthat a +e=a for all a\u2208Z.\nInverse Element: There is no integer b\u2208Z such\n2\nthat a +b=0 for all a\u2208Z.\n2\nTherefore, \u2217(a,b)=a +b does not form a group\nbecause it lacks an identity element and inverses\nfor all elements.\nSo option A is the correct answer."
         }
       ],
       "answerSource": {
@@ -5250,8 +5238,11 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "discrete-structures",
+      "topicId": null,
+      "assets": [
+        "assets/ugc-net-cs-2024-june-cancelled/q-055.png"
+      ],
       "source": {
         "file": "UGC_Comp_June2024_Cancelled(1).pdf",
         "page": 7,
@@ -5259,24 +5250,21 @@
           7
         ]
       },
-      "assets": [
-        "assets/ugc-net-cs-2024-june-cancelled/q-055.png"
-      ],
       "extraction": {
         "method": "pdf-text+visual-crop",
         "confidence": "medium",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-cancelled-q-56",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Cancelled)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 56,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -5341,8 +5329,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "discrete-structures",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_Cancelled(1).pdf",
         "page": 7,
@@ -5350,22 +5339,21 @@
           7
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pdf-text",
         "confidence": "high",
         "visualVerified": false
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-cancelled-q-57",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Cancelled)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 57,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -5429,8 +5417,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "computer-architecture",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_Cancelled(1).pdf",
         "page": 7,
@@ -5438,22 +5427,21 @@
           7
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pdf-text",
         "confidence": "high",
         "visualVerified": false
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-cancelled-q-58",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Cancelled)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 58,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -5530,8 +5518,11 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "discrete-structures",
+      "topicId": null,
+      "assets": [
+        "assets/ugc-net-cs-2024-june-cancelled/q-058.png"
+      ],
       "source": {
         "file": "UGC_Comp_June2024_Cancelled(1).pdf",
         "page": 7,
@@ -5540,24 +5531,21 @@
           8
         ]
       },
-      "assets": [
-        "assets/ugc-net-cs-2024-june-cancelled/q-058.png"
-      ],
       "extraction": {
         "method": "pdf-text+visual-crop",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-cancelled-q-59",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Cancelled)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 59,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -5622,8 +5610,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "databases",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_Cancelled(1).pdf",
         "page": 8,
@@ -5631,22 +5620,21 @@
           8
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pdf-text",
         "confidence": "high",
         "visualVerified": false
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-cancelled-q-60",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Cancelled)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 60,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -5695,7 +5683,7 @@
       "explanation": [
         {
           "type": "text",
-          "value": "IPv4 Datagram Header\nVERSION: Version of the IP protocol (4 bits),\nwhich is 4 for IPv4.\nHLEN: IP header length (4 bits), which is the\nnumber of 32 bit words in the header. The\nminimum value for this field is 5 and the\nmaximum is 15.\nType of service: Low Delay, High Throughput,\nReliability (8 bits)\nTotal Length: Length of header + Data (16 bits),\nwhich has a minimum value 20 bytes and the\nmaximum is 65,535 bytes.\nIdentification: Unique Packet Id for identifying\nthe group of fragments of a single IP\ndatagram (16 bits)\nFlags: 3 flags of 1 bit each : reserved bit (must\nbe zero), do not fragment flag, more\nfragments flag (same order)\nFragment Offset: Represents the number of\nData Bytes ahead of the particular fragment in\nthe particular Datagram. Specified in terms of\nnumber of 8 bytes, which has the maximum\nvalue of 65,528 bytes.\nTime to live: Datagram’s lifetime (8 bits), It\nprevents the datagram to loop through the\nnetwork by restricting the number of Hops\ntaken by a Packet before delivering to the\nDestination.\nProtocol: Name of the protocol to which the\ndata is to be passed (8 bits)\nHeader Checksum: 16 bits header checksum\nfor checking errors in the datagram header\nSource IP address: 32 bits IP address of the\nsender\nDestination IP address: 32 bits IP address of\nthe receiver\nOption: Optional information such as source\nroute, record route. Used by the Network\nadministrator to check whether a path is\nworking or not.\nSo option A is the correct answer."
+          "value": "IPv4 Datagram Header\nVERSION: Version of the IP protocol (4 bits),\nwhich is 4 for IPv4.\nHLEN: IP header length (4 bits), which is the\nnumber of 32 bit words in the header. The\nminimum value for this field is 5 and the\nmaximum is 15.\nType of service: Low Delay, High Throughput,\nReliability (8 bits)\nTotal Length: Length of header + Data (16 bits),\nwhich has a minimum value 20 bytes and the\nmaximum is 65,535 bytes.\nIdentification: Unique Packet Id for identifying\nthe group of fragments of a single IP\ndatagram (16 bits)\nFlags: 3 flags of 1 bit each : reserved bit (must\nbe zero), do not fragment flag, more\nfragments flag (same order)\nFragment Offset: Represents the number of\nData Bytes ahead of the particular fragment in\nthe particular Datagram. Specified in terms of\nnumber of 8 bytes, which has the maximum\nvalue of 65,528 bytes.\nTime to live: Datagram\u2019s lifetime (8 bits), It\nprevents the datagram to loop through the\nnetwork by restricting the number of Hops\ntaken by a Packet before delivering to the\nDestination.\nProtocol: Name of the protocol to which the\ndata is to be passed (8 bits)\nHeader Checksum: 16 bits header checksum\nfor checking errors in the datagram header\nSource IP address: 32 bits IP address of the\nsender\nDestination IP address: 32 bits IP address of\nthe receiver\nOption: Optional information such as source\nroute, record route. Used by the Network\nadministrator to check whether a path is\nworking or not.\nSo option A is the correct answer."
         }
       ],
       "answerSource": {
@@ -5711,8 +5699,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "discrete-structures",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_Cancelled(1).pdf",
         "page": 8,
@@ -5720,22 +5709,21 @@
           8
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pdf-text",
         "confidence": "high",
         "visualVerified": false
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-cancelled-q-61",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Cancelled)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 61,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -5811,8 +5799,11 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "discrete-structures",
+      "topicId": null,
+      "assets": [
+        "assets/ugc-net-cs-2024-june-cancelled/q-061.png"
+      ],
       "source": {
         "file": "UGC_Comp_June2024_Cancelled(1).pdf",
         "page": 8,
@@ -5820,24 +5811,21 @@
           8
         ]
       },
-      "assets": [
-        "assets/ugc-net-cs-2024-june-cancelled/q-061.png"
-      ],
       "extraction": {
         "method": "pdf-text+visual-crop",
         "confidence": "medium",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-cancelled-q-62",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Cancelled)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 62,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -5901,8 +5889,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "operating-systems",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_Cancelled(1).pdf",
         "page": 8,
@@ -5910,22 +5899,21 @@
           8
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pdf-text",
         "confidence": "high",
         "visualVerified": false
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-cancelled-q-63",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Cancelled)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 63,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -5990,8 +5978,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": null,
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_Cancelled(1).pdf",
         "page": 8,
@@ -5999,22 +5988,21 @@
           8
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pdf-text",
         "confidence": "high",
         "visualVerified": false
+      },
+      "classification": {
+        "subjectConfidence": "low",
+        "topicConfidence": "low",
+        "reviewRequired": true
       }
     },
     {
       "id": "ugc-net-cs-2024-june-cancelled-q-64",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Cancelled)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 64,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -6063,7 +6051,7 @@
       "explanation": [
         {
           "type": "text",
-          "value": "Windows uses a priority-based scheduling\nalgorithm to manage processes running on the\nsystem. This prioritization helps determine which\nprocesses get access to CPU time and in what\norder. Windows categorizes priorities into two\nmain types: real-time priorities and non-real-time\npriorities.\nReal-time priorities are used for critical system\ntasks that require immediate attention and are\ntypically reserved for system-level processes.\nThey have a higher priority than non-real-time\npriorities.\nNon-real-time priorities are used for user-level\nprocesses and applications. These priorities\nare further subdivided into 16 levels.\nHere’s how the 16 non-real-time priority levels are\nstructured:\nThey range from 0 (lowest) to 15 (highest).\nEach level represents a different priority at\nwhich a process can run relative to other non-\nreal-time processes.\nHigher priority levels (closer to 15) indicate\nmore urgency and readiness to execute,\nwhereas lower levels (closer to 0) indicate less\nurgency and lower priority.\nThese priorities are dynamic and can change\nbased on various factors such as process\nbehavior, resource availability, and system\nload.\nThe scheduling algorithm in Windows adjusts\nthese priorities to ensure fair access to CPU\nresources while prioritizing processes that\nneed more immediate attention.\nSo option D is the correct answer."
+          "value": "Windows uses a priority-based scheduling\nalgorithm to manage processes running on the\nsystem. This prioritization helps determine which\nprocesses get access to CPU time and in what\norder. Windows categorizes priorities into two\nmain types: real-time priorities and non-real-time\npriorities.\nReal-time priorities are used for critical system\ntasks that require immediate attention and are\ntypically reserved for system-level processes.\nThey have a higher priority than non-real-time\npriorities.\nNon-real-time priorities are used for user-level\nprocesses and applications. These priorities\nare further subdivided into 16 levels.\nHere\u2019s how the 16 non-real-time priority levels are\nstructured:\nThey range from 0 (lowest) to 15 (highest).\nEach level represents a different priority at\nwhich a process can run relative to other non-\nreal-time processes.\nHigher priority levels (closer to 15) indicate\nmore urgency and readiness to execute,\nwhereas lower levels (closer to 0) indicate less\nurgency and lower priority.\nThese priorities are dynamic and can change\nbased on various factors such as process\nbehavior, resource availability, and system\nload.\nThe scheduling algorithm in Windows adjusts\nthese priorities to ensure fair access to CPU\nresources while prioritizing processes that\nneed more immediate attention.\nSo option D is the correct answer."
         }
       ],
       "answerSource": {
@@ -6078,8 +6066,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": null,
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_Cancelled(1).pdf",
         "page": 8,
@@ -6087,22 +6076,21 @@
           8
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pdf-text",
         "confidence": "high",
         "visualVerified": false
+      },
+      "classification": {
+        "subjectConfidence": "low",
+        "topicConfidence": "low",
+        "reviewRequired": true
       }
     },
     {
       "id": "ugc-net-cs-2024-june-cancelled-q-65",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Cancelled)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 65,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -6166,8 +6154,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "computer-architecture",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_Cancelled(1).pdf",
         "page": 8,
@@ -6175,22 +6164,21 @@
           8
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pdf-text",
         "confidence": "high",
         "visualVerified": false
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-cancelled-q-66",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Cancelled)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 66,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -6255,8 +6243,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "discrete-structures",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_Cancelled(1).pdf",
         "page": 8,
@@ -6265,26 +6254,25 @@
           9
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pdf-text",
         "confidence": "high",
         "visualVerified": false
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-cancelled-q-67",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Cancelled)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 67,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
-          "value": "Which of the followings are tautology ? A. (p ∨r) →p p →(p ∧r) B. C. ~p →(p →r) (p ∧r) →(p →r) ~(p →r) →p D. E. Choose the correct answer from the options given below :"
+          "value": "Which of the followings are tautology ? A. (p \u2228r) \u2192p p \u2192(p \u2227r) B. C. ~p \u2192(p \u2192r) (p \u2227r) \u2192(p \u2192r) ~(p \u2192r) \u2192p D. E. Choose the correct answer from the options given below :"
         },
         {
           "type": "image",
@@ -6341,7 +6329,7 @@
       "explanation": [
         {
           "type": "text",
-          "value": "(p ∨r) →p\np\nr\npVr\n~(pVr)\n~(pVr) V p\n0\n0\n0\n1\n1\n0\n1\n1\n0\n0\n1\n0\n1\n0\n1\n1\n1\n1\n0\n1\nSince all the values of (pVr)\np are not 1.\n→\n(p ∨r) →p\np →(p ∧r) is not a tautology.\np r\np\nr ~p\n~p v(p\nr)\n∧\n∧\n0 0\n0\n1\n1\n0 1\n0\n1\n1\n1\n0\n0\n0\n0\n1\n1\n1\n0\n1\nSince all the values of are not 1.\np →(p ∧r)\np →(p ∧r) is not a tautology, | |\n~p →(p →r)\n~pv\np r\n~p\nr\n~(~p)v(p\nr)\n→\n0 0\n1\n1\n1\n0 1\n1\n1\n1\n1\n0\n0\n0\n1\n1\n1\n0\n1\n1\nSince all the values of are 1.\n~p →(p →r)\n~p →(p →r)\n(p ∧r) →(p →r) is a tautology.\np\nr\n(p\nr)\n~pvr\n~(p\nr) v (p\nr)\n∧\n∧\n→\n0\n0\n0\n1\n1\n0\n1\n0\n1\n1\n1\n0\n0\n0\n1\n1\n1\n1\n1\n1\nSince all the values of are 1.\n(p ∧r) →(p →r)\n(p ∧r) →(p →r)\n~(p →r) →p is a tautology.\n~(p\nr)\n→\n→\np\nr\n~pvr\n~(~pvr) p\n0\n0\n1\n0\n1\n0\n1\n1\n0\n1\n1\n0\n0\n1\n1\n1\n1\n1\n0\n1\nSince all the values of are 1.\n~(p →r) →p\n~(p →r) →p is a tautology.\nSo option D is the correct answer."
+          "value": "(p \u2228r) \u2192p\np\nr\npVr\n~(pVr)\n~(pVr) V p\n0\n0\n0\n1\n1\n0\n1\n1\n0\n0\n1\n0\n1\n0\n1\n1\n1\n1\n0\n1\nSince all the values of (pVr)\np are not 1.\n\u2192\n(p \u2228r) \u2192p\np \u2192(p \u2227r) is not a tautology.\np r\np\nr ~p\n~p v(p\nr)\n\u2227\n\u2227\n0 0\n0\n1\n1\n0 1\n0\n1\n1\n1\n0\n0\n0\n0\n1\n1\n1\n0\n1\nSince all the values of are not 1.\np \u2192(p \u2227r)\np \u2192(p \u2227r) is not a tautology, | |\n~p \u2192(p \u2192r)\n~pv\np r\n~p\nr\n~(~p)v(p\nr)\n\u2192\n0 0\n1\n1\n1\n0 1\n1\n1\n1\n1\n0\n0\n0\n1\n1\n1\n0\n1\n1\nSince all the values of are 1.\n~p \u2192(p \u2192r)\n~p \u2192(p \u2192r)\n(p \u2227r) \u2192(p \u2192r) is a tautology.\np\nr\n(p\nr)\n~pvr\n~(p\nr) v (p\nr)\n\u2227\n\u2227\n\u2192\n0\n0\n0\n1\n1\n0\n1\n0\n1\n1\n1\n0\n0\n0\n1\n1\n1\n1\n1\n1\nSince all the values of are 1.\n(p \u2227r) \u2192(p \u2192r)\n(p \u2227r) \u2192(p \u2192r)\n~(p \u2192r) \u2192p is a tautology.\n~(p\nr)\n\u2192\n\u2192\np\nr\n~pvr\n~(~pvr) p\n0\n0\n1\n0\n1\n0\n1\n1\n0\n1\n1\n0\n0\n1\n1\n1\n1\n1\n0\n1\nSince all the values of are 1.\n~(p \u2192r) \u2192p\n~(p \u2192r) \u2192p is a tautology.\nSo option D is the correct answer."
         }
       ],
       "answerSource": {
@@ -6356,8 +6344,11 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "discrete-structures",
+      "topicId": null,
+      "assets": [
+        "assets/ugc-net-cs-2024-june-cancelled/q-067.png"
+      ],
       "source": {
         "file": "UGC_Comp_June2024_Cancelled(1).pdf",
         "page": 9,
@@ -6365,24 +6356,21 @@
           9
         ]
       },
-      "assets": [
-        "assets/ugc-net-cs-2024-june-cancelled/q-067.png"
-      ],
       "extraction": {
         "method": "pdf-text+visual-crop",
         "confidence": "medium",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-cancelled-q-68",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Cancelled)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 68,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -6447,8 +6435,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "computer-architecture",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_Cancelled(1).pdf",
         "page": 9,
@@ -6456,26 +6445,25 @@
           9
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pdf-text",
         "confidence": "high",
         "visualVerified": false
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-cancelled-q-69",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Cancelled)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 69,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
-          "value": "The language of the following PDA would be : δ ( , a, ) = ( , aaa ) q0 z0 q0 z0 δ ( , a, a) = ( , aaaa ) q0 q0 δ ( , b, a) = ( , λ) q0 q1 δ ( , b, a) = ( , λ) q1 q1 δ ( , ϵ, ) = ( , ) q1 z0 qf z0 f , where q is the final state. { ∣n > 0} anbn { ∣n > 0} anb2n"
+          "value": "The language of the following PDA would be : \u03b4 ( , a, ) = ( , aaa ) q0 z0 q0 z0 \u03b4 ( , a, a) = ( , aaaa ) q0 q0 \u03b4 ( , b, a) = ( , \u03bb) q0 q1 \u03b4 ( , b, a) = ( , \u03bb) q1 q1 \u03b4 ( , \u03f5, ) = ( , ) q1 z0 qf z0 f , where q is the final state. { \u2223n > 0} anbn { \u2223n > 0} anb2n"
         },
         {
           "type": "image",
@@ -6532,7 +6520,7 @@
       "explanation": [
         {
           "type": "text",
-          "value": "To determine the language accepted by the\ngiven Pushdown Automaton (PDA), we need to\nanalyze its transitions and the behavior of its\nstack.\nThe PDA transitions are given as follows:\nδ (\n, a,\n) = (\n, aaa )\nq0\nz0\nq0\nz0\nδ (\n, a, a) = (\n, aaaa )\nq0\nq0\nδ (\n, b, a) = (\n, λ)\nq0\nq1\nδ (\n, b, a) = (\n, λ)\nq1\nq1\nδ (\n, ϵ,\n) = (\n,\n)\nq1\nz0\nqf z0\nLet's interpret these transitions:\n- From q , upon seeing an a with z on the stack,\n0\n0\nit pushes three a's onto the stack.\n- From q , upon seeing an a with a on the stack, it\n0\npushes three a's onto the stack.\n- From q , upon seeing a b with a on the stack, it\n0\nremoves a from the stack (using ).\nλ\n- From q , upon seeing a b with a on the stack, it\n1\ncontinues to remove a from the stack.\n- When q reaches (empty input) with z on the\n1\n∈\n0\nstack, it transitions to q and empties the stack.\nf\nNow, let's analyze the language recognized by\nthis PDA:\n- The PDA starts in state q with z on the stack.\n0\n0\n- For every a read in state q , it adds aaa to the\n0\nstack, depending on whether z or a is on the\n0\nstack initially.\n- For every b encountered, it removes an a from\nthe stack.\n- When no input is left , if z is on the stack, it\n∈\n0\naccepts (moves to q ).\nf\nThe key observation here is the balanced nature\nof the stack operations:\n- For each a, the stack grows by three a's.\n- For each b, the stack decreases by one a.\nThe language accepted by PDA is\n{\n∣n > 0}\nanb3n\nSo option C is the correct answer."
+          "value": "To determine the language accepted by the\ngiven Pushdown Automaton (PDA), we need to\nanalyze its transitions and the behavior of its\nstack.\nThe PDA transitions are given as follows:\n\u03b4 (\n, a,\n) = (\n, aaa )\nq0\nz0\nq0\nz0\n\u03b4 (\n, a, a) = (\n, aaaa )\nq0\nq0\n\u03b4 (\n, b, a) = (\n, \u03bb)\nq0\nq1\n\u03b4 (\n, b, a) = (\n, \u03bb)\nq1\nq1\n\u03b4 (\n, \u03f5,\n) = (\n,\n)\nq1\nz0\nqf z0\nLet's interpret these transitions:\n- From q , upon seeing an a with z on the stack,\n0\n0\nit pushes three a's onto the stack.\n- From q , upon seeing an a with a on the stack, it\n0\npushes three a's onto the stack.\n- From q , upon seeing a b with a on the stack, it\n0\nremoves a from the stack (using ).\n\u03bb\n- From q , upon seeing a b with a on the stack, it\n1\ncontinues to remove a from the stack.\n- When q reaches (empty input) with z on the\n1\n\u2208\n0\nstack, it transitions to q and empties the stack.\nf\nNow, let's analyze the language recognized by\nthis PDA:\n- The PDA starts in state q with z on the stack.\n0\n0\n- For every a read in state q , it adds aaa to the\n0\nstack, depending on whether z or a is on the\n0\nstack initially.\n- For every b encountered, it removes an a from\nthe stack.\n- When no input is left , if z is on the stack, it\n\u2208\n0\naccepts (moves to q ).\nf\nThe key observation here is the balanced nature\nof the stack operations:\n- For each a, the stack grows by three a's.\n- For each b, the stack decreases by one a.\nThe language accepted by PDA is\n{\n\u2223n > 0}\nanb3n\nSo option C is the correct answer."
         }
       ],
       "answerSource": {
@@ -6547,8 +6535,11 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "theory-of-computation",
+      "topicId": null,
+      "assets": [
+        "assets/ugc-net-cs-2024-june-cancelled/q-069.png"
+      ],
       "source": {
         "file": "UGC_Comp_June2024_Cancelled(1).pdf",
         "page": 9,
@@ -6556,24 +6547,21 @@
           9
         ]
       },
-      "assets": [
-        "assets/ugc-net-cs-2024-june-cancelled/q-069.png"
-      ],
       "extraction": {
         "method": "pdf-text+visual-crop",
         "confidence": "medium",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-cancelled-q-70",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Cancelled)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 70,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -6637,8 +6625,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "computer-architecture",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_Cancelled(1).pdf",
         "page": 9,
@@ -6646,22 +6635,21 @@
           9
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pdf-text",
         "confidence": "high",
         "visualVerified": false
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-cancelled-q-71",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Cancelled)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 71,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -6738,8 +6726,11 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "software-engineering",
+      "topicId": null,
+      "assets": [
+        "assets/ugc-net-cs-2024-june-cancelled/q-071.png"
+      ],
       "source": {
         "file": "UGC_Comp_June2024_Cancelled(1).pdf",
         "page": 9,
@@ -6747,24 +6738,21 @@
           9
         ]
       },
-      "assets": [
-        "assets/ugc-net-cs-2024-june-cancelled/q-071.png"
-      ],
       "extraction": {
         "method": "pdf-text+visual-crop",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-cancelled-q-72",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Cancelled)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 72,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -6828,8 +6816,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "artificial-intelligence",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_Cancelled(1).pdf",
         "page": 9,
@@ -6837,22 +6826,21 @@
           9
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pdf-text",
         "confidence": "high",
         "visualVerified": false
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-cancelled-q-73",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Cancelled)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 73,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -6913,7 +6901,7 @@
       "explanation": [
         {
           "type": "text",
-          "value": "Option A) In DFA, there is only one path for\nspecific input from the current state to the next\nstate. DFA does not accept the null move, i.e., the\nDFA cannot change state without any input\ncharacter. DFA can contain multiple final states. It\nis used in Lexical Analysis in Compiler.\nMachine 1 does not contain multiple final states.\nOption B) The finite automata are called NFA\nwhen there exist many paths for specific input\nfrom the current state to the next state.Every\nNFA is not DFA, but each NFA can be translated\ninto DFA.NFA is defined in the same way as DFA\nbut with the following two exceptions, it contains\nmultiple next states, and it contains ε transition.\nSo Both are non-equivalent machines. Machine 1\nis NFA and Machine 2 is DFA.\nOption B is the correct answer."
+          "value": "Option A) In DFA, there is only one path for\nspecific input from the current state to the next\nstate. DFA does not accept the null move, i.e., the\nDFA cannot change state without any input\ncharacter. DFA can contain multiple final states. It\nis used in Lexical Analysis in Compiler.\nMachine 1 does not contain multiple final states.\nOption B) The finite automata are called NFA\nwhen there exist many paths for specific input\nfrom the current state to the next state.Every\nNFA is not DFA, but each NFA can be translated\ninto DFA.NFA is defined in the same way as DFA\nbut with the following two exceptions, it contains\nmultiple next states, and it contains \u03b5 transition.\nSo Both are non-equivalent machines. Machine 1\nis NFA and Machine 2 is DFA.\nOption B is the correct answer."
         }
       ],
       "answerSource": {
@@ -6928,8 +6916,11 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "theory-of-computation",
+      "topicId": null,
+      "assets": [
+        "assets/ugc-net-cs-2024-june-cancelled/q-073.png"
+      ],
       "source": {
         "file": "UGC_Comp_June2024_Cancelled(1).pdf",
         "page": 9,
@@ -6937,24 +6928,21 @@
           9
         ]
       },
-      "assets": [
-        "assets/ugc-net-cs-2024-june-cancelled/q-073.png"
-      ],
       "extraction": {
         "method": "pdf-text+visual-crop",
         "confidence": "medium",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-cancelled-q-74",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Cancelled)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 74,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -7018,8 +7006,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "compiler-design",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_Cancelled(1).pdf",
         "page": 9,
@@ -7028,22 +7017,21 @@
           10
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pdf-text",
         "confidence": "high",
         "visualVerified": false
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-cancelled-q-75",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Cancelled)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 75,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -7092,7 +7080,7 @@
       "explanation": [
         {
           "type": "text",
-          "value": "Option A. Conceptual dependency: Conceptual\ndependency is a semantic representation\nformalism that focuses on representing the\nmeaning of natural language sentences in terms\nof conceptual structures. It emphasizes the\nrelationships between actions and objects and is\nmore concerned with semantic content rather\nthan just syntax.\nOption B Predicate Logic: Syntactic Nature:\nPredicate logic, also known as first-order logic, is\nhighly syntactic. It deals with formal rules\ngoverning the syntax and semantics of logical\nstatements. It uses symbols (predicates,\nvariables, quantifiers, and logical connectives) to\nrepresent relationships and assertions.\nFocus on Syntax: Predicate logic focuses on the\nformal structure of statements, such as how\npredicates are applied to arguments, how\nvariables are quantified, and how logical\nconnectives are used to form complex\nexpressions.\nExample: In predicate logic, statements like \"All\nmen are mortal\" can be expressed as ∀x (Man(x)\n→ Mortal(x)), where ∀ denotes universal\nquantification, Man(x) and Mortal(x) are\npredicates, and → denotes implication.\nOption C Slot-and-Filler:\nSyntactic Structure: Slot-and-filler structures,\ncommonly used in frame-based systems,\norganize knowledge using templates where\nentities (objects or concepts) are described by\nfilling predefined slots (attributes or properties)\nwith specific values.\nTemplate Structure: Each template defines a\nsyntactic structure consisting of slots (which\nrepresent attributes or roles) and fillers (which\nrepresent specific values or entities).\nExample: In a slot-and-filler representation for a\ncar, a template might have slots like\n\"Manufacturer\", \"Model\", \"Color\", etc., where each\nslot is filled with specific information (e.g.,\n\"Manufacturer: Toyota\", \"Model: Camry\", \"Color:\nBlue\").\nOption D: Nonmonotonic systems:\nNonmonotonic logic systems extend classical\nlogic to handle reasoning under uncertainty and\nwith incomplete information.\nSo option B is the correct answer."
+          "value": "Option A. Conceptual dependency: Conceptual\ndependency is a semantic representation\nformalism that focuses on representing the\nmeaning of natural language sentences in terms\nof conceptual structures. It emphasizes the\nrelationships between actions and objects and is\nmore concerned with semantic content rather\nthan just syntax.\nOption B Predicate Logic: Syntactic Nature:\nPredicate logic, also known as first-order logic, is\nhighly syntactic. It deals with formal rules\ngoverning the syntax and semantics of logical\nstatements. It uses symbols (predicates,\nvariables, quantifiers, and logical connectives) to\nrepresent relationships and assertions.\nFocus on Syntax: Predicate logic focuses on the\nformal structure of statements, such as how\npredicates are applied to arguments, how\nvariables are quantified, and how logical\nconnectives are used to form complex\nexpressions.\nExample: In predicate logic, statements like \"All\nmen are mortal\" can be expressed as \u2200x (Man(x)\n\u2192 Mortal(x)), where \u2200 denotes universal\nquantification, Man(x) and Mortal(x) are\npredicates, and \u2192 denotes implication.\nOption C Slot-and-Filler:\nSyntactic Structure: Slot-and-filler structures,\ncommonly used in frame-based systems,\norganize knowledge using templates where\nentities (objects or concepts) are described by\nfilling predefined slots (attributes or properties)\nwith specific values.\nTemplate Structure: Each template defines a\nsyntactic structure consisting of slots (which\nrepresent attributes or roles) and fillers (which\nrepresent specific values or entities).\nExample: In a slot-and-filler representation for a\ncar, a template might have slots like\n\"Manufacturer\", \"Model\", \"Color\", etc., where each\nslot is filled with specific information (e.g.,\n\"Manufacturer: Toyota\", \"Model: Camry\", \"Color:\nBlue\").\nOption D: Nonmonotonic systems:\nNonmonotonic logic systems extend classical\nlogic to handle reasoning under uncertainty and\nwith incomplete information.\nSo option B is the correct answer."
         }
       ],
       "answerSource": {
@@ -7108,8 +7096,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "discrete-structures",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_Cancelled(1).pdf",
         "page": 10,
@@ -7117,22 +7106,21 @@
           10
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pdf-text",
         "confidence": "high",
         "visualVerified": false
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-cancelled-q-76",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Cancelled)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 76,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -7208,8 +7196,11 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "artificial-intelligence",
+      "topicId": null,
+      "assets": [
+        "assets/ugc-net-cs-2024-june-cancelled/q-076.png"
+      ],
       "source": {
         "file": "UGC_Comp_June2024_Cancelled(1).pdf",
         "page": 10,
@@ -7217,24 +7208,21 @@
           10
         ]
       },
-      "assets": [
-        "assets/ugc-net-cs-2024-june-cancelled/q-076.png"
-      ],
       "extraction": {
         "method": "pdf-text+visual-crop",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-cancelled-q-77",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Cancelled)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 77,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -7310,8 +7298,11 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "discrete-structures",
+      "topicId": null,
+      "assets": [
+        "assets/ugc-net-cs-2024-june-cancelled/q-077.png"
+      ],
       "source": {
         "file": "UGC_Comp_June2024_Cancelled(1).pdf",
         "page": 10,
@@ -7319,28 +7310,25 @@
           10
         ]
       },
-      "assets": [
-        "assets/ugc-net-cs-2024-june-cancelled/q-077.png"
-      ],
       "extraction": {
         "method": "pdf-text+visual-crop",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-cancelled-q-78",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Cancelled)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 78,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
-          "value": "Arrange the following prefix expressions based on their values in increasing order : A. +-* 2 / 8432 B. -* 33 * 425 ↑ C.+- 32 23 / 6-42 ↑ ↑ D. *+3+3 3+113 ↑ | | Choose the correct answer from the options given below :"
+          "value": "Arrange the following prefix expressions based on their values in increasing order : A. +-* 2 / 8432 B. -* 33 * 425 \u2191 C.+- 32 23 / 6-42 \u2191 \u2191 D. *+3+3 3+113 \u2191 | | Choose the correct answer from the options given below :"
         },
         {
           "type": "image",
@@ -7397,7 +7385,7 @@
       "explanation": [
         {
           "type": "text",
-          "value": "Option A: +-* 2 / 8432\n+-*2 2 3 2 (8/4 =2)\n+- 4 3 2 (2*2 =4)\n+ 1 2 (4-3=1)\n3 (1+2=3)\nOption B: -* 33 * 425\n↑\n-*3 3 8 5 (4*2 =8)\n↑\n↑\n↑\n- 9 8 5 (3*3=9)\n1 5 (9-8=1)\n5\n1 (1 =1)\nOption C: +- 32 23 / 6-42\n↑\n↑\n2\n3\n+- 9 8 /6 2 (3 = 9, 2 = 8 , 4-2 =2)\n+- 9 8 3 (6/2 =3)\n+1 3 (9-8 =1)\n4 (1+3 =4)\nOption D: *+3+3 3+113\n↑\n↑\n* + 3+3 3 2 3(1+1=2) 3\n*+3 + 27 2 3 ( 3 = 27)\n* + 3 29 3 (27+2=29)\n* 32 3 (29+3=32)\n96( 32*3)\nSo A =3, B= 1 , C= 4, D= 96\ntherefore correct sequence will be B A C D,\nOption B."
+          "value": "Option A: +-* 2 / 8432\n+-*2 2 3 2 (8/4 =2)\n+- 4 3 2 (2*2 =4)\n+ 1 2 (4-3=1)\n3 (1+2=3)\nOption B: -* 33 * 425\n\u2191\n-*3 3 8 5 (4*2 =8)\n\u2191\n\u2191\n\u2191\n- 9 8 5 (3*3=9)\n1 5 (9-8=1)\n5\n1 (1 =1)\nOption C: +- 32 23 / 6-42\n\u2191\n\u2191\n2\n3\n+- 9 8 /6 2 (3 = 9, 2 = 8 , 4-2 =2)\n+- 9 8 3 (6/2 =3)\n+1 3 (9-8 =1)\n4 (1+3 =4)\nOption D: *+3+3 3+113\n\u2191\n\u2191\n* + 3+3 3 2 3(1+1=2) 3\n*+3 + 27 2 3 ( 3 = 27)\n* + 3 29 3 (27+2=29)\n* 32 3 (29+3=32)\n96( 32*3)\nSo A =3, B= 1 , C= 4, D= 96\ntherefore correct sequence will be B A C D,\nOption B."
         }
       ],
       "answerSource": {
@@ -7413,8 +7401,11 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": null,
+      "topicId": null,
+      "assets": [
+        "assets/ugc-net-cs-2024-june-cancelled/q-078.png"
+      ],
       "source": {
         "file": "UGC_Comp_June2024_Cancelled(1).pdf",
         "page": 10,
@@ -7422,24 +7413,21 @@
           10
         ]
       },
-      "assets": [
-        "assets/ugc-net-cs-2024-june-cancelled/q-078.png"
-      ],
       "extraction": {
         "method": "pdf-text+visual-crop",
         "confidence": "medium",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "low",
+        "topicConfidence": "low",
+        "reviewRequired": true
       }
     },
     {
       "id": "ugc-net-cs-2024-june-cancelled-q-79",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Cancelled)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 79,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -7503,8 +7491,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "algorithms",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_Cancelled(1).pdf",
         "page": 10,
@@ -7512,22 +7501,21 @@
           10
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pdf-text",
         "confidence": "high",
         "visualVerified": false
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-cancelled-q-80",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Cancelled)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 80,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -7591,8 +7579,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": null,
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_Cancelled(1).pdf",
         "page": 10,
@@ -7600,22 +7589,21 @@
           10
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pdf-text",
         "confidence": "high",
         "visualVerified": false
+      },
+      "classification": {
+        "subjectConfidence": "low",
+        "topicConfidence": "low",
+        "reviewRequired": true
       }
     },
     {
       "id": "ugc-net-cs-2024-june-cancelled-q-81",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Cancelled)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 81,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -7676,7 +7664,7 @@
       "explanation": [
         {
           "type": "text",
-          "value": "Option A: The Nyquist theorem states that to\naccurately reconstruct the original analog signal\nfrom its samples, the sampling rate f must be at\ns\nleast twice the highest frequency f present in\nmax\nthe signal.\nMathematically, this is expressed as f ≥2×fmax\ns\n​Here, f is the sampling rate (number of samples\ns\nper second), and f is the highest frequency\nmax\ncomponent present in the analog signal.\nOption (B) states that the sampling rate must be\nat least 2 times the lowest frequency contained\nin the signal. This is incorrect because the\nNyquist theorem pertains to the highest\nfrequency, not the lowest.\nOptions (3) and (4) suggest sampling rates that\nare less than the Nyquist rate (less than 2 times\nthe highest frequency), which would lead to\ninaccurate reconstruction of the analog signal.\nSo option A is the correct answer."
+          "value": "Option A: The Nyquist theorem states that to\naccurately reconstruct the original analog signal\nfrom its samples, the sampling rate f must be at\ns\nleast twice the highest frequency f present in\nmax\nthe signal.\nMathematically, this is expressed as f \u22652\u00d7fmax\ns\n\u200bHere, f is the sampling rate (number of samples\ns\nper second), and f is the highest frequency\nmax\ncomponent present in the analog signal.\nOption (B) states that the sampling rate must be\nat least 2 times the lowest frequency contained\nin the signal. This is incorrect because the\nNyquist theorem pertains to the highest\nfrequency, not the lowest.\nOptions (3) and (4) suggest sampling rates that\nare less than the Nyquist rate (less than 2 times\nthe highest frequency), which would lead to\ninaccurate reconstruction of the analog signal.\nSo option A is the correct answer."
         }
       ],
       "answerSource": {
@@ -7692,8 +7680,11 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": null,
+      "topicId": null,
+      "assets": [
+        "assets/ugc-net-cs-2024-june-cancelled/q-081.png"
+      ],
       "source": {
         "file": "UGC_Comp_June2024_Cancelled(1).pdf",
         "page": 10,
@@ -7701,28 +7692,25 @@
           10
         ]
       },
-      "assets": [
-        "assets/ugc-net-cs-2024-june-cancelled/q-081.png"
-      ],
       "extraction": {
         "method": "pdf-text+visual-crop",
         "confidence": "medium",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "low",
+        "topicConfidence": "low",
+        "reviewRequired": true
       }
     },
     {
       "id": "ugc-net-cs-2024-june-cancelled-q-82",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Cancelled)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 82,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
-          "value": "For the fuzzy sets and A = {( , 0. 3), ( , 0. 7), ( , 0. 4)} x1 x2 x3 B = {( , 0. 5), ( , 0. 2), ( , 0. 5)}, x1 x2 x3 A ∩B then would be:"
+          "value": "For the fuzzy sets and A = {( , 0. 3), ( , 0. 7), ( , 0. 4)} x1 x2 x3 B = {( , 0. 5), ( , 0. 2), ( , 0. 5)}, x1 x2 x3 A \u2229B then would be:"
         },
         {
           "type": "image",
@@ -7779,7 +7767,7 @@
       "explanation": [
         {
           "type": "text",
-          "value": "A = {(\n, 0. 3), (\n, 0. 7), (\n, 0. 4)}\nx1\nx2\nx3\nB = {(\n, 0. 5), (\n, 0. 2), (\n, 0. 5)}\nx1\nx2\nx3\nA ∩B\n{(\n, 0. 3), (\n, 0. 2), (\n, 0. 4)}\nx1\nx2\nx3\n∩ =\nµA B(x1) = min (µA(x1), µB(x1)) = min(0.3,0.5) = 0.3 µA B(x2) = 0.2 and µA B(x3) = 0.4\n∩\n∩\nSo option D is the correct answer."
+          "value": "A = {(\n, 0. 3), (\n, 0. 7), (\n, 0. 4)}\nx1\nx2\nx3\nB = {(\n, 0. 5), (\n, 0. 2), (\n, 0. 5)}\nx1\nx2\nx3\nA \u2229B\n{(\n, 0. 3), (\n, 0. 2), (\n, 0. 4)}\nx1\nx2\nx3\n\u2229 =\n\u00b5A B(x1) = min (\u00b5A(x1), \u00b5B(x1)) = min(0.3,0.5) = 0.3 \u00b5A B(x2) = 0.2 and \u00b5A B(x3) = 0.4\n\u2229\n\u2229\nSo option D is the correct answer."
         }
       ],
       "answerSource": {
@@ -7794,8 +7782,11 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "discrete-structures",
+      "topicId": null,
+      "assets": [
+        "assets/ugc-net-cs-2024-june-cancelled/q-082.png"
+      ],
       "source": {
         "file": "UGC_Comp_June2024_Cancelled(1).pdf",
         "page": 10,
@@ -7803,24 +7794,21 @@
           10
         ]
       },
-      "assets": [
-        "assets/ugc-net-cs-2024-june-cancelled/q-082.png"
-      ],
       "extraction": {
         "method": "pdf-text+visual-crop",
         "confidence": "medium",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-cancelled-q-83",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Cancelled)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 83,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -7869,7 +7857,7 @@
       "explanation": [
         {
           "type": "text",
-          "value": "Unsigned 8-bit variable: 8\nThis type can represent values from 0 to 2 −1=255.\nTherefore, the least value is 0.\nSigned 8-bit variable:\nFor signed variables using 8 bits, the range is\n7 7\ntypically from −2 to 2 −1.\nThis corresponds to −128 to 127\nTherefore, the least value for a signed 8-bit\nvariable is -128.\nSo option D is the correct answer."
+          "value": "Unsigned 8-bit variable: 8\nThis type can represent values from 0 to 2 \u22121=255.\nTherefore, the least value is 0.\nSigned 8-bit variable:\nFor signed variables using 8 bits, the range is\n7 7\ntypically from \u22122 to 2 \u22121.\nThis corresponds to \u2212128 to 127\nTherefore, the least value for a signed 8-bit\nvariable is -128.\nSo option D is the correct answer."
         }
       ],
       "answerSource": {
@@ -7884,8 +7872,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "discrete-structures",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_Cancelled(1).pdf",
         "page": 11,
@@ -7893,22 +7882,21 @@
           11
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pdf-text",
         "confidence": "high",
         "visualVerified": false
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-cancelled-q-84",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Cancelled)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 84,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -7969,7 +7957,7 @@
       "explanation": [
         {
           "type": "text",
-          "value": "Explanation:\nThe following statements are True for a complete\nbinary Tree:\nA. It is always an odd number of vertices. This is\nTrue. For n>1, a full binary tree must have an odd\nnumber of nodes (since each node has either 0\nor 2 children, and we start with 1 root node). So, n\nshould be odd.\nB. With i internal vertices, it has i+1 leaves. True. In\na complete binary tree, the number of internal\nvertices i is equal to the number of leaves l plus\none:l=i+1\nThis relationship holds because each internal\nvertex has exactly two children (except possibly\nthe last level of the tree), and each leaf | |\ncorresponds to a node that does not have any\nchildren.\nC. With l leaves, it has 2l−1 vertices.\nTrue. The total number of vertices v in a\ncomplete binary tree with l leaves is given\nby:v=2l−1\nD. With 2n−1 vertices, it has n leaves. True. For a\ncomplete binary tree with n leaves, the total\nnumber of vertices v is v=2n−1. This relationship\nholds because every complete binary tree with n\nleaves has 2n−1 vertices in total.\nSo option D is the correct answer."
+          "value": "Explanation:\nThe following statements are True for a complete\nbinary Tree:\nA. It is always an odd number of vertices. This is\nTrue. For n>1, a full binary tree must have an odd\nnumber of nodes (since each node has either 0\nor 2 children, and we start with 1 root node). So, n\nshould be odd.\nB. With i internal vertices, it has i+1 leaves. True. In\na complete binary tree, the number of internal\nvertices i is equal to the number of leaves l plus\none:l=i+1\nThis relationship holds because each internal\nvertex has exactly two children (except possibly\nthe last level of the tree), and each leaf | |\ncorresponds to a node that does not have any\nchildren.\nC. With l leaves, it has 2l\u22121 vertices.\nTrue. The total number of vertices v in a\ncomplete binary tree with l leaves is given\nby:v=2l\u22121\nD. With 2n\u22121 vertices, it has n leaves. True. For a\ncomplete binary tree with n leaves, the total\nnumber of vertices v is v=2n\u22121. This relationship\nholds because every complete binary tree with n\nleaves has 2n\u22121 vertices in total.\nSo option D is the correct answer."
         }
       ],
       "answerSource": {
@@ -7984,8 +7972,11 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "discrete-structures",
+      "topicId": null,
+      "assets": [
+        "assets/ugc-net-cs-2024-june-cancelled/q-084.png"
+      ],
       "source": {
         "file": "UGC_Comp_June2024_Cancelled(1).pdf",
         "page": 11,
@@ -7993,24 +7984,21 @@
           11
         ]
       },
-      "assets": [
-        "assets/ugc-net-cs-2024-june-cancelled/q-084.png"
-      ],
       "extraction": {
         "method": "pdf-text+visual-crop",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-cancelled-q-85",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Cancelled)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 85,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -8059,7 +8047,7 @@
       "explanation": [
         {
           "type": "text",
-          "value": "Size of the memory needed:\nMemory size required: 2048×8 bytes.\nSize of each chip:128×4 bytes.\nCalculating the number of chips:\nFirst, calculate the total number of bytes required\nfor the memory:\nTotal bytes required=2048×8=16384 bytes\nNow, calculate how many chips are needed to\ncover this total memory size:\nEach chip provides 128×4 bytes.\nCalculate how many such chips are needed:\nNumber of chips = Total bytes required / Bytes\nper chip\n= 16384 / 128 × 4\nNumber of chips = 16384/ 512 = 32\nSo option C is the correct answer."
+          "value": "Size of the memory needed:\nMemory size required: 2048\u00d78 bytes.\nSize of each chip:128\u00d74 bytes.\nCalculating the number of chips:\nFirst, calculate the total number of bytes required\nfor the memory:\nTotal bytes required=2048\u00d78=16384 bytes\nNow, calculate how many chips are needed to\ncover this total memory size:\nEach chip provides 128\u00d74 bytes.\nCalculate how many such chips are needed:\nNumber of chips = Total bytes required / Bytes\nper chip\n= 16384 / 128 \u00d7 4\nNumber of chips = 16384/ 512 = 32\nSo option C is the correct answer."
         }
       ],
       "answerSource": {
@@ -8074,8 +8062,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": null,
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_Cancelled(1).pdf",
         "page": 11,
@@ -8083,22 +8072,21 @@
           11
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pdf-text",
         "confidence": "high",
         "visualVerified": false
+      },
+      "classification": {
+        "subjectConfidence": "low",
+        "topicConfidence": "low",
+        "reviewRequired": true
       }
     },
     {
       "id": "ugc-net-cs-2024-june-cancelled-q-86",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Cancelled)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 86,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -8163,8 +8151,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "computer-architecture",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_Cancelled(1).pdf",
         "page": 11,
@@ -8172,22 +8161,21 @@
           11
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pdf-text",
         "confidence": "high",
         "visualVerified": false
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-cancelled-q-87",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Cancelled)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 87,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -8251,8 +8239,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "software-engineering",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_Cancelled(1).pdf",
         "page": 11,
@@ -8260,22 +8249,21 @@
           11
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pdf-text",
         "confidence": "high",
         "visualVerified": false
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-cancelled-q-88",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Cancelled)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 88,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -8340,8 +8328,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "computer-architecture",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_Cancelled(1).pdf",
         "page": 11,
@@ -8349,22 +8338,21 @@
           11
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pdf-text",
         "confidence": "high",
         "visualVerified": false
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-cancelled-q-89",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Cancelled)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 89,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -8428,8 +8416,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": null,
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_Cancelled(1).pdf",
         "page": 11,
@@ -8437,22 +8426,21 @@
           11
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pdf-text",
         "confidence": "high",
         "visualVerified": false
+      },
+      "classification": {
+        "subjectConfidence": "low",
+        "topicConfidence": "low",
+        "reviewRequired": true
       }
     },
     {
       "id": "ugc-net-cs-2024-june-cancelled-q-90",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Cancelled)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 90,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -8517,8 +8505,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "software-engineering",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_Cancelled(1).pdf",
         "page": 11,
@@ -8526,26 +8515,25 @@
           11
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pdf-text",
         "confidence": "high",
         "visualVerified": false
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-cancelled-q-91",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Cancelled)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 91,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
-          "value": "Passage for Questions 91-95:\nA firm can produce two types of cloth say A and B. Three kinds of wool are required for it, say red wool, green wool, and blue wool. One unit length of type A cloth needs 2 yards of red and 3 yards of green wool. One unit length of type B cloth needs 3 yards of red wool, 2 yards of green wool and 2 yards of blue wool. The firm has only a stock of 8 yards of red wool, 10 yards of green wool, and 15 yards of blue wool. It is assumed that the income obtained from one unit length of type A and type B clothes are ₹ 30 and ₹ 50, respectively.\n\nWhen we formulate the LPP from the above-given passage. Which of the following is an objective function for its dual problem?"
+          "value": "Passage for Questions 91-95:\nA firm can produce two types of cloth say A and B. Three kinds of wool are required for it, say red wool, green wool, and blue wool. One unit length of type A cloth needs 2 yards of red and 3 yards of green wool. One unit length of type B cloth needs 3 yards of red wool, 2 yards of green wool and 2 yards of blue wool. The firm has only a stock of 8 yards of red wool, 10 yards of green wool, and 15 yards of blue wool. It is assumed that the income obtained from one unit length of type A and type B clothes are \u20b9 30 and \u20b9 50, respectively.\n\nWhen we formulate the LPP from the above-given passage. Which of the following is an objective function for its dual problem?"
         },
         {
           "type": "image",
@@ -8602,7 +8590,7 @@
       "explanation": [
         {
           "type": "text",
-          "value": "Let x be the number of units of type A to be\nproduced and y be the number of units of type B\nto be produced. It is given that:\nRed\nGreen\nBlue\nWool\nProfit\nWool\nWool\nType A\n2 yard\n3 yard Rs. 30\nType B\n3 yard\n2 yard\n2 yard\nRs. 50\n(available\nat most)\n8 yard\n10 yard\n15 yard\nLet Z be the profit function. The mathematical\nformulation of the given\nproblem is Max. Z = 30x + 50y\nsubject to the constraints:\n2x+3y 8\n≤\n≤\n3x+2y 10\n0x+2y 15\n≤\nSteps for formulation are summarised as\nStep 1: write the given LPP in its standard form.\nStep 2: identify the variables of dual problem\nwhich are same as the number of constraints\nequation.\nStep 3: write the objective function of the dual\nproblem by using the constants of the right hand\nside of the constraints.\nStep 4: if primal is max/min type than dual is\nmin/max type and the constraints are ≥/≤ type.\nSo, the objective function for its dual problem is:\nMin P = 8u+10v+15w\nOption B is the correct answer."
+          "value": "Let x be the number of units of type A to be\nproduced and y be the number of units of type B\nto be produced. It is given that:\nRed\nGreen\nBlue\nWool\nProfit\nWool\nWool\nType A\n2 yard\n3 yard Rs. 30\nType B\n3 yard\n2 yard\n2 yard\nRs. 50\n(available\nat most)\n8 yard\n10 yard\n15 yard\nLet Z be the profit function. The mathematical\nformulation of the given\nproblem is Max. Z = 30x + 50y\nsubject to the constraints:\n2x+3y 8\n\u2264\n\u2264\n3x+2y 10\n0x+2y 15\n\u2264\nSteps for formulation are summarised as\nStep 1: write the given LPP in its standard form.\nStep 2: identify the variables of dual problem\nwhich are same as the number of constraints\nequation.\nStep 3: write the objective function of the dual\nproblem by using the constants of the right hand\nside of the constraints.\nStep 4: if primal is max/min type than dual is\nmin/max type and the constraints are \u2265/\u2264 type.\nSo, the objective function for its dual problem is:\nMin P = 8u+10v+15w\nOption B is the correct answer."
         }
       ],
       "answerSource": {
@@ -8617,8 +8605,11 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "discrete-structures",
+      "topicId": null,
+      "assets": [
+        "assets/ugc-net-cs-2024-june-cancelled/q-091.png"
+      ],
       "source": {
         "file": "UGC_Comp_June2024_Cancelled(1).pdf",
         "page": 12,
@@ -8626,28 +8617,25 @@
           12
         ]
       },
-      "assets": [
-        "assets/ugc-net-cs-2024-june-cancelled/q-091.png"
-      ],
       "extraction": {
         "method": "pdf-text+visual-crop",
         "confidence": "medium",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-cancelled-q-92",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Cancelled)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 92,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
-          "value": "Passage for Questions 91-95:\nA firm can produce two types of cloth say A and B. Three kinds of wool are required for it, say red wool, green wool, and blue wool. One unit length of type A cloth needs 2 yards of red and 3 yards of green wool. One unit length of type B cloth needs 3 yards of red wool, 2 yards of green wool and 2 yards of blue wool. The firm has only a stock of 8 yards of red wool, 10 yards of green wool, and 15 yards of blue wool. It is assumed that the income obtained from one unit length of type A and type B clothes are ₹ 30 and ₹ 50, respectively.\n\nWhich of the following will be appropriate objectives function for the given problem ?"
+          "value": "Passage for Questions 91-95:\nA firm can produce two types of cloth say A and B. Three kinds of wool are required for it, say red wool, green wool, and blue wool. One unit length of type A cloth needs 2 yards of red and 3 yards of green wool. One unit length of type B cloth needs 3 yards of red wool, 2 yards of green wool and 2 yards of blue wool. The firm has only a stock of 8 yards of red wool, 10 yards of green wool, and 15 yards of blue wool. It is assumed that the income obtained from one unit length of type A and type B clothes are \u20b9 30 and \u20b9 50, respectively.\n\nWhich of the following will be appropriate objectives function for the given problem ?"
         }
       ],
       "options": [
@@ -8707,8 +8695,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "discrete-structures",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_Cancelled(1).pdf",
         "page": 12,
@@ -8716,26 +8705,25 @@
           12
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pdf-text",
         "confidence": "high",
         "visualVerified": false
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-cancelled-q-93",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Cancelled)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 93,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
-          "value": "Passage for Questions 91-95:\nA firm can produce two types of cloth say A and B. Three kinds of wool are required for it, say red wool, green wool, and blue wool. One unit length of type A cloth needs 2 yards of red and 3 yards of green wool. One unit length of type B cloth needs 3 yards of red wool, 2 yards of green wool and 2 yards of blue wool. The firm has only a stock of 8 yards of red wool, 10 yards of green wool, and 15 yards of blue wool. It is assumed that the income obtained from one unit length of type A and type B clothes are ₹ 30 and ₹ 50, respectively.\n\nHow many unit length used for cloth A when income is maximized ?"
+          "value": "Passage for Questions 91-95:\nA firm can produce two types of cloth say A and B. Three kinds of wool are required for it, say red wool, green wool, and blue wool. One unit length of type A cloth needs 2 yards of red and 3 yards of green wool. One unit length of type B cloth needs 3 yards of red wool, 2 yards of green wool and 2 yards of blue wool. The firm has only a stock of 8 yards of red wool, 10 yards of green wool, and 15 yards of blue wool. It is assumed that the income obtained from one unit length of type A and type B clothes are \u20b9 30 and \u20b9 50, respectively.\n\nHow many unit length used for cloth A when income is maximized ?"
         }
       ],
       "options": [
@@ -8795,8 +8783,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": null,
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_Cancelled(1).pdf",
         "page": 12,
@@ -8804,26 +8793,25 @@
           12
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pdf-text",
         "confidence": "high",
         "visualVerified": false
+      },
+      "classification": {
+        "subjectConfidence": "low",
+        "topicConfidence": "low",
+        "reviewRequired": true
       }
     },
     {
       "id": "ugc-net-cs-2024-june-cancelled-q-94",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Cancelled)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 94,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
-          "value": "Passage for Questions 91-95:\nA firm can produce two types of cloth say A and B. Three kinds of wool are required for it, say red wool, green wool, and blue wool. One unit length of type A cloth needs 2 yards of red and 3 yards of green wool. One unit length of type B cloth needs 3 yards of red wool, 2 yards of green wool and 2 yards of blue wool. The firm has only a stock of 8 yards of red wool, 10 yards of green wool, and 15 yards of blue wool. It is assumed that the income obtained from one unit length of type A and type B clothes are ₹ 30 and ₹ 50, respectively.\n\nIf x unit length of type A cloths and y unit length of type B cloths, then contrains formulate for the LPP, is :"
+          "value": "Passage for Questions 91-95:\nA firm can produce two types of cloth say A and B. Three kinds of wool are required for it, say red wool, green wool, and blue wool. One unit length of type A cloth needs 2 yards of red and 3 yards of green wool. One unit length of type B cloth needs 3 yards of red wool, 2 yards of green wool and 2 yards of blue wool. The firm has only a stock of 8 yards of red wool, 10 yards of green wool, and 15 yards of blue wool. It is assumed that the income obtained from one unit length of type A and type B clothes are \u20b9 30 and \u20b9 50, respectively.\n\nIf x unit length of type A cloths and y unit length of type B cloths, then contrains formulate for the LPP, is :"
         },
         {
           "type": "image",
@@ -8880,7 +8868,7 @@
       "explanation": [
         {
           "type": "text",
-          "value": "Let x be the number of units of type A to be\nproduced and y be the number of units of type B\nto be produced. It is given that: Red\nGreen\nBlue\nProfit\nWool\nWool\nWool\nType A\n2 yard\n3 yard Rs. 30\nType B\n3 yard\n2 yard\n2 yard\nRs. 50\n(available\n8 yard\n10 yard\n15 yard\nat most)\nsubject to the constraints:\n2x+3y 8\n≤\n≤\n3x+2y 10\n0x+2y 15\n≤\nSo the option B is the correct answer."
+          "value": "Let x be the number of units of type A to be\nproduced and y be the number of units of type B\nto be produced. It is given that: Red\nGreen\nBlue\nProfit\nWool\nWool\nWool\nType A\n2 yard\n3 yard Rs. 30\nType B\n3 yard\n2 yard\n2 yard\nRs. 50\n(available\n8 yard\n10 yard\n15 yard\nat most)\nsubject to the constraints:\n2x+3y 8\n\u2264\n\u2264\n3x+2y 10\n0x+2y 15\n\u2264\nSo the option B is the correct answer."
         }
       ],
       "answerSource": {
@@ -8895,8 +8883,11 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": null,
+      "topicId": null,
+      "assets": [
+        "assets/ugc-net-cs-2024-june-cancelled/q-094.png"
+      ],
       "source": {
         "file": "UGC_Comp_June2024_Cancelled(1).pdf",
         "page": 12,
@@ -8904,28 +8895,25 @@
           12
         ]
       },
-      "assets": [
-        "assets/ugc-net-cs-2024-june-cancelled/q-094.png"
-      ],
       "extraction": {
         "method": "pdf-text+visual-crop",
         "confidence": "medium",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "low",
+        "topicConfidence": "low",
+        "reviewRequired": true
       }
     },
     {
       "id": "ugc-net-cs-2024-june-cancelled-q-95",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Cancelled)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 95,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
-          "value": "Passage for Questions 91-95:\nA firm can produce two types of cloth say A and B. Three kinds of wool are required for it, say red wool, green wool, and blue wool. One unit length of type A cloth needs 2 yards of red and 3 yards of green wool. One unit length of type B cloth needs 3 yards of red wool, 2 yards of green wool and 2 yards of blue wool. The firm has only a stock of 8 yards of red wool, 10 yards of green wool, and 15 yards of blue wool. It is assumed that the income obtained from one unit length of type A and type B clothes are ₹ 30 and ₹ 50, respectively.\n\nOn the basis of available material, maximum total income is :"
+          "value": "Passage for Questions 91-95:\nA firm can produce two types of cloth say A and B. Three kinds of wool are required for it, say red wool, green wool, and blue wool. One unit length of type A cloth needs 2 yards of red and 3 yards of green wool. One unit length of type B cloth needs 3 yards of red wool, 2 yards of green wool and 2 yards of blue wool. The firm has only a stock of 8 yards of red wool, 10 yards of green wool, and 15 yards of blue wool. It is assumed that the income obtained from one unit length of type A and type B clothes are \u20b9 30 and \u20b9 50, respectively.\n\nOn the basis of available material, maximum total income is :"
         }
       ],
       "options": [
@@ -8934,7 +8922,7 @@
           "content": [
             {
               "type": "text",
-              "value": "₹ 133.3"
+              "value": "\u20b9 133.3"
             }
           ]
         },
@@ -8943,7 +8931,7 @@
           "content": [
             {
               "type": "text",
-              "value": "₹ 124"
+              "value": "\u20b9 124"
             }
           ]
         },
@@ -8952,7 +8940,7 @@
           "content": [
             {
               "type": "text",
-              "value": "₹ 100"
+              "value": "\u20b9 100"
             }
           ]
         },
@@ -8961,7 +8949,7 @@
           "content": [
             {
               "type": "text",
-              "value": "₹ 153.3"
+              "value": "\u20b9 153.3"
             }
           ]
         }
@@ -8986,8 +8974,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": null,
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_Cancelled(1).pdf",
         "page": 12,
@@ -8995,22 +8984,21 @@
           12
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pdf-text",
         "confidence": "high",
         "visualVerified": false
+      },
+      "classification": {
+        "subjectConfidence": "low",
+        "topicConfidence": "low",
+        "reviewRequired": true
       }
     },
     {
       "id": "ugc-net-cs-2024-june-cancelled-q-96",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Cancelled)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 96,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -9074,8 +9062,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "databases",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_Cancelled(1).pdf",
         "page": 12,
@@ -9083,22 +9072,21 @@
           12
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pdf-text",
         "confidence": "high",
         "visualVerified": false
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-cancelled-q-97",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Cancelled)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 97,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -9162,8 +9150,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": null,
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_Cancelled(1).pdf",
         "page": 12,
@@ -9171,22 +9160,21 @@
           12
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pdf-text",
         "confidence": "high",
         "visualVerified": false
+      },
+      "classification": {
+        "subjectConfidence": "low",
+        "topicConfidence": "low",
+        "reviewRequired": true
       }
     },
     {
       "id": "ugc-net-cs-2024-june-cancelled-q-98",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Cancelled)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 98,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -9251,8 +9239,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "databases",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_Cancelled(1).pdf",
         "page": 12,
@@ -9260,22 +9249,21 @@
           12
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pdf-text",
         "confidence": "high",
         "visualVerified": false
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-cancelled-q-99",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Cancelled)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 99,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -9352,8 +9340,11 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "databases",
+      "topicId": null,
+      "assets": [
+        "assets/ugc-net-cs-2024-june-cancelled/q-099.png"
+      ],
       "source": {
         "file": "UGC_Comp_June2024_Cancelled(1).pdf",
         "page": 12,
@@ -9362,24 +9353,21 @@
           13
         ]
       },
-      "assets": [
-        "assets/ugc-net-cs-2024-june-cancelled/q-099.png"
-      ],
       "extraction": {
         "method": "pdf-text+visual-crop",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-cancelled-q-100",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Cancelled)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 100,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -9443,8 +9431,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "discrete-structures",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_Cancelled(1).pdf",
         "page": 13,
@@ -9452,11 +9441,15 @@
           13
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pdf-text",
         "confidence": "high",
         "visualVerified": false
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     }
   ]

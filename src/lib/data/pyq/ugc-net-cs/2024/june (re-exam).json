@@ -1,63 +1,56 @@
 {
-  "schemaVersion": "1.0.0",
-  "datasetType": "ugc-net-pyq",
-  "paper": {
-    "id": "ugc-net-cs-2024-june-re-exam",
-    "examId": "ugc-net-cs",
+  "schemaVersion": "1.0",
+  "id": "ugc-net-cs-2024-june-re-exam",
+  "examId": "ugc-net-cs",
+  "metadata": {
     "year": 2024,
     "session": "June (Re-Exam)",
-    "paper": null,
-    "shift": null
+    "paperNumber": 2,
+    "paperName": "Computer Science",
+    "shift": null,
+    "title": "UGC NET Computer Science \u2014 June (Re-Exam) 2024",
+    "questionCount": 100
   },
   "source": {
     "files": [
       "UGC_Comp_June2024_ReExam(2).pdf"
     ],
-    "pageCount": 45
-  },
-  "sourceAnalysis": {
-    "documentType": "mixed",
-    "layout": "two-column question pages; answer-key pages; solution pages",
-    "answerKey": {
-      "detected": true,
-      "type": "source-provided",
-      "pages": [
-        17,
-        18
-      ]
-    },
-    "solutions": {
-      "detected": true,
-      "pages": [
-        19,
-        20,
-        21,
-        22,
-        23,
-        24,
-        25,
-        26,
-        27,
-        28,
-        29,
-        30,
-        31,
-        32,
-        33,
-        34,
-        35,
-        36,
-        37,
-        38,
-        39,
-        40,
-        41,
-        42,
-        43,
-        44,
-        45
-      ]
-    }
+    "pageCount": 45,
+    "answerKeyDetected": true,
+    "answerKeyPages": [
+      17,
+      18
+    ],
+    "solutionsDetected": true,
+    "solutionPages": [
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ]
   },
   "extraction": {
     "questionCountExpected": 100,
@@ -76,13 +69,8 @@
   "questions": [
     {
       "id": "ugc-net-cs-2024-june-re-exam-q-1",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Re-Exam)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 1,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -94,7 +82,25 @@
         },
         {
           "type": "text",
-          "value": "If $I = CLOSURE(\\{[S\\to\\cdot A]\\})$ then, how many items be in the set for $GOTO(I,\\$)$?"
+          "value": "If"
+        },
+        {
+          "type": "math",
+          "value": "I = CLOSURE(\\{[S\\to\\cdot A]\\})",
+          "display": false
+        },
+        {
+          "type": "text",
+          "value": "then, how many items be in the set for"
+        },
+        {
+          "type": "math",
+          "value": "GOTO(I,\\",
+          "display": false
+        },
+        {
+          "type": "text",
+          "value": ")$?"
         }
       ],
       "options": [
@@ -139,7 +145,34 @@
       "explanation": [
         {
           "type": "text",
-          "value": "The correct answer is Option C ( 5 ).\n GOTO(I ,$)\nA -> $.B$\nB -> .B,A\nB -> .A\nA -> .$B$\nA-> .id\nThe number of items in the set GOTO(I ,$) is 5."
+          "value": "The correct answer is Option C ( 5 ).\n GOTO(I ,"
+        },
+        {
+          "type": "math",
+          "value": ")\nA ->",
+          "display": false
+        },
+        {
+          "type": "text",
+          "value": ".B"
+        },
+        {
+          "type": "math",
+          "value": "B -> .B,A\nB -> .A\nA -> .",
+          "display": false
+        },
+        {
+          "type": "text",
+          "value": "B"
+        },
+        {
+          "type": "math",
+          "value": "A-> .id\nThe number of items in the set GOTO(I ,",
+          "display": false
+        },
+        {
+          "type": "text",
+          "value": ") is 5."
         }
       ],
       "answerSource": {
@@ -154,8 +187,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "discrete-structures",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_ReExam(2).pdf",
         "page": 1,
@@ -163,26 +197,25 @@
           1
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pymupdf-text+visual-verification",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-re-exam-q-2",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Re-Exam)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 2,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
-          "value": "In a schema R(A, B, C, D, E, F, G, H), each field of R contains only atomic values. F= {CH→G, A →BC, B→CFH, E→A, F→EG} is a set of functional dependencies F+ is exactly the set of FDs that holds R. The relation R is :"
+          "value": "In a schema R(A, B, C, D, E, F, G, H), each field of R contains only atomic values. F= {CH\u2192G, A \u2192BC, B\u2192CFH, E\u2192A, F\u2192EG} is a set of functional dependencies F+ is exactly the set of FDs that holds R. The relation R is :"
         }
       ],
       "options": [
@@ -227,7 +260,7 @@
       "explanation": [
         {
           "type": "text",
-          "value": "The correct answer is Option A ( In 1NF, but not\nin 2 NF ).\nThe minimum number of attributes that uniquely\nidentify tuples in a table is called the Candidate\nKey. Candidate keys may have multiple\nattributes.\nNormal forms are used to minimize redundancy\nfrom a set of relations.\n\nNormal\nForms ( NF )\nDescription\n1NF\nIf a relation contains only atomic\nvalues then it is in 1NF.\n2NF\nIf a relation is in 1NF and all non-\nkey attributes are fully functionally\ndependent on the primary key.\n3NF\nIf a relation is in 2NF then there\nmust not exist any transition\ndependency ( i.e. If X\nY and Y\nZ then X\nZ ).\nBCNF\nThe table should be in 3NF and X\nshould be a superkey for every\nfunctional dependency X\nY in a\ngiven relation.\n\nFor given schema R(A, B, C, D, E, F, G, H), each\nfield of R contains only atomic values ( i.e. 1NF ).\nF= {CH→G, A →BC, B→CFH, E→A, F→EG} is a set\nof functional dependencies.\nSince D is not a part of any functional\ndependency so either it can be a candidate key\nor may be a part of candidate key.\nFirst, find all possible candidate keys using\nclosure.\n(AD)  = {ABCDEFGH}\n(BD)  = {ABCDEFGH}\n(ED) = {ABCDEFGH}\n(FD)  = {ABCDEFGH}\nThese are the only candidate keys that are\npossible.\nPrime Attributes ( i.e. part of key attributes ) =  A,\nB, D, E, F\nNon-Prime Attributes ( i.e. attributes that are not\npart of the key ) = C, G, H\nA →BC, B→CFH, F→EG, Here we can clearly see\nthat partial dependency exists i.e a non-prime\nattribute (i.e., not part of any candidate key) is\nfunctionally dependent on only a part of the\nprimary key, rather than the entire primary key.\nThe relation is not in 2NF."
+          "value": "The correct answer is Option A ( In 1NF, but not\nin 2 NF ).\nThe minimum number of attributes that uniquely\nidentify tuples in a table is called the Candidate\nKey. Candidate keys may have multiple\nattributes.\nNormal forms are used to minimize redundancy\nfrom a set of relations.\n\nNormal\nForms ( NF )\nDescription\n1NF\nIf a relation contains only atomic\nvalues then it is in 1NF.\n2NF\nIf a relation is in 1NF and all non-\nkey attributes are fully functionally\ndependent on the primary key.\n3NF\nIf a relation is in 2NF then there\nmust not exist any transition\ndependency ( i.e. If X\nY and Y\nZ then X\nZ ).\nBCNF\nThe table should be in 3NF and X\nshould be a superkey for every\nfunctional dependency X\nY in a\ngiven relation.\n\nFor given schema R(A, B, C, D, E, F, G, H), each\nfield of R contains only atomic values ( i.e. 1NF ).\nF= {CH\u2192G, A \u2192BC, B\u2192CFH, E\u2192A, F\u2192EG} is a set\nof functional dependencies.\nSince D is not a part of any functional\ndependency so either it can be a candidate key\nor may be a part of candidate key.\nFirst, find all possible candidate keys using\nclosure.\n(AD)  = {ABCDEFGH}\n(BD)  = {ABCDEFGH}\n(ED) = {ABCDEFGH}\n(FD)  = {ABCDEFGH}\nThese are the only candidate keys that are\npossible.\nPrime Attributes ( i.e. part of key attributes ) =  A,\nB, D, E, F\nNon-Prime Attributes ( i.e. attributes that are not\npart of the key ) = C, G, H\nA \u2192BC, B\u2192CFH, F\u2192EG, Here we can clearly see\nthat partial dependency exists i.e a non-prime\nattribute (i.e., not part of any candidate key) is\nfunctionally dependent on only a part of the\nprimary key, rather than the entire primary key.\nThe relation is not in 2NF."
         }
       ],
       "answerSource": {
@@ -242,8 +275,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "discrete-structures",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_ReExam(2).pdf",
         "page": 1,
@@ -251,22 +285,21 @@
           1
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pymupdf-text+visual-verification",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-re-exam-q-3",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Re-Exam)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 3,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -315,7 +348,7 @@
       "explanation": [
         {
           "type": "text",
-          "value": "The correct answer is Option B ( (A) and (B)\nOnly ).\nA Pointer is a variable whose value is the address\nof another variable.\n(A) Pointers can be used to access array\nelements: True. Suppose arr is a 2-D array, we\ncan access any element arr[i][j] of the array using\nthe pointer expression ((arr + i) + j).\n(B) Pointers can store the address of another\npointer: True. Pointers are variables, but instead\nof holding the data directly, they hold addresses\nthat point to the location in memory where the\ndata resides.\n(C) Pointers are automatically deferenced in the\nexpression: False. We have to use the\n   |\n0\n0\n→\n→\n→\n→\ndereference operator (*) to get the value.\n(D) Pointers cannot be used to access structure\nmembers: False. Structure pointers are used to\nindirectly access and modify the members of a\nstructure by pointing to the structure's memory\naddress."
+          "value": "The correct answer is Option B ( (A) and (B)\nOnly ).\nA Pointer is a variable whose value is the address\nof another variable.\n(A) Pointers can be used to access array\nelements: True. Suppose arr is a 2-D array, we\ncan access any element arr[i][j] of the array using\nthe pointer expression ((arr + i) + j).\n(B) Pointers can store the address of another\npointer: True. Pointers are variables, but instead\nof holding the data directly, they hold addresses\nthat point to the location in memory where the\ndata resides.\n(C) Pointers are automatically deferenced in the\nexpression: False. We have to use the\n   |\n0\n0\n\u2192\n\u2192\n\u2192\n\u2192\ndereference operator (*) to get the value.\n(D) Pointers cannot be used to access structure\nmembers: False. Structure pointers are used to\nindirectly access and modify the members of a\nstructure by pointing to the structure's memory\naddress."
         }
       ],
       "answerSource": {
@@ -331,8 +364,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "programming-data-structures",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_ReExam(2).pdf",
         "page": 1,
@@ -340,22 +374,21 @@
           1
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pymupdf-text+visual-verification",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-re-exam-q-4",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Re-Exam)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 4,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -420,7 +453,7 @@
       "explanation": [
         {
           "type": "text",
-          "value": "The correct answer is Option A ( 20 m ).\nTo determine the 1-bit delay in a token ring\nnetwork, we need to consider the transmission\nspeed and propagation speed.\nTransmission speed (T ) = 10  bits per second\n(bps)\nTransmission delay for 1 bit = 1 / T  = 1/10  = 0.1 μs\nPropagation speed (P ) = 200 meters per\nmicrosecond (m/μs)\n1-bit delay = ( Transmission delay for 1 bit ) x (\nPropagation speed)\n                 = [(1 bit) / T  ]× P\n                 = [(1 bit) / (10  bps)] × (200 m/μs)\n                 = (0.1 μs) x 200 m/μs\n                = 20 m\nTherefore, the 1-bit delay in this network is\nequivalent to 20 meters."
+          "value": "The correct answer is Option A ( 20 m ).\nTo determine the 1-bit delay in a token ring\nnetwork, we need to consider the transmission\nspeed and propagation speed.\nTransmission speed (T ) = 10  bits per second\n(bps)\nTransmission delay for 1 bit = 1 / T  = 1/10  = 0.1 \u03bcs\nPropagation speed (P ) = 200 meters per\nmicrosecond (m/\u03bcs)\n1-bit delay = ( Transmission delay for 1 bit ) x (\nPropagation speed)\n                 = [(1 bit) / T  ]\u00d7 P\n                 = [(1 bit) / (10  bps)] \u00d7 (200 m/\u03bcs)\n                 = (0.1 \u03bcs) x 200 m/\u03bcs\n                = 20 m\nTherefore, the 1-bit delay in this network is\nequivalent to 20 meters."
         }
       ],
       "answerSource": {
@@ -435,8 +468,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "discrete-structures",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_ReExam(2).pdf",
         "page": 1,
@@ -444,22 +478,21 @@
           1
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pymupdf-text+visual-verification",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-re-exam-q-5",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Re-Exam)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 5,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -523,8 +556,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "operating-systems",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_ReExam(2).pdf",
         "page": 1,
@@ -532,22 +566,21 @@
           1
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pymupdf-text+visual-verification",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-re-exam-q-6",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Re-Exam)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 6,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -620,8 +653,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "discrete-structures",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_ReExam(2).pdf",
         "page": 1,
@@ -629,22 +663,21 @@
           1
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pymupdf-text+visual-verification",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-re-exam-q-7",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Re-Exam)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 7,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -713,7 +746,7 @@
       "explanation": [
         {
           "type": "text",
-          "value": "The correct answer is Option D ( (C) and (E)\nOnly ).\nA reflexive relation is a binary relation on a set\nwhere every element of the set is related to itself.\nIn a reflexive relation, (a, a) ∈ R for every\nelement, where a is the element, A is the set, and\nR is the relation.\n\n(A) R1=(1,1),(1,2),(2,1),(2,2),(3,4),(4,1),(4,4)} is not a\nreflexive relation because (3,3)\n R1\n(B) R2={(1,1),(1,2),(2,1)}  is not a reflexive relation\nbecause Here (2,2)\nR2\n(C) R3={(1,1),(1,2),(1,4),(2,1),(2,2),(3,3),(4,1),(4,4)}\n is a reflexive relation because every element is\nrelated to itself.\n(D) R4={(2,1),(3,1),(3,2),(4,1),(4,2),(4,3)}  is not a\nreflexive relation because (1,1), (2,2), (3,3) and\n(4,4)\n R4. No element is related to itself.\n(E) R5={(1,1),(1,2),(1,3),(1,4),(2,2),(2,3),(2,4),(3,3),\n(3,4),(4,4)}  is a reflexive relation because every\nelement is related to itself.\n   |\ns\n7\ns\n7\ns\ns\ns\n7\n∉\n∉\n∉"
+          "value": "The correct answer is Option D ( (C) and (E)\nOnly ).\nA reflexive relation is a binary relation on a set\nwhere every element of the set is related to itself.\nIn a reflexive relation, (a, a) \u2208 R for every\nelement, where a is the element, A is the set, and\nR is the relation.\n\n(A) R1=(1,1),(1,2),(2,1),(2,2),(3,4),(4,1),(4,4)} is not a\nreflexive relation because (3,3)\n R1\n(B) R2={(1,1),(1,2),(2,1)}  is not a reflexive relation\nbecause Here (2,2)\nR2\n(C) R3={(1,1),(1,2),(1,4),(2,1),(2,2),(3,3),(4,1),(4,4)}\n is a reflexive relation because every element is\nrelated to itself.\n(D) R4={(2,1),(3,1),(3,2),(4,1),(4,2),(4,3)}  is not a\nreflexive relation because (1,1), (2,2), (3,3) and\n(4,4)\n R4. No element is related to itself.\n(E) R5={(1,1),(1,2),(1,3),(1,4),(2,2),(2,3),(2,4),(3,3),\n(3,4),(4,4)}  is a reflexive relation because every\nelement is related to itself.\n   |\ns\n7\ns\n7\ns\ns\ns\n7\n\u2209\n\u2209\n\u2209"
         }
       ],
       "answerSource": {
@@ -728,8 +761,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "discrete-structures",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_ReExam(2).pdf",
         "page": 1,
@@ -738,26 +772,25 @@
           2
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pymupdf-text+visual-verification",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-re-exam-q-8",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Re-Exam)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 8,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
-          "value": "Consider a relation schema R=(U, V, W, X, Y, Z), on which the following functional dependencies hold {U→V, VW→X, Y→W; X→U} The candidate keys of R are :"
+          "value": "Consider a relation schema R=(U, V, W, X, Y, Z), on which the following functional dependencies hold {U\u2192V, VW\u2192X, Y\u2192W; X\u2192U} The candidate keys of R are :"
         }
       ],
       "options": [
@@ -802,7 +835,7 @@
       "explanation": [
         {
           "type": "text",
-          "value": "Step 1: Identify which attributes are dependent\non others.\nU→V means if we know U, we can determine V.\nVW→X means knowing V and W, we can\ndetermine X.\nY→W means knowing Y, we can determine W.\nX→U means knowing X, we can determine U.\nStep 2: Find the closure of attribute\ncombinations to determine candidate keys.\nClosure of UY:\nU→V, so UY determines V.\nY→W, so UY determines W.\nVW→X, so UY determines X.\nX→U, so UY already determines U (nothing new).\nThus, UY+={U,V,W,X,Y}, covering all attributes\nexcept Z.\nClosure of VY:\nY→W, so VY determines W.\nVW→X, so VY determines X.\nX→U, so VY determines U. Thus, VY+={U,V,W,X,Y},\ncovering all attributes except Z.\nClosure of XY:\nX→U, so XY determines U.\nU→V, so XY determines V.\nY→W, so XY determines W. Thus, XY+={U,V,W,X,Y},\ncovering all attributes except Z.\nStep 3: Evaluate the candidate key options.\nTo cover all attributes, including Z, we need to\nextend the combinations:\nUY, VY, and XY determine all attributes except Z.\nTherefore, adding Z to these combinations will\ncover all attributes.\nThus, the correct candidate keys are UYZ, VYZ,\nand XYZ.\nThe correct option is D: UYZ,VYZ,XYZ."
+          "value": "Step 1: Identify which attributes are dependent\non others.\nU\u2192V means if we know U, we can determine V.\nVW\u2192X means knowing V and W, we can\ndetermine X.\nY\u2192W means knowing Y, we can determine W.\nX\u2192U means knowing X, we can determine U.\nStep 2: Find the closure of attribute\ncombinations to determine candidate keys.\nClosure of UY:\nU\u2192V, so UY determines V.\nY\u2192W, so UY determines W.\nVW\u2192X, so UY determines X.\nX\u2192U, so UY already determines U (nothing new).\nThus, UY+={U,V,W,X,Y}, covering all attributes\nexcept Z.\nClosure of VY:\nY\u2192W, so VY determines W.\nVW\u2192X, so VY determines X.\nX\u2192U, so VY determines U. Thus, VY+={U,V,W,X,Y},\ncovering all attributes except Z.\nClosure of XY:\nX\u2192U, so XY determines U.\nU\u2192V, so XY determines V.\nY\u2192W, so XY determines W. Thus, XY+={U,V,W,X,Y},\ncovering all attributes except Z.\nStep 3: Evaluate the candidate key options.\nTo cover all attributes, including Z, we need to\nextend the combinations:\nUY, VY, and XY determine all attributes except Z.\nTherefore, adding Z to these combinations will\ncover all attributes.\nThus, the correct candidate keys are UYZ, VYZ,\nand XYZ.\nThe correct option is D: UYZ,VYZ,XYZ."
         }
       ],
       "answerSource": {
@@ -817,8 +850,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "discrete-structures",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_ReExam(2).pdf",
         "page": 2,
@@ -826,22 +860,21 @@
           2
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pymupdf-text+visual-verification",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-re-exam-q-9",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Re-Exam)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 9,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -890,7 +923,7 @@
       "explanation": [
         {
           "type": "text",
-          "value": "The correct way to declare a function pointer in\nC is:\nOption B: int (*func)(int, int);\nExplanation:\nIn this declaration, (*func) indicates that func is a\npointer to a function.\nThe function takes two int arguments (int, int)\nand returns an int.\nLet’s break down the other options:\nA: int *func(int, int);\nThis declares a function named func that takes\ntwo int arguments and returns a pointer to an int.\nThis is not a function pointer declaration.\nC: int (func*) (int, int);\nThis syntax is incorrect because the asterisk *\nshould be inside parentheses to indicate a\npointer.\nD: int *func* (int, int);\nThis is also invalid due to incorrect placement of\nasterisks. The syntax doesn’t follow the proper\nrules for declaring a function pointer."
+          "value": "The correct way to declare a function pointer in\nC is:\nOption B: int (*func)(int, int);\nExplanation:\nIn this declaration, (*func) indicates that func is a\npointer to a function.\nThe function takes two int arguments (int, int)\nand returns an int.\nLet\u2019s break down the other options:\nA: int *func(int, int);\nThis declares a function named func that takes\ntwo int arguments and returns a pointer to an int.\nThis is not a function pointer declaration.\nC: int (func*) (int, int);\nThis syntax is incorrect because the asterisk *\nshould be inside parentheses to indicate a\npointer.\nD: int *func* (int, int);\nThis is also invalid due to incorrect placement of\nasterisks. The syntax doesn\u2019t follow the proper\nrules for declaring a function pointer."
         }
       ],
       "answerSource": {
@@ -905,8 +938,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "discrete-structures",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_ReExam(2).pdf",
         "page": 2,
@@ -914,22 +948,21 @@
           2
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pymupdf-text+visual-verification",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-re-exam-q-10",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Re-Exam)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 10,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -978,7 +1011,7 @@
       "explanation": [
         {
           "type": "text",
-          "value": "The correct sequence of steps in the Feature\nDriven Development (FDD) process is:\n(A) Develop an overall model → (E) Build a\nfeature list → (C) Plan by feature → (D) Design by\nfeature → (B) Build by feature.\nExplanation:\nFeature Driven Development (FDD) is an iterative\nand incremental software development\nmethodology with the following sequence of\nsteps:\nDevelop an overall model: Understand the\ndomain and develop a high-level model.\nBuild a feature list: Identify and organize all the\nnecessary features.\nPlan by feature: Create a development plan\nbased on the feature list.\nDesign by feature: Design individual features\nbefore implementation.\nBuild by feature: Implement the features in small\niterations."
+          "value": "The correct sequence of steps in the Feature\nDriven Development (FDD) process is:\n(A) Develop an overall model \u2192 (E) Build a\nfeature list \u2192 (C) Plan by feature \u2192 (D) Design by\nfeature \u2192 (B) Build by feature.\nExplanation:\nFeature Driven Development (FDD) is an iterative\nand incremental software development\nmethodology with the following sequence of\nsteps:\nDevelop an overall model: Understand the\ndomain and develop a high-level model.\nBuild a feature list: Identify and organize all the\nnecessary features.\nPlan by feature: Create a development plan\nbased on the feature list.\nDesign by feature: Design individual features\nbefore implementation.\nBuild by feature: Implement the features in small\niterations."
         }
       ],
       "answerSource": {
@@ -993,8 +1026,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "operating-systems",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_ReExam(2).pdf",
         "page": 2,
@@ -1002,22 +1036,21 @@
           2
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pymupdf-text+visual-verification",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-re-exam-q-11",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Re-Exam)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 11,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -1074,7 +1107,7 @@
       "explanation": [
         {
           "type": "text",
-          "value": "The number 45 ​ is given in an unknown base y,\nand we need to determine its possible values.\nInterpretation:\nThe number 45y​ means 4×y+5 in base y, where\nboth digits (4 and 5) must be valid digits in base\ny.\nIn base y, digits range from 0 to y−1. Therefore,\n   |\ny\n\nfor the number 45y​ to be valid, y must be greater\nthan 5 (since 5 is the highest digit used in the\nnumber).\nEvaluation of each base:\nBase 5: Invalid, because the digit 5 is not allowed\nin base 5 (the maximum digit is 4).\nBase 6: Valid, since digits 4 and 5 are allowed in\nbase 6 (digits 0-5 are valid).\nBase 7: Valid, since digits 4 and 5 are allowed in\nbase 7 (digits 0-6 are valid).\nBase 8: Valid, since digits 4 and 5 are allowed in\nbase 8 (digits 0-7 are valid).\nConclusion:\nThe possible values for\ny are 6, 7, and 8.\nThus, the correct answer is B: (B), (C), and (D)\nonly."
+          "value": "The number 45 \u200b is given in an unknown base y,\nand we need to determine its possible values.\nInterpretation:\nThe number 45y\u200b means 4\u00d7y+5 in base y, where\nboth digits (4 and 5) must be valid digits in base\ny.\nIn base y, digits range from 0 to y\u22121. Therefore,\n   |\ny\n\nfor the number 45y\u200b to be valid, y must be greater\nthan 5 (since 5 is the highest digit used in the\nnumber).\nEvaluation of each base:\nBase 5: Invalid, because the digit 5 is not allowed\nin base 5 (the maximum digit is 4).\nBase 6: Valid, since digits 4 and 5 are allowed in\nbase 6 (digits 0-5 are valid).\nBase 7: Valid, since digits 4 and 5 are allowed in\nbase 7 (digits 0-6 are valid).\nBase 8: Valid, since digits 4 and 5 are allowed in\nbase 8 (digits 0-7 are valid).\nConclusion:\nThe possible values for\ny are 6, 7, and 8.\nThus, the correct answer is B: (B), (C), and (D)\nonly."
         }
       ],
       "answerSource": {
@@ -1090,8 +1123,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": null,
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_ReExam(2).pdf",
         "page": 2,
@@ -1099,22 +1133,21 @@
           2
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pymupdf-text+visual-verification",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "low",
+        "topicConfidence": "low",
+        "reviewRequired": true
       }
     },
     {
       "id": "ugc-net-cs-2024-june-re-exam-q-12",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Re-Exam)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 12,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -1187,8 +1220,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": null,
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_ReExam(2).pdf",
         "page": 2,
@@ -1196,22 +1230,21 @@
           2
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pymupdf-text+visual-verification",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "low",
+        "topicConfidence": "low",
+        "reviewRequired": true
       }
     },
     {
       "id": "ugc-net-cs-2024-june-re-exam-q-13",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Re-Exam)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 13,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -1339,7 +1372,7 @@
       "explanation": [
         {
           "type": "text",
-          "value": "List I - List II:\n(A) The activation function → (II) is one of the key\ncomponents of the perceptron as in the most\ncommon neural network architecture.\nThe output of the perceptron plays a crucial role\nin determining the decision boundaries of neural\nnetworks\n(B) The learning method of perceptron → (I) is\ncalled the delta rule.\nThe delta rule (also known as the perceptron\nlearning rule) is used to adjust weights in neural\nnetworks.\n(C) Areas of application of artificial neural → (IV)\nsystem identification and control.\nNeural networks are widely used in system\nidentification, control systems, and various other\napplications.\n(D) The output of the perceptron → (III) is always\nboolean like a switch\nThis is true for the activation function in a\nperceptron, which uses a threshold function for\nbinary classification.\nCorrect Match:\n(A) → (II)\n(B) → (I)\n(C) → (IV)\n(D) → (III)\nThus, the correct answer is Option C.\n   |"
+          "value": "List I - List II:\n(A) The activation function \u2192 (II) is one of the key\ncomponents of the perceptron as in the most\ncommon neural network architecture.\nThe output of the perceptron plays a crucial role\nin determining the decision boundaries of neural\nnetworks\n(B) The learning method of perceptron \u2192 (I) is\ncalled the delta rule.\nThe delta rule (also known as the perceptron\nlearning rule) is used to adjust weights in neural\nnetworks.\n(C) Areas of application of artificial neural \u2192 (IV)\nsystem identification and control.\nNeural networks are widely used in system\nidentification, control systems, and various other\napplications.\n(D) The output of the perceptron \u2192 (III) is always\nboolean like a switch\nThis is true for the activation function in a\nperceptron, which uses a threshold function for\nbinary classification.\nCorrect Match:\n(A) \u2192 (II)\n(B) \u2192 (I)\n(C) \u2192 (IV)\n(D) \u2192 (III)\nThus, the correct answer is Option C.\n   |"
         }
       ],
       "answerSource": {
@@ -1354,8 +1387,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": null,
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_ReExam(2).pdf",
         "page": 2,
@@ -1364,22 +1398,21 @@
           3
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pymupdf-text+visual-verification",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "low",
+        "topicConfidence": "low",
+        "reviewRequired": true
       }
     },
     {
       "id": "ugc-net-cs-2024-june-re-exam-q-14",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Re-Exam)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 14,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -1522,8 +1555,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": null,
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_ReExam(2).pdf",
         "page": 3,
@@ -1531,22 +1565,21 @@
           3
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pymupdf-text+visual-verification",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "low",
+        "topicConfidence": "low",
+        "reviewRequired": true
       }
     },
     {
       "id": "ugc-net-cs-2024-june-re-exam-q-15",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Re-Exam)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 15,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -1610,8 +1643,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "software-engineering",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_ReExam(2).pdf",
         "page": 3,
@@ -1619,22 +1653,21 @@
           3
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pymupdf-text+visual-verification",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-re-exam-q-16",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Re-Exam)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 16,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -1699,8 +1732,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "discrete-structures",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_ReExam(2).pdf",
         "page": 3,
@@ -1708,22 +1742,21 @@
           3
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pymupdf-text+visual-verification",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-re-exam-q-17",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Re-Exam)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 17,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -1772,7 +1805,7 @@
       "explanation": [
         {
           "type": "text",
-          "value": "In a CSMA/CD (Carrier Sense Multiple Access\nwith Collision Detection) network, the minimum\nframe size is determined to detect a collision\nbefore the frame is completely transmitted.\nData rate: 100 Mbps (Megabits per second)\nMinimum frame size: 1250 bytes = 1250 × 8 =\n10,000 bits\nDistance: 1 km\nNow, the time to transmit the minimum frame\nis:\nTransmission time = Frame size (in bits) / Data\nrate(in bits/sec)​\n                              = 10,000 bits /100 *10  = 0.0001\nseconds\nFor collision detection, the signal must propagate\n2 kilometers round-trip from one end of the\ncable to the other and back (the distance is 2\nkilometers).\nThus, the signal speed v in the cable can be\ncalculated as:\nv = Round-trip distance / Transmission time ​\n   ​= 2 km/0.0001 seconds ​= 20,000 km/sec\nThus, the signal speed is 20,000 km/sec, and the\ncorrect option is: D) 20000"
+          "value": "In a CSMA/CD (Carrier Sense Multiple Access\nwith Collision Detection) network, the minimum\nframe size is determined to detect a collision\nbefore the frame is completely transmitted.\nData rate: 100 Mbps (Megabits per second)\nMinimum frame size: 1250 bytes = 1250 \u00d7 8 =\n10,000 bits\nDistance: 1 km\nNow, the time to transmit the minimum frame\nis:\nTransmission time = Frame size (in bits) / Data\nrate(in bits/sec)\u200b\n                              = 10,000 bits /100 *10  = 0.0001\nseconds\nFor collision detection, the signal must propagate\n2 kilometers round-trip from one end of the\ncable to the other and back (the distance is 2\nkilometers).\nThus, the signal speed v in the cable can be\ncalculated as:\nv = Round-trip distance / Transmission time \u200b\n   \u200b= 2 km/0.0001 seconds \u200b= 20,000 km/sec\nThus, the signal speed is 20,000 km/sec, and the\ncorrect option is: D) 20000"
         }
       ],
       "answerSource": {
@@ -1787,8 +1820,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "computer-networks",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_ReExam(2).pdf",
         "page": 3,
@@ -1796,26 +1830,25 @@
           3
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pymupdf-text+visual-verification",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-re-exam-q-18",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Re-Exam)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 18,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
-          "value": "Consider the Grammar: T → Qx Q → RS R → y ∣ ϵ S → z ∣ ϵ Here x, y, z are terminals and T, Q, R, S are non- terminals. What will be the follow set of the non-terminal R?"
+          "value": "Consider the Grammar: T \u2192 Qx Q \u2192 RS R \u2192 y \u2223 \u03f5 S \u2192 z \u2223 \u03f5 Here x, y, z are terminals and T, Q, R, S are non- terminals. What will be the follow set of the non-terminal R?"
         }
       ],
       "options": [
@@ -1851,7 +1884,7 @@
           "content": [
             {
               "type": "text",
-              "value": "{ϵ}"
+              "value": "{\u03f5}"
             }
           ]
         }
@@ -1860,7 +1893,7 @@
       "explanation": [
         {
           "type": "text",
-          "value": "To find the following set of R, let's use the\nfollowing steps:\n1. Follow of R from grammar rules:\nBy definition, the terminals that can come right\nafter a non-terminal in some kind of sentence\nform are in the following set of the non-terminal.\n2. Analyze productions involving R:\nIn production Q → RS, S comes immediately after\nR. Hence, whatever is in the first set of S is added\nto the follow of R.\nThe production S → z ∣ ϵ means S can either\nproduce z or ϵ. So the first set of S is {z, ϵ}.\n3. Add to FOLLOW set:\nSince S can produce ϵ , we need to look at what\ncomes after S in the grammar so that it can be\nadded to the following set.\nIn T → Qx, x follows Q. So, after Q derives RS, if S\ngoes to ϵ, the terminal x will follow R.\nThus, the following set of R is {z, x}.\nAnswer:\nThe correct option is (C): {z, x}"
+          "value": "To find the following set of R, let's use the\nfollowing steps:\n1. Follow of R from grammar rules:\nBy definition, the terminals that can come right\nafter a non-terminal in some kind of sentence\nform are in the following set of the non-terminal.\n2. Analyze productions involving R:\nIn production Q \u2192 RS, S comes immediately after\nR. Hence, whatever is in the first set of S is added\nto the follow of R.\nThe production S \u2192 z \u2223 \u03f5 means S can either\nproduce z or \u03f5. So the first set of S is {z, \u03f5}.\n3. Add to FOLLOW set:\nSince S can produce \u03f5 , we need to look at what\ncomes after S in the grammar so that it can be\nadded to the following set.\nIn T \u2192 Qx, x follows Q. So, after Q derives RS, if S\ngoes to \u03f5, the terminal x will follow R.\nThus, the following set of R is {z, x}.\nAnswer:\nThe correct option is (C): {z, x}"
         }
       ],
       "answerSource": {
@@ -1875,8 +1908,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "discrete-structures",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_ReExam(2).pdf",
         "page": 3,
@@ -1884,22 +1918,21 @@
           3
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pymupdf-text+visual-verification",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-re-exam-q-19",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Re-Exam)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 19,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -1963,8 +1996,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "discrete-structures",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_ReExam(2).pdf",
         "page": 3,
@@ -1972,26 +2006,25 @@
           3
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pymupdf-text+visual-verification",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-re-exam-q-20",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Re-Exam)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 20,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
-          "value": "Which of the following properties correctly describe a Regular Grammar ? (A) All production rules are of the form A→xB or A→x, where A and B are non terminal symbols and x is a terminal symbol. (B) Regular grammars are more powerful than context-free grammars and can express any type of language. (C) There is a direct correspondence between regular grammar and finite automata. (D) Regular grammars can generate languages that are not recognised by any type of automata."
+          "value": "Which of the following properties correctly describe a Regular Grammar ? (A) All production rules are of the form A\u2192xB or A\u2192x, where A and B are non terminal symbols and x is a terminal symbol. (B) Regular grammars are more powerful than context-free grammars and can express any type of language. (C) There is a direct correspondence between regular grammar and finite automata. (D) Regular grammars can generate languages that are not recognised by any type of automata."
         }
       ],
       "options": [
@@ -2036,7 +2069,7 @@
       "explanation": [
         {
           "type": "text",
-          "value": "The correct answer is D: (A) and (C) Only.\nExplanation:\n(A) All production rules are of the form A → xB\nor A → x, where A and B are non-terminal\nsymbols, and x is a terminal symbol.\nThis statement is TRUE. A regular grammar has\n   |\n6\n\nproduction rules that are either:\n A → xB (where A and B are non-terminals, and x\nis a terminal), or\n A → x (where x is a terminal).\nThese rules describe the form of a regular\ngrammar.\n(B) Regular grammars are more powerful than\ncontext-free grammars and can express any\ntype of language.\nFalse:  Regular grammar can only describe\nregular languages.\nContext-free grammars, on the other hand, can\nrepresent a wider range of languages, even ones\nthat regular grammars can't.\n(C) There is a direct correspondence between\nregular grammar and finite automata.\nTrue:  A comparable finite automaton can\nrecognize a given language for every regular\ngrammar, and vice versa.\n(D) Regular grammars can generate languages\nthat are not recognized by any type of\nautomata.\nFalse: Finite automata can identify regular\nlanguages produced by regular grammars."
+          "value": "The correct answer is D: (A) and (C) Only.\nExplanation:\n(A) All production rules are of the form A \u2192 xB\nor A \u2192 x, where A and B are non-terminal\nsymbols, and x is a terminal symbol.\nThis statement is TRUE. A regular grammar has\n   |\n6\n\nproduction rules that are either:\n A \u2192 xB (where A and B are non-terminals, and x\nis a terminal), or\n A \u2192 x (where x is a terminal).\nThese rules describe the form of a regular\ngrammar.\n(B) Regular grammars are more powerful than\ncontext-free grammars and can express any\ntype of language.\nFalse:  Regular grammar can only describe\nregular languages.\nContext-free grammars, on the other hand, can\nrepresent a wider range of languages, even ones\nthat regular grammars can't.\n(C) There is a direct correspondence between\nregular grammar and finite automata.\nTrue:  A comparable finite automaton can\nrecognize a given language for every regular\ngrammar, and vice versa.\n(D) Regular grammars can generate languages\nthat are not recognized by any type of\nautomata.\nFalse: Finite automata can identify regular\nlanguages produced by regular grammars."
         }
       ],
       "answerSource": {
@@ -2052,8 +2085,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "theory-of-computation",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_ReExam(2).pdf",
         "page": 3,
@@ -2062,26 +2096,25 @@
           4
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pymupdf-text+visual-verification",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-re-exam-q-21",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Re-Exam)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 21,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
-          "value": "Consider a schema R(P, Q, R, S) and the following functional dependencies P → Q, Q → R, R → S, S → Q. Then decomposition of R (P, Q), R (Q, R) and R 3(Q, S) is :"
+          "value": "Consider a schema R(P, Q, R, S) and the following functional dependencies P \u2192 Q, Q \u2192 R, R \u2192 S, S \u2192 Q. Then decomposition of R (P, Q), R (Q, R) and R 3(Q, S) is :"
         }
       ],
       "options": [
@@ -2126,7 +2159,7 @@
       "explanation": [
         {
           "type": "text",
-          "value": "We are given the schema R(P,Q,R,S) and the\nfollowing functional dependencies (FDs):\nP→Q\nQ→R\nR→S\nS→Q\nWe are decomposing the relation R into the\nfollowing sub-relations:\nR (P, Q)\nR (Q, R)\nR 3(Q, S)\nWe need to check two things:\nPreserving all functional dependencies means\nthat, from the decomposed relations, we should\nbe able to enforce the original functional\ndependencies.\nLossless Join: The decomposition is let us join the\nsubrelations without losing any information.\nStep 1: Lossless Join\nTo ensure that the decomposition allows us to\ncombine the subrelations without losing\ninformation, we check for a lossless join.\nHow to Check:\nA lossless join means that when you join the\nsubrelations back together, you get the original\nrelation without extra tuples.\nSince the decomposition is based on the\nfunctional dependencies and shared attributes\n(like Q), we can conclude that we can join R R\nand R  back together to recreate the original\nrelation R without losing any data.\nStep 2: Dependency Preservation\nTo check if the decomposition is dependency\npreserving, we need to see whether all the\noriginal functional dependencies can be\nenforced from the decomposed relations.\nP→Q is preserved in R (P, Q)\nQ→R is preserved in R (Q, R)\nR→S and S→Q are indirectly preserved in the\ncombination of R and R 3 because are\nincluded in the decomposition.\nSince all the functional dependencies can be\nenforced from the decomposed relations, this\ndecomposition is dependency-preserving.\nConclusion\nThe correct option is (A): Dependency Preserving\nand lossless join"
+          "value": "We are given the schema R(P,Q,R,S) and the\nfollowing functional dependencies (FDs):\nP\u2192Q\nQ\u2192R\nR\u2192S\nS\u2192Q\nWe are decomposing the relation R into the\nfollowing sub-relations:\nR (P, Q)\nR (Q, R)\nR 3(Q, S)\nWe need to check two things:\nPreserving all functional dependencies means\nthat, from the decomposed relations, we should\nbe able to enforce the original functional\ndependencies.\nLossless Join: The decomposition is let us join the\nsubrelations without losing any information.\nStep 1: Lossless Join\nTo ensure that the decomposition allows us to\ncombine the subrelations without losing\ninformation, we check for a lossless join.\nHow to Check:\nA lossless join means that when you join the\nsubrelations back together, you get the original\nrelation without extra tuples.\nSince the decomposition is based on the\nfunctional dependencies and shared attributes\n(like Q), we can conclude that we can join R R\nand R  back together to recreate the original\nrelation R without losing any data.\nStep 2: Dependency Preservation\nTo check if the decomposition is dependency\npreserving, we need to see whether all the\noriginal functional dependencies can be\nenforced from the decomposed relations.\nP\u2192Q is preserved in R (P, Q)\nQ\u2192R is preserved in R (Q, R)\nR\u2192S and S\u2192Q are indirectly preserved in the\ncombination of R and R 3 because are\nincluded in the decomposition.\nSince all the functional dependencies can be\nenforced from the decomposed relations, this\ndecomposition is dependency-preserving.\nConclusion\nThe correct option is (A): Dependency Preserving\nand lossless join"
         }
       ],
       "answerSource": {
@@ -2141,8 +2174,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "discrete-structures",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_ReExam(2).pdf",
         "page": 4,
@@ -2150,22 +2184,21 @@
           4
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pymupdf-text+visual-verification",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-re-exam-q-22",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Re-Exam)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 22,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -2230,8 +2263,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "software-engineering",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_ReExam(2).pdf",
         "page": 4,
@@ -2239,22 +2273,21 @@
           4
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pymupdf-text+visual-verification",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-re-exam-q-23",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Re-Exam)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 23,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -2318,8 +2351,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "discrete-structures",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_ReExam(2).pdf",
         "page": 4,
@@ -2327,26 +2361,25 @@
           4
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pymupdf-text+visual-verification",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-re-exam-q-24",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Re-Exam)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 24,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
-          "value": "Let P be \"It is hot day\" and q be \"The temperature is 48°C\". Write in simple sentences the meaning of"
+          "value": "Let P be \"It is hot day\" and q be \"The temperature is 48\u00b0C\". Write in simple sentences the meaning of"
         },
         {
           "type": "math",
@@ -2363,7 +2396,7 @@
           "content": [
             {
               "type": "text",
-              "value": "It is hot day or temperature is 48°C"
+              "value": "It is hot day or temperature is 48\u00b0C"
             }
           ]
         },
@@ -2372,7 +2405,7 @@
           "content": [
             {
               "type": "text",
-              "value": "It is cold day or temperature is 48°C"
+              "value": "It is cold day or temperature is 48\u00b0C"
             }
           ]
         },
@@ -2381,7 +2414,7 @@
           "content": [
             {
               "type": "text",
-              "value": "It is neither a hot day nor temperature is 48°C"
+              "value": "It is neither a hot day nor temperature is 48\u00b0C"
             }
           ]
         },
@@ -2399,7 +2432,7 @@
       "explanation": [
         {
           "type": "text",
-          "value": "Given:\np be \"It is hot day.\"\nq be \"The temperature is 48°C.\"\n The meaning of ¬p∧¬q in the sentence will be:\n¬p means \"It is not a hot day.\"\n¬q means \"The temperature is not 48°C.\"\n is a logical AND, so ¬p∧¬q means both\nconditions must be true.\nThus, ¬p∧¬q will be\n\"It is neither a hot day nor is the temperature\n48°C.\""
+          "value": "Given:\np be \"It is hot day.\"\nq be \"The temperature is 48\u00b0C.\"\n The meaning of \u00acp\u2227\u00acq in the sentence will be:\n\u00acp means \"It is not a hot day.\"\n\u00acq means \"The temperature is not 48\u00b0C.\"\n is a logical AND, so \u00acp\u2227\u00acq means both\nconditions must be true.\nThus, \u00acp\u2227\u00acq will be\n\"It is neither a hot day nor is the temperature\n48\u00b0C.\""
         }
       ],
       "answerSource": {
@@ -2414,8 +2447,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": null,
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_ReExam(2).pdf",
         "page": 4,
@@ -2423,22 +2457,21 @@
           4
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pymupdf-text+visual-verification",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "low",
+        "topicConfidence": "low",
+        "reviewRequired": true
       }
     },
     {
       "id": "ugc-net-cs-2024-june-re-exam-q-25",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Re-Exam)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 25,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -2487,7 +2520,7 @@
       "explanation": [
         {
           "type": "text",
-          "value": "Total Lines of Code (LOC) = 2000\nProductivity Rate = 10 LOC per person-hour\nPerson-Hours = Productivity Rate (LOC per\nperson-hour)/ Total Lines of Code (LOC)\nSubstitute the values into the formula:\nPerson-Hours = 2000/10 = 200 person-hours\nThe correct option is (C): 200 person-hours are\nrequired to complete the project.\n​"
+          "value": "Total Lines of Code (LOC) = 2000\nProductivity Rate = 10 LOC per person-hour\nPerson-Hours = Productivity Rate (LOC per\nperson-hour)/ Total Lines of Code (LOC)\nSubstitute the values into the formula:\nPerson-Hours = 2000/10 = 200 person-hours\nThe correct option is (C): 200 person-hours are\nrequired to complete the project.\n\u200b"
         }
       ],
       "answerSource": {
@@ -2502,8 +2535,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "software-engineering",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_ReExam(2).pdf",
         "page": 4,
@@ -2511,22 +2545,21 @@
           4
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pymupdf-text+visual-verification",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-re-exam-q-26",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Re-Exam)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 26,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -2590,8 +2623,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "artificial-intelligence",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_ReExam(2).pdf",
         "page": 4,
@@ -2599,22 +2633,21 @@
           4
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pymupdf-text+visual-verification",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-re-exam-q-27",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Re-Exam)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 27,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "code",
@@ -2664,7 +2697,7 @@
       "explanation": [
         {
           "type": "text",
-          "value": "Explanation:\nchar *a = \"ONE\", *b = \"TWO\";\na points to the string \"ONE\", and b points to the\n   |\n∧\n\nstring \"TWO\".\nCalling f1(a, b):\nInside f1, the values of x and y are swapped\nlocally using a temporary variable t1. However,\nsince C passes arguments by value, the actual\nvalues of a and b in the main() function remain\nunchanged.\nAfter f1(a, b), a still points to \"ONE\" and b still\npoints to \"TWO\".\nSo the printf statement after f1 prints:\nONE TWO\nCalling f2(&a, &b):\nInside f2, the values of *x and *y (i.e., the pointers\na and b themselves) are swapped.\nAfter f2(&a, &b), a now points to \"TWO\" and b\npoints to \"ONE\".\nSo the printf statement after f2 prints:\nTWO ONE\nThe correct option is (A): ONE TWO TWO ONE"
+          "value": "Explanation:\nchar *a = \"ONE\", *b = \"TWO\";\na points to the string \"ONE\", and b points to the\n   |\n\u2227\n\nstring \"TWO\".\nCalling f1(a, b):\nInside f1, the values of x and y are swapped\nlocally using a temporary variable t1. However,\nsince C passes arguments by value, the actual\nvalues of a and b in the main() function remain\nunchanged.\nAfter f1(a, b), a still points to \"ONE\" and b still\npoints to \"TWO\".\nSo the printf statement after f1 prints:\nONE TWO\nCalling f2(&a, &b):\nInside f2, the values of *x and *y (i.e., the pointers\na and b themselves) are swapped.\nAfter f2(&a, &b), a now points to \"TWO\" and b\npoints to \"ONE\".\nSo the printf statement after f2 prints:\nTWO ONE\nThe correct option is (A): ONE TWO TWO ONE"
         }
       ],
       "answerSource": {
@@ -2680,8 +2713,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": null,
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_ReExam(2).pdf",
         "page": 4,
@@ -2690,22 +2724,21 @@
           5
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pymupdf-text+visual-verification",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "low",
+        "topicConfidence": "low",
+        "reviewRequired": true
       }
     },
     {
       "id": "ugc-net-cs-2024-june-re-exam-q-28",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Re-Exam)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 28,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -2769,8 +2802,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "discrete-structures",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_ReExam(2).pdf",
         "page": 5,
@@ -2778,22 +2812,21 @@
           5
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pymupdf-text+visual-verification",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-re-exam-q-29",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Re-Exam)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 29,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -2857,8 +2890,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "programming-data-structures",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_ReExam(2).pdf",
         "page": 5,
@@ -2866,22 +2900,21 @@
           5
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pymupdf-text+visual-verification",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-re-exam-q-30",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Re-Exam)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 30,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -2950,7 +2983,7 @@
       "explanation": [
         {
           "type": "text",
-          "value": "Time Complexity Analysis:\n(A) T(n)=T(n/2)+1\nThis recurrence relation simplifies to O(log n).\n(B) T(n)=2T(n/2)+n\nThis results in T(n) = O(n log n).\nC) T(n)=3T(n/3)+n\nT(n) = O(n log n).\n(D) T(n)=2T(n/2)+\n T(n)=O(n).\n(E) T(n)=T(n−1)+1\nThis simplifies to T(n) = O(n).\nArranging in Increasing Order:\nO(log n)<O(n)<O(n log n)."
+          "value": "Time Complexity Analysis:\n(A) T(n)=T(n/2)+1\nThis recurrence relation simplifies to O(log n).\n(B) T(n)=2T(n/2)+n\nThis results in T(n) = O(n log n).\nC) T(n)=3T(n/3)+n\nT(n) = O(n log n).\n(D) T(n)=2T(n/2)+\n T(n)=O(n).\n(E) T(n)=T(n\u22121)+1\nThis simplifies to T(n) = O(n).\nArranging in Increasing Order:\nO(log n)<O(n)<O(n log n)."
         }
       ],
       "answerSource": {
@@ -2965,8 +2998,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "discrete-structures",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_ReExam(2).pdf",
         "page": 5,
@@ -2974,22 +3008,21 @@
           5
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pymupdf-text+visual-verification",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-re-exam-q-31",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Re-Exam)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 31,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -3053,8 +3086,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "discrete-structures",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_ReExam(2).pdf",
         "page": 5,
@@ -3062,22 +3096,21 @@
           5
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pymupdf-text+visual-verification",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-re-exam-q-32",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Re-Exam)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 32,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -3205,7 +3238,7 @@
       "explanation": [
         {
           "type": "text",
-          "value": "The IP address classes based on the first octet\n(the first number in the IP address) are as follows:\n1. Class A: IP addresses from 0.0.0.0 to\n127.255.255.255.\nExample: 10.20.30.40 → Class A.\n2. Class B: IP addresses from 128.0.0.0 to\n191.255.255.255.\nExample: 180.30.100.10 → Class B.\n3. Class C: IP addresses from 192.0.0.0 to\n223.255.255.255.\nExample: 210.20.30.3 → Class C.\n4. Class E: IP addresses from 240.0.0.0 to\n255.255.255.255 (Reserved for experimental\nuse).\nExample: 252.5.15.11 → Class E.\nThe correct answer is D: (A)-(III), (B)-(IV), (C)-\n(II), (D)-(I)."
+          "value": "The IP address classes based on the first octet\n(the first number in the IP address) are as follows:\n1. Class A: IP addresses from 0.0.0.0 to\n127.255.255.255.\nExample: 10.20.30.40 \u2192 Class A.\n2. Class B: IP addresses from 128.0.0.0 to\n191.255.255.255.\nExample: 180.30.100.10 \u2192 Class B.\n3. Class C: IP addresses from 192.0.0.0 to\n223.255.255.255.\nExample: 210.20.30.3 \u2192 Class C.\n4. Class E: IP addresses from 240.0.0.0 to\n255.255.255.255 (Reserved for experimental\nuse).\nExample: 252.5.15.11 \u2192 Class E.\nThe correct answer is D: (A)-(III), (B)-(IV), (C)-\n(II), (D)-(I)."
         }
       ],
       "answerSource": {
@@ -3220,8 +3253,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": null,
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_ReExam(2).pdf",
         "page": 5,
@@ -3229,22 +3263,21 @@
           5
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pymupdf-text+visual-verification",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "low",
+        "topicConfidence": "low",
+        "reviewRequired": true
       }
     },
     {
       "id": "ugc-net-cs-2024-june-re-exam-q-33",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Re-Exam)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 33,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -3293,7 +3326,7 @@
       "explanation": [
         {
           "type": "text",
-          "value": "In descending order of access time (from slowest\nto fastest), the sequence of storage devices is:\n   |\nn−−\n√\n\n(C) Magnetic Tapes - Slowest access time\n(seconds or more).\n(E) Optical Disk - Access time in milliseconds,\nsimilar to magnetic disks.\n(B) Magnetic Disk - Access time in milliseconds.\n(D) Main Memory - Access time in nanoseconds.\n(A) Registers - Fastest access time (nanoseconds).\nThus, the correct answer is D: (C), (E), (B), (D), (A).\nNOTE: In  question paper, the question\nwas asked about ascending order which was\nwrong. We have changed it to arrange it in\ndescending order."
+          "value": "In descending order of access time (from slowest\nto fastest), the sequence of storage devices is:\n   |\nn\u2212\u2212\n\u221a\n\n(C) Magnetic Tapes - Slowest access time\n(seconds or more).\n(E) Optical Disk - Access time in milliseconds,\nsimilar to magnetic disks.\n(B) Magnetic Disk - Access time in milliseconds.\n(D) Main Memory - Access time in nanoseconds.\n(A) Registers - Fastest access time (nanoseconds).\nThus, the correct answer is D: (C), (E), (B), (D), (A).\nNOTE: In  question paper, the question\nwas asked about ascending order which was\nwrong. We have changed it to arrange it in\ndescending order."
         }
       ],
       "answerSource": {
@@ -3309,8 +3342,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "computer-architecture",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_ReExam(2).pdf",
         "page": 5,
@@ -3318,22 +3352,21 @@
           5
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pymupdf-text+visual-verification",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-re-exam-q-34",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Re-Exam)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 34,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -3390,7 +3423,7 @@
       "explanation": [
         {
           "type": "text",
-          "value": "The correct answer is C: Half of the number of\nvertices.\nThis result is based on Dirac's Theorem, which\nstates that a graph G with n vertices (where n≥3)\nis Hamiltonian if the degree of each vertex is at\nleast\n​.\nExplanation:\nA Hamiltonian graph is a graph that contains a\nHamiltonian cycle, a cycle that visits each\nvertex exactly once.\nDirac's Theorem provides a sufficient condition\nfor a graph to be Hamiltonian. It states that if\nevery vertex in a graph has a degree\n​,\nwhere n is the number of vertices, then the\ngraph is Hamiltonian.\nThus, the degree of each vertex should be\ngreater than or equal to half of the number of\nvertices for the graph to be Hamiltonian."
+          "value": "The correct answer is C: Half of the number of\nvertices.\nThis result is based on Dirac's Theorem, which\nstates that a graph G with n vertices (where n\u22653)\nis Hamiltonian if the degree of each vertex is at\nleast\n\u200b.\nExplanation:\nA Hamiltonian graph is a graph that contains a\nHamiltonian cycle, a cycle that visits each\nvertex exactly once.\nDirac's Theorem provides a sufficient condition\nfor a graph to be Hamiltonian. It states that if\nevery vertex in a graph has a degree\n\u200b,\nwhere n is the number of vertices, then the\ngraph is Hamiltonian.\nThus, the degree of each vertex should be\ngreater than or equal to half of the number of\nvertices for the graph to be Hamiltonian."
         }
       ],
       "answerSource": {
@@ -3405,8 +3438,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "discrete-structures",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_ReExam(2).pdf",
         "page": 5,
@@ -3414,22 +3448,21 @@
           5
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pymupdf-text+visual-verification",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-re-exam-q-35",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Re-Exam)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 35,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -3493,8 +3526,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "discrete-structures",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_ReExam(2).pdf",
         "page": 6,
@@ -3502,26 +3536,25 @@
           6
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pymupdf-text+visual-verification",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-re-exam-q-36",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Re-Exam)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 36,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
-          "value": "Consider the transactions T₁, T₂, T₃, and the schedules S₁ and S₂ given below. T₁: r₁(x); r₁(z); w₁(z) T₂: r₂(y); r₂(z); w₂(z) T₃: r₃(y); r₃(x); w₃(y) S₁ : r₁(x); r₃(y); r₃(x); r (y); r₂(z); w (y); w (z); r (z); w (x); w (z) S₂ : r₁(x); r₃(y); r (y), r₃(x); r₁(z); r₂(z); w₃(y); w₁(x); w₂(z); w₁(z) Which one of the following statements about the schedules is TRUE?"
+          "value": "Consider the transactions T\u2081, T\u2082, T\u2083, and the schedules S\u2081 and S\u2082 given below. T\u2081: r\u2081(x); r\u2081(z); w\u2081(z) T\u2082: r\u2082(y); r\u2082(z); w\u2082(z) T\u2083: r\u2083(y); r\u2083(x); w\u2083(y) S\u2081 : r\u2081(x); r\u2083(y); r\u2083(x); r (y); r\u2082(z); w (y); w (z); r (z); w (x); w (z) S\u2082 : r\u2081(x); r\u2083(y); r (y), r\u2083(x); r\u2081(z); r\u2082(z); w\u2083(y); w\u2081(x); w\u2082(z); w\u2081(z) Which one of the following statements about the schedules is TRUE?"
         }
       ],
       "options": [
@@ -3530,7 +3563,7 @@
           "content": [
             {
               "type": "text",
-              "value": "Only S₁ is conflict-serializable"
+              "value": "Only S\u2081 is conflict-serializable"
             }
           ]
         },
@@ -3539,7 +3572,7 @@
           "content": [
             {
               "type": "text",
-              "value": "Only S₂ is conflict-serializable"
+              "value": "Only S\u2082 is conflict-serializable"
             }
           ]
         },
@@ -3548,7 +3581,7 @@
           "content": [
             {
               "type": "text",
-              "value": "Both S₁ and S₂ are conflict-serializable"
+              "value": "Both S\u2081 and S\u2082 are conflict-serializable"
             }
           ]
         },
@@ -3557,7 +3590,7 @@
           "content": [
             {
               "type": "text",
-              "value": "Neither S₁ nor S₂ is conflict-serializable"
+              "value": "Neither S\u2081 nor S\u2082 is conflict-serializable"
             }
           ]
         }
@@ -3566,7 +3599,7 @@
       "explanation": [
         {
           "type": "text",
-          "value": "The correct answer is option A.\nUsing the precedence graph method, we can\nfind out Schedule is conflict serializable or\nnot.\nIf the precedence graph has any loop then\nthat schedule will not be conflict-serializable.\nIf the precedence graph has no loop, then that\nschedule will be conflict-serializable.\nFor both schedules, S   and\n, construct the\nprecedence graphs by identifying conflicts (read-\nwrite, write-read, write-write) between\ntransactions.\nFor schedule\n​:\nT1\nT2\nT3\nr(x)\n\nr(y)\n\nr(x)\n\nr(y)\n\nr(z)\n\nw(y)\n\nw(z)\nr(z)\n\nw(x)\n\nw(z)\n\nThe precedence graph of S  has no loop. It is\nconflict serializable.\nFor schedule\n:\nT1\nT2\nT3\nr(x)\n   |\nn\n2\n≥n\n2\n1\nS2\nS1\n1\nS2\n\nr(y)\n\nr(y)\n\nr(x)\nr(z)\n\nr(z)\n\nw(y)\nw(x)\n\nw(z)\n\nw(z)\n\nThe Precedence graph of\n ​has loop. It is\nnot conflict-serializable."
+          "value": "The correct answer is option A.\nUsing the precedence graph method, we can\nfind out Schedule is conflict serializable or\nnot.\nIf the precedence graph has any loop then\nthat schedule will not be conflict-serializable.\nIf the precedence graph has no loop, then that\nschedule will be conflict-serializable.\nFor both schedules, S   and\n, construct the\nprecedence graphs by identifying conflicts (read-\nwrite, write-read, write-write) between\ntransactions.\nFor schedule\n\u200b:\nT1\nT2\nT3\nr(x)\n\nr(y)\n\nr(x)\n\nr(y)\n\nr(z)\n\nw(y)\n\nw(z)\nr(z)\n\nw(x)\n\nw(z)\n\nThe precedence graph of S  has no loop. It is\nconflict serializable.\nFor schedule\n:\nT1\nT2\nT3\nr(x)\n   |\nn\n2\n\u2265n\n2\n1\nS2\nS1\n1\nS2\n\nr(y)\n\nr(y)\n\nr(x)\nr(z)\n\nr(z)\n\nw(y)\nw(x)\n\nw(z)\n\nw(z)\n\nThe Precedence graph of\n \u200bhas loop. It is\nnot conflict-serializable."
         }
       ],
       "answerSource": {
@@ -3582,8 +3615,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "databases",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_ReExam(2).pdf",
         "page": 6,
@@ -3591,22 +3625,21 @@
           6
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pymupdf-text+visual-verification",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-re-exam-q-37",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Re-Exam)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 37,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -3670,8 +3703,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "computer-architecture",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_ReExam(2).pdf",
         "page": 6,
@@ -3679,22 +3713,21 @@
           6
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pymupdf-text+visual-verification",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-re-exam-q-38",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Re-Exam)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 38,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -3822,7 +3855,7 @@
       "explanation": [
         {
           "type": "text",
-          "value": "Explanation:\n(A) Half Adder – (IV) 2-bit addition circuit: A\nhalf adder is a digital circuit that performs the\naddition of two binary digits and produces a\nsum and carry output.\n(B) Decoder – (I) Has n input and 2n output: A\ndecoder is a combinational circuit that\nconverts n inputs into a unique combination of\n2^n outputs, where each output corresponds\nto one input combination.\n(C) Register – (II) CPU Storage Unit: A register\nis a small, fast storage location in the CPU\nused to hold data temporarily during\nprocessing.\n(D) Main memory – (III) Used to store\nprograms at runtime: Main memory (RAM) is\nused to store programs and data while they\nare being processed by the CPU.\nThe correct answer is C: (A)-(IV), (B)-(I), (C)-(II),\n(D)-(III)."
+          "value": "Explanation:\n(A) Half Adder \u2013 (IV) 2-bit addition circuit: A\nhalf adder is a digital circuit that performs the\naddition of two binary digits and produces a\nsum and carry output.\n(B) Decoder \u2013 (I) Has n input and 2n output: A\ndecoder is a combinational circuit that\nconverts n inputs into a unique combination of\n2^n outputs, where each output corresponds\nto one input combination.\n(C) Register \u2013 (II) CPU Storage Unit: A register\nis a small, fast storage location in the CPU\nused to hold data temporarily during\nprocessing.\n(D) Main memory \u2013 (III) Used to store\nprograms at runtime: Main memory (RAM) is\nused to store programs and data while they\nare being processed by the CPU.\nThe correct answer is C: (A)-(IV), (B)-(I), (C)-(II),\n(D)-(III)."
         }
       ],
       "answerSource": {
@@ -3837,8 +3870,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": null,
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_ReExam(2).pdf",
         "page": 6,
@@ -3846,22 +3880,21 @@
           6
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pymupdf-text+visual-verification",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "low",
+        "topicConfidence": "low",
+        "reviewRequired": true
       }
     },
     {
       "id": "ugc-net-cs-2024-june-re-exam-q-39",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Re-Exam)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 39,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -3925,8 +3958,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "theory-of-computation",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_ReExam(2).pdf",
         "page": 6,
@@ -3934,22 +3968,21 @@
           6
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pymupdf-text+visual-verification",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-re-exam-q-40",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Re-Exam)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 40,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -4014,8 +4047,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "discrete-structures",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_ReExam(2).pdf",
         "page": 6,
@@ -4023,22 +4057,21 @@
           6
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pymupdf-text+visual-verification",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-re-exam-q-41",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Re-Exam)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 41,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -4051,7 +4084,7 @@
           "content": [
             {
               "type": "text",
-              "value": "R (V,W,X,Y,Z) {VW→X, WX→V, VX→W, W→Y, Y→Z}"
+              "value": "R (V,W,X,Y,Z) {VW\u2192X, WX\u2192V, VX\u2192W, W\u2192Y, Y\u2192Z}"
             }
           ]
         },
@@ -4060,7 +4093,7 @@
           "content": [
             {
               "type": "text",
-              "value": "R (V,W,X,Y,Z) {VW→W, X→Y}"
+              "value": "R (V,W,X,Y,Z) {VW\u2192W, X\u2192Y}"
             }
           ]
         },
@@ -4069,7 +4102,7 @@
           "content": [
             {
               "type": "text",
-              "value": "R (V,W,X,Y,Z) {VW→X, X→VY}"
+              "value": "R (V,W,X,Y,Z) {VW\u2192X, X\u2192VY}"
             }
           ]
         },
@@ -4078,7 +4111,7 @@
           "content": [
             {
               "type": "text",
-              "value": "R (V,W,X,Y,Z) {VW→X, X→Y, Y→Z, Z→V}"
+              "value": "R (V,W,X,Y,Z) {VW\u2192X, X\u2192Y, Y\u2192Z, Z\u2192V}"
             }
           ]
         }
@@ -4087,7 +4120,7 @@
       "explanation": [
         {
           "type": "text",
-          "value": "Option A\nFDs: {VW→X, WX→V, VX→W, W→Y, Y→Z}\nThis is a classic case where BCNF decomposition\nbreaks dependency preservation.\nLet’s find the candidate key:\nTry closure of VW:\nVW → X\nWX → V (WX is V + W + X → V, V already\nthere)\nVX → W\nW → Y\nY → Z\n⇒ VW+ = V, W, X, Y, Z ⇒ So VW is a\ncandidate key\nNow check if all FDs are BCNF compliant (LHS\nmust be a superkey):\nVW → X ✅ (superkey)\nWX → V ❌ (WX is not a superkey)\nVX → W ❌\nW → Y ❌\nY → Z ❌\nSo BCNF violated in multiple FDs.\nTry decomposing based on W → Y and Y → Z:\nIn the process, some FDs are lost, so\ndependency preservation fails.\nConclusion: Cannot decompose into BCNF\nwhile preserving dependencies\nCorrect Answer: A"
+          "value": "Option A\nFDs: {VW\u2192X, WX\u2192V, VX\u2192W, W\u2192Y, Y\u2192Z}\nThis is a classic case where BCNF decomposition\nbreaks dependency preservation.\nLet\u2019s find the candidate key:\nTry closure of VW:\nVW \u2192 X\nWX \u2192 V (WX is V + W + X \u2192 V, V already\nthere)\nVX \u2192 W\nW \u2192 Y\nY \u2192 Z\n\u21d2 VW+ = V, W, X, Y, Z \u21d2 So VW is a\ncandidate key\nNow check if all FDs are BCNF compliant (LHS\nmust be a superkey):\nVW \u2192 X \u2705 (superkey)\nWX \u2192 V \u274c (WX is not a superkey)\nVX \u2192 W \u274c\nW \u2192 Y \u274c\nY \u2192 Z \u274c\nSo BCNF violated in multiple FDs.\nTry decomposing based on W \u2192 Y and Y \u2192 Z:\nIn the process, some FDs are lost, so\ndependency preservation fails.\nConclusion: Cannot decompose into BCNF\nwhile preserving dependencies\nCorrect Answer: A"
         }
       ],
       "answerSource": {
@@ -4102,8 +4135,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "discrete-structures",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_ReExam(2).pdf",
         "page": 6,
@@ -4111,22 +4145,21 @@
           6
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pymupdf-text+visual-verification",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-re-exam-q-42",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Re-Exam)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 42,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "code",
@@ -4195,8 +4228,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": null,
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_ReExam(2).pdf",
         "page": 7,
@@ -4204,22 +4238,21 @@
           7
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pymupdf-text+visual-verification",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "low",
+        "topicConfidence": "low",
+        "reviewRequired": true
       }
     },
     {
       "id": "ugc-net-cs-2024-june-re-exam-q-43",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Re-Exam)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 43,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -4284,8 +4317,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "discrete-structures",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_ReExam(2).pdf",
         "page": 7,
@@ -4293,22 +4327,21 @@
           7
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pymupdf-text+visual-verification",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-re-exam-q-44",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Re-Exam)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 44,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -4372,8 +4405,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "discrete-structures",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_ReExam(2).pdf",
         "page": 7,
@@ -4381,22 +4415,21 @@
           7
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pymupdf-text+visual-verification",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-re-exam-q-45",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Re-Exam)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 45,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -4460,8 +4493,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "discrete-structures",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_ReExam(2).pdf",
         "page": 7,
@@ -4469,22 +4503,21 @@
           7
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pymupdf-text+visual-verification",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-re-exam-q-46",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Re-Exam)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 46,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -4548,8 +4581,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "discrete-structures",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_ReExam(2).pdf",
         "page": 7,
@@ -4557,22 +4591,21 @@
           7
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pymupdf-text+visual-verification",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-re-exam-q-47",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Re-Exam)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 47,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -4636,8 +4669,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": null,
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_ReExam(2).pdf",
         "page": 7,
@@ -4645,22 +4679,21 @@
           7
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pymupdf-text+visual-verification",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "low",
+        "topicConfidence": "low",
+        "reviewRequired": true
       }
     },
     {
       "id": "ugc-net-cs-2024-june-re-exam-q-48",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Re-Exam)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 48,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -4718,7 +4751,7 @@
       "explanation": [
         {
           "type": "text",
-          "value": "The correct answer is Option A ( Base Const\nDerived Const Derived dest Base dest ).\nExecution starts from the main function. In main\nfunction, first executes\n1.)  Base *b = new Derived();\nIt creates a new object of type Derived on the\nheap and assigns its address to a pointer b of\ntype Base*.\n   |\nP(E)  =\nfavourable outcome\ntotal number of outcome\n⇒P(E)  =     =\n6\n8\n3\n4\n∧\n≡\n∨\n∨\n≡\n∧\n∧\n≡\n∧\n⇒≡∧\n⇒\n∨\n⇒\n∨\n∧\n∧\n∨≡\n∨\n∨\n∨\n\nThis statement calls the constructor of the\nDerived class, which in turn calls the\nconstructor of the Base class because the\nDerived class inherits from the Base class.\nSo, the output is \"Base Const\" followed by\n\"Derived Const\".\nAfter that, it executes\n2.)  delete b;\nIt deletes the object pointed to by b, which is\nof type Derived.\nb is a pointer to a Base class and the Base\nclass has a virtual destructor. A virtual\ndestructor ensures that when an object of a\nderived class is deleted through a base class\npointer, the derived class’s destructor is called\nfirst.\nSo, the destructor of the Derived class is\ncalled first, which outputs \"Derived dest\".\nThen, the destructor of the Base class is\ncalled, which outputs \"Base dest\".\nCombining all outputs from each step gives us:\nFrom constructing objects:\n\"Base Const\" \"Derived Const\"\nFrom destructing objects (in reverse order):\n\"Derived dest\" \"Base dest\"\nNote: The order of destruction is the reverse of\nthe order of construction. The First Derived class\ndestructor is called, and after that, the Base class\ndestructor is called. So that any resources\nacquired by the derived class are released before\nthe base class's resources are released."
+          "value": "The correct answer is Option A ( Base Const\nDerived Const Derived dest Base dest ).\nExecution starts from the main function. In main\nfunction, first executes\n1.)  Base *b = new Derived();\nIt creates a new object of type Derived on the\nheap and assigns its address to a pointer b of\ntype Base*.\n   |\nP(E)  =\nfavourable outcome\ntotal number of outcome\n\u21d2P(E)  =     =\n6\n8\n3\n4\n\u2227\n\u2261\n\u2228\n\u2228\n\u2261\n\u2227\n\u2227\n\u2261\n\u2227\n\u21d2\u2261\u2227\n\u21d2\n\u2228\n\u21d2\n\u2228\n\u2227\n\u2227\n\u2228\u2261\n\u2228\n\u2228\n\u2228\n\nThis statement calls the constructor of the\nDerived class, which in turn calls the\nconstructor of the Base class because the\nDerived class inherits from the Base class.\nSo, the output is \"Base Const\" followed by\n\"Derived Const\".\nAfter that, it executes\n2.)  delete b;\nIt deletes the object pointed to by b, which is\nof type Derived.\nb is a pointer to a Base class and the Base\nclass has a virtual destructor. A virtual\ndestructor ensures that when an object of a\nderived class is deleted through a base class\npointer, the derived class\u2019s destructor is called\nfirst.\nSo, the destructor of the Derived class is\ncalled first, which outputs \"Derived dest\".\nThen, the destructor of the Base class is\ncalled, which outputs \"Base dest\".\nCombining all outputs from each step gives us:\nFrom constructing objects:\n\"Base Const\" \"Derived Const\"\nFrom destructing objects (in reverse order):\n\"Derived dest\" \"Base dest\"\nNote: The order of destruction is the reverse of\nthe order of construction. The First Derived class\ndestructor is called, and after that, the Base class\ndestructor is called. So that any resources\nacquired by the derived class are released before\nthe base class's resources are released."
         }
       ],
       "answerSource": {
@@ -4734,8 +4767,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": null,
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_ReExam(2).pdf",
         "page": 7,
@@ -4744,26 +4778,43 @@
           8
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pymupdf-text+visual-verification",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "low",
+        "topicConfidence": "low",
+        "reviewRequired": true
       }
     },
     {
       "id": "ugc-net-cs-2024-june-re-exam-q-49",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Re-Exam)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 49,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
-          "value": "If $L_1$ and $L_2$ are context free languages, which one of the following is true about"
+          "value": "If"
+        },
+        {
+          "type": "math",
+          "value": "L_1",
+          "display": false
+        },
+        {
+          "type": "text",
+          "value": "and"
+        },
+        {
+          "type": "math",
+          "value": "L_2",
+          "display": false
+        },
+        {
+          "type": "text",
+          "value": "are context free languages, which one of the following is true about"
         },
         {
           "type": "math",
@@ -4831,8 +4882,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": null,
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_ReExam(2).pdf",
         "page": 8,
@@ -4840,22 +4892,21 @@
           8
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pymupdf-text+visual-verification",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "low",
+        "topicConfidence": "low",
+        "reviewRequired": true
       }
     },
     {
       "id": "ugc-net-cs-2024-june-re-exam-q-50",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Re-Exam)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 50,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -4928,8 +4979,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": null,
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_ReExam(2).pdf",
         "page": 8,
@@ -4937,22 +4989,21 @@
           8
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pymupdf-text+visual-verification",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "low",
+        "topicConfidence": "low",
+        "reviewRequired": true
       }
     },
     {
       "id": "ugc-net-cs-2024-june-re-exam-q-51",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Re-Exam)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 51,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -5001,7 +5052,7 @@
       "explanation": [
         {
           "type": "text",
-          "value": "The correct answer is Option A ( A, B, C only ).\nA Syntax tree ( also called a parse tree )\nrepresents a structure of program code in the\ncompiler.\nSyntax trees are useful for a variety of tasks in\ncompiler design, such as type checking, code\noptimization and code generation. They can\n   |\n1∩2\n1∩2\n1\n2\n1∩2\n\nalso be used to represent the structure of\nother types of logical structures, such as\nnatural language sentences or logical\nexpressions.\nSyntax tree can be used for error detection, it\ndetermines if a compiler is accurate. If a\nsyntax tree contains an error, the compiler will\ndisplay an error message. But Syntax tree\ncannot handle the error it only detects."
+          "value": "The correct answer is Option A ( A, B, C only ).\nA Syntax tree ( also called a parse tree )\nrepresents a structure of program code in the\ncompiler.\nSyntax trees are useful for a variety of tasks in\ncompiler design, such as type checking, code\noptimization and code generation. They can\n   |\n1\u22292\n1\u22292\n1\n2\n1\u22292\n\nalso be used to represent the structure of\nother types of logical structures, such as\nnatural language sentences or logical\nexpressions.\nSyntax tree can be used for error detection, it\ndetermines if a compiler is accurate. If a\nsyntax tree contains an error, the compiler will\ndisplay an error message. But Syntax tree\ncannot handle the error it only detects."
         }
       ],
       "answerSource": {
@@ -5017,8 +5068,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "discrete-structures",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_ReExam(2).pdf",
         "page": 8,
@@ -5026,22 +5078,21 @@
           8
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pymupdf-text+visual-verification",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-re-exam-q-52",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Re-Exam)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 52,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -5184,8 +5235,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": null,
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_ReExam(2).pdf",
         "page": 8,
@@ -5193,22 +5245,21 @@
           8
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pymupdf-text+visual-verification",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "low",
+        "topicConfidence": "low",
+        "reviewRequired": true
       }
     },
     {
       "id": "ugc-net-cs-2024-june-re-exam-q-53",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Re-Exam)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 53,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -5336,7 +5387,7 @@
       "explanation": [
         {
           "type": "text",
-          "value": "The correct answer is Option C ( (A)-(II), (B)-(I),\n(C)-(IV), (D)-(III) ).\n\nList - I\n(Counter)\nList - II (uses/working)\n(A) N-bit Ring\nCounter\n(II) Counts exactly N\nstates\n(B)\nSynchronous\nCounter\n(I) Uses universal clock\n(C)\nAsynchronou\ns Counter\n(IV) Main clock is applied\nto first flip-flop only\n(D) Decimal\nCounter\n(III) Counts 0 to 9\n\nA Counter is a device which stores or displays\nthe number of times a particular event or process\nhas occurred.\n\n(A) N-bit Ring Counter : The number of states in\nan N-bit ring counter is N. This is because a ring\ncounter is a shift register with N flip-flops, and\nthe state repeats every N clock cycles.\n(B) Synchronous Counter : Synchronous counter\nhas one global clock which drives each flip flop\nso output changes in parallel.\n(C) Asynchronous Counter : In asynchronous\ncounter we don’t use universal clock, only first\nflip flop is driven by main clock and the clock\ninput of rest of the following flip flop is driven by\noutput of previous flip flops.\n(D) Decimal Counter : A decimal counter, also\nknown as Modulo-10 counter, has 10 states. It\ncounts from 0 to 9, with each decimal digit\nrepresented by a unique binary encoding"
+          "value": "The correct answer is Option C ( (A)-(II), (B)-(I),\n(C)-(IV), (D)-(III) ).\n\nList - I\n(Counter)\nList - II (uses/working)\n(A) N-bit Ring\nCounter\n(II) Counts exactly N\nstates\n(B)\nSynchronous\nCounter\n(I) Uses universal clock\n(C)\nAsynchronou\ns Counter\n(IV) Main clock is applied\nto first flip-flop only\n(D) Decimal\nCounter\n(III) Counts 0 to 9\n\nA Counter is a device which stores or displays\nthe number of times a particular event or process\nhas occurred.\n\n(A) N-bit Ring Counter : The number of states in\nan N-bit ring counter is N. This is because a ring\ncounter is a shift register with N flip-flops, and\nthe state repeats every N clock cycles.\n(B) Synchronous Counter : Synchronous counter\nhas one global clock which drives each flip flop\nso output changes in parallel.\n(C) Asynchronous Counter : In asynchronous\ncounter we don\u2019t use universal clock, only first\nflip flop is driven by main clock and the clock\ninput of rest of the following flip flop is driven by\noutput of previous flip flops.\n(D) Decimal Counter : A decimal counter, also\nknown as Modulo-10 counter, has 10 states. It\ncounts from 0 to 9, with each decimal digit\nrepresented by a unique binary encoding"
         }
       ],
       "answerSource": {
@@ -5351,8 +5402,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": null,
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_ReExam(2).pdf",
         "page": 9,
@@ -5360,22 +5412,21 @@
           9
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pymupdf-text+visual-verification",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "low",
+        "topicConfidence": "low",
+        "reviewRequired": true
       }
     },
     {
       "id": "ugc-net-cs-2024-june-re-exam-q-54",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Re-Exam)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 54,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -5439,8 +5490,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": null,
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_ReExam(2).pdf",
         "page": 9,
@@ -5448,22 +5500,21 @@
           9
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pymupdf-text+visual-verification",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "low",
+        "topicConfidence": "low",
+        "reviewRequired": true
       }
     },
     {
       "id": "ugc-net-cs-2024-june-re-exam-q-55",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Re-Exam)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 55,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -5607,8 +5658,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": null,
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_ReExam(2).pdf",
         "page": 9,
@@ -5616,22 +5668,21 @@
           9
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pymupdf-text+visual-verification",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "low",
+        "topicConfidence": "low",
+        "reviewRequired": true
       }
     },
     {
       "id": "ugc-net-cs-2024-june-re-exam-q-56",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Re-Exam)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 56,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -5695,8 +5746,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "computer-architecture",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_ReExam(2).pdf",
         "page": 9,
@@ -5704,22 +5756,21 @@
           9
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pymupdf-text+visual-verification",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-re-exam-q-57",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Re-Exam)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 57,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -5862,8 +5913,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": null,
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_ReExam(2).pdf",
         "page": 9,
@@ -5871,22 +5923,21 @@
           9
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pymupdf-text+visual-verification",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "low",
+        "topicConfidence": "low",
+        "reviewRequired": true
       }
     },
     {
       "id": "ugc-net-cs-2024-june-re-exam-q-58",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Re-Exam)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 58,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -5958,8 +6009,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "computer-networks",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_ReExam(2).pdf",
         "page": 9,
@@ -5968,22 +6020,21 @@
           10
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pymupdf-text+visual-verification",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-re-exam-q-59",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Re-Exam)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 59,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -6047,8 +6098,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "algorithms",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_ReExam(2).pdf",
         "page": 10,
@@ -6056,22 +6108,21 @@
           10
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pymupdf-text+visual-verification",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-re-exam-q-60",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Re-Exam)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 60,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -6135,8 +6186,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "discrete-structures",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_ReExam(2).pdf",
         "page": 10,
@@ -6144,26 +6196,34 @@
           10
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pymupdf-text+visual-verification",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-re-exam-q-61",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Re-Exam)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 61,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
-          "value": "Let $L(x,y)$ be the statement \"x loves y\" where the domain for both x and y consists of all people in the world. Use quantifiers to express \"Joy is loved by everyone\"."
+          "value": "Let"
+        },
+        {
+          "type": "math",
+          "value": "L(x,y)",
+          "display": false
+        },
+        {
+          "type": "text",
+          "value": "be the statement \"x loves y\" where the domain for both x and y consists of all people in the world. Use quantifiers to express \"Joy is loved by everyone\"."
         }
       ],
       "options": [
@@ -6172,7 +6232,7 @@
           "content": [
             {
               "type": "text",
-              "value": "∀x L(x,Joy)"
+              "value": "\u2200x L(x,Joy)"
             }
           ]
         },
@@ -6181,7 +6241,7 @@
           "content": [
             {
               "type": "text",
-              "value": "∀y L(Joy,y)"
+              "value": "\u2200y L(Joy,y)"
             }
           ]
         },
@@ -6190,7 +6250,7 @@
           "content": [
             {
               "type": "text",
-              "value": "∃y∀x L(x,y)"
+              "value": "\u2203y\u2200x L(x,y)"
             }
           ]
         },
@@ -6199,7 +6259,7 @@
           "content": [
             {
               "type": "text",
-              "value": "∃x¬ L(Joy,x)"
+              "value": "\u2203x\u00ac L(Joy,x)"
             }
           ]
         }
@@ -6208,7 +6268,7 @@
       "explanation": [
         {
           "type": "text",
-          "value": "Option : A - ∀x L(x,Joy)\nExplanation: Given,\nLet L (x , y) be the statement \"x loves y\" where\nthe domain for both x and y consists of all people\nin the world.\nIn statement, \"Joy is loved by everyone\" it implies\nthat Joy is loved by all the people in the world.\n=> ∀x L(x,Joy)\nIn this case, ∀x denotes \"for all people  x,\" while 𝐿\n(𝑥 , Joy)  denotes  x's love for Joy."
+          "value": "Option : A - \u2200x L(x,Joy)\nExplanation: Given,\nLet L (x , y) be the statement \"x loves y\" where\nthe domain for both x and y consists of all people\nin the world.\nIn statement, \"Joy is loved by everyone\" it implies\nthat Joy is loved by all the people in the world.\n=> \u2200x L(x,Joy)\nIn this case, \u2200x denotes \"for all people  x,\" while \ud835\udc3f\n(\ud835\udc65 , Joy)  denotes  x's love for Joy."
         }
       ],
       "answerSource": {
@@ -6223,8 +6283,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "discrete-structures",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_ReExam(2).pdf",
         "page": 10,
@@ -6232,22 +6293,21 @@
           10
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pymupdf-text+visual-verification",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-re-exam-q-62",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Re-Exam)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 62,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -6321,8 +6381,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": null,
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_ReExam(2).pdf",
         "page": 10,
@@ -6330,22 +6391,21 @@
           10
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pymupdf-text+visual-verification",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "low",
+        "topicConfidence": "low",
+        "reviewRequired": true
       }
     },
     {
       "id": "ugc-net-cs-2024-june-re-exam-q-63",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Re-Exam)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 63,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -6409,8 +6469,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "discrete-structures",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_ReExam(2).pdf",
         "page": 10,
@@ -6418,22 +6479,21 @@
           10
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pymupdf-text+visual-verification",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-re-exam-q-64",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Re-Exam)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 64,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -6576,8 +6636,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": null,
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_ReExam(2).pdf",
         "page": 10,
@@ -6585,22 +6646,21 @@
           10
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pymupdf-text+visual-verification",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "low",
+        "topicConfidence": "low",
+        "reviewRequired": true
       }
     },
     {
       "id": "ugc-net-cs-2024-june-re-exam-q-65",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Re-Exam)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 65,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -6669,7 +6729,7 @@
       "explanation": [
         {
           "type": "text",
-          "value": "Option : D (None of the above)\nExplanation:\n(A) L = {w∈{0,1}* | the length of w is even}\nType: Regular\nRecognizability: Can be recognized by both\nDFA and NFA.\n(B) L  = {w∈{0,1}* | the length of w is odd}\nType: Regular\nRecognizability: Can be recognized by both\nDFA and NFA.\n(C) L  = {w∈{0,1}* | all 0's come before all 1's in w}\nType: Regular\nRecognizability: Can be recognized by both\nDFA and NFA.\n(D) L = {w∈{0,1}* | w contains an equal number of\n0's and 1's}\nType: Non Regular\nRecognizability: neither DFA nor NFA can\nrecognize it because it requires counting.\n(E) L = {w∈{0,1}*  | all 1's come before all 0's in w}\nType: Regular\nRecognizability: Can be recognized by both\nDFA and NFA.\nNOTE: In the paper of  None of the\noptions match, So we have edited option D."
+          "value": "Option : D (None of the above)\nExplanation:\n(A) L = {w\u2208{0,1}* | the length of w is even}\nType: Regular\nRecognizability: Can be recognized by both\nDFA and NFA.\n(B) L  = {w\u2208{0,1}* | the length of w is odd}\nType: Regular\nRecognizability: Can be recognized by both\nDFA and NFA.\n(C) L  = {w\u2208{0,1}* | all 0's come before all 1's in w}\nType: Regular\nRecognizability: Can be recognized by both\nDFA and NFA.\n(D) L = {w\u2208{0,1}* | w contains an equal number of\n0's and 1's}\nType: Non Regular\nRecognizability: neither DFA nor NFA can\nrecognize it because it requires counting.\n(E) L = {w\u2208{0,1}*  | all 1's come before all 0's in w}\nType: Regular\nRecognizability: Can be recognized by both\nDFA and NFA.\nNOTE: In the paper of  None of the\noptions match, So we have edited option D."
         }
       ],
       "answerSource": {
@@ -6684,8 +6744,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "theory-of-computation",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_ReExam(2).pdf",
         "page": 10,
@@ -6694,22 +6755,21 @@
           11
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pymupdf-text+visual-verification",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-re-exam-q-66",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Re-Exam)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 66,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -6758,7 +6818,7 @@
       "explanation": [
         {
           "type": "text",
-          "value": "|\n3\nThe correct answer is B: 37.5\nExplanation:  Given a project with an estimated\neffort of 1500 person-hours and a team of 5\npeople,  each person works 8 hours a day. We\nhave to find out number of days required to\ncomplete the project.\nStep 1: Determine the team's total person-hours\nper day:\nTotal person-hours per day = Number of people ×\nHours worked per day\nTotal person-hours per day =\n5 people×8 hours/day=40 person-hours/day\nStep 2: Calculate the total number of days\nrequired to complete the project:\nTotal days = Total estimated effort / Total person-\nhours per day\nTotal days=1500 person-hours​ / 40 person-\nhours/day = 37.5 days\nTherefore, the correct option is B​"
+          "value": "|\n3\nThe correct answer is B: 37.5\nExplanation:  Given a project with an estimated\neffort of 1500 person-hours and a team of 5\npeople,  each person works 8 hours a day. We\nhave to find out number of days required to\ncomplete the project.\nStep 1: Determine the team's total person-hours\nper day:\nTotal person-hours per day = Number of people \u00d7\nHours worked per day\nTotal person-hours per day =\n5 people\u00d78 hours/day=40 person-hours/day\nStep 2: Calculate the total number of days\nrequired to complete the project:\nTotal days = Total estimated effort / Total person-\nhours per day\nTotal days=1500 person-hours\u200b / 40 person-\nhours/day = 37.5 days\nTherefore, the correct option is B\u200b"
         }
       ],
       "answerSource": {
@@ -6774,8 +6834,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": null,
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_ReExam(2).pdf",
         "page": 11,
@@ -6783,22 +6844,21 @@
           11
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pymupdf-text+visual-verification",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "low",
+        "topicConfidence": "low",
+        "reviewRequired": true
       }
     },
     {
       "id": "ugc-net-cs-2024-june-re-exam-q-67",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Re-Exam)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 67,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -6862,8 +6922,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "discrete-structures",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_ReExam(2).pdf",
         "page": 11,
@@ -6871,22 +6932,21 @@
           11
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pymupdf-text+visual-verification",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-re-exam-q-68",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Re-Exam)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 68,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -6950,8 +7010,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "discrete-structures",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_ReExam(2).pdf",
         "page": 11,
@@ -6959,22 +7020,21 @@
           11
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pymupdf-text+visual-verification",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-re-exam-q-69",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Re-Exam)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 69,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -7038,8 +7098,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "computer-networks",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_ReExam(2).pdf",
         "page": 11,
@@ -7047,22 +7108,21 @@
           11
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pymupdf-text+visual-verification",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-re-exam-q-70",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Re-Exam)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 70,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -7127,8 +7187,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "software-engineering",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_ReExam(2).pdf",
         "page": 11,
@@ -7136,22 +7197,21 @@
           11
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pymupdf-text+visual-verification",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-re-exam-q-71",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Re-Exam)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 71,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -7215,8 +7275,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "compiler-design",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_ReExam(2).pdf",
         "page": 11,
@@ -7224,22 +7285,21 @@
           11
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pymupdf-text+visual-verification",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-re-exam-q-72",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Re-Exam)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 72,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -7367,7 +7427,7 @@
       "explanation": [
         {
           "type": "text",
-          "value": "Option - D ( (A)-(IV), (B)-(III), (C)-(I), (D)-(II) )\nExplanation :\n(A)  The number of ways of picking 2 balls out of\n6+4 =10 balls is C =45\nThe number of ways of getting ( 2  balls out of 6\n white balls) or ( 2  balls out of 4 red balls) = C\n+ C  =21\nRequired probability = 21/45 = 7/15\n(B) The number of cards in a pack =52 The\nnumber of the kings in a pack =4\nIf we draw one card at random from the 52 cards,\nThen the probability of getting a king = number\nof kings/number of all the cards\ni.e. probability of getting a king =4 / 52\nOr, the probability of getting a king =1 / 13\nThe number of queens in a pack =4\nIf we draw one card at random from the 52 cards,\nThen the probability of getting a queen = number\nof queens/number of all the cards\ni.e. probability of getting a queen =4 / 52\nOr, the probability of getting a queen =1 / 13\nThe probability of getting a king or a queen out\nof all the cards = probability of getting a king out\nof all the cards + probability of getting a queen\nout of all the cards\n =1 / 13+1 / 13\n=(1+1) / 13\n=2 / 13\nHence the probability of getting a king or a\nqueen out of 52 cards is 2 / 1 3.\n(C) Chance of Drawing One Red Ball and Two\nWhite Balls\nFor an 18-ball bag containing 6 red, 4 white, and\n8 blue balls:\nThe total number of possibilities to select three\nballs is (  C ).\nMethods for selecting 1 red =\nMethods for selecting two white =\nTotal paths =\n = 816\nWays for 1 red and 2 white =\n*\n  = 6 × 6 =\n36,  P(C) = 36 / 816 = 3 / 68\n(D) The likelihood of drawing two blue and one\nred ball out of a total of eighteen balls\nMethods for selecting 2 blue =\nMethods for selecting 1 red =\nMethods for 2 blue and 1 red =\n\n=\n28×6=168 , P(D) = 168/816 ​= 14/68 = 7 / 34\n​Note: We have edited (III) to 2/13"
+          "value": "Option - D ( (A)-(IV), (B)-(III), (C)-(I), (D)-(II) )\nExplanation :\n(A)  The number of ways of picking 2 balls out of\n6+4 =10 balls is C =45\nThe number of ways of getting ( 2  balls out of 6\n white balls) or ( 2  balls out of 4 red balls) = C\n+ C  =21\nRequired probability = 21/45 = 7/15\n(B) The number of cards in a pack =52 The\nnumber of the kings in a pack =4\nIf we draw one card at random from the 52 cards,\nThen the probability of getting a king = number\nof kings/number of all the cards\ni.e. probability of getting a king =4 / 52\nOr, the probability of getting a king =1 / 13\nThe number of queens in a pack =4\nIf we draw one card at random from the 52 cards,\nThen the probability of getting a queen = number\nof queens/number of all the cards\ni.e. probability of getting a queen =4 / 52\nOr, the probability of getting a queen =1 / 13\nThe probability of getting a king or a queen out\nof all the cards = probability of getting a king out\nof all the cards + probability of getting a queen\nout of all the cards\n =1 / 13+1 / 13\n=(1+1) / 13\n=2 / 13\nHence the probability of getting a king or a\nqueen out of 52 cards is 2 / 1 3.\n(C) Chance of Drawing One Red Ball and Two\nWhite Balls\nFor an 18-ball bag containing 6 red, 4 white, and\n8 blue balls:\nThe total number of possibilities to select three\nballs is (  C ).\nMethods for selecting 1 red =\nMethods for selecting two white =\nTotal paths =\n = 816\nWays for 1 red and 2 white =\n*\n  = 6 \u00d7 6 =\n36,  P(C) = 36 / 816 = 3 / 68\n(D) The likelihood of drawing two blue and one\nred ball out of a total of eighteen balls\nMethods for selecting 2 blue =\nMethods for selecting 1 red =\nMethods for 2 blue and 1 red =\n\n=\n28\u00d76=168 , P(D) = 168/816 \u200b= 14/68 = 7 / 34\n\u200bNote: We have edited (III) to 2/13"
         }
       ],
       "answerSource": {
@@ -7382,8 +7442,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": null,
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_ReExam(2).pdf",
         "page": 11,
@@ -7392,22 +7453,21 @@
           12
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pymupdf-text+visual-verification",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "low",
+        "topicConfidence": "low",
+        "reviewRequired": true
       }
     },
     {
       "id": "ugc-net-cs-2024-june-re-exam-q-73",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Re-Exam)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 73,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -7535,7 +7595,7 @@
       "explanation": [
         {
           "type": "text",
-          "value": "The correct option is C: (A)-(III), (B)-(I), (C)-(IV),\n(D)-(II)\nExplanation:\nHere’s the correct matching of List - I with List - II:\n                             List - I\n                                  List -\nII\n   |\n10\n2\n4\n2\n18\n 3\n6 C 1\n  4\n2\n C\n 18 C 3\n 6 C 1\n 4\n2\n C\n8 2\nC\n  6 C\n\n 1\n8 2 *\nC\n6 1\nC\n\n(A)Natural language\nprocessing\n(III) A branch of AI\nfocused on\nunderstanding and\ngenerating human\nlanguage.\n(B) Reinforcement\nlearning\n(I) A method of training\nalgorithm by rewarding\ndesired behaviour\nand/or punishing\nundesired one.\n(C) Support vector\nmachine\n(IV) A machine learning\ntechnique that finds the\nhyper plane that best\nseparates different class\nin a feature space.\n(D) Expert system\n(II) System designed to\nemulate the decision\nmaking abilities of a\nhuman expert."
+          "value": "The correct option is C: (A)-(III), (B)-(I), (C)-(IV),\n(D)-(II)\nExplanation:\nHere\u2019s the correct matching of List - I with List - II:\n                             List - I\n                                  List -\nII\n   |\n10\n2\n4\n2\n18\n 3\n6 C 1\n  4\n2\n C\n 18 C 3\n 6 C 1\n 4\n2\n C\n8 2\nC\n  6 C\n\n 1\n8 2 *\nC\n6 1\nC\n\n(A)Natural language\nprocessing\n(III) A branch of AI\nfocused on\nunderstanding and\ngenerating human\nlanguage.\n(B) Reinforcement\nlearning\n(I) A method of training\nalgorithm by rewarding\ndesired behaviour\nand/or punishing\nundesired one.\n(C) Support vector\nmachine\n(IV) A machine learning\ntechnique that finds the\nhyper plane that best\nseparates different class\nin a feature space.\n(D) Expert system\n(II) System designed to\nemulate the decision\nmaking abilities of a\nhuman expert."
         }
       ],
       "answerSource": {
@@ -7551,8 +7611,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": null,
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_ReExam(2).pdf",
         "page": 12,
@@ -7560,22 +7621,21 @@
           12
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pymupdf-text+visual-verification",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "low",
+        "topicConfidence": "low",
+        "reviewRequired": true
       }
     },
     {
       "id": "ugc-net-cs-2024-june-re-exam-q-74",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Re-Exam)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 74,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -7654,7 +7714,7 @@
               "content": [
                 {
                   "type": "text",
-                  "value": "Prim’s algorithm finds the Minimum Spanning Tree (MST)"
+                  "value": "Prim\u2019s algorithm finds the Minimum Spanning Tree (MST)"
                 }
               ]
             }
@@ -7703,7 +7763,7 @@
       "explanation": [
         {
           "type": "text",
-          "value": "Explanation:\n\n(A) Dijkstra’s Algorithm → (II)\nUsed to find the shortest path from a single\nsource.\nWorks only when all edge weights are non-\nnegative.\n(B) Floyd–Warshall Algorithm → (I)\nFinds shortest paths between all pairs of vertices.\nCan handle positive and negative edge weights\n(no negative cycles).\n(C) Bellman–Ford Algorithm → (III)\nFinds single-source shortest paths.\nCan handle negative edge weights and also\ndetect negative cycles.\n(D) Prim’s Algorithm → (IV)\nUsed to find the Minimum Spanning Tree (MST).\nWorks on connected, weighted, undirected\ngraphs.\nThe Final Answer is Option B"
+          "value": "Explanation:\n\n(A) Dijkstra\u2019s Algorithm \u2192 (II)\nUsed to find the shortest path from a single\nsource.\nWorks only when all edge weights are non-\nnegative.\n(B) Floyd\u2013Warshall Algorithm \u2192 (I)\nFinds shortest paths between all pairs of vertices.\nCan handle positive and negative edge weights\n(no negative cycles).\n(C) Bellman\u2013Ford Algorithm \u2192 (III)\nFinds single-source shortest paths.\nCan handle negative edge weights and also\ndetect negative cycles.\n(D) Prim\u2019s Algorithm \u2192 (IV)\nUsed to find the Minimum Spanning Tree (MST).\nWorks on connected, weighted, undirected\ngraphs.\nThe Final Answer is Option B"
         }
       ],
       "answerSource": {
@@ -7718,8 +7778,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": null,
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_ReExam(2).pdf",
         "page": 12,
@@ -7727,22 +7788,21 @@
           12
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pymupdf-text+visual-verification",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "low",
+        "topicConfidence": "low",
+        "reviewRequired": true
       }
     },
     {
       "id": "ugc-net-cs-2024-june-re-exam-q-75",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Re-Exam)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 75,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -7806,8 +7866,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "operating-systems",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_ReExam(2).pdf",
         "page": 12,
@@ -7816,22 +7877,21 @@
           13
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pymupdf-text+visual-verification",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-re-exam-q-76",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Re-Exam)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 76,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "code",
@@ -7900,8 +7960,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": null,
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_ReExam(2).pdf",
         "page": 13,
@@ -7909,22 +7970,21 @@
           13
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pymupdf-text+visual-verification",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "low",
+        "topicConfidence": "low",
+        "reviewRequired": true
       }
     },
     {
       "id": "ugc-net-cs-2024-june-re-exam-q-77",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Re-Exam)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 77,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -7989,8 +8049,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "theory-of-computation",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_ReExam(2).pdf",
         "page": 13,
@@ -7998,26 +8059,43 @@
           13
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pymupdf-text+visual-verification",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-re-exam-q-78",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Re-Exam)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 78,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
-          "value": "Let $G(V,E)$ be an undirected graph with $l$ edges. Then the sum of degree of all vertices is equal to _________."
+          "value": "Let"
+        },
+        {
+          "type": "math",
+          "value": "G(V,E)",
+          "display": false
+        },
+        {
+          "type": "text",
+          "value": "be an undirected graph with"
+        },
+        {
+          "type": "math",
+          "value": "l",
+          "display": false
+        },
+        {
+          "type": "text",
+          "value": "edges. Then the sum of degree of all vertices is equal to _________."
         }
       ],
       "options": [
@@ -8077,8 +8155,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "discrete-structures",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_ReExam(2).pdf",
         "page": 13,
@@ -8086,22 +8165,21 @@
           13
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pymupdf-text+visual-verification",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-re-exam-q-79",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Re-Exam)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 79,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -8150,7 +8228,7 @@
       "explanation": [
         {
           "type": "text",
-          "value": "Let S be total number of software professionals\ninterviewed i.e. S = 40\nP be number of people who know Python i.e. P =\n25\nJ be number of people who know JAVA i.e. J = 20\nSo\n is the number of people who knew\nboth languages\nN be number of people who knew neither\nlanguages i.e. N = 7\n = S - N = 40 - 7 = 33\nApplying formula from set theory,\nSo number of people who know both\nlanguages is 12\nIn ugc net answer key answer is given 20 but\nthe correct should be 12. We have changed the\noption A.\n   |\nSum of degrees of all vertices = 2\n× Number of edges = 2l\nP ∩J\nP ∪J\nP ∪J  =  P  +  J  − P ∩J\n⇒33  =  25  +  20  − P ∩J\n⇒P ∩J  =  45  − 33\n⇒P ∩J = 12"
+          "value": "Let S be total number of software professionals\ninterviewed i.e. S = 40\nP be number of people who know Python i.e. P =\n25\nJ be number of people who know JAVA i.e. J = 20\nSo\n is the number of people who knew\nboth languages\nN be number of people who knew neither\nlanguages i.e. N = 7\n = S - N = 40 - 7 = 33\nApplying formula from set theory,\nSo number of people who know both\nlanguages is 12\nIn ugc net answer key answer is given 20 but\nthe correct should be 12. We have changed the\noption A.\n   |\nSum of degrees of all vertices = 2\n\u00d7 Number of edges = 2l\nP \u2229J\nP \u222aJ\nP \u222aJ  =  P  +  J  \u2212 P \u2229J\n\u21d233  =  25  +  20  \u2212 P \u2229J\n\u21d2P \u2229J  =  45  \u2212 33\n\u21d2P \u2229J = 12"
         }
       ],
       "answerSource": {
@@ -8165,8 +8243,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "programming-data-structures",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_ReExam(2).pdf",
         "page": 13,
@@ -8174,22 +8253,21 @@
           13
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pymupdf-text+visual-verification",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-re-exam-q-80",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Re-Exam)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 80,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -8253,8 +8331,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "computer-networks",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_ReExam(2).pdf",
         "page": 13,
@@ -8262,22 +8341,21 @@
           13
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pymupdf-text+visual-verification",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-re-exam-q-81",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Re-Exam)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 81,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -8387,7 +8465,7 @@
           "content": [
             {
               "type": "text",
-              "value": "(A)-(I), (B)-(III), (C)-(II), (D)-(IV) 2 l √"
+              "value": "(A)-(I), (B)-(III), (C)-(II), (D)-(IV) 2 l \u221a"
             }
           ]
         },
@@ -8420,8 +8498,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": null,
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_ReExam(2).pdf",
         "page": 13,
@@ -8430,22 +8509,21 @@
           14
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pymupdf-text+visual-verification",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "low",
+        "topicConfidence": "low",
+        "reviewRequired": true
       }
     },
     {
       "id": "ugc-net-cs-2024-june-re-exam-q-82",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Re-Exam)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 82,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -8510,8 +8588,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "computer-architecture",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_ReExam(2).pdf",
         "page": 14,
@@ -8519,22 +8598,21 @@
           14
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pymupdf-text+visual-verification",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-re-exam-q-83",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Re-Exam)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 83,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -8598,8 +8676,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "programming-data-structures",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_ReExam(2).pdf",
         "page": 14,
@@ -8607,22 +8686,21 @@
           14
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pymupdf-text+visual-verification",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-re-exam-q-84",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Re-Exam)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 84,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -8686,8 +8764,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "operating-systems",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_ReExam(2).pdf",
         "page": 14,
@@ -8695,22 +8774,21 @@
           14
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pymupdf-text+visual-verification",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-re-exam-q-85",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Re-Exam)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 85,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -8774,8 +8852,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "computer-architecture",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_ReExam(2).pdf",
         "page": 14,
@@ -8783,22 +8862,21 @@
           14
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pymupdf-text+visual-verification",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-re-exam-q-86",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Re-Exam)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 86,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -8850,7 +8928,7 @@
               "content": [
                 {
                   "type": "text",
-                  "value": "θ(n log n) {exact solution}"
+                  "value": "\u03b8(n log n) {exact solution}"
                 }
               ]
             },
@@ -8868,7 +8946,7 @@
               "content": [
                 {
                   "type": "text",
-                  "value": "θ(n) {exact solution}"
+                  "value": "\u03b8(n) {exact solution}"
                 }
               ]
             },
@@ -8926,7 +9004,7 @@
       "explanation": [
         {
           "type": "text",
-          "value": "(A)-(I), (B)-(III), (C)-(IV), (D)-(II)\nExplanation :-\nMaster theorum can be used here to determine\ncomplexities of recurrence relation. According to\nthis theorum if recurrence relation is of the form\n:-\nwhere n = size of the problem\na = number of subproblems in the recursion and\na >= 1\nn/b = size of each subproblem\nb > 1, k >= 0 and p is a real number. Then,\n1. if a > b , then T(n) = θ(n\n)\n2. if a = b , then\n(a) if p > -1, then T(n) = θ(n\n log\nn)\n(b) if p = -1, then T(n) = θ(n\n loglogn)\n(c) if p < -1, then T(n) = θ(n\n)\n3. if a < b , then\n(a) if p >= 0, then T(n) = θ(n  log n)\n(b) if p < 0, then T(n) = θ(n )\n(A) T(n) = 2T(n/2)+n\nHere a = 2 , b = 2  and for n =\n,\ncomparing we get k = 1, p=0\nb  = 2  = 2, so a = b  and p > -1, hence case 2 (a)\nT(n) =\n(B) T(n) = T(n/2) + 1\nHere a = 1 , b = 2  and for 1 =\n ,\ncomparing we get k = 0, p=0\nb  = 2  = 1, so a = b  and p > -1, hence case 2(a)\nT(n) =\n, it\ndoesnot match with any.\n   |\nParallel Time = 800 ÷ 16 = 50 clock\n cycles\nT(n)  =  aT(\n)  +  θ(\nn)\nn b/\nnk logp\nk\nlogba\nk\nlogba\np+1\nlogba\nlogba\nk\nk\np\nk\nn\nnk logp\nk\n1\nk\nθ(\nn)  =  θ(n log (n))\nn\n2\nlog2 log0+1\nn\nnk logp\nk\n0\nk\nθ(\nn)  =  θ(log (n))\nn\n1\nlog1 log0+1\n\n(C) T(n) = 2T(n/2) + 1\nHere a = 2 , b = 2  and for 1 =\n ,\ncomparing we get k = 0, p=0\nb  = 2  = 1, so a > b  , hence case 1\nT(n) = θ(n\n) =\n = O(n)\n(D) T(n) = T(n-1) + n\nWe can solve this question by substitution\nmethod,\nWe know T(n) = T(n-1) + n ---- (1)\nso T(n-1) = T(n-2) + n-1\nT(n-2) = T(n-3) + n-3\nT(n-4) = T(n-3) + n-4\n    .               .         .\n    .               .         .\n    .               .         .\nT(1) = T (0) + 1\nWe can put substitute values of T(n-1),T(n-\n2),,,,,,T(1) in equation 1\nT(n) = T(n-1) + n = T(n-2) + 2n-1 = T(n-3) + 3n-3 = .....\nAfter k steps , T(n) becomes:\nT(n) = T(n-k) + kn - k\nat base case n-k = 1 => n=k\nT(n) = T(1) + n  - n = O( n )\nIn ugc net anwer key (B) matches with (III) but\nthat is not correct answer."
+          "value": "(A)-(I), (B)-(III), (C)-(IV), (D)-(II)\nExplanation :-\nMaster theorum can be used here to determine\ncomplexities of recurrence relation. According to\nthis theorum if recurrence relation is of the form\n:-\nwhere n = size of the problem\na = number of subproblems in the recursion and\na >= 1\nn/b = size of each subproblem\nb > 1, k >= 0 and p is a real number. Then,\n1. if a > b , then T(n) = \u03b8(n\n)\n2. if a = b , then\n(a) if p > -1, then T(n) = \u03b8(n\n log\nn)\n(b) if p = -1, then T(n) = \u03b8(n\n loglogn)\n(c) if p < -1, then T(n) = \u03b8(n\n)\n3. if a < b , then\n(a) if p >= 0, then T(n) = \u03b8(n  log n)\n(b) if p < 0, then T(n) = \u03b8(n )\n(A) T(n) = 2T(n/2)+n\nHere a = 2 , b = 2  and for n =\n,\ncomparing we get k = 1, p=0\nb  = 2  = 2, so a = b  and p > -1, hence case 2 (a)\nT(n) =\n(B) T(n) = T(n/2) + 1\nHere a = 1 , b = 2  and for 1 =\n ,\ncomparing we get k = 0, p=0\nb  = 2  = 1, so a = b  and p > -1, hence case 2(a)\nT(n) =\n, it\ndoesnot match with any.\n   |\nParallel Time = 800 \u00f7 16 = 50 clock\n cycles\nT(n)  =  aT(\n)  +  \u03b8(\nn)\nn b/\nnk logp\nk\nlogba\nk\nlogba\np+1\nlogba\nlogba\nk\nk\np\nk\nn\nnk logp\nk\n1\nk\n\u03b8(\nn)  =  \u03b8(n log (n))\nn\n2\nlog2 log0+1\nn\nnk logp\nk\n0\nk\n\u03b8(\nn)  =  \u03b8(log (n))\nn\n1\nlog1 log0+1\n\n(C) T(n) = 2T(n/2) + 1\nHere a = 2 , b = 2  and for 1 =\n ,\ncomparing we get k = 0, p=0\nb  = 2  = 1, so a > b  , hence case 1\nT(n) = \u03b8(n\n) =\n = O(n)\n(D) T(n) = T(n-1) + n\nWe can solve this question by substitution\nmethod,\nWe know T(n) = T(n-1) + n ---- (1)\nso T(n-1) = T(n-2) + n-1\nT(n-2) = T(n-3) + n-3\nT(n-4) = T(n-3) + n-4\n    .               .         .\n    .               .         .\n    .               .         .\nT(1) = T (0) + 1\nWe can put substitute values of T(n-1),T(n-\n2),,,,,,T(1) in equation 1\nT(n) = T(n-1) + n = T(n-2) + 2n-1 = T(n-3) + 3n-3 = .....\nAfter k steps , T(n) becomes:\nT(n) = T(n-k) + kn - k\nat base case n-k = 1 => n=k\nT(n) = T(1) + n  - n = O( n )\nIn ugc net anwer key (B) matches with (III) but\nthat is not correct answer."
         }
       ],
       "answerSource": {
@@ -8942,8 +9020,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "discrete-structures",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_ReExam(2).pdf",
         "page": 14,
@@ -8951,22 +9030,21 @@
           14
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pymupdf-text+visual-verification",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-re-exam-q-87",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Re-Exam)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 87,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -9038,8 +9116,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": null,
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_ReExam(2).pdf",
         "page": 14,
@@ -9048,22 +9127,21 @@
           15
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pymupdf-text+visual-verification",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "low",
+        "topicConfidence": "low",
+        "reviewRequired": true
       }
     },
     {
       "id": "ugc-net-cs-2024-june-re-exam-q-88",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Re-Exam)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 88,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -9127,8 +9205,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "operating-systems",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_ReExam(2).pdf",
         "page": 15,
@@ -9136,22 +9215,21 @@
           15
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pymupdf-text+visual-verification",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-re-exam-q-89",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Re-Exam)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 89,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -9200,7 +9278,7 @@
       "explanation": [
         {
           "type": "text",
-          "value": "Option - B (400)\nGiven:\n- Approximate work = 2000 person-months   - 5\nperson-months per KLOC is the productivity rate.\n2. Find the approximate size in KLOC:\nEstimated size (KLOC) = Estimated effort (person-\nmonths) / Productivity rate (person-\nmonths/KLOC)​ Estimated size (KLOC) = 2000\nperson-months /​ 5 person-months/ KLOC =\n400 KLOC"
+          "value": "Option - B (400)\nGiven:\n- Approximate work = 2000 person-months   - 5\nperson-months per KLOC is the productivity rate.\n2. Find the approximate size in KLOC:\nEstimated size (KLOC) = Estimated effort (person-\nmonths) / Productivity rate (person-\nmonths/KLOC)\u200b Estimated size (KLOC) = 2000\nperson-months /\u200b 5 person-months/ KLOC =\n400 KLOC"
         }
       ],
       "answerSource": {
@@ -9215,8 +9293,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "software-engineering",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_ReExam(2).pdf",
         "page": 15,
@@ -9224,22 +9303,21 @@
           15
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pymupdf-text+visual-verification",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-re-exam-q-90",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Re-Exam)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 90,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -9308,7 +9386,7 @@
       "explanation": [
         {
           "type": "text",
-          "value": "Option - A ( (A) and (B) Only )\nExplanation:\n(A)  The key constraint i+k=j+l means that the\nsum of the counts of w and y must equal the sum\nof the counts of x and z. This kind of balancing\ncan be managed with a stack characteristic of\ncontext-free languages.\n(B) Two independent conditions on the counts\nare needed for this, and they can be expressed in\na language without regard to context. It is hence\ncontext-free\n(C) A context-free grammar is unable to capture\nthe dependencies created by the equality\ncondition ( i = j = k ) and the inequality ( k ≠  l ). It\nis therefore not context-free\n(D) Context-free grammars are unable to convey\nthe relationship between numerous counts that\nthis language enforces. It is therefore not\ncontext-free\n(E) As with (C), this sets requirements that,\nbecause of the simultaneous equalities and\ninequalities, result in a language that is not\ncontext-free. It is therefore not context-free."
+          "value": "Option - A ( (A) and (B) Only )\nExplanation:\n(A)  The key constraint i+k=j+l means that the\nsum of the counts of w and y must equal the sum\nof the counts of x and z. This kind of balancing\ncan be managed with a stack characteristic of\ncontext-free languages.\n(B) Two independent conditions on the counts\nare needed for this, and they can be expressed in\na language without regard to context. It is hence\ncontext-free\n(C) A context-free grammar is unable to capture\nthe dependencies created by the equality\ncondition ( i = j = k ) and the inequality ( k \u2260  l ). It\nis therefore not context-free\n(D) Context-free grammars are unable to convey\nthe relationship between numerous counts that\nthis language enforces. It is therefore not\ncontext-free\n(E) As with (C), this sets requirements that,\nbecause of the simultaneous equalities and\ninequalities, result in a language that is not\ncontext-free. It is therefore not context-free."
         }
       ],
       "answerSource": {
@@ -9323,8 +9401,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": null,
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_ReExam(2).pdf",
         "page": 15,
@@ -9332,22 +9411,21 @@
           15
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pymupdf-text+visual-verification",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "low",
+        "topicConfidence": "low",
+        "reviewRequired": true
       }
     },
     {
       "id": "ugc-net-cs-2024-june-re-exam-q-91",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Re-Exam)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 91,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -9411,8 +9489,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "discrete-structures",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_ReExam(2).pdf",
         "page": 15,
@@ -9420,22 +9499,21 @@
           15
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pymupdf-text+visual-verification",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-re-exam-q-92",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Re-Exam)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 92,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -9499,8 +9577,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": null,
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_ReExam(2).pdf",
         "page": 15,
@@ -9508,22 +9587,21 @@
           15
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pymupdf-text+visual-verification",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "low",
+        "topicConfidence": "low",
+        "reviewRequired": true
       }
     },
     {
       "id": "ugc-net-cs-2024-june-re-exam-q-93",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Re-Exam)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 93,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -9623,8 +9701,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "operating-systems",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_ReExam(2).pdf",
         "page": 15,
@@ -9632,22 +9711,21 @@
           15
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pymupdf-text+visual-verification",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-re-exam-q-94",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Re-Exam)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 94,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -9711,8 +9789,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "artificial-intelligence",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_ReExam(2).pdf",
         "page": 15,
@@ -9720,22 +9799,21 @@
           15
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pymupdf-text+visual-verification",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-re-exam-q-95",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Re-Exam)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 95,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -9799,8 +9877,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": null,
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_ReExam(2).pdf",
         "page": 16,
@@ -9808,22 +9887,21 @@
           16
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pymupdf-text+visual-verification",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "low",
+        "topicConfidence": "low",
+        "reviewRequired": true
       }
     },
     {
       "id": "ugc-net-cs-2024-june-re-exam-q-96",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Re-Exam)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 96,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -9888,8 +9966,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "operating-systems",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_ReExam(2).pdf",
         "page": 16,
@@ -9897,22 +9976,21 @@
           16
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pymupdf-text+visual-verification",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-re-exam-q-97",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Re-Exam)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 97,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -9976,8 +10054,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "programming-data-structures",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_ReExam(2).pdf",
         "page": 16,
@@ -9985,22 +10064,21 @@
           16
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pymupdf-text+visual-verification",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-re-exam-q-98",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Re-Exam)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 98,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -10064,8 +10142,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "operating-systems",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_ReExam(2).pdf",
         "page": 16,
@@ -10073,22 +10152,21 @@
           16
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pymupdf-text+visual-verification",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-re-exam-q-99",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Re-Exam)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 99,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -10152,8 +10230,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "operating-systems",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_ReExam(2).pdf",
         "page": 16,
@@ -10161,22 +10240,21 @@
           16
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pymupdf-text+visual-verification",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2024-june-re-exam-q-100",
-      "examId": "ugc-net-cs",
-      "year": 2024,
-      "session": "June (Re-Exam)",
-      "paper": null,
-      "shift": null,
       "questionNumber": 100,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -10240,8 +10318,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "operating-systems",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_June2024_ReExam(2).pdf",
         "page": 16,
@@ -10249,11 +10328,15 @@
           16
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "pymupdf-text+visual-verification",
         "confidence": "high",
         "visualVerified": true
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     }
   ]

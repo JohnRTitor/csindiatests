@@ -1,0 +1,52 @@
+{
+  "ugc-net-cs": [
+    {
+      "id": "discrete-structures",
+      "count": 250
+    },
+    {
+      "id": "computer-architecture",
+      "count": 53
+    },
+    {
+      "id": "programming-data-structures",
+      "count": 41
+    },
+    {
+      "id": "algorithms",
+      "count": 17
+    },
+    {
+      "id": "theory-of-computation",
+      "count": 27
+    },
+    {
+      "id": "compiler-design",
+      "count": 13
+    },
+    {
+      "id": "operating-systems",
+      "count": 45
+    },
+    {
+      "id": "databases",
+      "count": 25
+    },
+    {
+      "id": "computer-networks",
+      "count": 41
+    },
+    {
+      "id": "software-engineering",
+      "count": 35
+    },
+    {
+      "id": "artificial-intelligence",
+      "count": 17
+    },
+    {
+      "id": "other",
+      "count": 236
+    }
+  ]
+}

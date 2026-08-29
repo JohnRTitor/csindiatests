@@ -1,40 +1,73 @@
 export interface PyqSource {
-  file: string;
-  page: number;
-  year: number;
-  paper: string; // e.g., "Paper II"
-  shift: string; // e.g., "Shift 1"
+  file?: string;
+  files?: string[];
+  page?: number;
+  pages?: number[];
+  type?: string; // e.g. "answer-key" or "solution"
 }
 
 export type RichContent = 
   | { type: "text"; value: string }
-  | { type: "math"; value: string }
+  | { type: "math"; value: string; display?: boolean }
   | { type: "code"; language: string; value: string }
   | { type: "image"; path: string; sourcePage?: number };
 
 export interface PyqQuestion {
   id: string;
-  examId: string;
-  subjectId?: string;
-  topic?: string;
-  difficulty?: "Easy" | "Medium" | "Hard";
-  year: number;
-  paper: string;
-  shift: string;
   questionNumber: number;
-  questionType: "mcq";
+  type: "single_choice" | "multiple_choice" | "numerical" | "descriptive";
   
   content: RichContent[]; 
   
   options: {
     id: string;
-    label: string;
     content: RichContent[];
   }[];
   
   answer: string | null;
-  explanation: string | RichContent[] | null;
-  source: PyqSource;
+  explanation: RichContent[] | null;
+
+  answerSource?: PyqSource | null;
+  explanationSource?: PyqSource | null;
+  
+  subjectId?: string | null;
+  topicId?: string | null;
+  
+  assets: any[];
+  source: any;
+  extraction: any;
+  classification: {
+    subjectConfidence: string;
+    topicConfidence: string;
+    reviewRequired: boolean;
+  };
+}
+
+export interface PyqPaperMetadata {
+  year: number;
+  session: string;
+  paperNumber: number | string;
+  paperName: string;
+  shift: string;
+  title: string;
+  questionCount: number;
+}
+
+export interface PyqDataset {
+  schemaVersion: string;
+  id: string;
+  examId: string;
+  metadata: PyqPaperMetadata;
+  source: {
+    files: string[];
+    pageCount: number;
+    answerKeyDetected?: boolean;
+    answerKeyPages?: number[];
+    solutionsDetected?: boolean;
+    solutionPages?: number[];
+  };
+  extraction: any;
+  questions: PyqQuestion[];
 }
 
 export interface PyqPaperManifest {

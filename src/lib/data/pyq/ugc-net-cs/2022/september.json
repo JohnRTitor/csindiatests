@@ -1,59 +1,52 @@
 {
-  "schemaVersion": "1.0.0",
-  "datasetType": "ugc-net-pyq",
-  "paper": {
-    "id": "ugc-net-cs-2022-september",
-    "examId": "ugc-net-cs",
+  "schemaVersion": "1.0",
+  "id": "ugc-net-cs-2022-september",
+  "examId": "ugc-net-cs",
+  "metadata": {
     "year": 2022,
     "session": "September",
-    "paper": null,
-    "shift": null
+    "paperNumber": 2,
+    "paperName": "Computer Science",
+    "shift": null,
+    "title": "UGC NET Computer Science \u2014 September 2022",
+    "questionCount": 100
   },
   "source": {
     "files": [
       "UGC_Comp_Sep2022(1).pdf"
     ],
-    "pageCount": 37
-  },
-  "sourceAnalysis": {
-    "documentType": "text-based mixed layout",
-    "layout": "two-column question paper followed by answer key and solution pages",
-    "answerKey": {
-      "detected": true,
-      "type": "provided answer key",
-      "pages": [
-        13,
-        14
-      ]
-    },
-    "solutions": {
-      "detected": true,
-      "pages": [
-        15,
-        16,
-        17,
-        18,
-        19,
-        20,
-        21,
-        22,
-        23,
-        24,
-        25,
-        26,
-        27,
-        28,
-        29,
-        30,
-        31,
-        32,
-        33,
-        34,
-        35,
-        36,
-        37
-      ]
-    }
+    "pageCount": 37,
+    "answerKeyDetected": true,
+    "answerKeyPages": [
+      13,
+      14
+    ],
+    "solutionsDetected": true,
+    "solutionPages": [
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37
+    ]
   },
   "extraction": {
     "questionCountExpected": 100,
@@ -64,13 +57,8 @@
   "questions": [
     {
       "id": "ugc-net-cs-2022-september-q-1",
-      "examId": "ugc-net-cs",
-      "year": 2022,
-      "session": "September",
-      "paper": null,
-      "shift": null,
       "questionNumber": 1,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -155,7 +143,7 @@
         },
         {
           "type": "text",
-          "value": "result based on the premises provided, let’s"
+          "value": "result based on the premises provided, let\u2019s"
         },
         {
           "type": "text",
@@ -163,7 +151,7 @@
         },
         {
           "type": "text",
-          "value": "Rule: (P1 and P2) or P3⇒R1(0.8) and R2(0.3)"
+          "value": "Rule: (P1 and P2) or P3\u21d2R1(0.8) and R2(0.3)"
         },
         {
           "type": "text",
@@ -223,11 +211,11 @@
         },
         {
           "type": "text",
-          "value": "(P1 and P2) or P3⇒R1 with CF=0.8"
+          "value": "(P1 and P2) or P3\u21d2R1 with CF=0.8"
         },
         {
           "type": "text",
-          "value": "(P1 and P2) or P3⇒R2 with CF=0.3"
+          "value": "(P1 and P2) or P3\u21d2R2 with CF=0.3"
         },
         {
           "type": "text",
@@ -243,7 +231,7 @@
         },
         {
           "type": "math",
-          "value": "CF(R1)=CF((P1 and P2) or P3)×CF(R1)=0.5×0.8=0.4"
+          "value": "CF(R1)=CF((P1 and P2) or P3)\u00d7CF(R1)=0.5\u00d70.8=0.4"
         },
         {
           "type": "text",
@@ -251,7 +239,7 @@
         },
         {
           "type": "math",
-          "value": "CF(R2)=CF((P1 and P2) or P3)×CF(R2)=0.5×0.3=0.1"
+          "value": "CF(R2)=CF((P1 and P2) or P3)\u00d7CF(R2)=0.5\u00d70.3=0.1"
         },
         {
           "type": "text",
@@ -275,8 +263,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": null,
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_Sep2022(1).pdf",
         "page": 2,
@@ -284,23 +273,22 @@
           2
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "mixed",
         "confidence": "high",
         "visualVerified": true,
         "issues": []
+      },
+      "classification": {
+        "subjectConfidence": "low",
+        "topicConfidence": "low",
+        "reviewRequired": true
       }
     },
     {
       "id": "ugc-net-cs-2022-september-q-2",
-      "examId": "ugc-net-cs",
-      "year": 2022,
-      "session": "September",
-      "paper": null,
-      "shift": null,
       "questionNumber": 2,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -417,7 +405,7 @@
         },
         {
           "type": "text",
-          "value": "2! ×(9−2)!"
+          "value": "2! \u00d7(9\u22122)!"
         },
         {
           "type": "text",
@@ -433,7 +421,7 @@
         },
         {
           "type": "text",
-          "value": "1!×(2−1)!"
+          "value": "1!\u00d7(2\u22121)!"
         },
         {
           "type": "text",
@@ -441,15 +429,15 @@
         },
         {
           "type": "text",
-          "value": "(1!)× ( 4−1)!"
+          "value": "(1!)\u00d7 ( 4\u22121)!"
         },
         {
           "type": "text",
-          "value": "Total ways: 2×4 = 8"
+          "value": "Total ways: 2\u00d74 = 8"
         },
         {
           "type": "math",
-          "value": "Hence, Probability is P(E∣B1)=8/36=2/9"
+          "value": "Hence, Probability is P(E\u2223B1)=8/36=2/9"
         },
         {
           "type": "text",
@@ -465,7 +453,7 @@
         },
         {
           "type": "text",
-          "value": "2!×(7−2)!"
+          "value": "2!\u00d7(7\u22122)!"
         },
         {
           "type": "text",
@@ -481,7 +469,7 @@
         },
         {
           "type": "text",
-          "value": "1!×(3−1)!"
+          "value": "1!\u00d7(3\u22121)!"
         },
         {
           "type": "text",
@@ -489,15 +477,15 @@
         },
         {
           "type": "text",
-          "value": "1!×(2−1)!"
+          "value": "1!\u00d7(2\u22121)!"
         },
         {
           "type": "text",
-          "value": "Total ways: 3×2 = 6"
+          "value": "Total ways: 3\u00d72 = 6"
         },
         {
           "type": "math",
-          "value": "Hence, Probability is P(E∣B2)=6/21=2/7"
+          "value": "Hence, Probability is P(E\u2223B2)=6/21=2/7"
         },
         {
           "type": "text",
@@ -529,11 +517,11 @@
         },
         {
           "type": "text",
-          "value": "Total ways: 4×3 = 12"
+          "value": "Total ways: 4\u00d73 = 12"
         },
         {
           "type": "math",
-          "value": "Hence, Probability is P(E∣B2)=12/28=3/7"
+          "value": "Hence, Probability is P(E\u2223B2)=12/28=3/7"
         },
         {
           "type": "text",
@@ -541,11 +529,11 @@
         },
         {
           "type": "text",
-          "value": "Total Probability = P(E)=P(E∣B1) x P(B1) + P(E∣B2) x"
+          "value": "Total Probability = P(E)=P(E\u2223B1) x P(B1) + P(E\u2223B2) x"
         },
         {
           "type": "text",
-          "value": "P(B2) + P(E∣B3 ) x P(B3 )"
+          "value": "P(B2) + P(E\u2223B3 ) x P(B3 )"
         },
         {
           "type": "math",
@@ -565,7 +553,7 @@
         },
         {
           "type": "math",
-          "value": "P(B1∣ E) = {P(E) x P(E∣B1) ] / P(B1) = (2/9 x 1/3) /"
+          "value": "P(B1\u2223 E) = {P(E) x P(E\u2223B1) ] / P(B1) = (2/9 x 1/3) /"
         },
         {
           "type": "math",
@@ -585,8 +573,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "discrete-structures",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_Sep2022(1).pdf",
         "page": 2,
@@ -594,23 +583,22 @@
           2
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "mixed",
         "confidence": "high",
         "visualVerified": true,
         "issues": []
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2022-september-q-3",
-      "examId": "ugc-net-cs",
-      "year": 2022,
-      "session": "September",
-      "paper": null,
-      "shift": null,
       "questionNumber": 3,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -639,7 +627,7 @@
           "content": [
             {
               "type": "text",
-              "value": "m⋅ T for m<<n t={ n T for m≫>n"
+              "value": "m\u22c5 T for m<<n t={ n T for m\u226b>n"
             }
           ]
         },
@@ -657,7 +645,7 @@
           "content": [
             {
               "type": "text",
-              "value": "m⋅T for m<<n t={ T for m≫n"
+              "value": "m\u22c5T for m<<n t={ T for m\u226bn"
             }
           ]
         },
@@ -666,7 +654,7 @@
           "content": [
             {
               "type": "text",
-              "value": "m⋅T for m≪n t={ m/T for m≫n"
+              "value": "m\u22c5T for m\u226an t={ m/T for m\u226bn"
             }
           ]
         }
@@ -679,7 +667,7 @@
         },
         {
           "type": "text",
-          "value": "For m≪n: The access time is reduced due to"
+          "value": "For m\u226an: The access time is reduced due to"
         },
         {
           "type": "text",
@@ -691,7 +679,7 @@
         },
         {
           "type": "text",
-          "value": "depends on m as m⋅T/n, benefiting from"
+          "value": "depends on m as m\u22c5T/n, benefiting from"
         },
         {
           "type": "text",
@@ -699,7 +687,7 @@
         },
         {
           "type": "text",
-          "value": "For m≫n: With larger m, requests frequently"
+          "value": "For m\u226bn: With larger m, requests frequently"
         },
         {
           "type": "text",
@@ -727,8 +715,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": null,
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_Sep2022(1).pdf",
         "page": 2,
@@ -736,23 +725,22 @@
           2
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "mixed",
         "confidence": "high",
         "visualVerified": true,
         "issues": []
+      },
+      "classification": {
+        "subjectConfidence": "low",
+        "topicConfidence": "low",
+        "reviewRequired": true
       }
     },
     {
       "id": "ugc-net-cs-2022-september-q-4",
-      "examId": "ugc-net-cs",
-      "year": 2022,
-      "session": "September",
-      "paper": null,
-      "shift": null,
       "questionNumber": 4,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -870,8 +858,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "computer-architecture",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_Sep2022(1).pdf",
         "page": 2,
@@ -879,23 +868,22 @@
           2
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "mixed",
         "confidence": "high",
         "visualVerified": true,
         "issues": []
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2022-september-q-5",
-      "examId": "ugc-net-cs",
-      "year": 2022,
-      "session": "September",
-      "paper": null,
-      "shift": null,
       "questionNumber": 5,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -1152,8 +1140,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": null,
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_Sep2022(1).pdf",
         "page": 2,
@@ -1161,23 +1150,22 @@
           2
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "mixed",
         "confidence": "high",
         "visualVerified": true,
         "issues": []
+      },
+      "classification": {
+        "subjectConfidence": "low",
+        "topicConfidence": "low",
+        "reviewRequired": true
       }
     },
     {
       "id": "ugc-net-cs-2022-september-q-6",
-      "examId": "ugc-net-cs",
-      "year": 2022,
-      "session": "September",
-      "paper": null,
-      "shift": null,
       "questionNumber": 6,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -1185,7 +1173,7 @@
         },
         {
           "type": "text",
-          "value": "ABC+AB¯¯¯CD+EF¯¯¯+AD"
+          "value": "ABC+AB\u00af\u00af\u00afCD+EF\u00af\u00af\u00af+AD"
         },
         {
           "type": "text",
@@ -1334,8 +1322,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": null,
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_Sep2022(1).pdf",
         "page": 2,
@@ -1343,23 +1332,22 @@
           2
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "mixed",
         "confidence": "high",
         "visualVerified": true,
         "issues": []
+      },
+      "classification": {
+        "subjectConfidence": "low",
+        "topicConfidence": "low",
+        "reviewRequired": true
       }
     },
     {
       "id": "ugc-net-cs-2022-september-q-7",
-      "examId": "ugc-net-cs",
-      "year": 2022,
-      "session": "September",
-      "paper": null,
-      "shift": null,
       "questionNumber": 7,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -1367,7 +1355,7 @@
         },
         {
           "type": "text",
-          "value": "(D 0 ,D 1 ……D 7 ) and 3 output lines"
+          "value": "(D 0 ,D 1 \u2026\u2026D 7 ) and 3 output lines"
         },
         {
           "type": "text",
@@ -1400,7 +1388,7 @@
           "content": [
             {
               "type": "text",
-              "value": "3×8 multiplexer"
+              "value": "3\u00d78 multiplexer"
             }
           ]
         },
@@ -1444,7 +1432,7 @@
         },
         {
           "type": "text",
-          "value": "8 input lines: D0, D1,…,D7"
+          "value": "8 input lines: D0, D1,\u2026,D7"
         },
         {
           "type": "text",
@@ -1476,7 +1464,7 @@
         },
         {
           "type": "text",
-          "value": "Let’s break down each output equation to"
+          "value": "Let\u2019s break down each output equation to"
         },
         {
           "type": "text",
@@ -1609,8 +1597,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "computer-architecture",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_Sep2022(1).pdf",
         "page": 2,
@@ -1618,23 +1607,22 @@
           2
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "mixed",
         "confidence": "high",
         "visualVerified": true,
         "issues": []
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2022-september-q-8",
-      "examId": "ugc-net-cs",
-      "year": 2022,
-      "session": "September",
-      "paper": null,
-      "shift": null,
       "questionNumber": 8,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -1727,11 +1715,11 @@
         },
         {
           "type": "text",
-          "value": "Total storage capacity = Number of tracks ×"
+          "value": "Total storage capacity = Number of tracks \u00d7"
         },
         {
           "type": "text",
-          "value": "Number of sectors per track × Bytes per sector"
+          "value": "Number of sectors per track \u00d7 Bytes per sector"
         },
         {
           "type": "text",
@@ -1739,11 +1727,11 @@
         },
         {
           "type": "text",
-          "value": "163,840 = 80 × S × 128"
+          "value": "163,840 = 80 \u00d7 S \u00d7 128"
         },
         {
           "type": "text",
-          "value": "S=163,840/(80×128)"
+          "value": "S=163,840/(80\u00d7128)"
         },
         {
           "type": "text",
@@ -1763,8 +1751,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "discrete-structures",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_Sep2022(1).pdf",
         "page": 2,
@@ -1772,23 +1761,22 @@
           2
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "mixed",
         "confidence": "high",
         "visualVerified": true,
         "issues": []
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2022-september-q-9",
-      "examId": "ugc-net-cs",
-      "year": 2022,
-      "session": "September",
-      "paper": null,
-      "shift": null,
       "questionNumber": 9,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -1957,8 +1945,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "discrete-structures",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_Sep2022(1).pdf",
         "page": 2,
@@ -1966,23 +1955,22 @@
           2
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "mixed",
         "confidence": "high",
         "visualVerified": true,
         "issues": []
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2022-september-q-10",
-      "examId": "ugc-net-cs",
-      "year": 2022,
-      "session": "September",
-      "paper": null,
-      "shift": null,
       "questionNumber": 10,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -1998,11 +1986,11 @@
         },
         {
           "type": "text",
-          "value": "2x 1 −x 2 +3x 3 =8"
+          "value": "2x 1 \u2212x 2 +3x 3 =8"
         },
         {
           "type": "text",
-          "value": "x 1 ,x 2 ,x 3 ≥0"
+          "value": "x 1 ,x 2 ,x 3 \u22650"
         },
         {
           "type": "text",
@@ -2014,15 +2002,15 @@
         },
         {
           "type": "text",
-          "value": "Subject to y 1 +2y 2 ≥5"
+          "value": "Subject to y 1 +2y 2 \u22655"
         },
         {
           "type": "text",
-          "value": "2y 1 −y 2 ≥12"
+          "value": "2y 1 \u2212y 2 \u226512"
         },
         {
           "type": "text",
-          "value": "y 1 +3y 2 ≥4"
+          "value": "y 1 +3y 2 \u22654"
         },
         {
           "type": "text",
@@ -2035,7 +2023,7 @@
           "content": [
             {
               "type": "text",
-              "value": "y 1 ≥0,y 2 unrestricted"
+              "value": "y 1 \u22650,y 2 unrestricted"
             }
           ]
         },
@@ -2044,7 +2032,7 @@
           "content": [
             {
               "type": "text",
-              "value": "y 1 ≥0,y 2 ≥0"
+              "value": "y 1 \u22650,y 2 \u22650"
             }
           ]
         },
@@ -2053,7 +2041,7 @@
           "content": [
             {
               "type": "text",
-              "value": "y 1 is unrestricted, y 2 ≥0"
+              "value": "y 1 is unrestricted, y 2 \u22650"
             }
           ]
         },
@@ -2087,11 +2075,11 @@
         },
         {
           "type": "text",
-          "value": "2x1−x2+3x3=8"
+          "value": "2x1\u2212x2+3x3=8"
         },
         {
           "type": "text",
-          "value": "x1 ,x2 ,x3 ≥0"
+          "value": "x1 ,x2 ,x3 \u22650"
         },
         {
           "type": "text",
@@ -2163,15 +2151,15 @@
         },
         {
           "type": "text",
-          "value": "For x1 : y1+2y2≥5"
+          "value": "For x1 : y1+2y2\u22655"
         },
         {
           "type": "text",
-          "value": "For x2: 2y1−y2≥12"
+          "value": "For x2: 2y1\u2212y2\u226512"
         },
         {
           "type": "text",
-          "value": "For x3 : y1+3y2≥4"
+          "value": "For x3 : y1+3y2\u22654"
         },
         {
           "type": "text",
@@ -2215,7 +2203,7 @@
         },
         {
           "type": "text",
-          "value": "2x1−x2+3x3=8"
+          "value": "2x1\u2212x2+3x3=8"
         },
         {
           "type": "text",
@@ -2259,7 +2247,7 @@
         },
         {
           "type": "text",
-          "value": "A (\"y1 ≥0 , y2 unresticted\") is the least incorrect,"
+          "value": "A (\"y1 \u22650 , y2 unresticted\") is the least incorrect,"
         },
         {
           "type": "text",
@@ -2284,8 +2272,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "algorithms",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_Sep2022(1).pdf",
         "page": 2,
@@ -2293,23 +2282,22 @@
           2
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "mixed",
         "confidence": "high",
         "visualVerified": true,
         "issues": []
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2022-september-q-11",
-      "examId": "ugc-net-cs",
-      "year": 2022,
-      "session": "September",
-      "paper": null,
-      "shift": null,
       "questionNumber": 11,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -2383,35 +2371,35 @@
         },
         {
           "type": "text",
-          "value": "(P¯¯¯"
+          "value": "(P\u00af\u00af\u00af"
         },
         {
           "type": "text",
-          "value": "∧Q)"
+          "value": "\u2227Q)"
         },
         {
           "type": "text",
-          "value": "∨"
+          "value": "\u2228"
         },
         {
           "type": "text",
-          "value": "P¯¯¯ (P∧ (P"
+          "value": "P\u00af\u00af\u00af (P\u2227 (P"
         },
         {
           "type": "text",
-          "value": "(P∨Q) ( ¯¯¯ (P∧Q)"
+          "value": "(P\u2228Q) ( \u00af\u00af\u00af (P\u2227Q)"
         },
         {
           "type": "text",
-          "value": "P Q Q ∧Q ¯¯¯ )"
+          "value": "P Q Q \u2227Q \u00af\u00af\u00af )"
         },
         {
           "type": "text",
-          "value": "∧Q) )"
+          "value": "\u2227Q) )"
         },
         {
           "type": "text",
-          "value": "∨"
+          "value": "\u2228"
         },
         {
           "type": "text",
@@ -2419,7 +2407,7 @@
         },
         {
           "type": "text",
-          "value": "∧Q)"
+          "value": "\u2227Q)"
         },
         {
           "type": "text",
@@ -2463,7 +2451,7 @@
         },
         {
           "type": "text",
-          "value": "Thus, the expression is equivalent to P∨Q"
+          "value": "Thus, the expression is equivalent to P\u2228Q"
         }
       ],
       "answerSource": {
@@ -2479,8 +2467,11 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "discrete-structures",
+      "topicId": null,
+      "assets": [
+        "assets/ugc-net-cs-2022-september/q-011.png"
+      ],
       "source": {
         "file": "UGC_Comp_Sep2022(1).pdf",
         "page": 2,
@@ -2488,25 +2479,22 @@
           2
         ]
       },
-      "assets": [
-        "assets/ugc-net-cs-2022-september/q-011.png"
-      ],
       "extraction": {
         "method": "mixed",
         "confidence": "high",
         "visualVerified": true,
         "issues": []
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2022-september-q-12",
-      "examId": "ugc-net-cs",
-      "year": 2022,
-      "session": "September",
-      "paper": null,
-      "shift": null,
       "questionNumber": 12,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -2522,19 +2510,19 @@
         },
         {
           "type": "text",
-          "value": "S →AB∣CA"
+          "value": "S \u2192AB\u2223CA"
         },
         {
           "type": "text",
-          "value": "B→BC ∣AB"
+          "value": "B\u2192BC \u2223AB"
         },
         {
           "type": "text",
-          "value": "A→a"
+          "value": "A\u2192a"
         },
         {
           "type": "text",
-          "value": "C →aB∣b"
+          "value": "C \u2192aB\u2223b"
         }
       ],
       "options": [
@@ -2543,7 +2531,7 @@
           "content": [
             {
               "type": "text",
-              "value": "S →CA,A→a,C →b"
+              "value": "S \u2192CA,A\u2192a,C \u2192b"
             }
           ]
         },
@@ -2552,7 +2540,7 @@
           "content": [
             {
               "type": "text",
-              "value": "S →CA|B,B→BC|B,A→a,C →aB∣b"
+              "value": "S \u2192CA|B,B\u2192BC|B,A\u2192a,C \u2192aB\u2223b"
             }
           ]
         },
@@ -2561,7 +2549,7 @@
           "content": [
             {
               "type": "text",
-              "value": "S →CA|B,B→BC,A→a,C →aB|b"
+              "value": "S \u2192CA|B,B\u2192BC,A\u2192a,C \u2192aB|b"
             }
           ]
         },
@@ -2570,7 +2558,7 @@
           "content": [
             {
               "type": "text",
-              "value": "S →AB|AC,B→BC|BA,A→a,C →aB∣b"
+              "value": "S \u2192AB|AC,B\u2192BC|BA,A\u2192a,C \u2192aB\u2223b"
             }
           ]
         }
@@ -2603,7 +2591,7 @@
         },
         {
           "type": "text",
-          "value": "B has the productions B→BC ∣ AB, both of"
+          "value": "B has the productions B\u2192BC \u2223 AB, both of"
         },
         {
           "type": "text",
@@ -2631,11 +2619,11 @@
         },
         {
           "type": "text",
-          "value": "all productions involving B, including S→AB,"
+          "value": "all productions involving B, including S\u2192AB,"
         },
         {
           "type": "text",
-          "value": "B→BC, B→AB, and any rules in C involving"
+          "value": "B\u2192BC, B\u2192AB, and any rules in C involving"
         },
         {
           "type": "text",
@@ -2643,19 +2631,19 @@
         },
         {
           "type": "text",
-          "value": "S→AB |CA"
+          "value": "S\u2192AB |CA"
         },
         {
           "type": "text",
-          "value": "B→BC |AB"
+          "value": "B\u2192BC |AB"
         },
         {
           "type": "text",
-          "value": "A→a"
+          "value": "A\u2192a"
         },
         {
           "type": "text",
-          "value": "C→aB | b"
+          "value": "C\u2192aB | b"
         },
         {
           "type": "text",
@@ -2663,7 +2651,7 @@
         },
         {
           "type": "text",
-          "value": "remove productions contains B S→CA A→a C→b"
+          "value": "remove productions contains B S\u2192CA A\u2192a C\u2192b"
         },
         {
           "type": "text",
@@ -2675,15 +2663,15 @@
         },
         {
           "type": "text",
-          "value": "S→CA"
+          "value": "S\u2192CA"
         },
         {
           "type": "text",
-          "value": "A→a"
+          "value": "A\u2192a"
         },
         {
           "type": "text",
-          "value": "C→b"
+          "value": "C\u2192b"
         }
       ],
       "answerSource": {
@@ -2699,8 +2687,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": null,
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_Sep2022(1).pdf",
         "page": 2,
@@ -2709,23 +2698,22 @@
           3
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "mixed",
         "confidence": "high",
         "visualVerified": true,
         "issues": []
+      },
+      "classification": {
+        "subjectConfidence": "low",
+        "topicConfidence": "low",
+        "reviewRequired": true
       }
     },
     {
       "id": "ugc-net-cs-2022-september-q-13",
-      "examId": "ugc-net-cs",
-      "year": 2022,
-      "session": "September",
-      "paper": null,
-      "shift": null,
       "questionNumber": 13,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -2733,15 +2721,15 @@
         },
         {
           "type": "text",
-          "value": "S →AbB"
+          "value": "S \u2192AbB"
         },
         {
           "type": "text",
-          "value": "A→aAb∣λ"
+          "value": "A\u2192aAb\u2223\u03bb"
         },
         {
           "type": "text",
-          "value": "B→bB∣λ"
+          "value": "B\u2192bB\u2223\u03bb"
         },
         {
           "type": "text",
@@ -2758,7 +2746,7 @@
           "content": [
             {
               "type": "math",
-              "value": "L={anbm :n≥0,m>n}"
+              "value": "L={anbm :n\u22650,m>n}"
             }
           ]
         },
@@ -2767,7 +2755,7 @@
           "content": [
             {
               "type": "math",
-              "value": "L={anbm :n≥0,m≥0}"
+              "value": "L={anbm :n\u22650,m\u22650}"
             }
           ]
         },
@@ -2776,7 +2764,7 @@
           "content": [
             {
               "type": "math",
-              "value": "L={anbm :n≥m}"
+              "value": "L={anbm :n\u2265m}"
             }
           ]
         },
@@ -2785,7 +2773,7 @@
           "content": [
             {
               "type": "math",
-              "value": "L={anbm :n≥m,m>0}"
+              "value": "L={anbm :n\u2265m,m>0}"
             }
           ]
         }
@@ -2802,15 +2790,15 @@
         },
         {
           "type": "text",
-          "value": "1. S→AbB"
+          "value": "1. S\u2192AbB"
         },
         {
           "type": "text",
-          "value": "2. A→aAb ∣ λ"
+          "value": "2. A\u2192aAb \u2223 \u03bb"
         },
         {
           "type": "text",
-          "value": "3. B→bB ∣ λ"
+          "value": "3. B\u2192bB \u2223 \u03bb"
         },
         {
           "type": "text",
@@ -2830,7 +2818,7 @@
         },
         {
           "type": "text",
-          "value": "The production rule for S is: S→AbB"
+          "value": "The production rule for S is: S\u2192AbB"
         },
         {
           "type": "text",
@@ -2850,7 +2838,7 @@
         },
         {
           "type": "text",
-          "value": "A→aAb: This rule allows A to produce a"
+          "value": "A\u2192aAb: This rule allows A to produce a"
         },
         {
           "type": "text",
@@ -2862,7 +2850,7 @@
         },
         {
           "type": "text",
-          "value": "A→λ: This rule allows A to be empty, giving"
+          "value": "A\u2192\u03bb: This rule allows A to be empty, giving"
         },
         {
           "type": "text",
@@ -2878,7 +2866,7 @@
         },
         {
           "type": "text",
-          "value": "form anbn, where n≥0."
+          "value": "form anbn, where n\u22650."
         },
         {
           "type": "text",
@@ -2886,7 +2874,7 @@
         },
         {
           "type": "text",
-          "value": "B→bB: This rule allows B to generate"
+          "value": "B\u2192bB: This rule allows B to generate"
         },
         {
           "type": "text",
@@ -2894,7 +2882,7 @@
         },
         {
           "type": "text",
-          "value": "B→λ: This rule allows B to be empty if"
+          "value": "B\u2192\u03bb: This rule allows B to be empty if"
         },
         {
           "type": "text",
@@ -2906,7 +2894,7 @@
         },
         {
           "type": "text",
-          "value": "where m≥0."
+          "value": "where m\u22650."
         },
         {
           "type": "text",
@@ -2918,7 +2906,7 @@
         },
         {
           "type": "text",
-          "value": "Given S→AbB, analyse the overall structure:"
+          "value": "Given S\u2192AbB, analyse the overall structure:"
         },
         {
           "type": "text",
@@ -2930,7 +2918,7 @@
         },
         {
           "type": "text",
-          "value": "The middle b from S→AbB adds an additional"
+          "value": "The middle b from S\u2192AbB adds an additional"
         },
         {
           "type": "text",
@@ -2958,7 +2946,7 @@
         },
         {
           "type": "text",
-          "value": "where n≥0 and m≥0."
+          "value": "where n\u22650 and m\u22650."
         },
         {
           "type": "text",
@@ -2966,7 +2954,7 @@
         },
         {
           "type": "math",
-          "value": "L={anbk∣n≥0, k≥n+1}"
+          "value": "L={anbk\u2223n\u22650, k\u2265n+1}"
         },
         {
           "type": "text",
@@ -2994,7 +2982,7 @@
         },
         {
           "type": "text",
-          "value": "aligns with the structure anbn+1+m where m≥0."
+          "value": "aligns with the structure anbn+1+m where m\u22650."
         },
         {
           "type": "text",
@@ -3015,8 +3003,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": null,
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_Sep2022(1).pdf",
         "page": 3,
@@ -3024,23 +3013,22 @@
           3
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "mixed",
         "confidence": "high",
         "visualVerified": true,
         "issues": []
+      },
+      "classification": {
+        "subjectConfidence": "low",
+        "topicConfidence": "low",
+        "reviewRequired": true
       }
     },
     {
       "id": "ugc-net-cs-2022-september-q-14",
-      "examId": "ugc-net-cs",
-      "year": 2022,
-      "session": "September",
-      "paper": null,
-      "shift": null,
       "questionNumber": 14,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -3048,7 +3036,7 @@
         },
         {
           "type": "math",
-          "value": "L={anbm :n≥4,m≤3}"
+          "value": "L={anbm :n\u22654,m\u22643}"
         },
         {
           "type": "text",
@@ -3065,7 +3053,7 @@
           "content": [
             {
               "type": "math",
-              "value": "aaaa*(λ+b+bb+bbb)"
+              "value": "aaaa*(\u03bb+b+bb+bbb)"
             }
           ]
         },
@@ -3083,7 +3071,7 @@
           "content": [
             {
               "type": "math",
-              "value": "aaaaa*(λ+b+bb+bbb)"
+              "value": "aaaaa*(\u03bb+b+bb+bbb)"
             }
           ]
         },
@@ -3092,7 +3080,7 @@
           "content": [
             {
               "type": "text",
-              "value": "aaaa∗(b+bb+bbb)"
+              "value": "aaaa\u2217(b+bb+bbb)"
             }
           ]
         }
@@ -3105,11 +3093,11 @@
         },
         {
           "type": "text",
-          "value": "The language L={anbm:n≥4,m≤3} specifies that:"
+          "value": "The language L={anbm:n\u22654,m\u22643} specifies that:"
         },
         {
           "type": "text",
-          "value": "1. n≥4: Each string must contain at least four a's."
+          "value": "1. n\u22654: Each string must contain at least four a's."
         },
         {
           "type": "text",
@@ -3125,15 +3113,15 @@
         },
         {
           "type": "text",
-          "value": "2. m≤3: Each string can contain 0, 1, 2, or 3 b's."
+          "value": "2. m\u22643: Each string can contain 0, 1, 2, or 3 b's."
         },
         {
           "type": "text",
-          "value": "This can be represented by λ+b+bb+bbb,"
+          "value": "This can be represented by \u03bb+b+bb+bbb,"
         },
         {
           "type": "text",
-          "value": "where λ represents the option for no b's."
+          "value": "where \u03bb represents the option for no b's."
         },
         {
           "type": "text",
@@ -3145,7 +3133,7 @@
         },
         {
           "type": "text",
-          "value": "1. At least 4 a’s:"
+          "value": "1. At least 4 a\u2019s:"
         },
         {
           "type": "text",
@@ -3153,11 +3141,11 @@
         },
         {
           "type": "text",
-          "value": "a’s, ensuring the minimum condition for"
+          "value": "a\u2019s, ensuring the minimum condition for"
         },
         {
           "type": "text",
-          "value": "n≥4."
+          "value": "n\u22654."
         },
         {
           "type": "text",
@@ -3165,15 +3153,15 @@
         },
         {
           "type": "text",
-          "value": "2. Additional a’s allowed:"
+          "value": "2. Additional a\u2019s allowed:"
         },
         {
           "type": "text",
-          "value": "We use a* after the initial four a’s to allow"
+          "value": "We use a* after the initial four a\u2019s to allow"
         },
         {
           "type": "text",
-          "value": "for any additional a’s if n>4."
+          "value": "for any additional a\u2019s if n>4."
         },
         {
           "type": "text",
@@ -3181,7 +3169,7 @@
         },
         {
           "type": "text",
-          "value": "3. At most 3 b’s:"
+          "value": "3. At most 3 b\u2019s:"
         },
         {
           "type": "text",
@@ -3189,19 +3177,19 @@
         },
         {
           "type": "text",
-          "value": "and 3 b’s."
+          "value": "and 3 b\u2019s."
         },
         {
           "type": "text",
-          "value": "This can be represented as (λ+b+bb+bbb)."
+          "value": "This can be represented as (\u03bb+b+bb+bbb)."
         },
         {
           "type": "text",
-          "value": "4. Order of a’s and b’s:"
+          "value": "4. Order of a\u2019s and b\u2019s:"
         },
         {
           "type": "text",
-          "value": "The b’s should come after the a’s, so the"
+          "value": "The b\u2019s should come after the a\u2019s, so the"
         },
         {
           "type": "text",
@@ -3221,7 +3209,7 @@
         },
         {
           "type": "math",
-          "value": "aaaaa* (λ+b+bb+bbb)"
+          "value": "aaaaa* (\u03bb+b+bb+bbb)"
         }
       ],
       "answerSource": {
@@ -3237,8 +3225,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "theory-of-computation",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_Sep2022(1).pdf",
         "page": 3,
@@ -3246,23 +3235,22 @@
           3
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "mixed",
         "confidence": "high",
         "visualVerified": true,
         "issues": []
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2022-september-q-15",
-      "examId": "ugc-net-cs",
-      "year": 2022,
-      "session": "September",
-      "paper": null,
-      "shift": null,
       "questionNumber": 15,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -3270,7 +3258,7 @@
         },
         {
           "type": "text",
-          "value": "Which of the following string is NOT in L∗ ?"
+          "value": "Which of the following string is NOT in L\u2217 ?"
         }
       ],
       "options": [
@@ -3367,7 +3355,7 @@
         },
         {
           "type": "text",
-          "value": "Let’s try to partition baaaaabaaaaa into valid"
+          "value": "Let\u2019s try to partition baaaaabaaaaa into valid"
         },
         {
           "type": "text",
@@ -3403,7 +3391,7 @@
         },
         {
           "type": "text",
-          "value": "Let’s try to partition abaabaaabaa:"
+          "value": "Let\u2019s try to partition abaabaaabaa:"
         },
         {
           "type": "text",
@@ -3431,7 +3419,7 @@
         },
         {
           "type": "text",
-          "value": "Let’s try to partition aaaabaaaa:"
+          "value": "Let\u2019s try to partition aaaabaaaa:"
         },
         {
           "type": "text",
@@ -3459,7 +3447,7 @@
         },
         {
           "type": "text",
-          "value": "Let’s try to partition baaaaabaa:"
+          "value": "Let\u2019s try to partition baaaaabaa:"
         },
         {
           "type": "text",
@@ -3507,8 +3495,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "discrete-structures",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_Sep2022(1).pdf",
         "page": 3,
@@ -3516,23 +3505,22 @@
           3
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "mixed",
         "confidence": "high",
         "visualVerified": true,
         "issues": []
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2022-september-q-16",
-      "examId": "ugc-net-cs",
-      "year": 2022,
-      "session": "September",
-      "paper": null,
-      "shift": null,
       "questionNumber": 16,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -3540,27 +3528,27 @@
         },
         {
           "type": "math",
-          "value": "=({q 0 ,q 1 ,q f },{a,b},{1,z},δ,q 0 ,z,{q f })"
+          "value": "=({q 0 ,q 1 ,q f },{a,b},{1,z},\u03b4,q 0 ,z,{q f })"
         },
         {
           "type": "text",
-          "value": "δ(q 0 ,λ,z)={(q f ,z)}"
+          "value": "\u03b4(q 0 ,\u03bb,z)={(q f ,z)}"
         },
         {
           "type": "text",
-          "value": "δ(q 0 ,a,z)={(q 1 ,11z)}"
+          "value": "\u03b4(q 0 ,a,z)={(q 1 ,11z)}"
         },
         {
           "type": "text",
-          "value": "δ(q 1 ,a,1)={(q 1 ,111)}"
+          "value": "\u03b4(q 1 ,a,1)={(q 1 ,111)}"
         },
         {
           "type": "text",
-          "value": "δ(q 1 ,b,1)={(q 1 ,λ)}"
+          "value": "\u03b4(q 1 ,b,1)={(q 1 ,\u03bb)}"
         },
         {
           "type": "text",
-          "value": "δ(q 1 ,λ,z)={(q f ,z)}"
+          "value": "\u03b4(q 1 ,\u03bb,z)={(q f ,z)}"
         },
         {
           "type": "text",
@@ -3586,7 +3574,7 @@
           "content": [
             {
               "type": "math",
-              "value": "L = = {a2nbn :n≥0} {anb2n :n≥0}"
+              "value": "L = = {a2nbn :n\u22650} {anb2n :n\u22650}"
             }
           ]
         },
@@ -3625,11 +3613,11 @@
         },
         {
           "type": "text",
-          "value": "Input Alphabet: Σ={a,b}"
+          "value": "Input Alphabet: \u03a3={a,b}"
         },
         {
           "type": "text",
-          "value": "Stack Alphabet: Γ={1,z}"
+          "value": "Stack Alphabet: \u0393={1,z}"
         },
         {
           "type": "text",
@@ -3645,11 +3633,11 @@
         },
         {
           "type": "text",
-          "value": "Transition Function δ:"
+          "value": "Transition Function \u03b4:"
         },
         {
           "type": "text",
-          "value": "δ(q0,λ,z)={(qf,z)}: Allows an immediate"
+          "value": "\u03b4(q0,\u03bb,z)={(qf,z)}: Allows an immediate"
         },
         {
           "type": "text",
@@ -3665,7 +3653,7 @@
         },
         {
           "type": "text",
-          "value": "δ(q0,a,z)={(q1,11z)}: On input a and stack top"
+          "value": "\u03b4(q0,a,z)={(q1,11z)}: On input a and stack top"
         },
         {
           "type": "text",
@@ -3677,7 +3665,7 @@
         },
         {
           "type": "text",
-          "value": "δ(q1,a,1)={(q1,111)}: On input a and stack top"
+          "value": "\u03b4(q1,a,1)={(q1,111)}: On input a and stack top"
         },
         {
           "type": "text",
@@ -3693,7 +3681,7 @@
         },
         {
           "type": "text",
-          "value": "δ(q1,b,1)={(q1,λ)}: On input b and stack top 1,"
+          "value": "\u03b4(q1,b,1)={(q1,\u03bb)}: On input b and stack top 1,"
         },
         {
           "type": "text",
@@ -3701,7 +3689,7 @@
         },
         {
           "type": "text",
-          "value": "δ(q1,λ,z)={(qf,z)}: If the stack has returned to"
+          "value": "\u03b4(q1,\u03bb,z)={(qf,z)}: If the stack has returned to"
         },
         {
           "type": "text",
@@ -3757,7 +3745,7 @@
         },
         {
           "type": "text",
-          "value": "stack will have n×2=2n 1's."
+          "value": "stack will have n\u00d72=2n 1's."
         },
         {
           "type": "text",
@@ -3821,7 +3809,7 @@
         },
         {
           "type": "math",
-          "value": "NPDA is:L={a2nbn∣n≥0}"
+          "value": "NPDA is:L={a2nbn\u2223n\u22650}"
         }
       ],
       "answerSource": {
@@ -3838,8 +3826,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "theory-of-computation",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_Sep2022(1).pdf",
         "page": 3,
@@ -3847,23 +3836,22 @@
           3
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "mixed",
         "confidence": "high",
         "visualVerified": true,
         "issues": []
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2022-september-q-17",
-      "examId": "ugc-net-cs",
-      "year": 2022,
-      "session": "September",
-      "paper": null,
-      "shift": null,
       "questionNumber": 17,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -3920,7 +3908,7 @@
         },
         {
           "type": "text",
-          "value": "The Painter’s algorithm is a commonly used"
+          "value": "The Painter\u2019s algorithm is a commonly used"
         },
         {
           "type": "text",
@@ -3992,7 +3980,7 @@
         },
         {
           "type": "text",
-          "value": "The Painter’s Algorithm is a specific solution for"
+          "value": "The Painter\u2019s Algorithm is a specific solution for"
         },
         {
           "type": "text",
@@ -4028,8 +4016,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "computer-architecture",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_Sep2022(1).pdf",
         "page": 3,
@@ -4037,23 +4026,22 @@
           3
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "mixed",
         "confidence": "high",
         "visualVerified": true,
         "issues": []
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2022-september-q-18",
-      "examId": "ugc-net-cs",
-      "year": 2022,
-      "session": "September",
-      "paper": null,
-      "shift": null,
       "questionNumber": 18,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -4126,11 +4114,11 @@
         },
         {
           "type": "text",
-          "value": "next calculate ∅ (n):"
+          "value": "next calculate \u2205 (n):"
         },
         {
           "type": "text",
-          "value": "∅ (n) = (p-1) * (q-1)"
+          "value": "\u2205 (n) = (p-1) * (q-1)"
         },
         {
           "type": "text",
@@ -4138,7 +4126,7 @@
         },
         {
           "type": "text",
-          "value": "so ∅ (n) = 48"
+          "value": "so \u2205 (n) = 48"
         },
         {
           "type": "text",
@@ -4150,11 +4138,11 @@
         },
         {
           "type": "text",
-          "value": "modul ∅ (n). In other words, we need to find 'd'"
+          "value": "modul \u2205 (n). In other words, we need to find 'd'"
         },
         {
           "type": "text",
-          "value": "such that (e*d) mod ∅ (n) = 1."
+          "value": "such that (e*d) mod \u2205 (n) = 1."
         },
         {
           "type": "text",
@@ -4234,8 +4222,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "computer-networks",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_Sep2022(1).pdf",
         "page": 3,
@@ -4243,23 +4232,22 @@
           3
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "mixed",
         "confidence": "high",
         "visualVerified": true,
         "issues": []
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2022-september-q-19",
-      "examId": "ugc-net-cs",
-      "year": 2022,
-      "session": "September",
-      "paper": null,
-      "shift": null,
       "questionNumber": 19,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -4294,7 +4282,7 @@
           "content": [
             {
               "type": "text",
-              "value": "num −65"
+              "value": "num \u221265"
             }
           ]
         },
@@ -4303,7 +4291,7 @@
           "content": [
             {
               "type": "text",
-              "value": "! (num −65)"
+              "value": "! (num \u221265)"
             }
           ]
         }
@@ -4337,8 +4325,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": null,
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_Sep2022(1).pdf",
         "page": 3,
@@ -4346,23 +4335,22 @@
           3
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "mixed",
         "confidence": "high",
         "visualVerified": true,
         "issues": []
+      },
+      "classification": {
+        "subjectConfidence": "low",
+        "topicConfidence": "low",
+        "reviewRequired": true
       }
     },
     {
       "id": "ugc-net-cs-2022-september-q-20",
-      "examId": "ugc-net-cs",
-      "year": 2022,
-      "session": "September",
-      "paper": null,
-      "shift": null,
       "questionNumber": 20,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -4447,8 +4435,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "programming-data-structures",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_Sep2022(1).pdf",
         "page": 3,
@@ -4456,23 +4445,22 @@
           3
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "mixed",
         "confidence": "high",
         "visualVerified": true,
         "issues": []
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2022-september-q-21",
-      "examId": "ugc-net-cs",
-      "year": 2022,
-      "session": "September",
-      "paper": null,
-      "shift": null,
       "questionNumber": 21,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -4557,8 +4545,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": null,
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_Sep2022(1).pdf",
         "page": 3,
@@ -4566,23 +4555,22 @@
           3
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "mixed",
         "confidence": "high",
         "visualVerified": true,
         "issues": []
+      },
+      "classification": {
+        "subjectConfidence": "low",
+        "topicConfidence": "low",
+        "reviewRequired": true
       }
     },
     {
       "id": "ugc-net-cs-2022-september-q-22",
-      "examId": "ugc-net-cs",
-      "year": 2022,
-      "session": "September",
-      "paper": null,
-      "shift": null,
       "questionNumber": 22,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -4663,8 +4651,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "operating-systems",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_Sep2022(1).pdf",
         "page": 3,
@@ -4672,23 +4661,22 @@
           3
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "mixed",
         "confidence": "high",
         "visualVerified": true,
         "issues": []
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2022-september-q-23",
-      "examId": "ugc-net-cs",
-      "year": 2022,
-      "session": "September",
-      "paper": null,
-      "shift": null,
       "questionNumber": 23,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -4785,8 +4773,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "operating-systems",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_Sep2022(1).pdf",
         "page": 3,
@@ -4794,23 +4783,22 @@
           3
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "mixed",
         "confidence": "high",
         "visualVerified": true,
         "issues": []
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2022-september-q-24",
-      "examId": "ugc-net-cs",
-      "year": 2022,
-      "session": "September",
-      "paper": null,
-      "shift": null,
       "questionNumber": 24,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -4818,23 +4806,23 @@
         },
         {
           "type": "text",
-          "value": "⎡ x¯ ⎤ ⎡ a 1 b 1 c 1 d 1⎤ ⎡ x ⎤"
+          "value": "\u23a1 x\u00af \u23a4 \u23a1 a 1 b 1 c 1 d 1\u23a4 \u23a1 x \u23a4"
         },
         {
           "type": "text",
-          "value": "⎢y¯ ⎢ ⎥ ⎥ ⎥=⎢ ⎢a 2 b 2 c 2 d 2⎥ ⎥ ⎥−⎢ ⎢y⎥ ⎥"
+          "value": "\u23a2y\u00af \u23a2 \u23a5 \u23a5 \u23a5=\u23a2 \u23a2a 2 b 2 c 2 d 2\u23a5 \u23a5 \u23a5\u2212\u23a2 \u23a2y\u23a5 \u23a5"
         },
         {
           "type": "text",
-          "value": "⎢ ⎢z¯ ⎥ ⎢ ⎢a b c d ⎥ ⎢ ⎢z⎥ ⎥"
+          "value": "\u23a2 \u23a2z\u00af \u23a5 \u23a2 \u23a2a b c d \u23a5 \u23a2 \u23a2z\u23a5 \u23a5"
         },
         {
           "type": "text",
-          "value": "⎣ ⎦ ⎣ 3 3 3 3 ⎦ ⎣ ⎦"
+          "value": "\u23a3 \u23a6 \u23a3 3 3 3 3 \u23a6 \u23a3 \u23a6"
         },
         {
           "type": "text",
-          "value": "w¯¯¯ e f g h 1"
+          "value": "w\u00af\u00af\u00af e f g h 1"
         },
         {
           "type": "image",
@@ -4928,8 +4916,11 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "discrete-structures",
+      "topicId": null,
+      "assets": [
+        "assets/ugc-net-cs-2022-september/q-024.png"
+      ],
       "source": {
         "file": "UGC_Comp_Sep2022(1).pdf",
         "page": 3,
@@ -4937,25 +4928,22 @@
           3
         ]
       },
-      "assets": [
-        "assets/ugc-net-cs-2022-september/q-024.png"
-      ],
       "extraction": {
         "method": "mixed",
         "confidence": "high",
         "visualVerified": true,
         "issues": []
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2022-september-q-25",
-      "examId": "ugc-net-cs",
-      "year": 2022,
-      "session": "September",
-      "paper": null,
-      "shift": null,
       "questionNumber": 25,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -5036,8 +5024,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "operating-systems",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_Sep2022(1).pdf",
         "page": 3,
@@ -5045,23 +5034,22 @@
           3
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "mixed",
         "confidence": "high",
         "visualVerified": true,
         "issues": []
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2022-september-q-26",
-      "examId": "ugc-net-cs",
-      "year": 2022,
-      "session": "September",
-      "paper": null,
-      "shift": null,
       "questionNumber": 26,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -5138,8 +5126,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "operating-systems",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_Sep2022(1).pdf",
         "page": 3,
@@ -5147,23 +5136,22 @@
           3
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "mixed",
         "confidence": "high",
         "visualVerified": true,
         "issues": []
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2022-september-q-27",
-      "examId": "ugc-net-cs",
-      "year": 2022,
-      "session": "September",
-      "paper": null,
-      "shift": null,
       "questionNumber": 27,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -5240,8 +5228,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "software-engineering",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_Sep2022(1).pdf",
         "page": 3,
@@ -5249,23 +5238,22 @@
           3
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "mixed",
         "confidence": "high",
         "visualVerified": true,
         "issues": []
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2022-september-q-28",
-      "examId": "ugc-net-cs",
-      "year": 2022,
-      "session": "September",
-      "paper": null,
-      "shift": null,
       "questionNumber": 28,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -5378,8 +5366,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "software-engineering",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_Sep2022(1).pdf",
         "page": 4,
@@ -5387,23 +5376,22 @@
           4
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "mixed",
         "confidence": "high",
         "visualVerified": true,
         "issues": []
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2022-september-q-29",
-      "examId": "ugc-net-cs",
-      "year": 2022,
-      "session": "September",
-      "paper": null,
-      "shift": null,
       "questionNumber": 29,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -5480,8 +5468,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "discrete-structures",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_Sep2022(1).pdf",
         "page": 4,
@@ -5489,23 +5478,22 @@
           4
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "mixed",
         "confidence": "high",
         "visualVerified": true,
         "issues": []
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2022-september-q-30",
-      "examId": "ugc-net-cs",
-      "year": 2022,
-      "session": "September",
-      "paper": null,
-      "shift": null,
       "questionNumber": 30,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -5578,8 +5566,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "discrete-structures",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_Sep2022(1).pdf",
         "page": 4,
@@ -5587,23 +5576,22 @@
           4
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "mixed",
         "confidence": "high",
         "visualVerified": true,
         "issues": []
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2022-september-q-31",
-      "examId": "ugc-net-cs",
-      "year": 2022,
-      "session": "September",
-      "paper": null,
-      "shift": null,
       "questionNumber": 31,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -5793,7 +5781,7 @@
           "content": [
             {
               "type": "text",
-              "value": "π sid (δ age >20 Sailors ) −π sid ((δ color =red Boats) ⋈Reserves⋈Δ Sailors)"
+              "value": "\u03c0 sid (\u03b4 age >20 Sailors ) \u2212\u03c0 sid ((\u03b4 color =red Boats) \u22c8Reserves\u22c8\u0394 Sailors)"
             }
           ]
         },
@@ -5802,7 +5790,7 @@
           "content": [
             {
               "type": "text",
-              "value": "π sid ((δ color='red' ∧age=20 (Boats ⋈Sailors⋈Reserves)))"
+              "value": "\u03c0 sid ((\u03b4 color='red' \u2227age=20 (Boats \u22c8Sailors\u22c8Reserves)))"
             }
           ]
         },
@@ -5811,7 +5799,7 @@
           "content": [
             {
               "type": "text",
-              "value": "π sid ((δ age<20 Sailors)−π sid ((δ color='red' Boats) ⋈Reserves⋈Sailors"
+              "value": "\u03c0 sid ((\u03b4 age<20 Sailors)\u2212\u03c0 sid ((\u03b4 color='red' Boats) \u22c8Reserves\u22c8Sailors"
             }
           ]
         },
@@ -5820,7 +5808,7 @@
           "content": [
             {
               "type": "text",
-              "value": "π sid ((δ age>20 Sailors)∧π sid ((δ color='red' Boats) ⋈Reserves⋈Sailors"
+              "value": "\u03c0 sid ((\u03b4 age>20 Sailors)\u2227\u03c0 sid ((\u03b4 color='red' Boats) \u22c8Reserves\u22c8Sailors"
             }
           ]
         }
@@ -5833,15 +5821,15 @@
         },
         {
           "type": "text",
-          "value": "Query: πsid (δ age >20Sailors )−πsid ((δ color =red"
+          "value": "Query: \u03c0sid (\u03b4 age >20Sailors )\u2212\u03c0sid ((\u03b4 color =red"
         },
         {
           "type": "text",
-          "value": "Boats)⋈Reserves⋈Δ Sailors)"
+          "value": "Boats)\u22c8Reserves\u22c8\u0394 Sailors)"
         },
         {
           "type": "text",
-          "value": "δ age > 20 Sailors: This part selects sailors older"
+          "value": "\u03b4 age > 20 Sailors: This part selects sailors older"
         },
         {
           "type": "text",
@@ -5849,7 +5837,7 @@
         },
         {
           "type": "text",
-          "value": "πsid ((δ color = red Boats) ⋈ Reserves ⋈ Δ Sailors):"
+          "value": "\u03c0sid ((\u03b4 color = red Boats) \u22c8 Reserves \u22c8 \u0394 Sailors):"
         },
         {
           "type": "text",
@@ -5893,8 +5881,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "databases",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_Sep2022(1).pdf",
         "page": 4,
@@ -5902,23 +5891,22 @@
           4
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "mixed",
         "confidence": "high",
         "visualVerified": true,
         "issues": []
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2022-september-q-32",
-      "examId": "ugc-net-cs",
-      "year": 2022,
-      "session": "September",
-      "paper": null,
-      "shift": null,
       "questionNumber": 32,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -6107,11 +6095,11 @@
         },
         {
           "type": "text",
-          "value": "Q1 π sname ((δ color='red' Boats)"
+          "value": "Q1 \u03c0 sname ((\u03b4 color='red' Boats)"
         },
         {
           "type": "text",
-          "value": "⋈Reserves⋈Sailors)"
+          "value": "\u22c8Reserves\u22c8Sailors)"
         },
         {
           "type": "text",
@@ -6119,19 +6107,19 @@
         },
         {
           "type": "text",
-          "value": "π sname (π sid ((π bid δ color='red' Boats)"
+          "value": "\u03c0 sname (\u03c0 sid ((\u03c0 bid \u03b4 color='red' Boats)"
         },
         {
           "type": "text",
-          "value": "⋈Reserves)⋈Sailors)"
+          "value": "\u22c8Reserves)\u22c8Sailors)"
         },
         {
           "type": "text",
-          "value": "Q3 π sname ( δ color='red' Reserves)Boats"
+          "value": "Q3 \u03c0 sname ( \u03b4 color='red' Reserves)Boats"
         },
         {
           "type": "text",
-          "value": "⋈Sailors)"
+          "value": "\u22c8Sailors)"
         }
       ],
       "options": [
@@ -6184,7 +6172,7 @@
         },
         {
           "type": "text",
-          "value": "πsname((δ color='red'Boats)⋈Reserves⋈Sailors)"
+          "value": "\u03c0sname((\u03b4 color='red'Boats)\u22c8Reserves\u22c8Sailors)"
         },
         {
           "type": "text",
@@ -6200,11 +6188,11 @@
         },
         {
           "type": "text",
-          "value": "Valid: Q2 πsname(πsid((πbid"
+          "value": "Valid: Q2 \u03c0sname(\u03c0sid((\u03c0bid"
         },
         {
           "type": "text",
-          "value": "δ color='red'Boats)⋈Reserves)⋈Sailors)"
+          "value": "\u03b4 color='red'Boats)\u22c8Reserves)\u22c8Sailors)"
         },
         {
           "type": "text",
@@ -6232,11 +6220,11 @@
         },
         {
           "type": "text",
-          "value": "Invalid: Q3 πsname("
+          "value": "Invalid: Q3 \u03c0sname("
         },
         {
           "type": "text",
-          "value": "δ color='red'Reserves)Boats⋈Sailors)"
+          "value": "\u03b4 color='red'Reserves)Boats\u22c8Sailors)"
         },
         {
           "type": "text",
@@ -6265,8 +6253,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "databases",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_Sep2022(1).pdf",
         "page": 4,
@@ -6274,23 +6263,22 @@
           4
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "mixed",
         "confidence": "high",
         "visualVerified": true,
         "issues": []
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2022-september-q-33",
-      "examId": "ugc-net-cs",
-      "year": 2022,
-      "session": "September",
-      "paper": null,
-      "shift": null,
       "questionNumber": 33,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -6479,11 +6467,11 @@
         },
         {
           "type": "text",
-          "value": "Q1 π sname ((δ bid=103 Boats)"
+          "value": "Q1 \u03c0 sname ((\u03b4 bid=103 Boats)"
         },
         {
           "type": "text",
-          "value": "⋈Sailors)"
+          "value": "\u22c8Sailors)"
         },
         {
           "type": "text",
@@ -6491,15 +6479,15 @@
         },
         {
           "type": "text",
-          "value": "π sname ((δ bid=103 (Reserves⋈Sailors)"
+          "value": "\u03c0 sname ((\u03b4 bid=103 (Reserves\u22c8Sailors)"
         },
         {
           "type": "text",
-          "value": "Q3 π sname ((δ bid=103 Reserves)"
+          "value": "Q3 \u03c0 sname ((\u03b4 bid=103 Reserves)"
         },
         {
           "type": "text",
-          "value": "⋈Sailors)"
+          "value": "\u22c8Sailors)"
         }
       ],
       "options": [
@@ -6548,7 +6536,7 @@
         },
         {
           "type": "text",
-          "value": "Incorrect : Q1 πsname((δ bid=103Boats)⋈Sailors)"
+          "value": "Incorrect : Q1 \u03c0sname((\u03b4 bid=103Boats)\u22c8Sailors)"
         },
         {
           "type": "text",
@@ -6576,7 +6564,7 @@
         },
         {
           "type": "text",
-          "value": "Correct : Q2 πsname((δ bid=103(Reserves⋈Sailors)"
+          "value": "Correct : Q2 \u03c0sname((\u03b4 bid=103(Reserves\u22c8Sailors)"
         },
         {
           "type": "text",
@@ -6592,7 +6580,7 @@
         },
         {
           "type": "text",
-          "value": "Correct : Q3 πsname((δ bid=103Reserves)⋈Sailors)"
+          "value": "Correct : Q3 \u03c0sname((\u03b4 bid=103Reserves)\u22c8Sailors)"
         },
         {
           "type": "text",
@@ -6624,8 +6612,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "databases",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_Sep2022(1).pdf",
         "page": 4,
@@ -6633,23 +6622,22 @@
           4
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "mixed",
         "confidence": "high",
         "visualVerified": true,
         "issues": []
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2022-september-q-34",
-      "examId": "ugc-net-cs",
-      "year": 2022,
-      "session": "September",
-      "paper": null,
-      "shift": null,
       "questionNumber": 34,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -6839,7 +6827,7 @@
           "content": [
             {
               "type": "text",
-              "value": "ρ(Tempsids.(π bid Reserves) /π bid Boats)π sname ((Tempsids) ⋈Sailors)"
+              "value": "\u03c1(Tempsids.(\u03c0 bid Reserves) /\u03c0 bid Boats)\u03c0 sname ((Tempsids) \u22c8Sailors)"
             }
           ]
         },
@@ -6848,7 +6836,7 @@
           "content": [
             {
               "type": "text",
-              "value": "ρ(Tempsids.(π sid,bid Reserves) /π bid Boats)π sname ((Tempsids) ⋈Sailors)"
+              "value": "\u03c1(Tempsids.(\u03c0 sid,bid Reserves) /\u03c0 bid Boats)\u03c0 sname ((Tempsids) \u22c8Sailors)"
             }
           ]
         },
@@ -6857,7 +6845,7 @@
           "content": [
             {
               "type": "text",
-              "value": "ρ(Tempsids.(π sid Sailors) /π bid Boats)π sname ((Tempsids) ⋈Sailors)"
+              "value": "\u03c1(Tempsids.(\u03c0 sid Sailors) /\u03c0 bid Boats)\u03c0 sname ((Tempsids) \u22c8Sailors)"
             }
           ]
         },
@@ -6866,7 +6854,7 @@
           "content": [
             {
               "type": "text",
-              "value": "ρ(Tempsids.(π sid Reserves) /π bid Boats)π sname ((Tempsids ⋈Boats)"
+              "value": "\u03c1(Tempsids.(\u03c0 sid Reserves) /\u03c0 bid Boats)\u03c0 sname ((Tempsids \u22c8Boats)"
             }
           ]
         }
@@ -6879,11 +6867,11 @@
         },
         {
           "type": "text",
-          "value": "B:ρ(Tempsids.(πsid,bidReserves)/"
+          "value": "B:\u03c1(Tempsids.(\u03c0sid,bidReserves)/"
         },
         {
           "type": "text",
-          "value": "πbidBoats)πsname((Tempsids)⋈Sailors)"
+          "value": "\u03c0bidBoats)\u03c0sname((Tempsids)\u22c8Sailors)"
         },
         {
           "type": "text",
@@ -6919,8 +6907,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "databases",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_Sep2022(1).pdf",
         "page": 4,
@@ -6929,23 +6918,22 @@
           5
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "mixed",
         "confidence": "high",
         "visualVerified": true,
         "issues": []
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2022-september-q-35",
-      "examId": "ugc-net-cs",
-      "year": 2022,
-      "session": "September",
-      "paper": null,
-      "shift": null,
       "questionNumber": 35,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -7135,7 +7123,7 @@
           "content": [
             {
               "type": "text",
-              "value": "ρ(Tempred, π sid ((δ color = 'red' Boats) ⋈Reserves)).ρ(Tempgreen, π sid ((δ color = 'green' Boats) ⋈Reserves)).π sname (Tempred ∩Tempgreen)⋈Sailors"
+              "value": "\u03c1(Tempred, \u03c0 sid ((\u03b4 color = 'red' Boats) \u22c8Reserves)).\u03c1(Tempgreen, \u03c0 sid ((\u03b4 color = 'green' Boats) \u22c8Reserves)).\u03c0 sname (Tempred \u2229Tempgreen)\u22c8Sailors"
             }
           ]
         },
@@ -7144,7 +7132,7 @@
           "content": [
             {
               "type": "text",
-              "value": "ρ(Tempboats 2(δ color = 'red' Boats) ∩(δ color = 'green' Boats)π sname (Tempboats 2⋈Reserves)"
+              "value": "\u03c1(Tempboats 2(\u03b4 color = 'red' Boats) \u2229(\u03b4 color = 'green' Boats)\u03c0 sname (Tempboats 2\u22c8Reserves)"
             }
           ]
         },
@@ -7153,7 +7141,7 @@
           "content": [
             {
               "type": "text",
-              "value": "π sname ((δ color = 'red' Boats) ∩(δ color = 'green' Boats)(Tempboats 2 ⋈Sailors⋈Reserves)"
+              "value": "\u03c0 sname ((\u03b4 color = 'red' Boats) \u2229(\u03b4 color = 'green' Boats)(Tempboats 2 \u22c8Sailors\u22c8Reserves)"
             }
           ]
         },
@@ -7162,7 +7150,7 @@
           "content": [
             {
               "type": "text",
-              "value": "ρ(Tempboats 2 .(δ color = 'red'∧color='green' Boats) (π sname (Tempboats 2⋈Sailors)"
+              "value": "\u03c1(Tempboats 2 .(\u03b4 color = 'red'\u2227color='green' Boats) (\u03c0 sname (Tempboats 2\u22c8Sailors)"
             }
           ]
         }
@@ -7175,7 +7163,7 @@
         },
         {
           "type": "text",
-          "value": "A:ρ(Tempred,πsid((δcolor=Boats'red')⋈Reserves)).ρ(Tempgreen,Tπhseid"
+          "value": "A:\u03c1(Tempred,\u03c0sid((\u03b4color=Boats'red')\u22c8Reserves)).\u03c1(Tempgreen,T\u03c0hseid"
         },
         {
           "type": "text",
@@ -7211,8 +7199,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "databases",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_Sep2022(1).pdf",
         "page": 5,
@@ -7220,23 +7209,22 @@
           5
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "mixed",
         "confidence": "high",
         "visualVerified": true,
         "issues": []
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2022-september-q-36",
-      "examId": "ugc-net-cs",
-      "year": 2022,
-      "session": "September",
-      "paper": null,
-      "shift": null,
       "questionNumber": 36,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -7253,7 +7241,7 @@
           "content": [
             {
               "type": "text",
-              "value": "T t =333.33μsec.T p =18000μsec"
+              "value": "T t =333.33\u03bcsec.T p =18000\u03bcsec"
             }
           ]
         },
@@ -7262,7 +7250,7 @@
           "content": [
             {
               "type": "text",
-              "value": "T t =300μsec.T P =15360μsec"
+              "value": "T t =300\u03bcsec.T P =15360\u03bcsec"
             }
           ]
         },
@@ -7271,7 +7259,7 @@
           "content": [
             {
               "type": "text",
-              "value": "T t =33.33μsec,T p =1800μsec"
+              "value": "T t =33.33\u03bcsec,T p =1800\u03bcsec"
             }
           ]
         },
@@ -7280,7 +7268,7 @@
           "content": [
             {
               "type": "text",
-              "value": "T t =1800μsec,T P =33.33μsec"
+              "value": "T t =1800\u03bcsec,T P =33.33\u03bcsec"
             }
           ]
         }
@@ -7325,11 +7313,11 @@
         },
         {
           "type": "text",
-          "value": "Tt = 512 bits = 333.33 μsec"
+          "value": "Tt = 512 bits = 333.33 \u03bcsec"
         },
         {
           "type": "text",
-          "value": "1.536×106 bits/sec"
+          "value": "1.536\u00d7106 bits/sec"
         },
         {
           "type": "text",
@@ -7341,19 +7329,19 @@
         },
         {
           "type": "text",
-          "value": "Propagation Speed = 6 μsec/km"
+          "value": "Propagation Speed = 6 \u03bcsec/km"
         },
         {
           "type": "text",
-          "value": "For 1 km it takes 6 μsec,"
+          "value": "For 1 km it takes 6 \u03bcsec,"
         },
         {
           "type": "text",
-          "value": "For 3000 km it will take 3000 x 6 μsec = 18000"
+          "value": "For 3000 km it will take 3000 x 6 \u03bcsec = 18000"
         },
         {
           "type": "text",
-          "value": "μsec."
+          "value": "\u03bcsec."
         }
       ],
       "answerSource": {
@@ -7369,8 +7357,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": null,
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_Sep2022(1).pdf",
         "page": 5,
@@ -7378,23 +7367,22 @@
           5
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "mixed",
         "confidence": "high",
         "visualVerified": true,
         "issues": []
+      },
+      "classification": {
+        "subjectConfidence": "low",
+        "topicConfidence": "low",
+        "reviewRequired": true
       }
     },
     {
       "id": "ugc-net-cs-2022-september-q-37",
-      "examId": "ugc-net-cs",
-      "year": 2022,
-      "session": "September",
-      "paper": null,
-      "shift": null,
       "questionNumber": 37,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -7471,7 +7459,7 @@
         },
         {
           "type": "text",
-          "value": "Tp = 18000 μsec Tt = 333.33 μsec"
+          "value": "Tp = 18000 \u03bcsec Tt = 333.33 \u03bcsec"
         },
         {
           "type": "text",
@@ -7483,7 +7471,7 @@
         },
         {
           "type": "text",
-          "value": "2T p 2×18000"
+          "value": "2T p 2\u00d718000"
         },
         {
           "type": "math",
@@ -7507,8 +7495,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "discrete-structures",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_Sep2022(1).pdf",
         "page": 5,
@@ -7516,23 +7505,22 @@
           5
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "mixed",
         "confidence": "high",
         "visualVerified": true,
         "issues": []
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2022-september-q-38",
-      "examId": "ugc-net-cs",
-      "year": 2022,
-      "session": "September",
-      "paper": null,
-      "shift": null,
       "questionNumber": 38,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -7605,7 +7593,7 @@
         },
         {
           "type": "text",
-          "value": "Tp = 18000 μsec Tt = 333.33 μsec"
+          "value": "Tp = 18000 \u03bcsec Tt = 333.33 \u03bcsec"
         },
         {
           "type": "text",
@@ -7613,7 +7601,7 @@
         },
         {
           "type": "math",
-          "value": "2T p = 1 + 2×18000 = 1 + 108.001"
+          "value": "2T p = 1 + 2\u00d718000 = 1 + 108.001"
         },
         {
           "type": "text",
@@ -7653,8 +7641,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": null,
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_Sep2022(1).pdf",
         "page": 5,
@@ -7662,23 +7651,22 @@
           5
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "mixed",
         "confidence": "high",
         "visualVerified": true,
         "issues": []
+      },
+      "classification": {
+        "subjectConfidence": "low",
+        "topicConfidence": "low",
+        "reviewRequired": true
       }
     },
     {
       "id": "ugc-net-cs-2022-september-q-39",
-      "examId": "ugc-net-cs",
-      "year": 2022,
-      "session": "September",
-      "paper": null,
-      "shift": null,
       "questionNumber": 39,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -7739,11 +7727,11 @@
         },
         {
           "type": "text",
-          "value": "The transmission delay (Tt) = 333.33 μsec."
+          "value": "The transmission delay (Tt) = 333.33 \u03bcsec."
         },
         {
           "type": "text",
-          "value": "p((rδocpoalogra=tBioona tDs'eglraeye (nT')p⋈) =R e18se,0r0ve0s ) μ )s.πescn.ame(Tempred∩Tempgreen)⋈Sailors"
+          "value": "p((r\u03b4ocpoalogra=tBioona tDs'eglraeye (nT')p\u22c8) =R e18se,0r0ve0s ) \u03bc )s.\u03c0escn.ame(Tempred\u2229Tempgreen)\u22c8Sailors"
         },
         {
           "type": "text",
@@ -7763,11 +7751,11 @@
         },
         {
           "type": "math",
-          "value": "2×Tp =1+ 2×18000 = 1+108.001"
+          "value": "2\u00d7Tp =1+ 2\u00d718000 = 1+108.001"
         },
         {
           "type": "text",
-          "value": "T 333.33 ≈ 109"
+          "value": "T 333.33 \u2248 109"
         },
         {
           "type": "text",
@@ -7795,7 +7783,7 @@
         },
         {
           "type": "text",
-          "value": "E = 64/109 ≈ 0.587"
+          "value": "E = 64/109 \u2248 0.587"
         }
       ],
       "answerSource": {
@@ -7811,8 +7799,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "discrete-structures",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_Sep2022(1).pdf",
         "page": 5,
@@ -7820,23 +7809,22 @@
           5
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "mixed",
         "confidence": "high",
         "visualVerified": true,
         "issues": []
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2022-september-q-40",
-      "examId": "ugc-net-cs",
-      "year": 2022,
-      "session": "September",
-      "paper": null,
-      "shift": null,
       "questionNumber": 40,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -7921,8 +7909,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": null,
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_Sep2022(1).pdf",
         "page": 5,
@@ -7930,23 +7919,22 @@
           5
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "mixed",
         "confidence": "high",
         "visualVerified": true,
         "issues": []
+      },
+      "classification": {
+        "subjectConfidence": "low",
+        "topicConfidence": "low",
+        "reviewRequired": true
       }
     },
     {
       "id": "ugc-net-cs-2022-september-q-41",
-      "examId": "ugc-net-cs",
-      "year": 2022,
-      "session": "September",
-      "paper": null,
-      "shift": null,
       "questionNumber": 41,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -8036,8 +8024,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "discrete-structures",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_Sep2022(1).pdf",
         "page": 5,
@@ -8045,23 +8034,22 @@
           5
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "mixed",
         "confidence": "high",
         "visualVerified": true,
         "issues": []
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2022-september-q-42",
-      "examId": "ugc-net-cs",
-      "year": 2022,
-      "session": "September",
-      "paper": null,
-      "shift": null,
       "questionNumber": 42,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -8142,8 +8130,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "software-engineering",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_Sep2022(1).pdf",
         "page": 5,
@@ -8151,23 +8140,22 @@
           5
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "mixed",
         "confidence": "high",
         "visualVerified": true,
         "issues": []
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2022-september-q-43",
-      "examId": "ugc-net-cs",
-      "year": 2022,
-      "session": "September",
-      "paper": null,
-      "shift": null,
       "questionNumber": 43,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -8256,8 +8244,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": null,
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_Sep2022(1).pdf",
         "page": 5,
@@ -8265,23 +8254,22 @@
           5
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "mixed",
         "confidence": "high",
         "visualVerified": true,
         "issues": []
+      },
+      "classification": {
+        "subjectConfidence": "low",
+        "topicConfidence": "low",
+        "reviewRequired": true
       }
     },
     {
       "id": "ugc-net-cs-2022-september-q-44",
-      "examId": "ugc-net-cs",
-      "year": 2022,
-      "session": "September",
-      "paper": null,
-      "shift": null,
       "questionNumber": 44,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -8362,8 +8350,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "discrete-structures",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_Sep2022(1).pdf",
         "page": 5,
@@ -8371,23 +8360,22 @@
           5
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "mixed",
         "confidence": "high",
         "visualVerified": true,
         "issues": []
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2022-september-q-45",
-      "examId": "ugc-net-cs",
-      "year": 2022,
-      "session": "September",
-      "paper": null,
-      "shift": null,
       "questionNumber": 45,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -8500,8 +8488,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "software-engineering",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_Sep2022(1).pdf",
         "page": 5,
@@ -8509,23 +8498,22 @@
           5
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "mixed",
         "confidence": "high",
         "visualVerified": true,
         "issues": []
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2022-september-q-46",
-      "examId": "ugc-net-cs",
-      "year": 2022,
-      "session": "September",
-      "paper": null,
-      "shift": null,
       "questionNumber": 46,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -8610,8 +8598,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "computer-networks",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_Sep2022(1).pdf",
         "page": 5,
@@ -8619,23 +8608,22 @@
           5
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "mixed",
         "confidence": "high",
         "visualVerified": true,
         "issues": []
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2022-september-q-47",
-      "examId": "ugc-net-cs",
-      "year": 2022,
-      "session": "September",
-      "paper": null,
-      "shift": null,
       "questionNumber": 47,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -8732,11 +8720,11 @@
         },
         {
           "type": "text",
-          "value": "512 bytes=512×8=4096 bits"
+          "value": "512 bytes=512\u00d78=4096 bits"
         },
         {
           "type": "text",
-          "value": "512 bytes=512×8=4096 bits"
+          "value": "512 bytes=512\u00d78=4096 bits"
         },
         {
           "type": "text",
@@ -8772,7 +8760,7 @@
         },
         {
           "type": "text",
-          "value": "0.064 seconds=0.064×1000=64 milliseconds"
+          "value": "0.064 seconds=0.064\u00d71000=64 milliseconds"
         },
         {
           "type": "text",
@@ -8800,7 +8788,7 @@
         },
         {
           "type": "text",
-          "value": "Time for 15 frames=15×0.064 seconds=0.96"
+          "value": "Time for 15 frames=15\u00d70.064 seconds=0.96"
         },
         {
           "type": "text",
@@ -8820,7 +8808,7 @@
         },
         {
           "type": "text",
-          "value": "Total bits in one RTT= 15×4096=61440 bits"
+          "value": "Total bits in one RTT= 15\u00d74096=61440 bits"
         },
         {
           "type": "text",
@@ -8840,7 +8828,7 @@
         },
         {
           "type": "text",
-          "value": "bits÷0.96=64 kbps ) approx 64 kpbs"
+          "value": "bits\u00f70.96=64 kbps ) approx 64 kpbs"
         },
         {
           "type": "text",
@@ -8860,8 +8848,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": null,
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_Sep2022(1).pdf",
         "page": 5,
@@ -8869,23 +8858,22 @@
           5
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "mixed",
         "confidence": "high",
         "visualVerified": true,
         "issues": []
+      },
+      "classification": {
+        "subjectConfidence": "low",
+        "topicConfidence": "low",
+        "reviewRequired": true
       }
     },
     {
       "id": "ugc-net-cs-2022-september-q-48",
-      "examId": "ugc-net-cs",
-      "year": 2022,
-      "session": "September",
-      "paper": null,
-      "shift": null,
       "questionNumber": 48,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -8950,11 +8938,11 @@
         },
         {
           "type": "text",
-          "value": "by 232−n (Formula)"
+          "value": "by 232\u2212n (Formula)"
         },
         {
           "type": "math",
-          "value": "No of addresses= 232−27 = 25 = 32"
+          "value": "No of addresses= 232\u221227 = 25 = 32"
         },
         {
           "type": "text",
@@ -8974,8 +8962,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": null,
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_Sep2022(1).pdf",
         "page": 6,
@@ -8983,23 +8972,22 @@
           6
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "mixed",
         "confidence": "high",
         "visualVerified": true,
         "issues": []
+      },
+      "classification": {
+        "subjectConfidence": "low",
+        "topicConfidence": "low",
+        "reviewRequired": true
       }
     },
     {
       "id": "ugc-net-cs-2022-september-q-49",
-      "examId": "ugc-net-cs",
-      "year": 2022,
-      "session": "September",
-      "paper": null,
-      "shift": null,
       "questionNumber": 49,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -9108,8 +9096,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "computer-networks",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_Sep2022(1).pdf",
         "page": 6,
@@ -9117,23 +9106,22 @@
           6
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "mixed",
         "confidence": "high",
         "visualVerified": true,
         "issues": []
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2022-september-q-50",
-      "examId": "ugc-net-cs",
-      "year": 2022,
-      "session": "September",
-      "paper": null,
-      "shift": null,
       "questionNumber": 50,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -9323,8 +9311,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "computer-architecture",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_Sep2022(1).pdf",
         "page": 6,
@@ -9332,23 +9321,22 @@
           6
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "mixed",
         "confidence": "high",
         "visualVerified": true,
         "issues": []
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2022-september-q-51",
-      "examId": "ugc-net-cs",
-      "year": 2022,
-      "session": "September",
-      "paper": null,
-      "shift": null,
       "questionNumber": 51,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -9437,8 +9425,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": null,
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_Sep2022(1).pdf",
         "page": 6,
@@ -9446,23 +9435,22 @@
           6
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "mixed",
         "confidence": "high",
         "visualVerified": true,
         "issues": []
+      },
+      "classification": {
+        "subjectConfidence": "low",
+        "topicConfidence": "low",
+        "reviewRequired": true
       }
     },
     {
       "id": "ugc-net-cs-2022-september-q-52",
-      "examId": "ugc-net-cs",
-      "year": 2022,
-      "session": "September",
-      "paper": null,
-      "shift": null,
       "questionNumber": 52,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -9479,7 +9467,7 @@
           "content": [
             {
               "type": "math",
-              "value": "f(n) = O(g(n)) and g(n) = O(h(n)) ⇒ f(n) = ω(h(n))"
+              "value": "f(n) = O(g(n)) and g(n) = O(h(n)) \u21d2 f(n) = \u03c9(h(n))"
             }
           ]
         },
@@ -9488,7 +9476,7 @@
           "content": [
             {
               "type": "math",
-              "value": "f(n) = Ω(g(n)) and g(n) = Ω(h(n)) ⇒ f(n) = O(h(n))"
+              "value": "f(n) = \u03a9(g(n)) and g(n) = \u03a9(h(n)) \u21d2 f(n) = O(h(n))"
             }
           ]
         },
@@ -9497,7 +9485,7 @@
           "content": [
             {
               "type": "math",
-              "value": "f(n) = o(g(n)) and g(n) = o(h(n)) ⇒ f(n) = o(h(n))"
+              "value": "f(n) = o(g(n)) and g(n) = o(h(n)) \u21d2 f(n) = o(h(n))"
             }
           ]
         },
@@ -9506,7 +9494,7 @@
           "content": [
             {
               "type": "math",
-              "value": "f(n) = ω(g(n)) and g(n) = ω(h(n)) ⇒ f(n) = Ω(h(n))"
+              "value": "f(n) = \u03c9(g(n)) and g(n) = \u03c9(h(n)) \u21d2 f(n) = \u03a9(h(n))"
             }
           ]
         }
@@ -9515,7 +9503,7 @@
       "explanation": [
         {
           "type": "math",
-          "value": "f(n) = o(g(n)) and g(n) = o(h(n)) ⇒ f(n) = o(h(n))"
+          "value": "f(n) = o(g(n)) and g(n) = o(h(n)) \u21d2 f(n) = o(h(n))"
         },
         {
           "type": "text",
@@ -9555,8 +9543,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "algorithms",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_Sep2022(1).pdf",
         "page": 6,
@@ -9564,23 +9553,22 @@
           6
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "mixed",
         "confidence": "high",
         "visualVerified": true,
         "issues": []
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2022-september-q-53",
-      "examId": "ugc-net-cs",
-      "year": 2022,
-      "session": "September",
-      "paper": null,
-      "shift": null,
       "questionNumber": 53,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -9597,7 +9585,7 @@
           "content": [
             {
               "type": "text",
-              "value": "θ ( n2. logn )"
+              "value": "\u03b8 ( n2. logn )"
             }
           ]
         },
@@ -9606,7 +9594,7 @@
           "content": [
             {
               "type": "text",
-              "value": "θ (n.log n)"
+              "value": "\u03b8 (n.log n)"
             }
           ]
         },
@@ -9615,7 +9603,7 @@
           "content": [
             {
               "type": "text",
-              "value": "θ (n.logn)2"
+              "value": "\u03b8 (n.logn)2"
             }
           ]
         },
@@ -9624,7 +9612,7 @@
           "content": [
             {
               "type": "text",
-              "value": "θ (log logn)"
+              "value": "\u03b8 (log logn)"
             }
           ]
         }
@@ -9665,7 +9653,7 @@
         },
         {
           "type": "text",
-          "value": "log3 0.4771≈"
+          "value": "log3 0.4771\u2248"
         },
         {
           "type": "text",
@@ -9677,11 +9665,11 @@
         },
         {
           "type": "text",
-          "value": "Step 3:- compare nlog b a ≈ n0.793"
+          "value": "Step 3:- compare nlog b a \u2248 n0.793"
         },
         {
           "type": "text",
-          "value": "Step 4: If f(n)= Ω ( nc ) where c > log a then"
+          "value": "Step 4: If f(n)= \u03a9 ( nc ) where c > log a then"
         },
         {
           "type": "text",
@@ -9689,11 +9677,11 @@
         },
         {
           "type": "text",
-          "value": "T(n)=Θ(f(n)), n log n grows faster than n0.793 ."
+          "value": "T(n)=\u0398(f(n)), n log n grows faster than n0.793 ."
         },
         {
           "type": "text",
-          "value": "So T(n)= θ (n.log n)"
+          "value": "So T(n)= \u03b8 (n.log n)"
         }
       ],
       "answerSource": {
@@ -9709,8 +9697,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "discrete-structures",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_Sep2022(1).pdf",
         "page": 6,
@@ -9718,23 +9707,22 @@
           6
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "mixed",
         "confidence": "high",
         "visualVerified": true,
         "issues": []
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2022-september-q-54",
-      "examId": "ugc-net-cs",
-      "year": 2022,
-      "session": "September",
-      "paper": null,
-      "shift": null,
       "questionNumber": 54,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -9760,7 +9748,7 @@
           "content": [
             {
               "type": "text",
-              "value": "n 2h+1 2h−1"
+              "value": "n 2h+1 2h\u22121"
             }
           ]
         },
@@ -9778,7 +9766,7 @@
           "content": [
             {
               "type": "text",
-              "value": "n−1 2h 2h−1"
+              "value": "n\u22121 2h 2h\u22121"
             }
           ]
         }
@@ -9867,8 +9855,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "programming-data-structures",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_Sep2022(1).pdf",
         "page": 6,
@@ -9876,23 +9865,22 @@
           6
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "mixed",
         "confidence": "high",
         "visualVerified": true,
         "issues": []
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2022-september-q-55",
-      "examId": "ugc-net-cs",
-      "year": 2022,
-      "session": "September",
-      "paper": null,
-      "shift": null,
       "questionNumber": 55,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -9900,7 +9888,7 @@
         },
         {
           "type": "text",
-          "value": "t≥2 that contains any n -key, where n≥1 ."
+          "value": "t\u22652 that contains any n -key, where n\u22651 ."
         },
         {
           "type": "text",
@@ -9913,7 +9901,7 @@
           "content": [
             {
               "type": "text",
-              "value": "h≥log n+ 1"
+              "value": "h\u2265log n+ 1"
             }
           ]
         },
@@ -9922,7 +9910,7 @@
           "content": [
             {
               "type": "text",
-              "value": "h≤log n+ 1 t 2 t 2"
+              "value": "h\u2264log n+ 1 t 2 t 2"
             }
           ]
         },
@@ -9931,7 +9919,7 @@
           "content": [
             {
               "type": "text",
-              "value": "h≥log n−1"
+              "value": "h\u2265log n\u22121"
             }
           ]
         },
@@ -9940,7 +9928,7 @@
           "content": [
             {
               "type": "text",
-              "value": "h≤log n−1 t 2 t 2"
+              "value": "h\u2264log n\u22121 t 2 t 2"
             }
           ]
         }
@@ -9961,11 +9949,11 @@
         },
         {
           "type": "text",
-          "value": "tree must have at least t−1 keys."
+          "value": "tree must have at least t\u22121 keys."
         },
         {
           "type": "text",
-          "value": "A node can have at most 2t−1 key"
+          "value": "A node can have at most 2t\u22121 key"
         },
         {
           "type": "text",
@@ -9985,7 +9973,7 @@
         },
         {
           "type": "math",
-          "value": "n≥1+(t−1) ∑h ( 2ti−1) ="
+          "value": "n\u22651+(t\u22121) \u2211h ( 2ti\u22121) ="
         },
         {
           "type": "text",
@@ -9993,11 +9981,11 @@
         },
         {
           "type": "text",
-          "value": "( 2th− 1)"
+          "value": "( 2th\u2212 1)"
         },
         {
           "type": "text",
-          "value": "whereas the height of h of the tree is h ≤"
+          "value": "whereas the height of h of the tree is h \u2264"
         },
         {
           "type": "text",
@@ -10009,7 +9997,7 @@
         },
         {
           "type": "text",
-          "value": "The final answer is: h≤log n+1"
+          "value": "The final answer is: h\u2264log n+1"
         },
         {
           "type": "text",
@@ -10029,8 +10017,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "discrete-structures",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_Sep2022(1).pdf",
         "page": 6,
@@ -10038,23 +10027,22 @@
           6
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "mixed",
         "confidence": "high",
         "visualVerified": true,
         "issues": []
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2022-september-q-56",
-      "examId": "ugc-net-cs",
-      "year": 2022,
-      "session": "September",
-      "paper": null,
-      "shift": null,
       "questionNumber": 56,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -10159,8 +10147,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "algorithms",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_Sep2022(1).pdf",
         "page": 6,
@@ -10168,23 +10157,22 @@
           6
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "mixed",
         "confidence": "high",
         "visualVerified": true,
         "issues": []
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2022-september-q-57",
-      "examId": "ugc-net-cs",
-      "year": 2022,
-      "session": "September",
-      "paper": null,
-      "shift": null,
       "questionNumber": 57,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -10301,7 +10289,7 @@
         },
         {
           "type": "text",
-          "value": "Bin 10 is empty → Insert 43 at index 10."
+          "value": "Bin 10 is empty \u2192 Insert 43 at index 10."
         },
         {
           "type": "text",
@@ -10313,7 +10301,7 @@
         },
         {
           "type": "text",
-          "value": "Bin 3 is empty → Insert 36 at index 3."
+          "value": "Bin 3 is empty \u2192 Insert 36 at index 3."
         },
         {
           "type": "text",
@@ -10325,7 +10313,7 @@
         },
         {
           "type": "text",
-          "value": "Bin 4 is empty → Insert 92 at index 4."
+          "value": "Bin 4 is empty \u2192 Insert 92 at index 4."
         },
         {
           "type": "text",
@@ -10337,7 +10325,7 @@
         },
         {
           "type": "text",
-          "value": "Bin 10 is occupied → Linear probing: Check bin"
+          "value": "Bin 10 is occupied \u2192 Linear probing: Check bin"
         },
         {
           "type": "text",
@@ -10345,7 +10333,7 @@
         },
         {
           "type": "text",
-          "value": "Bin 0 is empty → Insert 87 at index 0."
+          "value": "Bin 0 is empty \u2192 Insert 87 at index 0."
         },
         {
           "type": "text",
@@ -10357,7 +10345,7 @@
         },
         {
           "type": "text",
-          "value": "Bin 0 is occupied → Linear probing: Check bin"
+          "value": "Bin 0 is occupied \u2192 Linear probing: Check bin"
         },
         {
           "type": "text",
@@ -10365,7 +10353,7 @@
         },
         {
           "type": "text",
-          "value": "Bin 1 is empty → Insert 11 at index 1."
+          "value": "Bin 1 is empty \u2192 Insert 11 at index 1."
         },
         {
           "type": "text",
@@ -10377,7 +10365,7 @@
         },
         {
           "type": "text",
-          "value": "Bin 3 is occupied → Linear probing: Check bin"
+          "value": "Bin 3 is occupied \u2192 Linear probing: Check bin"
         },
         {
           "type": "text",
@@ -10385,7 +10373,7 @@
         },
         {
           "type": "text",
-          "value": "Bin 5 is empty → Insert 47 at index 5."
+          "value": "Bin 5 is empty \u2192 Insert 47 at index 5."
         },
         {
           "type": "text",
@@ -10397,7 +10385,7 @@
         },
         {
           "type": "text",
-          "value": "Bin 0 is occupied → Linear probing: Check bins"
+          "value": "Bin 0 is occupied \u2192 Linear probing: Check bins"
         },
         {
           "type": "text",
@@ -10405,7 +10393,7 @@
         },
         {
           "type": "text",
-          "value": "Bin 2 is empty → Insert 11 at index 2."
+          "value": "Bin 2 is empty \u2192 Insert 11 at index 2."
         },
         {
           "type": "text",
@@ -10417,7 +10405,7 @@
         },
         {
           "type": "text",
-          "value": "Bin 2 is occupied → Linear probing: Check bin"
+          "value": "Bin 2 is occupied \u2192 Linear probing: Check bin"
         },
         {
           "type": "text",
@@ -10425,7 +10413,7 @@
         },
         {
           "type": "text",
-          "value": "Bin 6 is empty → Insert 13 at index 6."
+          "value": "Bin 6 is empty \u2192 Insert 13 at index 6."
         },
         {
           "type": "text",
@@ -10437,7 +10425,7 @@
         },
         {
           "type": "text",
-          "value": "Bin 3 is occupied → Linear probing: Check bin"
+          "value": "Bin 3 is occupied \u2192 Linear probing: Check bin"
         },
         {
           "type": "text",
@@ -10445,7 +10433,7 @@
         },
         {
           "type": "text",
-          "value": "Bin 7 is empty → Insert 14 at index 7."
+          "value": "Bin 7 is empty \u2192 Insert 14 at index 7."
         },
         {
           "type": "text",
@@ -10466,8 +10454,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "discrete-structures",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_Sep2022(1).pdf",
         "page": 6,
@@ -10475,23 +10464,22 @@
           6
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "mixed",
         "confidence": "high",
         "visualVerified": true,
         "issues": []
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2022-september-q-58",
-      "examId": "ugc-net-cs",
-      "year": 2022,
-      "session": "September",
-      "paper": null,
-      "shift": null,
       "questionNumber": 58,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -10499,11 +10487,11 @@
         },
         {
           "type": "text",
-          "value": "Preorder → ABCEIFJDGHKL"
+          "value": "Preorder \u2192 ABCEIFJDGHKL"
         },
         {
           "type": "text",
-          "value": "Inorder → EICFJBGDKHLA"
+          "value": "Inorder \u2192 EICFJBGDKHLA"
         },
         {
           "type": "text",
@@ -10560,15 +10548,15 @@
         },
         {
           "type": "text",
-          "value": "Preorder → ABCEIFJDGHKL"
+          "value": "Preorder \u2192 ABCEIFJDGHKL"
         },
         {
           "type": "text",
-          "value": "In order → EICFJBGDKHLA"
+          "value": "In order \u2192 EICFJBGDKHLA"
         },
         {
           "type": "text",
-          "value": "Node A → Left child: ( EICFJBGDKHL), Right child:"
+          "value": "Node A \u2192 Left child: ( EICFJBGDKHL), Right child:"
         },
         {
           "type": "text",
@@ -10576,27 +10564,27 @@
         },
         {
           "type": "text",
-          "value": "Node B→ Left child: ( EICFJ ), Right child: GDKHL"
+          "value": "Node B\u2192 Left child: ( EICFJ ), Right child: GDKHL"
         },
         {
           "type": "text",
-          "value": "Node C→ Left child :(EI), Right child: (FJ)"
+          "value": "Node C\u2192 Left child :(EI), Right child: (FJ)"
         },
         {
           "type": "text",
-          "value": "Node D→ Left child: (G), Right child: (KHL)"
+          "value": "Node D\u2192 Left child: (G), Right child: (KHL)"
         },
         {
           "type": "text",
-          "value": "Node E→ Left child: No child, Right child: (I)."
+          "value": "Node E\u2192 Left child: No child, Right child: (I)."
         },
         {
           "type": "text",
-          "value": "Node F→ Left child: No child, Right child: (J)"
+          "value": "Node F\u2192 Left child: No child, Right child: (J)"
         },
         {
           "type": "text",
-          "value": "Node G → Left child: No child, Right child: No"
+          "value": "Node G \u2192 Left child: No child, Right child: No"
         },
         {
           "type": "text",
@@ -10604,11 +10592,11 @@
         },
         {
           "type": "text",
-          "value": "Node H→ Left child: K, Right child: L"
+          "value": "Node H\u2192 Left child: K, Right child: L"
         },
         {
           "type": "text",
-          "value": "Post order: Left → Right→ Node"
+          "value": "Post order: Left \u2192 Right\u2192 Node"
         },
         {
           "type": "text",
@@ -10628,8 +10616,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "discrete-structures",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_Sep2022(1).pdf",
         "page": 6,
@@ -10637,23 +10626,22 @@
           6
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "mixed",
         "confidence": "high",
         "visualVerified": true,
         "issues": []
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2022-september-q-59",
-      "examId": "ugc-net-cs",
-      "year": 2022,
-      "session": "September",
-      "paper": null,
-      "shift": null,
       "questionNumber": 59,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -10734,7 +10722,7 @@
         },
         {
           "type": "text",
-          "value": "(−1,0,1-1, 0, 1−1,0,1) at every node. Insertion"
+          "value": "(\u22121,0,1-1, 0, 1\u22121,0,1) at every node. Insertion"
         },
         {
           "type": "text",
@@ -10766,11 +10754,11 @@
         },
         {
           "type": "text",
-          "value": "child of 35. The balance factor of 35 is 0−1=−1,"
+          "value": "child of 35. The balance factor of 35 is 0\u22121=\u22121,"
         },
         {
           "type": "text",
-          "value": "which is within the acceptable range (−1,0,1). No"
+          "value": "which is within the acceptable range (\u22121,0,1). No"
         },
         {
           "type": "text",
@@ -10802,11 +10790,11 @@
         },
         {
           "type": "text",
-          "value": "of 50 is 1−0=1, and the balance factor of 35 is"
+          "value": "of 50 is 1\u22120=1, and the balance factor of 35 is"
         },
         {
           "type": "text",
-          "value": "0−2=−2."
+          "value": "0\u22122=\u22122."
         },
         {
           "type": "text",
@@ -10882,7 +10870,7 @@
         },
         {
           "type": "text",
-          "value": "of 35 becomes 2−0=2, causing an imbalance."
+          "value": "of 35 becomes 2\u22120=2, causing an imbalance."
         },
         {
           "type": "text",
@@ -10970,7 +10958,7 @@
         },
         {
           "type": "text",
-          "value": "0−2=−2, causing an imbalance. Imbalance at 50:"
+          "value": "0\u22122=\u22122, causing an imbalance. Imbalance at 50:"
         },
         {
           "type": "text",
@@ -11135,8 +11123,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "discrete-structures",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_Sep2022(1).pdf",
         "page": 6,
@@ -11144,23 +11133,22 @@
           6
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "mixed",
         "confidence": "high",
         "visualVerified": true,
         "issues": []
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2022-september-q-60",
-      "examId": "ugc-net-cs",
-      "year": 2022,
-      "session": "September",
-      "paper": null,
-      "shift": null,
       "questionNumber": 60,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -11324,8 +11312,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": null,
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_Sep2022(1).pdf",
         "page": 6,
@@ -11333,23 +11322,22 @@
           6
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "mixed",
         "confidence": "high",
         "visualVerified": true,
         "issues": []
+      },
+      "classification": {
+        "subjectConfidence": "low",
+        "topicConfidence": "low",
+        "reviewRequired": true
       }
     },
     {
       "id": "ugc-net-cs-2022-september-q-61",
-      "examId": "ugc-net-cs",
-      "year": 2022,
-      "session": "September",
-      "paper": null,
-      "shift": null,
       "questionNumber": 61,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -11361,15 +11349,15 @@
         },
         {
           "type": "text",
-          "value": "F ={A→B,ABCD→E,EF →G,EF"
+          "value": "F ={A\u2192B,ABCD\u2192E,EF \u2192G,EF"
         },
         {
           "type": "text",
-          "value": "→H"
+          "value": "\u2192H"
         },
         {
           "type": "text",
-          "value": "and ACDF →EG} . The minimal cover of a"
+          "value": "and ACDF \u2192EG} . The minimal cover of a"
         },
         {
           "type": "text",
@@ -11382,7 +11370,7 @@
           "content": [
             {
               "type": "text",
-              "value": "A→B,ACD→E,EF →G , and EF →H"
+              "value": "A\u2192B,ACD\u2192E,EF \u2192G , and EF \u2192H"
             }
           ]
         },
@@ -11391,7 +11379,7 @@
           "content": [
             {
               "type": "text",
-              "value": "A→B,ACD→E,EF →G,EF →H and ACDF →G"
+              "value": "A\u2192B,ACD\u2192E,EF \u2192G,EF \u2192H and ACDF \u2192G"
             }
           ]
         },
@@ -11400,7 +11388,7 @@
           "content": [
             {
               "type": "text",
-              "value": "A→B,ACD→E,EF →G,EF →H and ACDF →E"
+              "value": "A\u2192B,ACD\u2192E,EF \u2192G,EF \u2192H and ACDF \u2192E"
             }
           ]
         },
@@ -11409,7 +11397,7 @@
           "content": [
             {
               "type": "text",
-              "value": "A→B,ABCD→E,EF →H, and EF →G"
+              "value": "A\u2192B,ABCD\u2192E,EF \u2192H, and EF \u2192G"
             }
           ]
         }
@@ -11438,11 +11426,11 @@
         },
         {
           "type": "text",
-          "value": "possible, such as EF→G and EF→H, into one:"
+          "value": "possible, such as EF\u2192G and EF\u2192H, into one:"
         },
         {
           "type": "text",
-          "value": "EF→GH"
+          "value": "EF\u2192GH"
         },
         {
           "type": "text",
@@ -11450,7 +11438,7 @@
         },
         {
           "type": "text",
-          "value": "F={A→B,ABCD→E,EF→GH,ACDF→EG}"
+          "value": "F={A\u2192B,ABCD\u2192E,EF\u2192GH,ACDF\u2192EG}"
         },
         {
           "type": "text",
@@ -11458,15 +11446,15 @@
         },
         {
           "type": "text",
-          "value": "In ABCD→E, B is extraneous. So, remove B"
+          "value": "In ABCD\u2192E, B is extraneous. So, remove B"
         },
         {
           "type": "text",
-          "value": "from ABCD→E, and we get: F="
+          "value": "from ABCD\u2192E, and we get: F="
         },
         {
           "type": "text",
-          "value": "{A→B,ACD→E,EF→GH,ACDF→EG}"
+          "value": "{A\u2192B,ACD\u2192E,EF\u2192GH,ACDF\u2192EG}"
         },
         {
           "type": "text",
@@ -11474,15 +11462,15 @@
         },
         {
           "type": "text",
-          "value": "E is extraneous in ACDF→EG, So, remove E"
+          "value": "E is extraneous in ACDF\u2192EG, So, remove E"
         },
         {
           "type": "text",
-          "value": "from ACDF→EG, and we get: F="
+          "value": "from ACDF\u2192EG, and we get: F="
         },
         {
           "type": "text",
-          "value": "{A→B,ACD→E,EF→GH,ACDF→G}"
+          "value": "{A\u2192B,ACD\u2192E,EF\u2192GH,ACDF\u2192G}"
         },
         {
           "type": "text",
@@ -11490,15 +11478,15 @@
         },
         {
           "type": "text",
-          "value": "G is extraneous in ACDF→G, because it’s"
+          "value": "G is extraneous in ACDF\u2192G, because it\u2019s"
         },
         {
           "type": "text",
-          "value": "already implied by EF→GH and ACD→E."
+          "value": "already implied by EF\u2192GH and ACD\u2192E."
         },
         {
           "type": "text",
-          "value": "we can see that ACDF→G can be derived"
+          "value": "we can see that ACDF\u2192G can be derived"
         },
         {
           "type": "text",
@@ -11506,11 +11494,11 @@
         },
         {
           "type": "text",
-          "value": "So, remove ACDF→G, and the set becomes:"
+          "value": "So, remove ACDF\u2192G, and the set becomes:"
         },
         {
           "type": "text",
-          "value": "F={A→B,ACD→E,EF→GH}"
+          "value": "F={A\u2192B,ACD\u2192E,EF\u2192GH}"
         },
         {
           "type": "text",
@@ -11522,7 +11510,7 @@
         },
         {
           "type": "text",
-          "value": "F={A→B,ACD→E,EF→G,EF→H}"
+          "value": "F={A\u2192B,ACD\u2192E,EF\u2192G,EF\u2192H}"
         }
       ],
       "answerSource": {
@@ -11538,8 +11526,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "discrete-structures",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_Sep2022(1).pdf",
         "page": 6,
@@ -11548,23 +11537,22 @@
           7
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "mixed",
         "confidence": "high",
         "visualVerified": true,
         "issues": []
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2022-september-q-62",
-      "examId": "ugc-net-cs",
-      "year": 2022,
-      "session": "September",
-      "paper": null,
-      "shift": null,
       "questionNumber": 62,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -11690,8 +11678,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": null,
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_Sep2022(1).pdf",
         "page": 7,
@@ -11699,23 +11688,22 @@
           7
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "mixed",
         "confidence": "high",
         "visualVerified": true,
         "issues": []
+      },
+      "classification": {
+        "subjectConfidence": "low",
+        "topicConfidence": "low",
+        "reviewRequired": true
       }
     },
     {
       "id": "ugc-net-cs-2022-september-q-63",
-      "examId": "ugc-net-cs",
-      "year": 2022,
-      "session": "September",
-      "paper": null,
-      "shift": null,
       "questionNumber": 63,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -11960,8 +11948,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "discrete-structures",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_Sep2022(1).pdf",
         "page": 7,
@@ -11969,23 +11958,22 @@
           7
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "mixed",
         "confidence": "high",
         "visualVerified": true,
         "issues": []
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2022-september-q-64",
-      "examId": "ugc-net-cs",
-      "year": 2022,
-      "session": "September",
-      "paper": null,
-      "shift": null,
       "questionNumber": 64,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -12082,7 +12070,7 @@
         },
         {
           "type": "text",
-          "value": "100 characters×10 blocks per byte )"
+          "value": "100 characters\u00d710 blocks per byte )"
         },
         {
           "type": "text",
@@ -12162,8 +12150,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "discrete-structures",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_Sep2022(1).pdf",
         "page": 7,
@@ -12171,23 +12160,22 @@
           7
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "mixed",
         "confidence": "high",
         "visualVerified": true,
         "issues": []
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2022-september-q-65",
-      "examId": "ugc-net-cs",
-      "year": 2022,
-      "session": "September",
-      "paper": null,
-      "shift": null,
       "questionNumber": 65,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -12497,8 +12485,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "discrete-structures",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_Sep2022(1).pdf",
         "page": 7,
@@ -12506,23 +12495,22 @@
           7
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "mixed",
         "confidence": "high",
         "visualVerified": true,
         "issues": []
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2022-september-q-66",
-      "examId": "ugc-net-cs",
-      "year": 2022,
-      "session": "September",
-      "paper": null,
-      "shift": null,
       "questionNumber": 66,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -12703,8 +12691,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "discrete-structures",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_Sep2022(1).pdf",
         "page": 7,
@@ -12712,23 +12701,22 @@
           7
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "mixed",
         "confidence": "high",
         "visualVerified": true,
         "issues": []
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2022-september-q-67",
-      "examId": "ugc-net-cs",
-      "year": 2022,
-      "session": "September",
-      "paper": null,
-      "shift": null,
       "questionNumber": 67,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -13032,8 +13020,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": null,
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_Sep2022(1).pdf",
         "page": 7,
@@ -13041,23 +13030,22 @@
           7
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "mixed",
         "confidence": "high",
         "visualVerified": true,
         "issues": []
+      },
+      "classification": {
+        "subjectConfidence": "low",
+        "topicConfidence": "low",
+        "reviewRequired": true
       }
     },
     {
       "id": "ugc-net-cs-2022-september-q-68",
-      "examId": "ugc-net-cs",
-      "year": 2022,
-      "session": "September",
-      "paper": null,
-      "shift": null,
       "questionNumber": 68,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -13202,8 +13190,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": null,
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_Sep2022(1).pdf",
         "page": 7,
@@ -13211,27 +13200,26 @@
           7
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "mixed",
         "confidence": "high",
         "visualVerified": true,
         "issues": []
+      },
+      "classification": {
+        "subjectConfidence": "low",
+        "topicConfidence": "low",
+        "reviewRequired": true
       }
     },
     {
       "id": "ugc-net-cs-2022-september-q-69",
-      "examId": "ugc-net-cs",
-      "year": 2022,
-      "session": "September",
-      "paper": null,
-      "shift": null,
       "questionNumber": 69,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
-          "value": "Consider the grammar S →SbS|a ."
+          "value": "Consider the grammar S \u2192SbS|a ."
         },
         {
           "type": "text",
@@ -13308,7 +13296,7 @@
         },
         {
           "type": "text",
-          "value": "S→S b S ∣ a"
+          "value": "S\u2192S b S \u2223 a"
         },
         {
           "type": "text",
@@ -13352,7 +13340,7 @@
         },
         {
           "type": "text",
-          "value": "pattern. The production S→S b S allows us to"
+          "value": "pattern. The production S\u2192S b S allows us to"
         },
         {
           "type": "text",
@@ -13376,11 +13364,11 @@
         },
         {
           "type": "text",
-          "value": "Apply S→S b S"
+          "value": "Apply S\u2192S b S"
         },
         {
           "type": "text",
-          "value": "S→S b S"
+          "value": "S\u2192S b S"
         },
         {
           "type": "text",
@@ -13388,7 +13376,7 @@
         },
         {
           "type": "text",
-          "value": "S→a b S b S"
+          "value": "S\u2192a b S b S"
         },
         {
           "type": "text",
@@ -13396,7 +13384,7 @@
         },
         {
           "type": "text",
-          "value": "S→a b a b S"
+          "value": "S\u2192a b a b S"
         },
         {
           "type": "text",
@@ -13404,7 +13392,7 @@
         },
         {
           "type": "text",
-          "value": "S→a b a b a"
+          "value": "S\u2192a b a b a"
         },
         {
           "type": "text",
@@ -13428,19 +13416,19 @@
         },
         {
           "type": "text",
-          "value": "Apply S→S b S:"
+          "value": "Apply S\u2192S b S:"
         },
         {
           "type": "text",
-          "value": "S→S b S"
+          "value": "S\u2192S b S"
         },
         {
           "type": "text",
-          "value": "Apply S→S b S b S:"
+          "value": "Apply S\u2192S b S b S:"
         },
         {
           "type": "text",
-          "value": "S→S b S b S"
+          "value": "S\u2192S b S b S"
         },
         {
           "type": "text",
@@ -13448,7 +13436,7 @@
         },
         {
           "type": "text",
-          "value": "S→a b S b S"
+          "value": "S\u2192a b S b S"
         },
         {
           "type": "text",
@@ -13456,7 +13444,7 @@
         },
         {
           "type": "text",
-          "value": "S→a b a b S"
+          "value": "S\u2192a b a b S"
         },
         {
           "type": "text",
@@ -13464,15 +13452,15 @@
         },
         {
           "type": "text",
-          "value": "S→a b a b a"
+          "value": "S\u2192a b a b a"
         },
         {
           "type": "text",
-          "value": "Apply S→S b S again:"
+          "value": "Apply S\u2192S b S again:"
         },
         {
           "type": "text",
-          "value": "S→a b a b a b S"
+          "value": "S\u2192a b a b a b S"
         },
         {
           "type": "text",
@@ -13480,7 +13468,7 @@
         },
         {
           "type": "text",
-          "value": "S→a b a b a b a"
+          "value": "S\u2192a b a b a b a"
         },
         {
           "type": "text",
@@ -13496,15 +13484,15 @@
         },
         {
           "type": "text",
-          "value": "Apply S→a:"
+          "value": "Apply S\u2192a:"
         },
         {
           "type": "text",
-          "value": "S→a"
+          "value": "S\u2192a"
         },
         {
           "type": "text",
-          "value": "Go back and apply S→S b S to the start"
+          "value": "Go back and apply S\u2192S b S to the start"
         },
         {
           "type": "text",
@@ -13512,7 +13500,7 @@
         },
         {
           "type": "text",
-          "value": "S→S b a"
+          "value": "S\u2192S b a"
         },
         {
           "type": "text",
@@ -13520,15 +13508,15 @@
         },
         {
           "type": "text",
-          "value": "S→a b a"
+          "value": "S\u2192a b a"
         },
         {
           "type": "text",
-          "value": "Apply S→S b S to the first S:"
+          "value": "Apply S\u2192S b S to the first S:"
         },
         {
           "type": "text",
-          "value": "S→S b a b a"
+          "value": "S\u2192S b a b a"
         },
         {
           "type": "text",
@@ -13536,15 +13524,15 @@
         },
         {
           "type": "text",
-          "value": "S→a b a b a"
+          "value": "S\u2192a b a b a"
         },
         {
           "type": "text",
-          "value": "Apply S→S b S to the first S:"
+          "value": "Apply S\u2192S b S to the first S:"
         },
         {
           "type": "text",
-          "value": "S→a b a b a b a"
+          "value": "S\u2192a b a b a b a"
         },
         {
           "type": "text",
@@ -13576,19 +13564,19 @@
         },
         {
           "type": "text",
-          "value": "Apply S→S b S:"
+          "value": "Apply S\u2192S b S:"
         },
         {
           "type": "text",
-          "value": "S→S b S"
+          "value": "S\u2192S b S"
         },
         {
           "type": "text",
-          "value": "Apply S→S b S b S:"
+          "value": "Apply S\u2192S b S b S:"
         },
         {
           "type": "text",
-          "value": "S→S b S b S"
+          "value": "S\u2192S b S b S"
         },
         {
           "type": "text",
@@ -13596,7 +13584,7 @@
         },
         {
           "type": "text",
-          "value": "S→S b S b a"
+          "value": "S\u2192S b S b a"
         },
         {
           "type": "text",
@@ -13604,7 +13592,7 @@
         },
         {
           "type": "text",
-          "value": "S→S b a b a"
+          "value": "S\u2192S b a b a"
         },
         {
           "type": "text",
@@ -13612,15 +13600,15 @@
         },
         {
           "type": "text",
-          "value": "S→a b a b a"
+          "value": "S\u2192a b a b a"
         },
         {
           "type": "text",
-          "value": "Apply S→S b S to the first S:"
+          "value": "Apply S\u2192S b S to the first S:"
         },
         {
           "type": "text",
-          "value": "S→a b a b a b a"
+          "value": "S\u2192a b a b a b a"
         },
         {
           "type": "text",
@@ -13636,27 +13624,11 @@
         },
         {
           "type": "text",
-          "value": "Apply S→S b S:"
+          "value": "Apply S\u2192S b S:"
         },
         {
           "type": "text",
-          "value": "S→S b S"
-        },
-        {
-          "type": "text",
-          "value": "Replace the rightmost S with 'a':"
-        },
-        {
-          "type": "text",
-          "value": "S→S b a"
-        },
-        {
-          "type": "text",
-          "value": "Apply S→S b S to the first S:"
-        },
-        {
-          "type": "text",
-          "value": "S→S b S b a"
+          "value": "S\u2192S b S"
         },
         {
           "type": "text",
@@ -13664,7 +13636,23 @@
         },
         {
           "type": "text",
-          "value": "S→S b a b a"
+          "value": "S\u2192S b a"
+        },
+        {
+          "type": "text",
+          "value": "Apply S\u2192S b S to the first S:"
+        },
+        {
+          "type": "text",
+          "value": "S\u2192S b S b a"
+        },
+        {
+          "type": "text",
+          "value": "Replace the rightmost S with 'a':"
+        },
+        {
+          "type": "text",
+          "value": "S\u2192S b a b a"
         },
         {
           "type": "text",
@@ -13672,15 +13660,15 @@
         },
         {
           "type": "text",
-          "value": "S→a b a b a"
+          "value": "S\u2192a b a b a"
         },
         {
           "type": "text",
-          "value": "Apply S→S b S to the first S:"
+          "value": "Apply S\u2192S b S to the first S:"
         },
         {
           "type": "text",
-          "value": "S→a b a b a b a"
+          "value": "S\u2192a b a b a b a"
         },
         {
           "type": "text",
@@ -13733,8 +13721,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "discrete-structures",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_Sep2022(1).pdf",
         "page": 7,
@@ -13742,23 +13731,22 @@
           7
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "mixed",
         "confidence": "high",
         "visualVerified": true,
         "issues": []
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2022-september-q-70",
-      "examId": "ugc-net-cs",
-      "year": 2022,
-      "session": "September",
-      "paper": null,
-      "shift": null,
       "questionNumber": 70,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -13766,7 +13754,7 @@
         },
         {
           "type": "text",
-          "value": "α−β pruning can be applied?"
+          "value": "\u03b1\u2212\u03b2 pruning can be applied?"
         },
         {
           "type": "text",
@@ -13900,8 +13888,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "discrete-structures",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_Sep2022(1).pdf",
         "page": 7,
@@ -13910,27 +13899,26 @@
           8
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "mixed",
         "confidence": "high",
         "visualVerified": true,
         "issues": []
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2022-september-q-71",
-      "examId": "ugc-net-cs",
-      "year": 2022,
-      "session": "September",
-      "paper": null,
-      "shift": null,
       "questionNumber": 71,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
-          "value": "Consider α,β,γ as logical variables. Identify"
+          "value": "Consider \u03b1,\u03b2,\u03b3 as logical variables. Identify"
         },
         {
           "type": "text",
@@ -13942,19 +13930,19 @@
         },
         {
           "type": "math",
-          "value": "(A) (α∧(β∨γ))≡((α∧β)∨(α∧γ))"
+          "value": "(A) (\u03b1\u2227(\u03b2\u2228\u03b3))\u2261((\u03b1\u2227\u03b2)\u2228(\u03b1\u2227\u03b3))"
         },
         {
           "type": "text",
-          "value": "(B) (α∨β)≡−α∨β"
+          "value": "(B) (\u03b1\u2228\u03b2)\u2261\u2212\u03b1\u2228\u03b2"
         },
         {
           "type": "math",
-          "value": "(C) (α⇒β)≡(−β⇒−α)"
+          "value": "(C) (\u03b1\u21d2\u03b2)\u2261(\u2212\u03b2\u21d2\u2212\u03b1)"
         },
         {
           "type": "math",
-          "value": "(D) (−(α∨β))≡(¬α⇒−β)"
+          "value": "(D) (\u2212(\u03b1\u2228\u03b2))\u2261(\u00ac\u03b1\u21d2\u2212\u03b2)"
         },
         {
           "type": "text",
@@ -14015,7 +14003,7 @@
         },
         {
           "type": "math",
-          "value": "A. (α ∧ (β ∨ γ)) = (α ∧ β) ∨ (α ∧ γ): The"
+          "value": "A. (\u03b1 \u2227 (\u03b2 \u2228 \u03b3)) = (\u03b1 \u2227 \u03b2) \u2228 (\u03b1 \u2227 \u03b3): The"
         },
         {
           "type": "text",
@@ -14031,15 +14019,15 @@
         },
         {
           "type": "math",
-          "value": "A∧(B∨C)≡(A∧B)∨(A∧C)"
+          "value": "A\u2227(B\u2228C)\u2261(A\u2227B)\u2228(A\u2227C)"
         },
         {
           "type": "math",
-          "value": "In this instance, (α ∧ (β ∨ γ)) yields ((α ∧ β) ∨ (α ∧"
+          "value": "In this instance, (\u03b1 \u2227 (\u03b2 \u2228 \u03b3)) yields ((\u03b1 \u2227 \u03b2) \u2228 (\u03b1 \u2227"
         },
         {
           "type": "text",
-          "value": "γ)), which is true, when the distributive property"
+          "value": "\u03b3)), which is true, when the distributive property"
         },
         {
           "type": "text",
@@ -14047,23 +14035,23 @@
         },
         {
           "type": "text",
-          "value": "B. (α ⇒ β) ≡ (¬β ⇒ ¬α): This equivalency is"
+          "value": "B. (\u03b1 \u21d2 \u03b2) \u2261 (\u00ac\u03b2 \u21d2 \u00ac\u03b1): This equivalency is"
         },
         {
           "type": "text",
-          "value": "contrapositive. The formula is (𝛼⇒𝛽)≡(¬𝛽⇒¬𝛼)"
+          "value": "contrapositive. The formula is (\ud835\udefc\u21d2\ud835\udefd)\u2261(\u00ac\ud835\udefd\u21d2\u00ac\ud835\udefc)"
         },
         {
           "type": "text",
-          "value": "Since if β is false, then α must also be false, hence"
+          "value": "Since if \u03b2 is false, then \u03b1 must also be false, hence"
         },
         {
           "type": "text",
-          "value": "¬β ⇒ ¬α must also be true. This equivalence is"
+          "value": "\u00ac\u03b2 \u21d2 \u00ac\u03b1 must also be true. This equivalence is"
         },
         {
           "type": "text",
-          "value": "true if α ⇒ β is true."
+          "value": "true if \u03b1 \u21d2 \u03b2 is true."
         }
       ],
       "answerSource": {
@@ -14079,8 +14067,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "discrete-structures",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_Sep2022(1).pdf",
         "page": 8,
@@ -14088,23 +14077,22 @@
           8
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "mixed",
         "confidence": "high",
         "visualVerified": true,
         "issues": []
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2022-september-q-72",
-      "examId": "ugc-net-cs",
-      "year": 2022,
-      "session": "September",
-      "paper": null,
-      "shift": null,
       "questionNumber": 72,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "math",
@@ -14229,8 +14217,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "discrete-structures",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_Sep2022(1).pdf",
         "page": 8,
@@ -14238,23 +14227,22 @@
           8
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "mixed",
         "confidence": "high",
         "visualVerified": true,
         "issues": []
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2022-september-q-73",
-      "examId": "ugc-net-cs",
-      "year": 2022,
-      "session": "September",
-      "paper": null,
-      "shift": null,
       "questionNumber": 73,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -14372,8 +14360,11 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "discrete-structures",
+      "topicId": null,
+      "assets": [
+        "assets/ugc-net-cs-2022-september/q-073.png"
+      ],
       "source": {
         "file": "UGC_Comp_Sep2022(1).pdf",
         "page": 8,
@@ -14381,33 +14372,30 @@
           8
         ]
       },
-      "assets": [
-        "assets/ugc-net-cs-2022-september/q-073.png"
-      ],
       "extraction": {
         "method": "mixed",
         "confidence": "high",
         "visualVerified": true,
         "issues": []
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2022-september-q-74",
-      "examId": "ugc-net-cs",
-      "year": 2022,
-      "session": "September",
-      "paper": null,
-      "shift": null,
       "questionNumber": 74,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
-          "value": "Let ϵ=0.0005 . and Let Re be the relation"
+          "value": "Let \u03f5=0.0005 . and Let Re be the relation"
         },
         {
           "type": "math",
-          "value": "{(x,y)∈R2 :∣∣x−y∣∣<ϵ} , Re could be"
+          "value": "{(x,y)\u2208R2 :\u2223\u2223x\u2212y\u2223\u2223<\u03f5} , Re could be"
         },
         {
           "type": "text",
@@ -14488,7 +14476,7 @@
         },
         {
           "type": "text",
-          "value": "A. Reflexive: For any element x, if (x,x)∈ (R), then"
+          "value": "A. Reflexive: For any element x, if (x,x)\u2208 (R), then"
         },
         {
           "type": "text",
@@ -14504,11 +14492,11 @@
         },
         {
           "type": "text",
-          "value": "∣x-x∣<0.0005"
+          "value": "\u2223x-x\u2223<0.0005"
         },
         {
           "type": "text",
-          "value": "∣x-x∣ = 0 which is less than 0.0005"
+          "value": "\u2223x-x\u2223 = 0 which is less than 0.0005"
         },
         {
           "type": "text",
@@ -14524,15 +14512,15 @@
         },
         {
           "type": "text",
-          "value": "B. Symmetric: If for every x, y, if (x, y)∈R, then (y,"
+          "value": "B. Symmetric: If for every x, y, if (x, y)\u2208R, then (y,"
         },
         {
           "type": "text",
-          "value": "x)∈R, a relation R is symmetric. In this instance,"
+          "value": "x)\u2208R, a relation R is symmetric. In this instance,"
         },
         {
           "type": "text",
-          "value": "we must determine whether ∣y−x∣<0.0005."
+          "value": "we must determine whether \u2223y\u2212x\u2223<0.0005."
         },
         {
           "type": "text",
@@ -14540,7 +14528,7 @@
         },
         {
           "type": "text",
-          "value": "symmetric, the absolute difference ∣x−y∣=∣y−x∣."
+          "value": "symmetric, the absolute difference \u2223x\u2212y\u2223=\u2223y\u2212x\u2223."
         },
         {
           "type": "text",
@@ -14548,7 +14536,7 @@
         },
         {
           "type": "text",
-          "value": "y∣<0.0005 and ∣y-x∣<0.0005"
+          "value": "y\u2223<0.0005 and \u2223y-x\u2223<0.0005"
         }
       ],
       "answerSource": {
@@ -14564,8 +14552,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "discrete-structures",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_Sep2022(1).pdf",
         "page": 8,
@@ -14573,23 +14562,22 @@
           8
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "mixed",
         "confidence": "high",
         "visualVerified": true,
         "issues": []
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2022-september-q-75",
-      "examId": "ugc-net-cs",
-      "year": 2022,
-      "session": "September",
-      "paper": null,
-      "shift": null,
       "questionNumber": 75,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -14734,8 +14722,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "discrete-structures",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_Sep2022(1).pdf",
         "page": 8,
@@ -14743,23 +14732,22 @@
           8
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "mixed",
         "confidence": "high",
         "visualVerified": true,
         "issues": []
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2022-september-q-76",
-      "examId": "ugc-net-cs",
-      "year": 2022,
-      "session": "September",
-      "paper": null,
-      "shift": null,
       "questionNumber": 76,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -15080,8 +15068,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": null,
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_Sep2022(1).pdf",
         "page": 8,
@@ -15089,23 +15078,22 @@
           8
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "mixed",
         "confidence": "high",
         "visualVerified": true,
         "issues": []
+      },
+      "classification": {
+        "subjectConfidence": "low",
+        "topicConfidence": "low",
+        "reviewRequired": true
       }
     },
     {
       "id": "ugc-net-cs-2022-september-q-77",
-      "examId": "ugc-net-cs",
-      "year": 2022,
-      "session": "September",
-      "paper": null,
-      "shift": null,
       "questionNumber": 77,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -15513,8 +15501,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": null,
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_Sep2022(1).pdf",
         "page": 8,
@@ -15523,23 +15512,22 @@
           9
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "mixed",
         "confidence": "high",
         "visualVerified": true,
         "issues": []
+      },
+      "classification": {
+        "subjectConfidence": "low",
+        "topicConfidence": "low",
+        "reviewRequired": true
       }
     },
     {
       "id": "ugc-net-cs-2022-september-q-78",
-      "examId": "ugc-net-cs",
-      "year": 2022,
-      "session": "September",
-      "paper": null,
-      "shift": null,
       "questionNumber": 78,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -15795,8 +15783,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": null,
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_Sep2022(1).pdf",
         "page": 9,
@@ -15804,23 +15793,22 @@
           9
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "mixed",
         "confidence": "high",
         "visualVerified": true,
         "issues": []
+      },
+      "classification": {
+        "subjectConfidence": "low",
+        "topicConfidence": "low",
+        "reviewRequired": true
       }
     },
     {
       "id": "ugc-net-cs-2022-september-q-79",
-      "examId": "ugc-net-cs",
-      "year": 2022,
-      "session": "September",
-      "paper": null,
-      "shift": null,
       "questionNumber": 79,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -16133,8 +16121,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": null,
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_Sep2022(1).pdf",
         "page": 9,
@@ -16142,23 +16131,22 @@
           9
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "mixed",
         "confidence": "high",
         "visualVerified": true,
         "issues": []
+      },
+      "classification": {
+        "subjectConfidence": "low",
+        "topicConfidence": "low",
+        "reviewRequired": true
       }
     },
     {
       "id": "ugc-net-cs-2022-september-q-80",
-      "examId": "ugc-net-cs",
-      "year": 2022,
-      "session": "September",
-      "paper": null,
-      "shift": null,
       "questionNumber": 80,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -16522,8 +16510,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": null,
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_Sep2022(1).pdf",
         "page": 9,
@@ -16531,23 +16520,22 @@
           9
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "mixed",
         "confidence": "high",
         "visualVerified": true,
         "issues": []
+      },
+      "classification": {
+        "subjectConfidence": "low",
+        "topicConfidence": "low",
+        "reviewRequired": true
       }
     },
     {
       "id": "ugc-net-cs-2022-september-q-81",
-      "examId": "ugc-net-cs",
-      "year": 2022,
-      "session": "September",
-      "paper": null,
-      "shift": null,
       "questionNumber": 81,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -16588,7 +16576,7 @@
               "content": [
                 {
                   "type": "text",
-                  "value": "Banker’s Algorithm"
+                  "value": "Banker\u2019s Algorithm"
                 }
               ]
             }
@@ -16807,7 +16795,7 @@
         },
         {
           "type": "text",
-          "value": "(D) Banker’s (III) Resource Banker’s"
+          "value": "(D) Banker\u2019s (III) Resource Banker\u2019s"
         },
         {
           "type": "text",
@@ -16864,8 +16852,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": null,
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_Sep2022(1).pdf",
         "page": 9,
@@ -16873,23 +16862,22 @@
           9
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "mixed",
         "confidence": "high",
         "visualVerified": true,
         "issues": []
+      },
+      "classification": {
+        "subjectConfidence": "low",
+        "topicConfidence": "low",
+        "reviewRequired": true
       }
     },
     {
       "id": "ugc-net-cs-2022-september-q-82",
-      "examId": "ugc-net-cs",
-      "year": 2022,
-      "session": "September",
-      "paper": null,
-      "shift": null,
       "questionNumber": 82,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -17161,8 +17149,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": null,
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_Sep2022(1).pdf",
         "page": 9,
@@ -17170,23 +17159,22 @@
           9
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "mixed",
         "confidence": "high",
         "visualVerified": true,
         "issues": []
+      },
+      "classification": {
+        "subjectConfidence": "low",
+        "topicConfidence": "low",
+        "reviewRequired": true
       }
     },
     {
       "id": "ugc-net-cs-2022-september-q-83",
-      "examId": "ugc-net-cs",
-      "year": 2022,
-      "session": "September",
-      "paper": null,
-      "shift": null,
       "questionNumber": 83,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -17446,8 +17434,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": null,
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_Sep2022(1).pdf",
         "page": 9,
@@ -17455,23 +17444,22 @@
           9
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "mixed",
         "confidence": "high",
         "visualVerified": true,
         "issues": []
+      },
+      "classification": {
+        "subjectConfidence": "low",
+        "topicConfidence": "low",
+        "reviewRequired": true
       }
     },
     {
       "id": "ugc-net-cs-2022-september-q-84",
-      "examId": "ugc-net-cs",
-      "year": 2022,
-      "session": "September",
-      "paper": null,
-      "shift": null,
       "questionNumber": 84,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -17840,8 +17828,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": null,
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_Sep2022(1).pdf",
         "page": 9,
@@ -17850,23 +17839,22 @@
           10
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "mixed",
         "confidence": "high",
         "visualVerified": true,
         "issues": []
+      },
+      "classification": {
+        "subjectConfidence": "low",
+        "topicConfidence": "low",
+        "reviewRequired": true
       }
     },
     {
       "id": "ugc-net-cs-2022-september-q-85",
-      "examId": "ugc-net-cs",
-      "year": 2022,
-      "session": "September",
-      "paper": null,
-      "shift": null,
       "questionNumber": 85,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -17927,7 +17915,7 @@
               "content": [
                 {
                   "type": "text",
-                  "value": "θ(v+E)"
+                  "value": "\u03b8(v+E)"
                 }
               ]
             },
@@ -17945,7 +17933,7 @@
               "content": [
                 {
                   "type": "text",
-                  "value": "θ((n−m−1)m)"
+                  "value": "\u03b8((n\u2212m\u22121)m)"
                 }
               ]
             },
@@ -17954,7 +17942,7 @@
               "content": [
                 {
                   "type": "text",
-                  "value": "O(n²)"
+                  "value": "O(n\u00b2)"
                 }
               ]
             },
@@ -18044,7 +18032,7 @@
         },
         {
           "type": "text",
-          "value": "(B) Rabin-Karp θ((n−m−1)"
+          "value": "(B) Rabin-Karp \u03b8((n\u2212m\u22121)"
         },
         {
           "type": "text",
@@ -18052,7 +18040,7 @@
         },
         {
           "type": "text",
-          "value": "Algorithm θ((n−m−1)m)"
+          "value": "Algorithm \u03b8((n\u2212m\u22121)m)"
         },
         {
           "type": "text",
@@ -18064,7 +18052,7 @@
         },
         {
           "type": "text",
-          "value": "(C) Depth-First θ(v+E) θ(v+E)"
+          "value": "(C) Depth-First \u03b8(v+E) \u03b8(v+E)"
         },
         {
           "type": "text",
@@ -18136,8 +18124,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": null,
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_Sep2022(1).pdf",
         "page": 10,
@@ -18145,23 +18134,22 @@
           10
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "mixed",
         "confidence": "high",
         "visualVerified": true,
         "issues": []
+      },
+      "classification": {
+        "subjectConfidence": "low",
+        "topicConfidence": "low",
+        "reviewRequired": true
       }
     },
     {
       "id": "ugc-net-cs-2022-september-q-86",
-      "examId": "ugc-net-cs",
-      "year": 2022,
-      "session": "September",
-      "paper": null,
-      "shift": null,
       "questionNumber": 86,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -18553,8 +18541,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": null,
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_Sep2022(1).pdf",
         "page": 10,
@@ -18562,23 +18551,22 @@
           10
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "mixed",
         "confidence": "high",
         "visualVerified": true,
         "issues": []
+      },
+      "classification": {
+        "subjectConfidence": "low",
+        "topicConfidence": "low",
+        "reviewRequired": true
       }
     },
     {
       "id": "ugc-net-cs-2022-september-q-87",
-      "examId": "ugc-net-cs",
-      "year": 2022,
-      "session": "September",
-      "paper": null,
-      "shift": null,
       "questionNumber": 87,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -18743,8 +18731,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": null,
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_Sep2022(1).pdf",
         "page": 10,
@@ -18752,23 +18741,22 @@
           10
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "mixed",
         "confidence": "high",
         "visualVerified": true,
         "issues": []
+      },
+      "classification": {
+        "subjectConfidence": "low",
+        "topicConfidence": "low",
+        "reviewRequired": true
       }
     },
     {
       "id": "ugc-net-cs-2022-september-q-88",
-      "examId": "ugc-net-cs",
-      "year": 2022,
-      "session": "September",
-      "paper": null,
-      "shift": null,
       "questionNumber": 88,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -18962,8 +18950,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "databases",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_Sep2022(1).pdf",
         "page": 10,
@@ -18971,23 +18960,22 @@
           10
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "mixed",
         "confidence": "high",
         "visualVerified": true,
         "issues": []
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2022-september-q-89",
-      "examId": "ugc-net-cs",
-      "year": 2022,
-      "session": "September",
-      "paper": null,
-      "shift": null,
       "questionNumber": 89,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -19156,8 +19144,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "computer-networks",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_Sep2022(1).pdf",
         "page": 10,
@@ -19165,23 +19154,22 @@
           10
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "mixed",
         "confidence": "high",
         "visualVerified": true,
         "issues": []
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2022-september-q-90",
-      "examId": "ugc-net-cs",
-      "year": 2022,
-      "session": "September",
-      "paper": null,
-      "shift": null,
       "questionNumber": 90,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -19354,8 +19342,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": null,
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_Sep2022(1).pdf",
         "page": 10,
@@ -19364,23 +19353,22 @@
           11
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "mixed",
         "confidence": "high",
         "visualVerified": true,
         "issues": []
+      },
+      "classification": {
+        "subjectConfidence": "low",
+        "topicConfidence": "low",
+        "reviewRequired": true
       }
     },
     {
       "id": "ugc-net-cs-2022-september-q-91",
-      "examId": "ugc-net-cs",
-      "year": 2022,
-      "session": "September",
-      "paper": null,
-      "shift": null,
       "questionNumber": 91,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -19545,8 +19533,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "compiler-design",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_Sep2022(1).pdf",
         "page": 11,
@@ -19554,23 +19543,22 @@
           11
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "mixed",
         "confidence": "high",
         "visualVerified": true,
         "issues": []
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2022-september-q-92",
-      "examId": "ugc-net-cs",
-      "year": 2022,
-      "session": "September",
-      "paper": null,
-      "shift": null,
       "questionNumber": 92,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -19699,8 +19687,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": null,
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_Sep2022(1).pdf",
         "page": 11,
@@ -19708,23 +19697,22 @@
           11
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "mixed",
         "confidence": "high",
         "visualVerified": true,
         "issues": []
+      },
+      "classification": {
+        "subjectConfidence": "low",
+        "topicConfidence": "low",
+        "reviewRequired": true
       }
     },
     {
       "id": "ugc-net-cs-2022-september-q-93",
-      "examId": "ugc-net-cs",
-      "year": 2022,
-      "session": "September",
-      "paper": null,
-      "shift": null,
       "questionNumber": 93,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -19732,15 +19720,15 @@
         },
         {
           "type": "math",
-          "value": "X:a∨(b∧(a∨c))=(a∨b)∧(a∨c)"
+          "value": "X:a\u2228(b\u2227(a\u2228c))=(a\u2228b)\u2227(a\u2228c)"
         },
         {
           "type": "math",
-          "value": "Y :a∧(b∨(a∧c))=(a∧b)∨(a∧c)"
+          "value": "Y :a\u2227(b\u2228(a\u2227c))=(a\u2227b)\u2228(a\u2227c)"
         },
         {
           "type": "math",
-          "value": "a∨(b∧c)=(a∨b)∧c is satisfied if"
+          "value": "a\u2228(b\u2227c)=(a\u2228b)\u2227c is satisfied if"
         }
       ],
       "options": [
@@ -19789,7 +19777,7 @@
         },
         {
           "type": "math",
-          "value": "X:a∨(b∧(a∨c))=(a∨b)∧(a∨c)"
+          "value": "X:a\u2228(b\u2227(a\u2228c))=(a\u2228b)\u2227(a\u2228c)"
         },
         {
           "type": "text",
@@ -19797,11 +19785,11 @@
         },
         {
           "type": "text",
-          "value": "which distribute a∨ over b∧(a∨c):"
+          "value": "which distribute a\u2228 over b\u2227(a\u2228c):"
         },
         {
           "type": "math",
-          "value": "a∨(b∧(a∨c))=(a∨b)∧(a∨c)"
+          "value": "a\u2228(b\u2227(a\u2228c))=(a\u2228b)\u2227(a\u2228c)"
         },
         {
           "type": "text",
@@ -19817,7 +19805,7 @@
         },
         {
           "type": "math",
-          "value": "Y:a∧(b∨(a∧c))=(a∧b)∨(a∧c)"
+          "value": "Y:a\u2227(b\u2228(a\u2227c))=(a\u2227b)\u2228(a\u2227c)"
         },
         {
           "type": "text",
@@ -19825,15 +19813,15 @@
         },
         {
           "type": "text",
-          "value": "Boolean algebra, which distributes a∧ over"
+          "value": "Boolean algebra, which distributes a\u2227 over"
         },
         {
           "type": "text",
-          "value": "b∨(a∧c):"
+          "value": "b\u2228(a\u2227c):"
         },
         {
           "type": "math",
-          "value": "a∧(b∨(a∧c))=(a∧b)∨(a∧c)"
+          "value": "a\u2227(b\u2228(a\u2227c))=(a\u2227b)\u2228(a\u2227c)"
         },
         {
           "type": "text",
@@ -19849,7 +19837,7 @@
         },
         {
           "type": "math",
-          "value": "The expression a∨(b∧c)=(a∨b)∧c does not"
+          "value": "The expression a\u2228(b\u2227c)=(a\u2228b)\u2227c does not"
         },
         {
           "type": "text",
@@ -19881,11 +19869,11 @@
         },
         {
           "type": "text",
-          "value": "X is true, then the expression a∨(b∧c)="
+          "value": "X is true, then the expression a\u2228(b\u2227c)="
         },
         {
           "type": "text",
-          "value": "(a∨b)∧c is satisfied. However, the"
+          "value": "(a\u2228b)\u2227c is satisfied. However, the"
         },
         {
           "type": "text",
@@ -19905,11 +19893,11 @@
         },
         {
           "type": "text",
-          "value": "Y is true, then the expression a∨(b∧c)="
+          "value": "Y is true, then the expression a\u2228(b\u2227c)="
         },
         {
           "type": "text",
-          "value": "(a∨b)∧c is satisfied. The truth of Y alone is"
+          "value": "(a\u2228b)\u2227c is satisfied. The truth of Y alone is"
         },
         {
           "type": "text",
@@ -19925,7 +19913,7 @@
         },
         {
           "type": "math",
-          "value": "a∨(b∧c) = (a∨b)∧c is satisfied. This"
+          "value": "a\u2228(b\u2227c) = (a\u2228b)\u2227c is satisfied. This"
         },
         {
           "type": "text",
@@ -19954,8 +19942,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "computer-architecture",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_Sep2022(1).pdf",
         "page": 11,
@@ -19963,23 +19952,22 @@
           11
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "mixed",
         "confidence": "high",
         "visualVerified": true,
         "issues": []
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2022-september-q-94",
-      "examId": "ugc-net-cs",
-      "year": 2022,
-      "session": "September",
-      "paper": null,
-      "shift": null,
       "questionNumber": 94,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -20096,8 +20084,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": null,
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_Sep2022(1).pdf",
         "page": 11,
@@ -20105,23 +20094,22 @@
           11
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "mixed",
         "confidence": "high",
         "visualVerified": true,
         "issues": []
+      },
+      "classification": {
+        "subjectConfidence": "low",
+        "topicConfidence": "low",
+        "reviewRequired": true
       }
     },
     {
       "id": "ugc-net-cs-2022-september-q-95",
-      "examId": "ugc-net-cs",
-      "year": 2022,
-      "session": "September",
-      "paper": null,
-      "shift": null,
       "questionNumber": 95,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -20137,11 +20125,11 @@
         },
         {
           "type": "text",
-          "value": "Assertion (A) : p¯"
+          "value": "Assertion (A) : p\u00af"
         },
         {
           "type": "text",
-          "value": "Reason (R): (r→q¯,r∨s,s→q¯,p→q)"
+          "value": "Reason (R): (r\u2192q\u00af,r\u2228s,s\u2192q\u00af,p\u2192q)"
         },
         {
           "type": "text",
@@ -20194,7 +20182,7 @@
       "explanation": [
         {
           "type": "text",
-          "value": "Assertion (A): p¯"
+          "value": "Assertion (A): p\u00af"
         },
         {
           "type": "text",
@@ -20206,23 +20194,23 @@
         },
         {
           "type": "text",
-          "value": "Reason (R): (r→ q¯ ,r∨s,s→ q¯ ,p→q)"
+          "value": "Reason (R): (r\u2192 q\u00af ,r\u2228s,s\u2192 q\u00af ,p\u2192q)"
         },
         {
           "type": "text",
-          "value": "r→ q¯ : If r is true, then q is false."
+          "value": "r\u2192 q\u00af : If r is true, then q is false."
         },
         {
           "type": "text",
-          "value": "r∨s: Either r or s is true."
+          "value": "r\u2228s: Either r or s is true."
         },
         {
           "type": "text",
-          "value": "s→ q¯ : If s is true, then q is false."
+          "value": "s\u2192 q\u00af : If s is true, then q is false."
         },
         {
           "type": "text",
-          "value": "p→q: If p is true, then q is true."
+          "value": "p\u2192q: If p is true, then q is true."
         },
         {
           "type": "text",
@@ -20242,7 +20230,7 @@
         },
         {
           "type": "text",
-          "value": "Assertion (A): p¯ is a statement that p is false,"
+          "value": "Assertion (A): p\u00af is a statement that p is false,"
         },
         {
           "type": "text",
@@ -20286,8 +20274,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": null,
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_Sep2022(1).pdf",
         "page": 11,
@@ -20295,23 +20284,22 @@
           11
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "mixed",
         "confidence": "high",
         "visualVerified": true,
         "issues": []
+      },
+      "classification": {
+        "subjectConfidence": "low",
+        "topicConfidence": "low",
+        "reviewRequired": true
       }
     },
     {
       "id": "ugc-net-cs-2022-september-q-96",
-      "examId": "ugc-net-cs",
-      "year": 2022,
-      "session": "September",
-      "paper": null,
-      "shift": null,
       "questionNumber": 96,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -20324,7 +20312,7 @@
           "content": [
             {
               "type": "math",
-              "value": "Using the ′= ', instead of ' === ' to determine if two values are equal"
+              "value": "Using the \u2032= ', instead of ' === ' to determine if two values are equal"
             }
           ]
         },
@@ -20400,8 +20388,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "discrete-structures",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_Sep2022(1).pdf",
         "page": 11,
@@ -20409,23 +20398,22 @@
           11
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "mixed",
         "confidence": "high",
         "visualVerified": true,
         "issues": []
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2022-september-q-97",
-      "examId": "ugc-net-cs",
-      "year": 2022,
-      "session": "September",
-      "paper": null,
-      "shift": null,
       "questionNumber": 97,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -20606,8 +20594,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": null,
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_Sep2022(1).pdf",
         "page": 11,
@@ -20615,23 +20604,22 @@
           11
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "mixed",
         "confidence": "high",
         "visualVerified": true,
         "issues": []
+      },
+      "classification": {
+        "subjectConfidence": "low",
+        "topicConfidence": "low",
+        "reviewRequired": true
       }
     },
     {
       "id": "ugc-net-cs-2022-september-q-98",
-      "examId": "ugc-net-cs",
-      "year": 2022,
-      "session": "September",
-      "paper": null,
-      "shift": null,
       "questionNumber": 98,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -20785,8 +20773,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "discrete-structures",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_Sep2022(1).pdf",
         "page": 11,
@@ -20794,23 +20783,22 @@
           11
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "mixed",
         "confidence": "high",
         "visualVerified": true,
         "issues": []
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2022-september-q-99",
-      "examId": "ugc-net-cs",
-      "year": 2022,
-      "session": "September",
-      "paper": null,
-      "shift": null,
       "questionNumber": 99,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -20834,7 +20822,7 @@
         },
         {
           "type": "text",
-          "value": "∀g,c grandparent (g, c)⇔∃p parent (g. p)∧"
+          "value": "\u2200g,c grandparent (g, c)\u21d4\u2203p parent (g. p)\u2227"
         },
         {
           "type": "text",
@@ -20899,11 +20887,11 @@
         },
         {
           "type": "text",
-          "value": "Correct: Statement I “Grandparent is a parent of"
+          "value": "Correct: Statement I \u201cGrandparent is a parent of"
         },
         {
           "type": "text",
-          "value": "one’s parent.”"
+          "value": "one\u2019s parent.\u201d"
         },
         {
           "type": "text",
@@ -20911,7 +20899,7 @@
         },
         {
           "type": "text",
-          "value": "is defined as the parent of a person’s parent."
+          "value": "is defined as the parent of a person\u2019s parent."
         },
         {
           "type": "text",
@@ -20927,7 +20915,7 @@
         },
         {
           "type": "text",
-          "value": "∀g,c grandparent (g, c) ⇔∃p parent (g, p) ∧"
+          "value": "\u2200g,c grandparent (g, c) \u21d4\u2203p parent (g, p) \u2227"
         },
         {
           "type": "text",
@@ -20983,8 +20971,9 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "discrete-structures",
+      "topicId": null,
+      "assets": [],
       "source": {
         "file": "UGC_Comp_Sep2022(1).pdf",
         "page": 11,
@@ -20992,23 +20981,22 @@
           11
         ]
       },
-      "assets": [],
       "extraction": {
         "method": "mixed",
         "confidence": "high",
         "visualVerified": true,
         "issues": []
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     },
     {
       "id": "ugc-net-cs-2022-september-q-100",
-      "examId": "ugc-net-cs",
-      "year": 2022,
-      "session": "September",
-      "paper": null,
-      "shift": null,
       "questionNumber": 100,
-      "questionType": "mcq",
+      "type": "single_choice",
       "content": [
         {
           "type": "text",
@@ -21198,8 +21186,11 @@
         ],
         "type": "solution"
       },
-      "subject": null,
-      "topic": null,
+      "subjectId": "discrete-structures",
+      "topicId": null,
+      "assets": [
+        "assets/ugc-net-cs-2022-september/q-100.png"
+      ],
       "source": {
         "file": "UGC_Comp_Sep2022(1).pdf",
         "page": 11,
@@ -21208,14 +21199,16 @@
           12
         ]
       },
-      "assets": [
-        "assets/ugc-net-cs-2022-september/q-100.png"
-      ],
       "extraction": {
         "method": "mixed",
         "confidence": "high",
         "visualVerified": true,
         "issues": []
+      },
+      "classification": {
+        "subjectConfidence": "medium",
+        "topicConfidence": "low",
+        "reviewRequired": false
       }
     }
   ]

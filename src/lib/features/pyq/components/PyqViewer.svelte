@@ -25,15 +25,15 @@
   const mappedQuestions: Question[] = $derived(
     questions.map(q => ({
       id: q.id,
-      examId: q.examId,
+      examId: examConfig.id,
       subjectId: q.subjectId || "pyq",
-      topic: q.topic,
-      difficulty: q.difficulty || "Medium",
+      topic: q.topicId || undefined,
+      difficulty: "Medium",
       content: q.content,
       options: q.options,
       correctOptionId: q.answer,
       explanation: q.explanation,
-      tags: [q.year.toString(), q.paper, q.shift]
+      tags: [manifest.year.toString(), manifest.paper, manifest.shift]
     }))
   );
 </script>
