@@ -1,5 +1,5 @@
 <script lang="ts">
-  import InfoLayout from "$lib/components/info-layout.svelte";
+  import InfoLayout from "$lib/components/layout/info-layout.svelte";
   import { Input } from "$lib/components/ui/input/index.js";
   import { Textarea } from "$lib/components/ui/textarea/index.js";
   import { Label } from "$lib/components/ui/label/index.js";

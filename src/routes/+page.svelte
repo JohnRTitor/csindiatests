@@ -1,11 +1,11 @@
 <script lang="ts">
-  import AppHeader from "$lib/components/app-header.svelte";
-  import AppFooter from "$lib/components/app-footer.svelte";
+  import AppHeader from "$lib/components/layout/app-header.svelte";
+  import AppFooter from "$lib/components/layout/app-footer.svelte";
   
-  import ExamSelection from "$lib/components/home/exam-selection.svelte";
-  import RecentActivity from "$lib/components/home/recent-activity.svelte";
+  import ExamSelection from "$lib/features/dashboard/components/exam-selection.svelte";
+  import RecentActivity from "$lib/features/dashboard/components/recent-activity.svelte";
 
-  import { mockActivityFeed } from "$lib/data/user-progress";
+  import { mockActivityFeed } from "$lib/features/progress/data/user-progress";
 </script>
 
 <div class="min-h-screen flex flex-col bg-muted/10">

@@ -1,8 +1,8 @@
 <script lang="ts">
   import { onMount } from "svelte";
   import { toast } from "svelte-sonner";
-  import AppHeader from "$lib/components/app-header.svelte";
-  import AppFooter from "$lib/components/app-footer.svelte";
+  import AppHeader from "$lib/components/layout/app-header.svelte";
+  import AppFooter from "$lib/components/layout/app-footer.svelte";
   import { Separator } from "$lib/components/ui/separator/index.js";
   import { Switch } from "$lib/components/ui/switch/index.js";
   import { Label } from "$lib/components/ui/label/index.js";
@@ -11,7 +11,7 @@
   import { Button } from "$lib/components/ui/button/index.js";
   import * as Select from "$lib/components/ui/select/index.js";
   import { Loader2, Database, AlertCircle } from "@lucide/svelte";
-  import { preferencesRepo } from "$lib/db/index.js";
+  import { preferencesRepo } from '$lib/features/preferences/index';
 
   const defaultPreferences = {
     theme: "system",

@@ -1,9 +1,9 @@
 <script lang="ts">
-  import { ugcNetConfig, ugcNetQuestions } from "$lib/data/ugc-net-cs";
-  import type { QuizMode } from "$lib/types";
-  import QuizShell from "$lib/components/quiz/QuizShell.svelte";
-  import AppHeader from "$lib/components/app-header.svelte";
-  import AppFooter from "$lib/components/app-footer.svelte";
+  import { ugcNetConfig, ugcNetQuestions } from "$lib/features/exams/config/ugc-net-cs";
+  import type { QuizMode } from "$lib/features/quiz/types";
+  import QuizShell from "$lib/features/quiz/components/QuizShell.svelte";
+  import AppHeader from "$lib/components/layout/app-header.svelte";
+  import AppFooter from "$lib/components/layout/app-footer.svelte";
   import * as Card from "$lib/components/ui/card/index.js";
   import { Button } from "$lib/components/ui/button/index.js";
   import { Clock, Zap, Target, BookOpen, ChevronRight } from "@lucide/svelte";

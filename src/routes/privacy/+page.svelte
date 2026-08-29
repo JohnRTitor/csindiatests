@@ -1,5 +1,5 @@
 <script lang="ts">
-  import InfoLayout from "$lib/components/info-layout.svelte";
+  import InfoLayout from "$lib/components/layout/info-layout.svelte";
 </script>
 
 <svelte:head>
