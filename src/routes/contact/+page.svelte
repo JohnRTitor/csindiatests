@@ -5,7 +5,7 @@
   import { Label } from "$lib/components/ui/label/index.js";
   import * as Select from "$lib/components/ui/select/index.js";
   import { Button } from "$lib/components/ui/button/index.js";
-  import { Loader2, CheckCircle2 } from "lucide-svelte";
+  import { Loader2, CheckCircle2 } from "@lucide/svelte";
 
   let isSubmitting = $state(false);
   let isSuccess = $state(false);

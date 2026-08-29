@@ -10,10 +10,8 @@
   import { Slider } from "$lib/components/ui/slider/index.js";
   import { Button } from "$lib/components/ui/button/index.js";
   import * as Select from "$lib/components/ui/select/index.js";
-  import { getDatabase } from "$lib/db/index.js";
-  import { Loader2, Database, AlertCircle } from "lucide-svelte";
-
-  const db = getDatabase();
+  import { Loader2, Database, AlertCircle } from "@lucide/svelte";
+  import { preferencesRepo } from "$lib/db/index.js";
 
   const defaultPreferences = {
     theme: "system",
@@ -39,11 +37,10 @@
 
   onMount(async () => {
     try {
-      await db.init();
-      const loadedPrefs = await db.getPreferences();
+      const loadedPrefs = await preferencesRepo.getAll();
       preferences = { ...defaultPreferences, ...loadedPrefs };
     } catch (err: any) {
-      console.error("Failed to initialize database:", err);
+      console.error("Failed to load preferences:", err);
       dbSupported = false;
       error = err.message || "Failed to connect to local database.";
     } finally {
@@ -60,7 +57,7 @@
     saving[key] = true;
 
     try {
-      await db.setPreference(key, value);
+      await preferencesRepo.set(key, value);
       toast.success("Settings saved");
     } catch (err: any) {
       console.error(`Failed to save preference ${key}:`, err);

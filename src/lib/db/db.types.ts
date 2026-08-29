@@ -1,99 +1,74 @@
 export interface Preference {
   key: string;
-  value: string;
-  updated_at: string;
+  value: unknown;
+  updatedAt: string;
 }
 
 export type TestSessionStatus = 'in_progress' | 'completed' | 'abandoned' | 'expired';
 
 export interface TestSession {
   id: string;
-  exam_id: string;
+  examId: string;
   title: string;
   mode: string;
-  started_at: string;
-  completed_at: string | null;
-  duration_seconds: number | null;
-  total_questions: number;
-  answered_questions: number;
-  correct_answers: number;
-  incorrect_answers: number;
-  skipped_questions: number;
+  startedAt: string;
+  completedAt: string | null;
+  durationSeconds: number | null;
+  totalQuestions: number;
+  answeredQuestions: number;
+  correctAnswers: number;
+  incorrectAnswers: number;
+  skippedQuestions: number;
   score: number;
   percentage: number;
   status: TestSessionStatus;
-  metadata: string | null;
+  metadata: Record<string, unknown> | null;
 }
 
 export interface TestAnswer {
   id: string;
-  test_session_id: string;
-  question_id: string;
-  selected_answer: string | null;
-  correct_answer: string;
-  is_correct: number | null; // 0 or 1, or null if unassessed
-  answered_at: string | null;
-  time_spent_seconds: number;
-  marked_for_review: number; // 0 or 1
-  explanation_seen: number; // 0 or 1
-  metadata: string | null;
+  testSessionId: string;
+  questionId: string;
+  selectedAnswer: string | null;
+  correctAnswer: string;
+  isCorrect: boolean | null;
+  answeredAt: string | null;
+  timeSpentSeconds: number;
+  markedForReview: boolean;
+  explanationSeen: boolean;
+  metadata: Record<string, unknown> | null;
 }
 
 export interface QuestionProgress {
-  question_id: string;
+  questionId: string;
   attempts: number;
-  correct_attempts: number;
-  incorrect_attempts: number;
-  last_answered_at: string | null;
-  last_result: number | null; // 0 or 1
-  best_time_seconds: number | null;
-  total_time_seconds: number;
-  marked_for_review: number; // 0 or 1
+  correctAttempts: number;
+  incorrectAttempts: number;
+  lastAnsweredAt: string | null;
+  lastResult: boolean | null;
+  bestTimeSeconds: number | null;
+  totalTimeSeconds: number;
+  markedForReview: boolean;
   confidence: number;
-  metadata: string | null;
+  metadata: Record<string, unknown> | null;
 }
 
 export interface UserStats {
   id: number;
-  questions_attempted: number;
-  questions_correct: number;
-  questions_incorrect: number;
-  tests_started: number;
-  tests_completed: number;
-  total_study_seconds: number;
-  current_streak: number;
-  longest_streak: number;
-  last_activity_at: string | null;
-  updated_at: string;
-}
-
-export interface WorkerRequest {
-  id: string;
-  action: string;
-  payload?: unknown;
-}
-
-export interface WorkerResponse {
-  id: string;
-  ok: boolean;
-  data?: unknown;
-  error?: {
-    message: string;
-    code: string;
-  };
-}
-
-export interface RecordAnswerPayload {
-  answer: TestAnswer;
-  // Options for updating related records
-  updateSession?: boolean;
-  updateProgress?: boolean;
-  updateStats?: boolean;
+  questionsAttempted: number;
+  questionsCorrect: number;
+  questionsIncorrect: number;
+  testsStarted: number;
+  testsCompleted: number;
+  totalStudySeconds: number;
+  currentStreak: number;
+  longestStreak: number;
+  lastActivityAt: string | null;
+  updatedAt: string;
 }
 
 export interface ListTestSessionsOptions {
   limit?: number;
   offset?: number;
   status?: TestSessionStatus;
-  orderBy?: string; // e.g. "started_at DESC"
 }
