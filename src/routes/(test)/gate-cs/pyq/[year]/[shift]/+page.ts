@@ -7,7 +7,7 @@ export const load: PageLoad = async ({ params }) => {
   const shift = decodeURIComponent(params.shift);
 
   try {
-    const data = await pyqService.getPyqPaperByYearAndShift("ugc-net-cs", year, shift);
+    const data = await pyqService.getPyqPaperByYearAndShift("gate-cs", year, shift);
     return {
       manifest: data.manifest,
       questions: data.questions

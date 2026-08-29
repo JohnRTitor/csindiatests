@@ -1,12 +1,15 @@
 <script lang="ts">
   import { pyqService } from "$lib/features/pyq/services/pyq-service";
-  const ugcNetPyqManifest = pyqService.getAvailablePyqPapers();
   import * as Card from "$lib/components/ui/card/index.js";
   import { Button } from "$lib/components/ui/button/index.js";
   import { BookOpen, Calendar, Clock, ArrowRight } from "@lucide/svelte";
 
+  let { examId = "ugc-net-cs" } = $props<{ examId?: string }>();
+
+  let availablePapers = $derived(pyqService.getAvailablePyqPapers(examId));
+
   // Group papers by year
-  const papersByYear = ugcNetPyqManifest.reduce(
+  let papersByYear = $derived(availablePapers.reduce(
     (acc, paper) => {
       if (!acc[paper.year]) {
         acc[paper.year] = [];
@@ -14,12 +17,12 @@
       acc[paper.year].push(paper);
       return acc;
     },
-    {} as Record<number, typeof ugcNetPyqManifest>,
-  );
+    {} as Record<number, typeof availablePapers>,
+  ));
 
-  const years = Object.keys(papersByYear)
+  let years = $derived(Object.keys(papersByYear)
     .map(Number)
-    .sort((a, b) => b - a);
+    .sort((a, b) => b - a));
 </script>
 
 <div class="space-y-12">
@@ -53,7 +56,7 @@
             </Card.Content>
             <Card.Footer class="pt-0">
               <Button
-                href="/ugc-net-cs/pyq/{paper.year}/{encodeURIComponent(
+                href="/{examId}/pyq/{paper.year}/{encodeURIComponent(
                   paper.shift,
                 )}"
                 class="w-full justify-between"

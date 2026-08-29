@@ -1,6 +1,6 @@
 <script lang="ts">
   import PyqBrowser from "$lib/features/pyq/components/PyqBrowser.svelte";
-    </script>
+</script>
 
 <main class="grow">
     <!-- Hero Section -->
@@ -12,7 +12,7 @@
           Previous Year Questions
         </div>
         <h1 class="text-4xl md:text-5xl font-bold tracking-tight mb-4">
-          UGC NET Computer Science PYQs
+          GATE Computer Science PYQs
         </h1>
         <p class="text-xl text-muted-foreground max-w-2xl mx-auto">
           Practice with authentic previous year examination papers to understand
@@ -22,6 +22,6 @@
     </section>
 
     <div class="container mx-auto px-4 py-12 max-w-5xl">
-      <PyqBrowser examId="ugc-net-cs" />
+      <PyqBrowser examId="gate-cs" />
     </div>
   </main>

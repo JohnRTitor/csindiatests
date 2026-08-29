@@ -2,11 +2,12 @@
   import { onMount } from "svelte";
   import { page } from "$app/state";
   import { goto } from "$app/navigation";
-  import { ugcNetConfig, ugcNetQuestions } from "$lib/features/exams/config/ugc-net-cs";
+  import { ugcNetConfig } from "$lib/features/exams/config/ugc-net-cs";
   import type { QuizMode } from "$lib/features/quiz/types";
   import type { Question } from "$lib/features/exams/types";
   import QuizShell from "$lib/features/quiz/components/QuizShell.svelte";
   import { testHistoryRepo } from "$lib/features/tests/repositories/test-history";
+  import { pyqService } from "$lib/features/pyq/services/pyq-service";
 
   // Derive mode and count from route params and config
   let modeParam = $derived(page.params.mode);
@@ -36,21 +37,14 @@
       // Resume existing session
       const session = await testHistoryRepo.get(sessionId);
       if (session && session.questionIds) {
-        selectedQuestions = session.questionIds
-          .map(id => ugcNetQuestions.find(q => q.id === id))
-          .filter((q): q is Question => q !== undefined);
+        selectedQuestions = await pyqService.getQuestionsByIds("ugc-net-cs", session.questionIds);
       } else {
         // Fallback if invalid
-        selectedQuestions = ugcNetQuestions.slice(0, data.count);
+        selectedQuestions = await pyqService.getRandomQuestions("ugc-net-cs", data.count);
       }
     } else {
-      // New session: shuffle questions
-      const shuffled = [...ugcNetQuestions];
-      for (let i = shuffled.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
-      }
-      selectedQuestions = shuffled.slice(0, data.count);
+      // New session: get random questions
+      selectedQuestions = await pyqService.getRandomQuestions("ugc-net-cs", data.count);
     }
     
     isLoading = false;

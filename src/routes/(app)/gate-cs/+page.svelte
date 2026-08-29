@@ -1,7 +1,6 @@
 <script lang="ts">
   import {
     gateConfig,
-    gateQuestions,
   } from "$lib/features/exams/config/gate-cs";
       import * as Card from "$lib/components/ui/card/index.js";
   import { Button } from "$lib/components/ui/button/index.js";
@@ -27,9 +26,31 @@
     </section>
 
     <div class="container mx-auto px-4 py-12 max-w-5xl space-y-12">
+      <!-- Previous Year Questions -->
+      <section>
+        <div class="flex items-center justify-between mb-6">
+          <h2 class="text-2xl font-bold tracking-tight flex items-center">
+            <BookOpen class="mr-2 h-6 w-6 text-primary" /> Previous Year Questions
+          </h2>
+        </div>
+        <Card.Root class="hover:border-primary/50 transition-colors bg-primary/5">
+          <Card.Content class="p-6 flex flex-col md:flex-row items-center justify-between gap-4">
+            <div>
+              <h3 class="text-xl font-bold mb-2">Authentic PYQ Papers</h3>
+              <p class="text-muted-foreground max-w-2xl">
+                Browse, read, and practice with actual previous year question papers. Understand the real exam pattern and test your readiness.
+              </p>
+            </div>
+            <Button size="lg" class="shrink-0 w-full md:w-auto" href="/gate-cs/pyq">
+              Explore PYQs <ChevronRight class="ml-2 w-4 h-4" />
+            </Button>
+          </Card.Content>
+        </Card.Root>
+      </section>
+
       <!-- Practice Modes -->
       <section>
-        <h2 class="text-2xl font-bold tracking-tight mb-6 flex items-center">
+        <h2 class="text-2xl font-bold tracking-tight mb-6 flex items-center mt-12">
           <Target class="mr-2 h-6 w-6 text-primary" /> Practice Modes
         </h2>
 
