@@ -11,10 +11,11 @@
     { href: "/mock-tests", label: "Mock Tests" },
     { href: "/subjects", label: "Subjects" },
     { href: "/progress", label: "Progress" },
+    { href: "/settings", label: "Settings" },
   ];
 </script>
 
-<header class="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+<header class="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-backdrop-filter:bg-background/60">
   <div class="container mx-auto px-4 sm:px-8 flex h-16 items-center">
     
     <!-- Mobile Menu -->
@@ -28,7 +29,7 @@
             </Button>
           {/snippet}
         </Sheet.Trigger>
-        <Sheet.Content side="left" class="w-[250px] sm:w-[300px]">
+        <Sheet.Content side="left" class="w-62.5 sm:w-75">
           <nav class="flex flex-col gap-4 mt-8">
             {#each navLinks as link}
               <a 
@@ -45,7 +46,7 @@
     </div>
 
     <!-- Logo -->
-    <a href="/" class="flex items-center gap-2 mr-6 flex-shrink-0">
+    <a href="/" class="flex items-center gap-2 mr-6 shrink-0">
       <div class="bg-primary text-primary-foreground p-1.5 rounded-md">
         <BookOpen class="h-5 w-5" />
       </div>
