@@ -117,6 +117,13 @@ export function createQuizStore(initialQuestions: Question[] = [], mode: QuizMod
     state.endTime = null;
   }
 
+  function restoreState(savedAnswers: Record<string, string>, savedTimeRemaining?: number | null) {
+    state.answers = { ...savedAnswers };
+    if (savedTimeRemaining !== undefined) {
+      state.timeRemaining = savedTimeRemaining;
+    }
+  }
+
   return {
     get state() { return state; },
     get currentQuestion() { return state.questions[state.currentIndex]; },
@@ -129,6 +136,7 @@ export function createQuizStore(initialQuestions: Question[] = [], mode: QuizMod
     goToQuestion,
     complete,
     reset,
+    restoreState,
     pauseTimer,
     resumeTimer
   };

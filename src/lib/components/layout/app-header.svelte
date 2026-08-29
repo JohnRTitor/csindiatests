@@ -2,7 +2,8 @@
   import { Search, Menu, User, BookOpen } from "@lucide/svelte";
   import { Button } from "$lib/components/ui/button/index.js";
   import * as Sheet from "$lib/components/ui/sheet/index.js";
-  import ModeToggle from '$lib/components/layout/ModeToggle.svelte';
+  import ModeToggle from "$lib/components/layout/ModeToggle.svelte";
+  import { page } from "$app/state";
 
   let isOpen = $state(false);
 
@@ -15,9 +16,23 @@
   ];
 </script>
 
-<header class="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-backdrop-filter:bg-background/60">
+<header
+  class="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-backdrop-filter:bg-background/60"
+>
   <div class="container mx-auto px-4 sm:px-8 flex h-16 items-center">
-    
+    {#snippet NavItem(link: { href: string; label: string }, isMobile: boolean)}
+      <a
+        href={link.href}
+        class={isMobile 
+          ? "text-lg font-medium transition-colors hover:text-primary data-[active=true]:text-primary" 
+          : "transition-colors hover:text-primary text-muted-foreground data-[active=true]:text-foreground"}
+        data-active={page.url.pathname === link.href || (link.href !== "/" && page.url.pathname.startsWith(link.href))}
+        onclick={isMobile ? () => (isOpen = false) : undefined}
+      >
+        {link.label}
+      </a>
+    {/snippet}
+
     <!-- Mobile Menu -->
     <div class="md:hidden mr-4">
       <Sheet.Root bind:open={isOpen}>
@@ -32,13 +47,7 @@
         <Sheet.Content side="left" class="w-62.5 sm:w-75">
           <nav class="flex flex-col gap-4 mt-8">
             {#each navLinks as link}
-              <a 
-                href={link.href} 
-                class="text-lg font-medium transition-colors hover:text-primary"
-                onclick={() => isOpen = false}
-              >
-                {link.label}
-              </a>
+              {@render NavItem(link, true)}
             {/each}
           </nav>
         </Sheet.Content>
@@ -58,26 +67,27 @@
     <!-- Desktop Navigation -->
     <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
       {#each navLinks as link}
-        <a 
-          href={link.href} 
-          class="transition-colors hover:text-primary text-muted-foreground data-[active=true]:text-foreground"
-        >
-          {link.label}
-        </a>
+        {@render NavItem(link, false)}
       {/each}
     </nav>
 
     <!-- Right Side Actions -->
     <div class="ml-auto flex items-center space-x-2 sm:space-x-4">
-      <Button variant="ghost" size="icon" class="text-muted-foreground hidden sm:inline-flex">
+      <Button
+        variant="ghost"
+        size="icon"
+        class="text-muted-foreground hidden sm:inline-flex"
+      >
         <Search class="h-5 w-5" />
         <span class="sr-only">Search</span>
       </Button>
-      
+
       <ModeToggle />
-      
+
       <Button variant="ghost" size="icon" class="rounded-full">
-        <div class="h-8 w-8 rounded-full bg-muted flex items-center justify-center overflow-hidden border">
+        <div
+          class="h-8 w-8 rounded-full bg-muted flex items-center justify-center overflow-hidden border"
+        >
           <User class="h-5 w-5 text-muted-foreground" />
         </div>
         <span class="sr-only">User menu</span>

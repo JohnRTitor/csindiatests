@@ -30,9 +30,7 @@
 </script>
 
 <div class="grid grid-cols-5 sm:grid-cols-6 lg:grid-cols-5 xl:grid-cols-6 gap-2">
-  {#each questions as question, index}
-    {@const state = getQuestionState(question, index)}
-    
+  {#snippet QuestionButton(index: number, state: ReturnType<typeof getQuestionState>)}
     <button
       class={`
         relative flex flex-col items-center justify-center h-12 rounded-lg border font-medium text-sm transition-all outline-none
@@ -57,20 +55,23 @@
         {/if}
       </div>
     </button>
+  {/snippet}
+
+  {#each questions as question, index}
+    {@const state = getQuestionState(question, index)}
+    {@render QuestionButton(index, state)}
   {/each}
 </div>
 
 <div class="mt-6 flex flex-wrap gap-4 text-xs text-muted-foreground justify-center">
-  <div class="flex items-center gap-1.5">
-    <div class="h-3 w-3 rounded-full bg-background border"></div>
-    <span>Unanswered</span>
-  </div>
-  <div class="flex items-center gap-1.5">
-    <div class="h-3 w-3 rounded-full bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-900/50"></div>
-    <span>Correct</span>
-  </div>
-  <div class="flex items-center gap-1.5">
-    <div class="h-3 w-3 rounded-full bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-900/50"></div>
-    <span>Incorrect</span>
-  </div>
+  {#snippet LegendItem(label: string, dotClass: string)}
+    <div class="flex items-center gap-1.5">
+      <div class={`h-3 w-3 rounded-full ${dotClass}`}></div>
+      <span>{label}</span>
+    </div>
+  {/snippet}
+
+  {@render LegendItem("Unanswered", "bg-background border")}
+  {@render LegendItem("Correct", "bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-900/50")}
+  {@render LegendItem("Incorrect", "bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-900/50")}
 </div>

@@ -7,12 +7,12 @@
 
 <div class="min-h-screen flex flex-col bg-background text-foreground">
   <PublicHeader />
-  
-  <main class="flex-grow py-12 md:py-20 px-4 sm:px-6">
+
+  <main class="grow py-12 md:py-20 px-4 sm:px-6">
     <div class="container mx-auto {maxWidth}">
       {@render children()}
     </div>
   </main>
-  
+
   <PublicFooter />
 </div>

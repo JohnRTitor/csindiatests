@@ -19,7 +19,7 @@
 </script>
 
 <div class="rich-content space-y-3">
-  {#each content as block}
+  {#snippet RenderContentBlock(block: RichContent)}
     {#if block.type === "text"}
       <p class="text-foreground leading-relaxed whitespace-pre-wrap">{block.value}</p>
     {:else if block.type === "math"}
@@ -38,5 +38,9 @@
         />
       </div>
     {/if}
+  {/snippet}
+
+  {#each content as block}
+    {@render RenderContentBlock(block)}
   {/each}
 </div>

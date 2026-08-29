@@ -14,6 +14,7 @@ import type { QuizMode } from "$lib/features/quiz/types";
 
   import { quizPersistenceService } from "$lib/features/quiz/services/quiz-persistence";
   import { testHistoryRepo } from "$lib/features/tests/repositories/test-history";
+  import { testAnswersRepo } from "$lib/features/tests/repositories/test-answers";
 
   import { Button } from "$lib/components/ui/button/index.js";
   import * as Sheet from "$lib/components/ui/sheet/index.js";
@@ -41,31 +42,79 @@ import type { QuizMode } from "$lib/features/quiz/types";
   let sessionId = $state("");
 
   onMount(() => {
-    sessionId = crypto.randomUUID();
-    
-    // Create the test session
-    testHistoryRepo.create({
-      id: sessionId,
-      examId: examConfig.id,
-      title: `${examConfig.shortName} Practice`,
-      mode: mode,
-      startedAt: new Date().toISOString(),
-      completedAt: null,
-      durationSeconds: null,
-      totalQuestions: questions.length,
-      answeredQuestions: 0,
-      correctAnswers: 0,
-      incorrectAnswers: 0,
-      skippedQuestions: 0,
-      score: 0,
-      percentage: 0,
-      status: 'in_progress',
-      metadata: null
-    }).catch(console.error);
+    let isActive = true;
 
-    quiz.start();
+    const initSession = async () => {
+      // Check for an existing in-progress session for this exam, mode, and question count
+      const inProgressSessions = await testHistoryRepo.listInProgress();
+      const existingSession = inProgressSessions.find(s => 
+        s.examId === examConfig.id && 
+        s.mode === mode && 
+        s.totalQuestions === questions.length
+      );
+
+      if (!isActive) return;
+
+      if (existingSession) {
+        sessionId = existingSession.id;
+        // Load answers
+        const savedAnswers = await testAnswersRepo.getForTest(sessionId);
+        const answerMap: Record<string, string> = {};
+        savedAnswers.forEach(a => {
+          if (a.selectedAnswer) {
+            answerMap[a.questionId] = a.selectedAnswer;
+          }
+        });
+        
+        // Calculate remaining time
+        let timeRemaining = null;
+        if (mode === "timed" && existingSession.startedAt) {
+          const elapsedSeconds = Math.floor((Date.now() - new Date(existingSession.startedAt).getTime()) / 1000);
+          const totalDuration = durationMinutes * 60;
+          timeRemaining = Math.max(0, totalDuration - elapsedSeconds);
+        }
+        
+        quiz.restoreState(answerMap, timeRemaining);
+        quiz.start();
+        
+        // Restore currentIndex to the first unanswered question
+        const firstUnansweredIndex = questions.findIndex(q => !answerMap[q.id]);
+        if (firstUnansweredIndex !== -1) {
+          quiz.goToQuestion(firstUnansweredIndex);
+        } else {
+          quiz.goToQuestion(questions.length - 1);
+        }
+      } else {
+        sessionId = crypto.randomUUID();
+        
+        // Create the test session
+        await testHistoryRepo.create({
+          id: sessionId,
+          examId: examConfig.id,
+          title: `${examConfig.shortName} Practice`,
+          mode: mode,
+          startedAt: new Date().toISOString(),
+          completedAt: null,
+          durationSeconds: null,
+          totalQuestions: questions.length,
+          answeredQuestions: 0,
+          correctAnswers: 0,
+          incorrectAnswers: 0,
+          skippedQuestions: 0,
+          score: 0,
+          percentage: 0,
+          status: 'in_progress',
+          metadata: null
+        });
+
+        quiz.start();
+      }
+    };
+
+    initSession();
     
     return () => {
+      isActive = false;
       quiz.reset();
     };
   });

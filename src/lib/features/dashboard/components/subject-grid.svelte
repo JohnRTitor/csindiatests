@@ -13,7 +13,7 @@
   </div>
 
   <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-    {#each subjects as subject}
+    {#snippet SubjectCard(subject: any)}
       <a href="/ugc-net-cs" class="block outline-none focus-visible:ring-2 focus-visible:ring-ring rounded-xl">
         <Card.Root class="h-full hover:shadow-md transition-all duration-200 hover:-translate-y-1">
           <Card.Content class="p-5 flex flex-col h-full">
@@ -37,6 +37,10 @@
           </Card.Content>
         </Card.Root>
       </a>
+    {/snippet}
+
+    {#each subjects as subject}
+      {@render SubjectCard(subject)}
     {/each}
   </div>
 </section>
