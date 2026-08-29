@@ -1,32 +1,27 @@
 <script lang="ts">
   import {
-    ugcNetConfig,
-    ugcNetQuestions,
-  } from "$lib/features/exams/config/ugc-net-cs";
-  import AppHeader from "$lib/components/layout/app-header.svelte";
-  import AppFooter from "$lib/components/layout/app-footer.svelte";
-  import * as Card from "$lib/components/ui/card/index.js";
+    gateConfig,
+    gateQuestions,
+  } from "$lib/features/exams/config/gate-cs";
+      import * as Card from "$lib/components/ui/card/index.js";
   import { Button } from "$lib/components/ui/button/index.js";
   import { Clock, Zap, Target, BookOpen, ChevronRight } from "@lucide/svelte";
 </script>
 
-<div class="min-h-screen flex flex-col bg-muted/20">
-  <AppHeader />
-
-  <main class="grow">
+<main class="grow">
     <!-- Hero Section -->
     <section class="bg-card border-b py-12 md:py-16">
       <div class="container mx-auto px-4 max-w-5xl text-center">
         <div
           class="inline-block px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium mb-6"
         >
-          Exam Preparation
+          Advanced Preparation
         </div>
         <h1 class="text-4xl md:text-5xl font-bold tracking-tight mb-4">
-          {ugcNetConfig.name}
+          {gateConfig.name}
         </h1>
         <p class="text-xl text-muted-foreground max-w-2xl mx-auto">
-          {ugcNetConfig.description}
+          {gateConfig.description}
         </p>
       </div>
     </section>
@@ -69,7 +64,7 @@
         {/snippet}
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {#each [{ title: "Quick Practice", description: "10 questions", content: "A fast revision session to keep your concepts sharp.", href: "/ugc-net-cs/practice/quick", buttonText: "Start Quick", icon: Zap, iconColor: "text-amber-500", isExamMode: false }, { title: "Focused Practice", description: "25 questions", content: "A balanced session for thorough topic coverage.", href: "/ugc-net-cs/practice/focused", buttonText: "Start Focused", icon: Target, iconColor: "text-blue-500", isExamMode: false }, { title: "Full Practice", description: "50 questions", content: "Comprehensive untimed practice across all subjects.", href: "/ugc-net-cs/practice/full", buttonText: "Start Full", icon: BookOpen, iconColor: "text-indigo-500", isExamMode: false }, { title: "Mock Test", description: "Timed · 50 questions", content: "Simulate the real exam environment with a timer.", href: "/ugc-net-cs/mock-test", buttonText: "Start Mock Test", icon: Clock, iconColor: "text-primary", isExamMode: true }] as mode}
+          {#each [{ title: "Quick Practice", description: "10 questions", content: "Warm up with a fast conceptual revision.", href: "/gate-cs/practice/quick", buttonText: "Start Quick", icon: Zap, iconColor: "text-amber-500", isExamMode: false }, { title: "Focused Practice", description: "25 questions", content: "A balanced session for deep analytical problem solving.", href: "/gate-cs/practice/focused", buttonText: "Start Focused", icon: Target, iconColor: "text-blue-500", isExamMode: false }, { title: "Full Practice", description: "50 questions", content: "Comprehensive untimed practice across core GATE subjects.", href: "/gate-cs/practice/full", buttonText: "Start Full", icon: BookOpen, iconColor: "text-indigo-500", isExamMode: false }, { title: "Mock Test", description: "Timed · 65 questions", content: "Simulate the real GATE exam environment (3 hours).", href: "/gate-cs/mock-test", buttonText: "Start Mock Test", icon: Clock, iconColor: "text-primary", isExamMode: true }] as mode}
             {@render PracticeModeCard(mode)}
           {/each}
         </div>
@@ -84,7 +79,7 @@
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {#snippet SubjectCard(subject: any)}
-            <a href={`/ugc-net-cs/subjects/${subject.id}`} class="block h-full">
+            <a href={`/gate-cs/subjects/${subject.id}`} class="block h-full">
               <Card.Root
                 class="hover:bg-accent/50 cursor-pointer transition-colors h-full"
               >
@@ -107,12 +102,10 @@
             </a>
           {/snippet}
 
-          {#each ugcNetConfig.subjects as subject}
+          {#each gateConfig.subjects as subject}
             {@render SubjectCard(subject)}
           {/each}
         </div>
       </section>
     </div>
   </main>
-  <AppFooter />
-</div>

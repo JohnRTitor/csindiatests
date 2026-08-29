@@ -1,12 +1,10 @@
-<script lang="ts">
-  import InfoLayout from "$lib/components/layout/info-layout.svelte";
-</script>
-
 <svelte:head>
   <title>Privacy Policy — CS India Tests</title>
 </svelte:head>
 
-<InfoLayout>
+<div class="container mx-auto max-w-3xl py-12 md:py-20 px-4 sm:px-6">
+
+
   <div class="prose prose-zinc dark:prose-invert max-w-none space-y-10">
     <div>
       <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-4">Privacy Policy</h1>
@@ -92,4 +90,5 @@
       </p>
     </section>
   </div>
-</InfoLayout>
+
+</div>

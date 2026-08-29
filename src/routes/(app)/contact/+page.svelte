@@ -1,6 +1,5 @@
 <script lang="ts">
-  import InfoLayout from "$lib/components/layout/info-layout.svelte";
-  import { Input } from "$lib/components/ui/input/index.js";
+    import { Input } from "$lib/components/ui/input/index.js";
   import { Textarea } from "$lib/components/ui/textarea/index.js";
   import { Label } from "$lib/components/ui/label/index.js";
   import * as Select from "$lib/components/ui/select/index.js";
@@ -65,12 +64,14 @@
     message = "";
   }
 </script>
-
 <svelte:head>
   <title>Contact CS India Tests</title>
 </svelte:head>
 
-<InfoLayout maxWidth="max-w-5xl">
+<div class="container mx-auto max-w-3xl py-12 md:py-20 px-4 sm:px-6">
+
+
+
   <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24">
     
     <!-- Contact Info -->
@@ -187,4 +188,5 @@
     </div>
     
   </div>
-</InfoLayout>
+
+</div>

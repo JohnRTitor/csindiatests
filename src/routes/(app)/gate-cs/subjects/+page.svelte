@@ -1,16 +1,13 @@
 <script lang="ts">
   import { gateConfig } from "$lib/features/exams/config/gate-cs";
-  import AppHeader from "$lib/components/layout/app-header.svelte";
-  import AppFooter from "$lib/components/layout/app-footer.svelte";
-</script>
+    </script>
 
 <svelte:head>
   <title>GATE CS Subjects | CS India Tests</title>
 </svelte:head>
 
 <main class="min-h-screen bg-background flex flex-col">
-  <AppHeader />
-
+  
   <div class="grow container mx-auto max-w-5xl px-4 py-12 md:py-16">
     <div class="mb-12">
       <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-4">
@@ -62,5 +59,4 @@
     </div>
   </div>
 
-  <AppFooter />
-</main>
+  </main>

@@ -1,12 +1,10 @@
-<script lang="ts">
-  import InfoLayout from "$lib/components/layout/info-layout.svelte";
-</script>
-
 <svelte:head>
   <title>About CS India Tests</title>
 </svelte:head>
 
-<InfoLayout>
+<div class="container mx-auto max-w-3xl py-12 md:py-20 px-4 sm:px-6">
+
+
   <div class="space-y-12">
     
     <!-- Hero Section -->
@@ -118,4 +116,5 @@
       
     </div>
   </div>
-</InfoLayout>
+
+</div>

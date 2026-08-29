@@ -1,8 +1,6 @@
 <script lang="ts">
   import { onMount } from "svelte";
-  import AppHeader from "$lib/components/layout/app-header.svelte";
-  import AppFooter from "$lib/components/layout/app-footer.svelte";
-  import ProgressOverview from "$lib/features/dashboard/components/progress-overview.svelte";
+      import ProgressOverview from "$lib/features/dashboard/components/progress-overview.svelte";
   import { dashboardDataService } from "$lib/features/dashboard/services/dashboard-data";
   import type { UserProgress } from "$lib/features/progress/types";
 
@@ -25,10 +23,7 @@
   <title>Progress | CS India Tests</title>
 </svelte:head>
 
-<div class="min-h-screen flex flex-col bg-muted/10">
-  <AppHeader />
-  
-  <main class="grow py-12 md:py-16">
+<main class="grow py-12 md:py-16">
     <div class="container mx-auto px-4 sm:px-8 max-w-6xl">
       <div class="mb-10">
         <h1 class="text-4xl font-extrabold tracking-tight mb-4">
@@ -48,6 +43,3 @@
       {/if}
     </div>
   </main>
-  
-  <AppFooter />
-</div>

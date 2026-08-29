@@ -1,9 +1,7 @@
 <script lang="ts">
   import { onMount } from "svelte";
   import { toast } from "svelte-sonner";
-  import AppHeader from "$lib/components/layout/app-header.svelte";
-  import AppFooter from "$lib/components/layout/app-footer.svelte";
-  import { Separator } from "$lib/components/ui/separator/index.js";
+      import { Separator } from "$lib/components/ui/separator/index.js";
   import { Switch } from "$lib/components/ui/switch/index.js";
   import { Label } from "$lib/components/ui/label/index.js";
   import { Input } from "$lib/components/ui/input/index.js";
@@ -98,10 +96,7 @@
   });
 </script>
 
-<div class="min-h-screen flex flex-col bg-muted/20">
-  <AppHeader />
-  
-  <main class="grow container mx-auto px-4 sm:px-8 max-w-4xl py-8">
+<main class="grow container mx-auto px-4 sm:px-8 max-w-4xl py-8">
     <div class="flex items-center justify-between mb-8">
       <div>
         <h1 class="text-3xl font-bold tracking-tight">Settings</h1>
@@ -333,6 +328,3 @@
       </div>
     {/if}
   </main>
-  
-  <AppFooter />
-</div>

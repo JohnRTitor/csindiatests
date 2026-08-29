@@ -1,7 +1,5 @@
 <script lang="ts">
-  import AppHeader from "$lib/components/layout/app-header.svelte";
-  import AppFooter from "$lib/components/layout/app-footer.svelte";
-  import * as Card from "$lib/components/ui/card/index.js";
+      import * as Card from "$lib/components/ui/card/index.js";
   import { Button } from "$lib/components/ui/button/index.js";
   import { Clock, BrainCircuit, BookOpen } from "@lucide/svelte";
 </script>
@@ -10,10 +8,7 @@
   <title>Mock Tests | CS India Tests</title>
 </svelte:head>
 
-<div class="min-h-screen flex flex-col bg-muted/10">
-  <AppHeader />
-  
-  <main class="grow py-12 md:py-16">
+<main class="grow py-12 md:py-16">
     <div class="container mx-auto px-4 max-w-5xl">
       <div class="text-center mb-12">
         <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-4">
@@ -69,6 +64,3 @@
       </div>
     </div>
   </main>
-  
-  <AppFooter />
-</div>

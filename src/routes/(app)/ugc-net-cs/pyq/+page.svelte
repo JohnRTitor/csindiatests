@@ -1,13 +1,8 @@
 <script lang="ts">
   import PyqBrowser from "$lib/features/pyq/components/PyqBrowser.svelte";
-  import AppHeader from "$lib/components/layout/app-header.svelte";
-  import AppFooter from "$lib/components/layout/app-footer.svelte";
-</script>
+    </script>
 
-<div class="min-h-screen flex flex-col bg-muted/20">
-  <AppHeader />
-
-  <main class="grow">
+<main class="grow">
     <!-- Hero Section -->
     <section class="bg-card border-b py-12 md:py-16">
       <div class="container mx-auto px-4 max-w-5xl text-center">
@@ -30,6 +25,3 @@
       <PyqBrowser />
     </div>
   </main>
-
-  <AppFooter />
-</div>
