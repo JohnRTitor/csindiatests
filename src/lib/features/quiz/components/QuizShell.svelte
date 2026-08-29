@@ -12,6 +12,9 @@ import type { QuizMode } from "$lib/features/quiz/types";
   import QuizResults from "$lib/features/quiz/components/quiz-results.svelte";
   import QuestionNavigator from "$lib/features/quiz/components/question-navigator.svelte";
 
+  import { quizPersistenceService } from "$lib/features/quiz/services/quiz-persistence";
+  import { testHistoryRepo } from "$lib/features/tests/repositories/test-history";
+
   import { Button } from "$lib/components/ui/button/index.js";
   import * as Sheet from "$lib/components/ui/sheet/index.js";
   import { ArrowRight, LayoutGrid, CheckCircle2 } from "@lucide/svelte";
@@ -28,15 +31,38 @@ import type { QuizMode } from "$lib/features/quiz/types";
     onExit: () => void 
   } = $props();
 
-  const durationMinutes = examConfig.defaultDuration || 60;
+  let durationMinutes = $derived(examConfig.defaultDuration || 60);
   
-  // Initialize quiz with provided questions and mode
-  const quiz = createQuizStore(questions, mode, durationMinutes);
+  // Initialize quiz with provided questions and mode (needs to be reactive if these can change)
+  const quiz = $derived(createQuizStore(questions, mode, durationMinutes));
 
   let isMobileNavigatorOpen = $state(false);
   let reviewMode = $state(false);
+  let sessionId = $state("");
 
   onMount(() => {
+    sessionId = crypto.randomUUID();
+    
+    // Create the test session
+    testHistoryRepo.create({
+      id: sessionId,
+      examId: examConfig.id,
+      title: `${examConfig.shortName} Practice`,
+      mode: mode,
+      startedAt: new Date().toISOString(),
+      completedAt: null,
+      durationSeconds: null,
+      totalQuestions: questions.length,
+      answeredQuestions: 0,
+      correctAnswers: 0,
+      incorrectAnswers: 0,
+      skippedQuestions: 0,
+      score: 0,
+      percentage: 0,
+      status: 'in_progress',
+      metadata: null
+    }).catch(console.error);
+
     quiz.start();
     
     return () => {
@@ -46,8 +72,26 @@ import type { QuizMode } from "$lib/features/quiz/types";
 
   const handleAnswerSelect = (optionId: string) => {
     if (reviewMode) return;
-    if (!quiz.state.answers[quiz.currentQuestion.id]) {
-      quiz.answerQuestion(quiz.currentQuestion.id, optionId);
+    const currentQ = quiz.currentQuestion;
+    if (!quiz.state.answers[currentQ.id]) {
+      quiz.answerQuestion(currentQ.id, optionId);
+      
+      const isCorrect = optionId === currentQ.correctOptionId;
+      const timeSpent = 0; // Could track actual time spent per question later
+      
+      quizPersistenceService.recordAnswer({
+        id: crypto.randomUUID(),
+        testSessionId: sessionId,
+        questionId: currentQ.id,
+        selectedAnswer: optionId,
+        correctAnswer: currentQ.correctOptionId,
+        isCorrect: isCorrect,
+        answeredAt: new Date().toISOString(),
+        timeSpentSeconds: timeSpent,
+        markedForReview: false,
+        explanationSeen: true,
+        metadata: null
+      }).catch(console.error);
     }
   };
 
@@ -57,6 +101,16 @@ import type { QuizMode } from "$lib/features/quiz/types";
         onExit();
       } else {
         quiz.complete();
+        
+        // Finalize the session
+        const duration = Math.floor((Date.now() - quiz.state.startTime) / 1000);
+        testHistoryRepo.update(sessionId, {
+          status: 'completed',
+          completedAt: new Date().toISOString(),
+          durationSeconds: duration,
+          score: quiz.state.score,
+          percentage: (quiz.state.score / quiz.state.questions.length) * 100
+        }).catch(console.error);
       }
     } else {
       quiz.nextQuestion();
@@ -86,7 +140,7 @@ import type { QuizMode } from "$lib/features/quiz/types";
 <div class="min-h-screen bg-muted/10 flex flex-col">
   
   {#if quiz.isCompleted && !reviewMode}
-    <div class="container mx-auto px-4 flex-grow flex items-center justify-center">
+    <div class="container mx-auto px-4 grow flex items-center justify-center">
       <QuizResults 
         state={quiz.state} 
         onReviewMistakes={handleReviewMistakes} 
@@ -107,13 +161,13 @@ import type { QuizMode } from "$lib/features/quiz/types";
     />
 
     {#if quiz.state.isTimerPaused}
-      <div class="flex-grow flex flex-col items-center justify-center container mx-auto px-4 text-center">
+      <div class="grow flex flex-col items-center justify-center container mx-auto px-4 text-center">
         <h2 class="text-3xl font-bold mb-4">Test Paused</h2>
         <p class="text-muted-foreground max-w-md mb-8">Take a breather. The timer is currently stopped.</p>
         <Button size="lg" onclick={() => quiz.resumeTimer()}>Resume Practice</Button>
       </div>
     {:else}
-      <main class="flex-grow container mx-auto px-4 py-6 md:py-8 flex gap-8 relative items-start">
+      <main class="grow container mx-auto px-4 py-6 md:py-8 flex gap-8 relative items-start">
         
         <!-- Left Column: Question Area -->
         <div class="w-full lg:w-[65%] xl:w-[70%] max-w-3xl mx-auto lg:mx-0">
@@ -196,7 +250,7 @@ import type { QuizMode } from "$lib/features/quiz/types";
         </div>
 
         <!-- Right Column: Sidebar (Desktop only) -->
-        <div class="hidden lg:block lg:w-[35%] xl:w-[30%] shrink-0 sticky top-[88px]">
+        <div class="hidden lg:block lg:w-[35%] xl:w-[30%] shrink-0 sticky top-22">
           <QuizSidebar 
             questions={quiz.state.questions}
             currentIndex={quiz.state.currentIndex}

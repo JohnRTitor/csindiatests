@@ -1,7 +1,34 @@
 <script lang="ts">
   import { CheckCircle2, XCircle, Info } from "@lucide/svelte";
+  import { marked } from 'marked';
+  import katex from 'katex';
+  import 'katex/dist/katex.min.css';
   
   let { isCorrect, explanation, correctAnswerId } = $props();
+
+  let renderedExplanation = $derived.by(() => {
+    if (!explanation) return "";
+    
+    let processedText = explanation;
+    
+    try {
+      // Block math: $$...$$
+      processedText = processedText.replace(/\$\$([\s\S]+?)\$\$/g, (_: string, math: string) => {
+        return katex.renderToString(math, { displayMode: true, throwOnError: false });
+      });
+      
+      // Inline math: $...$
+      processedText = processedText.replace(/(?<!\$)\$([^$\n]+?)\$(?!\$)/g, (_: string, math: string) => {
+        return katex.renderToString(math, { displayMode: false, throwOnError: false });
+      });
+    } catch (e) {
+      console.error("KaTeX rendering error", e);
+    }
+    
+    // Parse markdown (async or sync depending on marked version, but marked.parse is sync by default if no async extensions)
+    const result = marked.parse(processedText);
+    return typeof result === 'string' ? result : result.toString();
+  });
 </script>
 
 <div class={`mt-8 rounded-xl border overflow-hidden animate-in fade-in slide-in-from-bottom-4 duration-300 ${isCorrect ? 'border-green-200 dark:border-green-900/50 bg-green-50/50 dark:bg-green-900/10' : 'border-red-200 dark:border-red-900/50 bg-red-50/50 dark:bg-red-900/10'}`}>
@@ -25,7 +52,7 @@
     </div>
     
     <div class="prose prose-sm sm:prose-base dark:prose-invert max-w-none text-muted-foreground ml-8 leading-relaxed">
-      <p>{explanation}</p>
+      {@html renderedExplanation}
     </div>
   </div>
 </div>
