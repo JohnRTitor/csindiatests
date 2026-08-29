@@ -18,7 +18,7 @@ import type { QuizMode } from "$lib/features/quiz/types";
 
   import { Button } from "$lib/components/ui/button/index.js";
   import * as Sheet from "$lib/components/ui/sheet/index.js";
-  import { ArrowRight, LayoutGrid, CheckCircle2 } from "@lucide/svelte";
+  import { ArrowRight, LayoutGrid, CircleCheck } from "@lucide/svelte";
 
   import { page } from "$app/state";
   import { goto } from "$app/navigation";
@@ -333,7 +333,7 @@ import type { QuizMode } from "$lib/features/quiz/types";
                   onclick={handleNext}
                 >
                   {#if quiz.state.currentIndex === quiz.state.questions.length - 1}
-                    <CheckCircle2 class="mr-2 h-4 w-4" /> {reviewMode ? "Exit Review" : "Finish Test"}
+                    <CircleCheck class="mr-2 h-4 w-4" /> {reviewMode ? "Exit Review" : "Finish Test"}
                   {:else}
                     Next Question <ArrowRight class="ml-2 h-4 w-4" />
                   {/if}

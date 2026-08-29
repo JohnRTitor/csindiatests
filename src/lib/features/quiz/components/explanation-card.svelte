@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { CheckCircle2, XCircle, Info } from "@lucide/svelte";
+  import { CircleCheck, CircleX, Info } from "@lucide/svelte";
   import { marked } from 'marked';
   import katex from 'katex';
   import 'katex/dist/katex.min.css';
@@ -38,10 +38,10 @@
   
   <div class={`px-5 py-3 border-b flex items-center gap-2 font-semibold ${isCorrect ? 'bg-green-100/50 dark:bg-green-900/20 text-green-800 dark:text-green-300 border-green-200 dark:border-green-900/50' : 'bg-red-100/50 dark:bg-red-900/20 text-red-800 dark:text-red-300 border-red-200 dark:border-red-900/50'}`}>
     {#if isCorrect}
-      <CheckCircle2 class="h-5 w-5" />
+      <CircleCheck class="h-5 w-5" />
       <span>Correct</span>
     {:else}
-      <XCircle class="h-5 w-5" />
+      <CircleX class="h-5 w-5" />
       <span>Incorrect — Correct Answer is {correctAnswerId}</span>
     {/if}
   </div>

@@ -1,7 +1,7 @@
 <script lang="ts">
   import { Progress } from "$lib/components/ui/progress/index.js";
   import { Button } from "$lib/components/ui/button/index.js";
-  import { MoreVertical, Pause, Play, Settings } from "@lucide/svelte";
+  import { Pause, Play, Settings } from "@lucide/svelte";
   import * as DropdownMenu from "$lib/components/ui/dropdown-menu/index.js";
   import * as AlertDialog from "$lib/components/ui/alert-dialog/index.js";
 

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { CheckCircle2, XCircle } from "@lucide/svelte";
+  import { CircleCheck, CircleX } from "@lucide/svelte";
   import RichContentRenderer from "$lib/features/pyq/components/RichContentRenderer.svelte";
 
   let {
@@ -73,11 +73,11 @@
 
   {#if isActuallyCorrectOption}
     <div class="shrink-0 text-green-500 mt-0.5">
-      <CheckCircle2 class="h-5 w-5" />
+      <CircleCheck class="h-5 w-5" />
     </div>
   {:else if isWrongSelected}
     <div class="shrink-0 text-red-500 mt-0.5">
-      <XCircle class="h-5 w-5" />
+      <CircleX class="h-5 w-5" />
     </div>
   {/if}
 </button>

@@ -5,7 +5,7 @@
   import { Label } from "$lib/components/ui/label/index.js";
   import * as Select from "$lib/components/ui/select/index.js";
   import { Button } from "$lib/components/ui/button/index.js";
-  import { Loader2, CheckCircle2 } from "@lucide/svelte";
+  import { LoaderCircle, CircleCheck } from "@lucide/svelte";
 
   let isSubmitting = $state(false);
   let isSuccess = $state(false);
@@ -97,9 +97,9 @@
     <!-- Contact Form -->
     <div class="bg-card border rounded-2xl p-6 sm:p-8 shadow-sm">
       {#if isSuccess}
-        <div class="h-full min-h-[400px] flex flex-col items-center justify-center text-center space-y-6 animate-in fade-in zoom-in duration-300">
+        <div class="h-full min-h-100 flex flex-col items-center justify-center text-center space-y-6 animate-in fade-in zoom-in duration-300">
           <div class="h-16 w-16 bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-500 rounded-full flex items-center justify-center">
-            <CheckCircle2 class="h-8 w-8" />
+            <CircleCheck class="h-8 w-8" />
           </div>
           <div>
             <h2 class="text-2xl font-bold mb-2">Thanks for reaching out.</h2>
@@ -166,7 +166,7 @@
               bind:value={message} 
               disabled={isSubmitting} 
               placeholder="How can we help?" 
-              class="min-h-[120px] resize-y {messageError ? 'border-destructive' : ''}" 
+              class="min-h-30 resize-y {messageError ? 'border-destructive' : ''}" 
             />
             {#if messageError}
               <p class="text-sm text-destructive font-medium">{messageError}</p>
@@ -175,7 +175,7 @@
 
           <Button type="submit" class="w-full" disabled={isSubmitting}>
             {#if isSubmitting}
-              <Loader2 class="mr-2 h-4 w-4 animate-spin" />
+              <LoaderCircle class="mr-2 h-4 w-4 animate-spin" />
               Sending...
             {:else}
               Send message

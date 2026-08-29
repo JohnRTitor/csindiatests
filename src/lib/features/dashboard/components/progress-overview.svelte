@@ -1,6 +1,6 @@
 <script lang="ts">
   import * as Card from "$lib/components/ui/card/index.js";
-  import { CheckCircle2, Target, Flame, Trophy } from "@lucide/svelte";
+  import { CircleCheck, Target, Flame, Trophy } from "@lucide/svelte";
   import type { UserProgress } from "$lib/features/progress/types";
 
   let { progress }: { progress: UserProgress } = $props();
@@ -14,7 +14,7 @@
         <div class="flex items-center justify-between mb-4">
           <span class="text-sm font-medium text-muted-foreground">Questions Solved</span>
           <div class="p-2 bg-primary/10 rounded-full text-primary">
-            <CheckCircle2 class="h-4 w-4" />
+            <CircleCheck class="h-4 w-4" />
           </div>
         </div>
         <div>

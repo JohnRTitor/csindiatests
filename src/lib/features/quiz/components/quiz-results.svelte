@@ -1,7 +1,7 @@
 <script lang="ts">
   import * as Card from "$lib/components/ui/card/index.js";
   import { Button } from "$lib/components/ui/button/index.js";
-  import { CheckCircle2, XCircle, Minus, Trophy, Clock, ArrowRight, RotateCcw } from "@lucide/svelte";
+  import { CircleCheck, CircleX, Minus, Trophy, Clock, ArrowRight, RotateCcw } from "@lucide/svelte";
   import type { Question } from "$lib/features/exams/types";
 import type { QuizState } from "$lib/features/quiz/types";
   import { mockSubjects } from "$lib/features/exams/config/subjects";
@@ -99,14 +99,14 @@ import type { QuizState } from "$lib/features/quiz/types";
         <div class="space-y-4">
           <div class="flex items-center justify-between">
             <div class="flex items-center text-green-600 dark:text-green-500">
-              <CheckCircle2 class="mr-2 h-5 w-5" />
+              <CircleCheck class="mr-2 h-5 w-5" />
               <span class="font-medium">Correct</span>
             </div>
             <span class="font-bold">{correct}</span>
           </div>
           <div class="flex items-center justify-between">
             <div class="flex items-center text-red-600 dark:text-red-500">
-              <XCircle class="mr-2 h-5 w-5" />
+              <CircleX class="mr-2 h-5 w-5" />
               <span class="font-medium">Incorrect</span>
             </div>
             <span class="font-bold">{incorrect}</span>

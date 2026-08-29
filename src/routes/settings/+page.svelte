@@ -10,7 +10,7 @@
   import { Slider } from "$lib/components/ui/slider/index.js";
   import { Button } from "$lib/components/ui/button/index.js";
   import * as Select from "$lib/components/ui/select/index.js";
-  import { Loader2, Database, AlertCircle } from "@lucide/svelte";
+  import { LoaderCircle, Database, CircleAlert } from "@lucide/svelte";
   import { preferencesRepo } from '$lib/features/preferences/index';
 
   const defaultPreferences = {
@@ -118,12 +118,12 @@
 
     {#if loading}
       <div class="flex flex-col items-center justify-center py-20 text-muted-foreground">
-        <Loader2 class="h-8 w-8 animate-spin mb-4" />
+        <LoaderCircle class="h-8 w-8 animate-spin mb-4" />
         <p>Loading settings...</p>
       </div>
     {:else if !dbSupported}
       <div class="bg-destructive/10 border border-destructive/20 rounded-lg p-6 flex items-start gap-4 text-destructive">
-        <AlertCircle class="h-6 w-6 shrink-0 mt-0.5" />
+        <CircleAlert class="h-6 w-6 shrink-0 mt-0.5" />
         <div>
           <h3 class="font-semibold text-lg">Local Storage Unavailable</h3>
           <p class="mt-1 opacity-90">

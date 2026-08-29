@@ -2,7 +2,7 @@
   import * as Card from "$lib/components/ui/card/index.js";
   import { Button } from "$lib/components/ui/button/index.js";
   import * as AlertDialog from "$lib/components/ui/alert-dialog/index.js";
-  import { CheckCircle2, LayoutGrid, Timer, Clock, Trash } from "@lucide/svelte";
+  import { CircleCheck, LayoutGrid, Timer, Clock, Trash } from "@lucide/svelte";
   import type { ActivityItem } from "$lib/features/progress/types";
 
   let { activities, onDeleteActivity }: { activities: ActivityItem[], onDeleteActivity?: (id: string) => void } = $props();
@@ -43,7 +43,7 @@
       case "mixed":
         return LayoutGrid;
       default:
-        return CheckCircle2;
+        return CircleCheck;
     }
   }
 
@@ -100,7 +100,7 @@
               </div>
             </div>
 
-            <div class="mt-4 sm:mt-0 flex-shrink-0 self-start sm:self-center w-full sm:w-auto flex items-center gap-2">
+            <div class="mt-4 sm:mt-0 shrink-0 self-start sm:self-center w-full sm:w-auto flex items-center gap-2">
               {#if activity.status === 'in_progress' && activity.resumeHref}
                 <Button href={activity.resumeHref} class="w-full sm:w-auto">
                   Resume

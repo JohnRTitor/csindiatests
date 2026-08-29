@@ -1,6 +1,6 @@
 <script lang="ts">
   import { Button } from "$lib/components/ui/button/index.js";
-  import { BookOpen, CheckSquare } from "@lucide/svelte";
+  import { BookOpen, SquareCheck } from "@lucide/svelte";
 
   let {
     mode,
@@ -16,7 +16,7 @@
     class="rounded-md"
     onclick={() => onModeChange("quiz")}
   >
-    <CheckSquare class="mr-2 h-4 w-4" />
+    <SquareCheck class="mr-2 h-4 w-4" />
     Quiz Mode
   </Button>
   <Button
