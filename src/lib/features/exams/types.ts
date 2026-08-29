@@ -1,3 +1,5 @@
+import type { RichContent } from "$lib/features/pyq/types";
+
 export interface ExamConfig {
   id: string;
   name: string;
@@ -14,13 +16,15 @@ export interface Question {
   subjectId: string;
   topic?: string;
   difficulty: "Easy" | "Medium" | "Hard";
-  text: string;
+  text?: string;
+  content?: RichContent[];
   options: {
     id: string;
-    text: string;
+    text?: string;
+    content?: RichContent[];
   }[];
-  correctOptionId: string;
-  explanation: string;
+  correctOptionId: string | null;
+  explanation: string | RichContent[] | null;
   tags?: string[];
 }
 

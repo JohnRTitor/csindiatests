@@ -1,16 +1,18 @@
 <script lang="ts">
   import { CheckCircle2, XCircle } from "@lucide/svelte";
+  import RichContentRenderer from "$lib/features/pyq/components/RichContentRenderer.svelte";
   
   let { 
     option, 
     isSelected = false, 
     isEvaluated = false, 
     isCorrect = false, 
+    isAnswerUnavailable = false,
     onSelect 
   } = $props();
 
-  const isActuallyCorrectOption = $derived(isEvaluated && isCorrect);
-  const isWrongSelected = $derived(isEvaluated && isSelected && !isCorrect);
+  const isActuallyCorrectOption = $derived(isEvaluated && !isAnswerUnavailable && isCorrect);
+  const isWrongSelected = $derived(isEvaluated && !isAnswerUnavailable && isSelected && !isCorrect);
   const isDisabled = $derived(isEvaluated);
 
   const getBaseStyles = () => {
@@ -48,13 +50,19 @@
     ${isWrongSelected ? 'bg-red-500 border-red-500 text-white' : ''}
     ${isSelected && !isEvaluated ? 'bg-primary border-primary text-primary-foreground' : ''}
     ${!isSelected && !isEvaluated ? 'bg-muted border-border text-muted-foreground' : ''}
-    ${!isSelected && isEvaluated && !isActuallyCorrectOption ? 'bg-muted/50 border-border/50 text-muted-foreground/50' : ''}
+    ${!isSelected && isEvaluated && !isActuallyCorrectOption && !isAnswerUnavailable ? 'bg-muted/50 border-border/50 text-muted-foreground/50' : ''}
+    ${isAnswerUnavailable && isSelected ? 'bg-primary border-primary text-primary-foreground' : ''}
+    ${isAnswerUnavailable && !isSelected ? 'bg-muted/50 border-border/50 text-muted-foreground/50' : ''}
   `}>
     {option.id}
   </div>
   
   <div class="flex-grow text-base pt-0.5">
-    {option.text}
+    {#if option.content}
+      <RichContentRenderer content={option.content} />
+    {:else if option.text}
+      {option.text}
+    {/if}
   </div>
 
   {#if isActuallyCorrectOption}

@@ -3,13 +3,16 @@
   import { marked } from 'marked';
   import katex from 'katex';
   import 'katex/dist/katex.min.css';
+  import RichContentRenderer from "$lib/features/pyq/components/RichContentRenderer.svelte";
   
   let { isCorrect, explanation, correctAnswerId } = $props();
 
+  let isRichContent = $derived(Array.isArray(explanation));
+
   let renderedExplanation = $derived.by(() => {
-    if (!explanation) return "";
+    if (!explanation || isRichContent) return "";
     
-    let processedText = explanation;
+    let processedText = explanation as string;
     
     try {
       // Block math: $$...$$
@@ -51,8 +54,14 @@
       <h4 class="font-semibold text-lg">Explanation</h4>
     </div>
     
-    <div class="prose prose-sm sm:prose-base dark:prose-invert max-w-none text-muted-foreground ml-8 leading-relaxed">
-      {@html renderedExplanation}
-    </div>
+    {#if isRichContent}
+      <div class="ml-8 text-muted-foreground leading-relaxed">
+        <RichContentRenderer content={explanation} />
+      </div>
+    {:else}
+      <div class="prose prose-sm sm:prose-base dark:prose-invert max-w-none text-muted-foreground ml-8 leading-relaxed">
+        {@html renderedExplanation}
+      </div>
+    {/if}
   </div>
 </div>

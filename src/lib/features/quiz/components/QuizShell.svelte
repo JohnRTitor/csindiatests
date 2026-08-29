@@ -84,7 +84,7 @@ import type { QuizMode } from "$lib/features/quiz/types";
         testSessionId: sessionId,
         questionId: currentQ.id,
         selectedAnswer: optionId,
-        correctAnswer: currentQ.correctOptionId,
+        correctAnswer: currentQ.correctOptionId || "",
         isCorrect: isCorrect,
         answeredAt: new Date().toISOString(),
         timeSpentSeconds: timeSpent,
@@ -191,17 +191,24 @@ import type { QuizMode } from "$lib/features/quiz/types";
                   isSelected={quiz.state.answers[quiz.currentQuestion.id] === option.id}
                   isEvaluated={reviewMode || quiz.state.answers[quiz.currentQuestion.id] !== undefined}
                   isCorrect={option.id === quiz.currentQuestion.correctOptionId}
+                  isAnswerUnavailable={quiz.currentQuestion.correctOptionId === null}
                   onSelect={handleAnswerSelect}
                 />
               {/each}
             </div>
 
             {#if reviewMode || quiz.state.answers[quiz.currentQuestion.id]}
-              <ExplanationCard 
-                isCorrect={quiz.state.answers[quiz.currentQuestion.id] === quiz.currentQuestion.correctOptionId}
-                explanation={quiz.currentQuestion.explanation}
-                correctAnswerId={quiz.currentQuestion.correctOptionId}
-              />
+              {#if quiz.currentQuestion.correctOptionId !== null || quiz.currentQuestion.explanation !== null}
+                <ExplanationCard 
+                  isCorrect={quiz.state.answers[quiz.currentQuestion.id] === quiz.currentQuestion.correctOptionId}
+                  explanation={quiz.currentQuestion.explanation}
+                  correctAnswerId={quiz.currentQuestion.correctOptionId}
+                />
+              {:else}
+                <div class="mt-6 p-4 rounded-xl border border-muted bg-muted/20 text-center text-sm text-muted-foreground">
+                  Answer key unavailable for this paper. Your selection has been recorded for this session.
+                </div>
+              {/if}
               
               <div class="mt-8 flex flex-col sm:flex-row items-center justify-between gap-4 pt-6 border-t animate-in fade-in">
                 
