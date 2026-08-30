@@ -1,6 +1,6 @@
 <script lang="ts">
   import SEO from "$lib/components/SEO.svelte";
-  import { onMount } from "svelte";
+  import { onMount, untrack } from "svelte";
   import { page } from "$app/state";
   import { goto } from "$app/navigation";
   
@@ -20,8 +20,6 @@
   
   let currentPage = $state(parseInt(page.url.searchParams.get("page") || "1", 10) || 1);
   let totalPages = $derived(Math.max(1, Math.ceil(totalCount / pageSize)));
-
-  import { untrack } from "svelte";
 
   // Sync from URL to local state when URL changes (e.g., browser back/forward)
   $effect(() => {

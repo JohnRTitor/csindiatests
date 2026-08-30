@@ -13,6 +13,8 @@
   import { sessionManager } from "$lib/features/tests/services/session-manager";
   import type { TestContext } from "$lib/features/tests/types";
   import { pyqService } from "$lib/features/pyq/services/pyq-service";
+  import { settingsState } from "$lib/features/preferences";
+  import { questionAttemptsRepo } from "$lib/features/progress/repositories/question-attempts";
 
   // Derive mode and count from route params and config
   let modeParam = $derived(page.params.mode);
@@ -40,9 +42,6 @@
   
   let conflictSession = $state<TestSession | null>(null);
   let showConflict = $state(false);
-
-  import { settingsState } from "$lib/features/preferences";
-  import { questionAttemptsRepo } from "$lib/features/progress/repositories/question-attempts";
 
   async function loadQuestions(id: string | null) {
     const data = modeData();
