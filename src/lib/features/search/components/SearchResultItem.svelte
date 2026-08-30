@@ -50,9 +50,7 @@
 </script>
 
 <a
-  href="/ugc-net-cs/pyq/{result.year}/{encodeURIComponent(
-    result.shift,
-  )}#q-{result.questionNumber}"
+  href="/ugc-net-cs/pyq/{result.year}/{result.slug}#q-{result.questionNumber}"
   class="block group"
 >
   <Card.Root class="transition-colors hover:bg-muted/50">

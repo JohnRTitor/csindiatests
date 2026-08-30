@@ -4,10 +4,10 @@ import type { PageLoad } from "./$types";
 
 export const load: PageLoad = async ({ params }) => {
   const year = parseInt(params.year);
-  const shift = decodeURIComponent(params.shift);
+  const slug = decodeURIComponent(params.slug);
 
   try {
-    const data = await pyqService.getPyqPaperByYearAndShift("gate-cs", year, shift);
+    const data = await pyqService.getPyqPaperByYearAndSlug("ugc-net-cs", year, slug);
     return {
       manifest: data.manifest,
       questions: data.questions

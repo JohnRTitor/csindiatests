@@ -6,6 +6,7 @@ export interface SearchResult {
   session: string;
   paper: number;
   shift: string;
+  slug: string;
   subjectId: string;
   topicId: string;
   questionNumber: number;

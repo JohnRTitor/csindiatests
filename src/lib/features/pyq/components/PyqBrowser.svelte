@@ -58,7 +58,7 @@
               <Button
                 variant="outline"
                 href="/{examId}/pyq/{paper.year}/{encodeURIComponent(
-                  paper.shift,
+                  paper.slug || paper.shift,
                 )}"
                 class="flex-1 justify-center"
               >
@@ -66,7 +66,7 @@
               </Button>
               <Button
                 href="/{examId}/pyq/{paper.year}/{encodeURIComponent(
-                  paper.shift,
+                  paper.slug || paper.shift,
                 )}?start=true"
                 class="flex-1 justify-center"
               >

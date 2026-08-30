@@ -21,7 +21,10 @@ function adaptPyqToQuestion(pyq: PyqQuestion, examId: string): Question {
 export const pyqService = {
   getAvailablePyqPapers(examId?: string): PyqPaperManifest[] {
     if (examId === "gate-cs") return []; // Not yet available
-    return ugcNetPyqManifest;
+    return ugcNetPyqManifest.map(m => ({
+      ...m,
+      slug: m.slug || m.file.split('/').pop()?.replace('.json', '') || m.shift
+    }));
   },
 
   async getPyqPaper(file: string): Promise<{ paper: any, questions: PyqQuestion[] }> {
@@ -45,11 +48,11 @@ export const pyqService = {
     }
   },
   
-  async getPyqPaperByYearAndShift(examId: string, year: number, shift: string): Promise<{ paper: any, questions: PyqQuestion[], manifest: PyqPaperManifest }> {
+  async getPyqPaperByYearAndSlug(examId: string, year: number, slug: string): Promise<{ paper: any, questions: PyqQuestion[], manifest: PyqPaperManifest }> {
     const availablePapers = this.getAvailablePyqPapers(examId);
-    const manifest = availablePapers.find(m => m.year === year && m.shift === shift);
+    const manifest = availablePapers.find(m => m.year === year && (m.slug === slug || m.shift === slug));
     if (!manifest) {
-      throw new Error(`PYQ paper not found for exam ${examId}, year ${year} and shift ${shift}`);
+      throw new Error(`PYQ paper not found for exam ${examId}, year ${year} and slug/shift ${slug}`);
     }
     const data = await this.getPyqPaper(manifest.file);
     return { ...data, manifest };

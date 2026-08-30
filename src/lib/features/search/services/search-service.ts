@@ -25,7 +25,7 @@ class SearchService {
         // Configuration must match the build script exactly
         this.miniSearch = MiniSearch.loadJSON(json, {
           fields: ['subject', 'topic', 'question', 'options', 'explanation'],
-          storeFields: ['id', 'year', 'session', 'paper', 'shift', 'subjectId', 'topicId', 'questionNumber', 'subject', 'topic', 'question'],
+          storeFields: ['id', 'year', 'session', 'paper', 'shift', 'slug', 'subjectId', 'topicId', 'questionNumber', 'subject', 'topic', 'question'],
           tokenize: (string) => string.match(/[\w+#]+/g) || []
         });
       } catch (error) {

@@ -74,6 +74,7 @@ export interface PyqPaperManifest {
   year: number;
   paper: string;
   shift: string;
+  slug?: string;
   questionCount: number;
   file: string;
   title: string;

@@ -68,6 +68,7 @@ async function buildIndex() {
           session: metadata.session,
           paper: metadata.paperNumber,
           shift: metadata.shift || '',
+          slug: file.replace('.json', ''),
           subjectId: q.subjectId || '',
           topicId: q.topicId || '',
           questionNumber: q.questionNumber,
@@ -87,7 +88,7 @@ async function buildIndex() {
   // Use MiniSearch to pre-build the index
   const miniSearch = new MiniSearch({
     fields: ['subject', 'topic', 'question', 'options', 'explanation'],
-    storeFields: ['id', 'year', 'session', 'paper', 'shift', 'subjectId', 'topicId', 'questionNumber', 'subject', 'topic', 'question'],
+    storeFields: ['id', 'year', 'session', 'paper', 'shift', 'slug', 'subjectId', 'topicId', 'questionNumber', 'subject', 'topic', 'question'],
     tokenize: (string) => string.match(/[\w+#]+/g) || []
   });
   
