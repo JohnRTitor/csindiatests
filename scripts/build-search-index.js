@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import MiniSearch from 'minisearch';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -82,7 +83,17 @@ async function buildIndex() {
 
   // Write to static folder
   const outputPath = path.join(staticDir, 'search-index.json');
-  fs.writeFileSync(outputPath, JSON.stringify(index));
+  
+  // Use MiniSearch to pre-build the index
+  const miniSearch = new MiniSearch({
+    fields: ['subject', 'topic', 'question', 'options', 'explanation'],
+    storeFields: ['id', 'year', 'session', 'paper', 'shift', 'subjectId', 'topicId', 'questionNumber', 'subject', 'topic', 'question'],
+    tokenize: (string) => string.match(/[\w+#]+/g) || []
+  });
+  
+  miniSearch.addAll(index);
+  
+  fs.writeFileSync(outputPath, JSON.stringify(miniSearch));
   console.log(`Generated search index with ${index.length} questions at ${outputPath}`);
 }
 
