@@ -47,11 +47,19 @@
       {index + 1}.
     </div>
     <div class="text-lg sm:text-xl font-medium leading-relaxed grow">
-      {#if question.content}
-        <RichContentRenderer content={question.content} />
-      {:else if question.text}
-        {question.text}
-      {/if}
+      <svelte:boundary>
+        {#if question.content}
+          <RichContentRenderer content={question.content} />
+        {:else if question.text}
+          {question.text}
+        {/if}
+        {#snippet failed(error, reset)}
+          <div class="text-destructive border border-destructive/20 bg-destructive/10 p-4 rounded-md">
+            <p class="font-medium text-sm mb-1">Failed to render question.</p>
+            <button class="text-xs underline hover:text-destructive/80 transition-colors" onclick={reset}>Try again</button>
+          </div>
+        {/snippet}
+      </svelte:boundary>
     </div>
   </div>
 </div>
