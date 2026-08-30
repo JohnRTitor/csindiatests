@@ -99,27 +99,29 @@
 </script>
 
 <div class="min-h-screen flex flex-col bg-muted/20">
-  <div class="bg-card border-b sticky top-0 z-10 shadow-sm">
-    <div
-      class="container mx-auto px-4 max-w-5xl h-16 flex items-center justify-between"
-    >
-      <div class="font-semibold hidden sm:block">
-        {examConfig.shortName} · {manifest.title}
-      </div>
-      <div>
-        <button
-          class="text-sm font-medium hover:underline text-muted-foreground"
-          onclick={onExit}
-        >
-          Exit
-        </button>
+  {#if mode !== "quiz"}
+    <div class="bg-card border-b sticky top-0 z-10 shadow-sm">
+      <div
+        class="container mx-auto px-4 max-w-5xl h-16 flex items-center justify-between"
+      >
+        <div class="font-semibold hidden sm:block">
+          {examConfig.shortName} · {manifest.title}
+        </div>
+        <div>
+          <button
+            class="text-sm font-medium hover:underline text-muted-foreground"
+            onclick={onExit}
+          >
+            Exit
+          </button>
+        </div>
       </div>
     </div>
-  </div>
+  {/if}
 
-  <div class="grow">
+  <div class="grow flex flex-col">
     {#if mode === "quiz"}
-      <div class="h-[calc(100vh-4rem)]">
+      <div class="grow flex flex-col">
         {#if showConflict && conflictSession}
           <SessionConflictDialog
             session={conflictSession}

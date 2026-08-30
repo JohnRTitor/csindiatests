@@ -259,8 +259,8 @@ import type { QuizMode } from "$lib/features/quiz/types";
   {:else if quiz.isStarted || reviewMode}
     
     <QuizHeader 
-      examName={examConfig.name}
-      examShortName={examConfig.shortName}
+      title={context.title || examConfig.name}
+      modeLabel={mode === 'practice' ? 'Practice Test' : 'Mock Test'}
       currentIndex={quiz.state.currentIndex}
       totalQuestions={quiz.state.questions.length}
       timeRemaining={quiz.state.timeRemaining}
@@ -268,6 +268,7 @@ import type { QuizMode } from "$lib/features/quiz/types";
       isTimerPaused={quiz.state.isTimerPaused}
       onPauseTimer={() => quiz.pauseTimer()}
       onResumeTimer={() => quiz.resumeTimer()}
+      onExit={onExit}
       onCancelTest={handleCancelTest}
     />
 
@@ -308,14 +309,6 @@ import type { QuizMode } from "$lib/features/quiz/types";
               {/each}
             </div>
 
-            {#if !reviewMode && !forceShowAnswerForCurrent && !quiz.state.answers[quiz.currentQuestion.id]}
-              <div class="mt-8 compact:mt-4 flex justify-end">
-                <Button variant="outline" onclick={handleShowAnswer}>
-                  Show Answer
-                </Button>
-              </div>
-            {/if}
-
             {#if reviewMode || forceShowAnswerForCurrent || quiz.state.answers[quiz.currentQuestion.id]}
               {#if settingsState.values.showExplanation || reviewMode || forceShowAnswerForCurrent}
                 {#if quiz.currentQuestion.correctOptionId !== null || quiz.currentQuestion.explanation !== null}
@@ -323,6 +316,7 @@ import type { QuizMode } from "$lib/features/quiz/types";
                     isCorrect={quiz.state.answers[quiz.currentQuestion.id] === quiz.currentQuestion.correctOptionId}
                     explanation={quiz.currentQuestion.explanation}
                     correctAnswerId={quiz.currentQuestion.correctOptionId}
+                    isAnswered={quiz.state.answers[quiz.currentQuestion.id] !== undefined}
                   />
                 {:else}
                   <div class="mt-6 compact:mt-4 p-4 rounded-xl border border-muted bg-muted/20 text-center text-sm text-muted-foreground">
@@ -330,52 +324,70 @@ import type { QuizMode } from "$lib/features/quiz/types";
                   </div>
                 {/if}
               {/if}
-              
-              <div class="mt-8 compact:mt-4 flex flex-col sm:flex-row items-center justify-between gap-4 pt-6 compact:pt-4 border-t animate-in fade-in">
-                
-                {#if settingsState.values.showNavigator}
-                  <Drawer.Root bind:open={isMobileNavigatorOpen}>
-                    <Drawer.Trigger>
-                      {#snippet child({ props }: { props: Record<string, unknown> })}
-                        <Button variant="outline" class="w-full sm:w-auto lg:hidden" {...props}>
-                          <LayoutGrid class="mr-2 h-4 w-4" />
-                          Navigator
-                        </Button>
-                      {/snippet}
-                    </Drawer.Trigger>
-                    <Drawer.Content class="h-[80vh] sm:h-auto sm:max-h-[85vh]">
-                      <Drawer.Header>
-                        <Drawer.Title>Question Navigator</Drawer.Title>
-                        <Drawer.Description>Jump to any question in the test</Drawer.Description>
-                      </Drawer.Header>
-                      <div class="py-6 overflow-y-auto">
-                        <QuestionNavigator 
-                          questions={quiz.state.questions}
-                          currentIndex={quiz.state.currentIndex}
-                          answers={quiz.state.answers}
-                          onGoToQuestion={(idx) => {
-                            quiz.goToQuestion(idx);
-                            isMobileNavigatorOpen = false;
-                          }}
-                        />
-                      </div>
-                    </Drawer.Content>
-                  </Drawer.Root>
-                {/if}
-
-                <Button 
-                  size="lg" 
-                  class="w-full sm:w-auto font-medium ml-auto"
-                  onclick={handleNext}
-                >
-                  {#if quiz.state.currentIndex === quiz.state.questions.length - 1}
-                    <CircleCheck class="mr-2 h-4 w-4" /> {reviewMode ? "Exit Review" : "Finish Test"}
-                  {:else}
-                    Next Question <ArrowRight class="ml-2 h-4 w-4" />
-                  {/if}
-                </Button>
-              </div>
             {/if}
+
+            <!-- Action Buttons Footer -->
+            <div class="mt-8 compact:mt-4 flex flex-col-reverse sm:flex-row items-center justify-between gap-4 pt-6 compact:pt-4 border-t animate-in fade-in">
+              
+              <!-- Mobile Navigator (Always accessible) -->
+              {#if settingsState.values.showNavigator}
+                <Drawer.Root bind:open={isMobileNavigatorOpen}>
+                  <Drawer.Trigger>
+                    {#snippet child({ props }: { props: Record<string, unknown> })}
+                      <Button variant="outline" class="w-full sm:w-auto lg:hidden" {...props}>
+                        <LayoutGrid class="mr-2 h-4 w-4" />
+                        Navigator
+                      </Button>
+                    {/snippet}
+                  </Drawer.Trigger>
+                  <Drawer.Content class="h-[80vh] sm:h-auto sm:max-h-[85vh]">
+                    <Drawer.Header>
+                      <Drawer.Title>Question Navigator</Drawer.Title>
+                      <Drawer.Description>Jump to any question in the test</Drawer.Description>
+                    </Drawer.Header>
+                    <div class="py-6 overflow-y-auto px-4 sm:px-6">
+                      <QuestionNavigator 
+                        questions={quiz.state.questions}
+                        currentIndex={quiz.state.currentIndex}
+                        answers={quiz.state.answers}
+                        onGoToQuestion={(idx) => {
+                          quiz.goToQuestion(idx);
+                          isMobileNavigatorOpen = false;
+                        }}
+                      />
+                    </div>
+                  </Drawer.Content>
+                </Drawer.Root>
+              {:else}
+                <div class="hidden sm:block"></div>
+              {/if}
+
+              <!-- Primary Action -->
+              <div class="w-full sm:w-auto flex flex-col sm:flex-row justify-end gap-3">
+                {#if !reviewMode && !forceShowAnswerForCurrent && !quiz.state.answers[quiz.currentQuestion.id]}
+                  <Button variant="outline" class="w-full sm:w-auto" onclick={handleShowAnswer}>
+                    Show Answer
+                  </Button>
+                {:else}
+                  {#if !reviewMode && forceShowAnswerForCurrent && !quiz.state.answers[quiz.currentQuestion.id]}
+                    <Button variant="outline" class="w-full sm:w-auto" onclick={() => forceShowAnswerForCurrent = false}>
+                      Hide Answer
+                    </Button>
+                  {/if}
+                  <Button 
+                    size="lg" 
+                    class="w-full sm:w-auto font-medium"
+                    onclick={handleNext}
+                  >
+                    {#if quiz.state.currentIndex === quiz.state.questions.length - 1}
+                      <CircleCheck class="mr-2 h-4 w-4" /> {reviewMode ? "Exit Review" : "Finish Test"}
+                    {:else}
+                      Next Question <ArrowRight class="ml-2 h-4 w-4" />
+                    {/if}
+                  </Button>
+                {/if}
+              </div>
+            </div>
           </div>
         </div>
 

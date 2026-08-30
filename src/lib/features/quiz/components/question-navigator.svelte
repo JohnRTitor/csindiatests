@@ -1,5 +1,6 @@
 <script lang="ts">
-  import { Check, X, Minus } from "@lucide/svelte";
+  import { Check, X, Minus, ChevronLeft, ChevronRight } from "@lucide/svelte";
+  import { Button } from "$lib/components/ui/button/index.js";
   import type { Question } from "$lib/features/exams/types";
 
   let { 
@@ -13,6 +14,21 @@
     answers: Record<string, string>,
     onGoToQuestion: (index: number) => void
   }>();
+
+  const QUESTIONS_PER_PAGE = 30;
+  
+  let currentPage = $state(0);
+  const totalPages = $derived(Math.ceil(questions.length / QUESTIONS_PER_PAGE));
+  
+  $effect(() => {
+    // Keep navigator page in sync with current question index
+    const expectedPage = Math.floor(currentIndex / QUESTIONS_PER_PAGE);
+    if (currentPage !== expectedPage) {
+      currentPage = expectedPage;
+    }
+  });
+
+  const visibleQuestions = $derived(questions.slice(currentPage * QUESTIONS_PER_PAGE, (currentPage + 1) * QUESTIONS_PER_PAGE));
 
   function getQuestionState(question: Question, index: number) {
     const isCurrent = index === currentIndex;
@@ -57,11 +73,38 @@
     </button>
   {/snippet}
 
-  {#each questions as question, index}
+  {#each visibleQuestions as question, localIndex}
+    {@const index = currentPage * QUESTIONS_PER_PAGE + localIndex}
     {@const state = getQuestionState(question, index)}
     {@render QuestionButton(index, state)}
   {/each}
 </div>
+
+{#if totalPages > 1}
+  <div class="mt-4 flex items-center justify-between">
+    <Button 
+      variant="outline" 
+      size="sm" 
+      disabled={currentPage === 0}
+      onclick={() => currentPage--}
+      aria-label="Previous questions"
+    >
+      <ChevronLeft class="h-4 w-4 mr-1" /> Prev
+    </Button>
+    <div class="text-xs text-muted-foreground font-medium">
+      {currentPage * QUESTIONS_PER_PAGE + 1} - {Math.min((currentPage + 1) * QUESTIONS_PER_PAGE, questions.length)} of {questions.length}
+    </div>
+    <Button 
+      variant="outline" 
+      size="sm" 
+      disabled={currentPage === totalPages - 1}
+      onclick={() => currentPage++}
+      aria-label="Next questions"
+    >
+      Next <ChevronRight class="h-4 w-4 ml-1" />
+    </Button>
+  </div>
+{/if}
 
 <div class="mt-6 flex flex-wrap gap-4 text-xs text-muted-foreground justify-center">
   {#snippet LegendItem(label: string, dotClass: string)}

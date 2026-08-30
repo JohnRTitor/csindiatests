@@ -7,8 +7,8 @@
   import { settingsState } from "$lib/features/preferences";
 
   let {
-    examName,
-    examShortName,
+    title,
+    modeLabel = "Practice Test",
     currentIndex,
     totalQuestions,
     timeRemaining,
@@ -16,6 +16,7 @@
     isTimerPaused,
     onPauseTimer,
     onResumeTimer,
+    onExit,
     onCancelTest,
   } = $props();
 
@@ -49,15 +50,15 @@
   >
     <!-- Left: Title -->
     <div class="flex items-center gap-3 overflow-hidden">
-      <div class="hidden sm:block font-semibold text-sm truncate">
-        {examName}
-      </div>
-      <div class="sm:hidden font-semibold text-sm truncate">
-        {examShortName}
+      <div class="font-semibold text-sm truncate">
+        {title}
       </div>
       <div class="hidden md:block h-4 w-px bg-border"></div>
-      <div class="text-xs text-muted-foreground whitespace-nowrap">
-        Practice Test
+      <div class="text-xs text-muted-foreground whitespace-nowrap hidden sm:block">
+        {modeLabel}
+      </div>
+      <div class="text-xs text-muted-foreground whitespace-nowrap sm:hidden">
+        {modeLabel.split(' ')[0]}
       </div>
     </div>
 
@@ -131,7 +132,7 @@
           {/snippet}
         </DropdownMenu.Trigger>
         <DropdownMenu.Content align="end">
-          <DropdownMenu.Item onclick={() => (window.location.href = "/")}>
+          <DropdownMenu.Item onclick={() => onExit?.()}>
             Save & Exit
           </DropdownMenu.Item>
           <DropdownMenu.Item onclick={() => (showDeleteDialog = true)} class="text-destructive focus:bg-destructive/10 focus:text-destructive">
@@ -139,6 +140,11 @@
           </DropdownMenu.Item>
         </DropdownMenu.Content>
       </DropdownMenu.Root>
+      
+      <div class="hidden sm:block h-4 w-px bg-border"></div>
+      <Button variant="ghost" class="hidden sm:inline-flex hover:bg-destructive/10 hover:text-destructive text-muted-foreground" onclick={() => onExit?.()}>
+        Exit
+      </Button>
     </div>
   </div>
 

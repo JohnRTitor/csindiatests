@@ -5,7 +5,7 @@
   import 'katex/dist/katex.min.css';
   import RichContentRenderer from "$lib/features/pyq/components/RichContentRenderer.svelte";
   
-  let { isCorrect, explanation, correctAnswerId } = $props();
+  let { isCorrect, explanation, correctAnswerId, isAnswered = true } = $props();
 
   let isRichContent = $derived(Array.isArray(explanation));
 
@@ -34,10 +34,13 @@
   });
 </script>
 
-<div class={`mt-8 rounded-xl border overflow-hidden animate-in fade-in slide-in-from-bottom-4 duration-300 ${isCorrect ? 'border-green-200 dark:border-green-900/50 bg-green-50/50 dark:bg-green-900/10' : 'border-red-200 dark:border-red-900/50 bg-red-50/50 dark:bg-red-900/10'}`}>
+<div class={`mt-8 rounded-xl border overflow-hidden animate-in fade-in slide-in-from-bottom-4 duration-300 ${!isAnswered ? 'border-primary/20 bg-primary/5 dark:bg-primary/10' : isCorrect ? 'border-green-200 dark:border-green-900/50 bg-green-50/50 dark:bg-green-900/10' : 'border-red-200 dark:border-red-900/50 bg-red-50/50 dark:bg-red-900/10'}`}>
   
-  <div class={`px-5 py-3 border-b flex items-center gap-2 font-semibold ${isCorrect ? 'bg-green-100/50 dark:bg-green-900/20 text-green-800 dark:text-green-300 border-green-200 dark:border-green-900/50' : 'bg-red-100/50 dark:bg-red-900/20 text-red-800 dark:text-red-300 border-red-200 dark:border-red-900/50'}`}>
-    {#if isCorrect}
+  <div class={`px-5 py-3 border-b flex items-center gap-2 font-semibold ${!isAnswered ? 'bg-primary/10 text-primary border-primary/20' : isCorrect ? 'bg-green-100/50 dark:bg-green-900/20 text-green-800 dark:text-green-300 border-green-200 dark:border-green-900/50' : 'bg-red-100/50 dark:bg-red-900/20 text-red-800 dark:text-red-300 border-red-200 dark:border-red-900/50'}`}>
+    {#if !isAnswered}
+      <Info class="h-5 w-5" />
+      <span>Correct Answer is {correctAnswerId}</span>
+    {:else if isCorrect}
       <CircleCheck class="h-5 w-5" />
       <span>Correct</span>
     {:else}
