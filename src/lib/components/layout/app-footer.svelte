@@ -19,10 +19,14 @@
       </div>
 
       <nav class="flex items-center gap-4 text-sm text-muted-foreground">
-        <a href="/about" class="hover:text-foreground transition-colors">About</a>
-        <a href="/contact" class="hover:text-foreground transition-colors">Contact</a>
-        <a href="/privacy" class="hover:text-foreground transition-colors">Privacy</a>
-        <a href="/terms" class="hover:text-foreground transition-colors">Terms</a>
+        {#each [
+          { href: "/about", label: "About" },
+          { href: "/contact", label: "Contact" },
+          { href: "/privacy", label: "Privacy" },
+          { href: "/terms", label: "Terms" }
+        ] as link}
+          <a href={link.href} class="hover:text-foreground transition-colors">{link.label}</a>
+        {/each}
       </nav>
       
     </div>

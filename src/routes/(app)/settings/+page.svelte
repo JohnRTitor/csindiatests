@@ -131,6 +131,21 @@
         </div>
       </div>
     {:else}
+      {#snippet SwitchSetting(id: string, label: string, description: string, key: string)}
+        <div class="flex items-center justify-between">
+          <div class="space-y-0.5">
+            <Label for={id} class="text-base">{label}</Label>
+            <p class="text-sm text-muted-foreground">{description}</p>
+          </div>
+          <Switch 
+            {id}
+            checked={preferences[key]} 
+            onCheckedChange={(v) => handleSwitchChange(key, v)} 
+            disabled={saving[key]}
+          />
+        </div>
+      {/snippet}
+
       <div class="grid gap-8">
         <!-- Appearance -->
         <section class="space-y-6 bg-card border rounded-xl p-6 shadow-sm">
@@ -140,31 +155,8 @@
           </div>
           <Separator />
           <div class="space-y-6">
-            <div class="flex items-center justify-between">
-              <div class="space-y-0.5">
-                <Label for="compact-layout" class="text-base">Compact Layout</Label>
-                <p class="text-sm text-muted-foreground">Reduce spacing between elements to fit more on screen.</p>
-              </div>
-              <Switch 
-                id="compact-layout" 
-                checked={preferences.compactLayout} 
-                onCheckedChange={(v) => handleSwitchChange('compactLayout', v)} 
-                disabled={saving.compactLayout}
-              />
-            </div>
-            
-            <div class="flex items-center justify-between">
-              <div class="space-y-0.5">
-                <Label for="reduce-animations" class="text-base">Reduce Animations</Label>
-                <p class="text-sm text-muted-foreground">Disable UI transitions and animations.</p>
-              </div>
-              <Switch 
-                id="reduce-animations" 
-                checked={preferences.reduceAnimations} 
-                onCheckedChange={(v) => handleSwitchChange('reduceAnimations', v)} 
-                disabled={saving.reduceAnimations}
-              />
-            </div>
+            {@render SwitchSetting("compact-layout", "Compact Layout", "Reduce spacing between elements to fit more on screen.", "compactLayout")}
+            {@render SwitchSetting("reduce-animations", "Reduce Animations", "Disable UI transitions and animations.", "reduceAnimations")}
           </div>
         </section>
 
@@ -176,57 +168,10 @@
           </div>
           <Separator />
           <div class="space-y-6">
-            <div class="flex items-center justify-between">
-              <div class="space-y-0.5">
-                <Label for="auto-advance" class="text-base">Auto-advance</Label>
-                <p class="text-sm text-muted-foreground">Automatically move to the next question after answering.</p>
-              </div>
-              <Switch 
-                id="auto-advance" 
-                checked={preferences.autoAdvance} 
-                onCheckedChange={(v) => handleSwitchChange('autoAdvance', v)} 
-                disabled={saving.autoAdvance}
-              />
-            </div>
-
-            <div class="flex items-center justify-between">
-              <div class="space-y-0.5">
-                <Label for="show-explanation" class="text-base">Show Explanations</Label>
-                <p class="text-sm text-muted-foreground">Show answer explanations immediately in practice mode.</p>
-              </div>
-              <Switch 
-                id="show-explanation" 
-                checked={preferences.showExplanation} 
-                onCheckedChange={(v) => handleSwitchChange('showExplanation', v)} 
-                disabled={saving.showExplanation}
-              />
-            </div>
-
-            <div class="flex items-center justify-between">
-              <div class="space-y-0.5">
-                <Label for="confirm-end" class="text-base">Confirm Submission</Label>
-                <p class="text-sm text-muted-foreground">Require confirmation before submitting a test.</p>
-              </div>
-              <Switch 
-                id="confirm-end" 
-                checked={preferences.confirmEndTest} 
-                onCheckedChange={(v) => handleSwitchChange('confirmEndTest', v)} 
-                disabled={saving.confirmEndTest}
-              />
-            </div>
-
-            <div class="flex items-center justify-between">
-              <div class="space-y-0.5">
-                <Label for="show-navigator" class="text-base">Question Navigator</Label>
-                <p class="text-sm text-muted-foreground">Show the question grid navigator during tests.</p>
-              </div>
-              <Switch 
-                id="show-navigator" 
-                checked={preferences.showNavigator} 
-                onCheckedChange={(v) => handleSwitchChange('showNavigator', v)} 
-                disabled={saving.showNavigator}
-              />
-            </div>
+            {@render SwitchSetting("auto-advance", "Auto-advance", "Automatically move to the next question after answering.", "autoAdvance")}
+            {@render SwitchSetting("show-explanation", "Show Explanations", "Show answer explanations immediately in practice mode.", "showExplanation")}
+            {@render SwitchSetting("confirm-end", "Confirm Submission", "Require confirmation before submitting a test.", "confirmEndTest")}
+            {@render SwitchSetting("show-navigator", "Question Navigator", "Show the question grid navigator during tests.", "showNavigator")}
           </div>
         </section>
 
@@ -238,31 +183,8 @@
           </div>
           <Separator />
           <div class="space-y-6">
-            <div class="flex items-center justify-between">
-              <div class="space-y-0.5">
-                <Label for="show-time" class="text-base">Show Elapsed Time</Label>
-                <p class="text-sm text-muted-foreground">Display the timer during untimed practice sessions.</p>
-              </div>
-              <Switch 
-                id="show-time" 
-                checked={preferences.showElapsedTime} 
-                onCheckedChange={(v) => handleSwitchChange('showElapsedTime', v)} 
-                disabled={saving.showElapsedTime}
-              />
-            </div>
-
-            <div class="flex items-center justify-between">
-              <div class="space-y-0.5">
-                <Label for="timer-warning" class="text-base">Low Time Warning</Label>
-                <p class="text-sm text-muted-foreground">Change timer color when time is running low.</p>
-              </div>
-              <Switch 
-                id="timer-warning" 
-                checked={preferences.enableTimerWarning} 
-                onCheckedChange={(v) => handleSwitchChange('enableTimerWarning', v)} 
-                disabled={saving.enableTimerWarning}
-              />
-            </div>
+            {@render SwitchSetting("show-time", "Show Elapsed Time", "Display the timer during untimed practice sessions.", "showElapsedTime")}
+            {@render SwitchSetting("timer-warning", "Low Time Warning", "Change timer color when time is running low.", "enableTimerWarning")}
 
             {#if preferences.enableTimerWarning}
               <div class="space-y-4 pt-2">
@@ -310,18 +232,7 @@
               </div>
             </div>
 
-            <div class="flex items-center justify-between">
-              <div class="space-y-0.5">
-                <Label for="review-incorrect" class="text-base">Prioritize Incorrect</Label>
-                <p class="text-sm text-muted-foreground">Show previously missed questions more frequently.</p>
-              </div>
-              <Switch 
-                id="review-incorrect" 
-                checked={preferences.reviewIncorrect} 
-                onCheckedChange={(v) => handleSwitchChange('reviewIncorrect', v)} 
-                disabled={saving.reviewIncorrect}
-              />
-            </div>
+            {@render SwitchSetting("review-incorrect", "Prioritize Incorrect", "Show previously missed questions more frequently.", "reviewIncorrect")}
           </div>
         </section>
 

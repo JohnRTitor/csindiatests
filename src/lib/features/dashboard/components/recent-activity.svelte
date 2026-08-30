@@ -59,7 +59,7 @@
   }
 </script>
 
-<section class="mb-12">
+<section id="recent-activity" class="mb-12">
   <div class="mb-6 flex items-center justify-between">
     <h2 class="text-2xl font-bold tracking-tight text-foreground flex items-center gap-2">
       <Clock class="h-6 w-6 text-primary" /> Recent Activity

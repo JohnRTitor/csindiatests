@@ -1,18 +1,34 @@
 <script lang="ts">
-  import { Search, Menu, User, BookOpen, LineChart, Settings } from "@lucide/svelte";
+  import { Search, Menu, User, BookOpen, LineChart, Settings, Clock } from "@lucide/svelte";
   import { Button } from "$lib/components/ui/button/index.js";
   import * as Sheet from "$lib/components/ui/sheet/index.js";
   import * as DropdownMenu from "$lib/components/ui/dropdown-menu/index.js";
   import ModeToggle from "$lib/components/layout/ModeToggle.svelte";
   import { page } from "$app/state";
+  import type { Component } from "svelte";
 
   let isOpen = $state(false);
+
+  type NavLink = {
+    href: string;
+    label: string;
+  };
 
   const navLinks = [
     { href: "/", label: "Practice" },
     { href: "/mock-tests", label: "Mock Tests" },
     { href: "/subjects", label: "Subjects" },
-  ];
+  ] satisfies NavLink[];
+
+  type UserMenuLink = NavLink & {
+    icon: Component;
+  };
+
+  const userMenuLinks = [
+    { href: "/progress", label: "Progress", icon: LineChart },
+    { href: "/activity", label: "Recent Activity", icon: Clock },
+    { href: "/settings", label: "Settings", icon: Settings },
+  ] satisfies UserMenuLink[];
 </script>
 
 <header
@@ -83,6 +99,18 @@
 
       <ModeToggle />
 
+      {#snippet UserMenuItem(link: { href: string; label: string; icon: Component })}
+        {@const Icon = link.icon}
+        <DropdownMenu.Item class={page.url.pathname === link.href ? 'bg-accent text-accent-foreground' : ''}>
+          {#snippet child({ props })}
+            <a href={link.href} {...props}>
+              <Icon class="mr-2 h-4 w-4" />
+              <span>{link.label}</span>
+            </a>
+          {/snippet}
+        </DropdownMenu.Item>
+      {/snippet}
+
       <DropdownMenu.Root>
         <DropdownMenu.Trigger>
           {#snippet child({ props })}
@@ -96,23 +124,11 @@
             </Button>
           {/snippet}
         </DropdownMenu.Trigger>
-        <DropdownMenu.Content align="end" class="w-40">
-          <DropdownMenu.Item class={page.url.pathname === '/progress' ? 'bg-accent text-accent-foreground' : ''}>
-            {#snippet child({ props })}
-              <a href="/progress" {...props}>
-                <LineChart class="mr-2 h-4 w-4" />
-                <span>Progress</span>
-              </a>
-            {/snippet}
-          </DropdownMenu.Item>
-          <DropdownMenu.Item class={page.url.pathname === '/settings' ? 'bg-accent text-accent-foreground' : ''}>
-            {#snippet child({ props })}
-              <a href="/settings" {...props}>
-                <Settings class="mr-2 h-4 w-4" />
-                <span>Settings</span>
-              </a>
-            {/snippet}
-          </DropdownMenu.Item>
+        <DropdownMenu.Content align="end" class="w-48">
+
+          {#each userMenuLinks as link}
+            {@render UserMenuItem(link)}
+          {/each}
         </DropdownMenu.Content>
       </DropdownMenu.Root>
     </div>
