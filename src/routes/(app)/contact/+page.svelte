@@ -1,5 +1,6 @@
 <script lang="ts">
-    import { Input } from "$lib/components/ui/input/index.js";
+  import SEO from "$lib/components/SEO.svelte";
+  import { Input } from "$lib/components/ui/input/index.js";
   import { Textarea } from "$lib/components/ui/textarea/index.js";
   import { Label } from "$lib/components/ui/label/index.js";
   import * as Select from "$lib/components/ui/select/index.js";
@@ -64,9 +65,7 @@
     message = "";
   }
 </script>
-<svelte:head>
-  <title>Contact CS India Tests</title>
-</svelte:head>
+<SEO title="Contact" description="Get in touch with the CS India Tests team for support or inquiries." />
 
 <div class="container mx-auto max-w-3xl py-12 md:py-20 px-4 sm:px-6">
 

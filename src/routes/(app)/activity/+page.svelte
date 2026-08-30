@@ -1,4 +1,5 @@
 <script lang="ts">
+  import SEO from "$lib/components/SEO.svelte";
   import { onMount } from "svelte";
   import { page } from "$app/state";
   import { goto } from "$app/navigation";
@@ -88,9 +89,7 @@
   };
 </script>
 
-<svelte:head>
-  <title>Recent Activity | CS India Tests</title>
-</svelte:head>
+<SEO title="Recent Activity" noindex={true} />
 
 <main class="grow py-8 md:py-12">
   <div class="container mx-auto px-4 sm:px-8 max-w-4xl">

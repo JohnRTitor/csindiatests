@@ -1,6 +1,9 @@
 <script lang="ts">
+  import SEO from "$lib/components/SEO.svelte";
   import { page } from "$app/state";
 </script>
+
+<SEO title="{page.status} Error" noindex={true} />
 
 <div
   class="flex flex-col items-center justify-center min-h-[50vh] p-8 text-center"

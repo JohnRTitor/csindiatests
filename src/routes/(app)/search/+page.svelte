@@ -1,4 +1,5 @@
 <script lang="ts">
+  import SEO from "$lib/components/SEO.svelte";
   import { onMount } from "svelte";
   import { Search, Loader2 } from "@lucide/svelte";
   import { Input } from "$lib/components/ui/input/index.js";
@@ -75,6 +76,8 @@
     }
   }
 </script>
+
+<SEO title="Search PYQs" description="Search UGC NET and GATE Computer Science previous-year questions by topic, subject, year, or keyword." />
 
 <div class="container mx-auto px-4 py-8 max-w-4xl min-h-[80vh]">
   <div class="space-y-6">

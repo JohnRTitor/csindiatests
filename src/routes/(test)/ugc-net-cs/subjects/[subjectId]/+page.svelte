@@ -1,4 +1,5 @@
 <script lang="ts">
+  import SEO from "$lib/components/SEO.svelte";
   import { onMount } from "svelte";
   import { page } from "$app/state";
   import { goto } from "$app/navigation";
@@ -112,9 +113,10 @@
   };
 </script>
 
-<svelte:head>
-  <title>{data.subject.name} | {data.examConfig.shortName}</title>
-</svelte:head>
+<SEO 
+  title="{data.subject.name} | {data.examConfig.shortName}" 
+  description="Practice questions and view statistics for {data.subject.name} in {data.examConfig.name}."
+/>
 
 {#if showConflict && conflictSession}
   <SessionConflictDialog 

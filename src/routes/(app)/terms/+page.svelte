@@ -1,6 +1,8 @@
-<svelte:head>
-  <title>Terms of Service — CS India Tests</title>
-</svelte:head>
+<script lang="ts">
+  import SEO from "$lib/components/SEO.svelte";
+</script>
+
+<SEO title="Terms of Service" description="Terms of service and conditions for using CS India Tests." />
 
 <div class="container mx-auto max-w-3xl py-12 md:py-20 px-4 sm:px-6">
 

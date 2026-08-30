@@ -1,4 +1,5 @@
 <script lang="ts">
+  import SEO from "$lib/components/SEO.svelte";
   import { UGC_NET_CS_SUBJECTS } from "$lib/features/subjects/registry";
   import { pyqService } from "$lib/features/pyq/services/pyq-service";
   
@@ -17,9 +18,7 @@
   // subjectsWithCounts.sort((a, b) => b.count - a.count);
 </script>
 
-<svelte:head>
-  <title>Subjects | CS India Tests</title>
-</svelte:head>
+<SEO title="Subjects" description="Browse Computer Science subjects for UGC NET and GATE preparation." />
 
 <main class="min-h-screen bg-background">
   <div class="container mx-auto max-w-5xl px-4 py-12 md:py-16">

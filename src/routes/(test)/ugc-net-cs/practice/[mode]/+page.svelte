@@ -1,4 +1,5 @@
 <script lang="ts">
+  import SEO from "$lib/components/SEO.svelte";
   import { onMount } from "svelte";
   import { page } from "$app/state";
   import { goto } from "$app/navigation";
@@ -143,9 +144,7 @@
   }
 </script>
 
-<svelte:head>
-  <title>Practice {modeParam} | UGC NET CS</title>
-</svelte:head>
+<SEO title="Practice {modeParam} | UGC NET CS" />
 
 {#if showConflict && conflictSession}
   <SessionConflictDialog 

@@ -1,6 +1,8 @@
-<svelte:head>
-  <title>About CS India Tests</title>
-</svelte:head>
+<script lang="ts">
+  import SEO from "$lib/components/SEO.svelte";
+</script>
+
+<SEO title="About" description="Learn about CS India Tests, our mission, and our UGC NET and GATE Computer Science preparation platform." />
 
 <div class="container mx-auto max-w-3xl py-12 md:py-20 px-4 sm:px-6">
 

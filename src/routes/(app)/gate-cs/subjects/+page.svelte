@@ -1,10 +1,9 @@
 <script lang="ts">
+  import SEO from "$lib/components/SEO.svelte";
   import { gateConfig } from "$lib/features/exams/config/gate-cs";
     </script>
 
-<svelte:head>
-  <title>GATE CS Subjects | CS India Tests</title>
-</svelte:head>
+<SEO title="GATE CS Subjects" description="Browse GATE Computer Science subjects." />
 
 <main class="min-h-screen bg-background flex flex-col">
   

@@ -1,10 +1,9 @@
 <script lang="ts">
+  import SEO from "$lib/components/SEO.svelte";
   import { UGC_NET_CS_SUBJECTS } from "$lib/features/subjects/registry";
     </script>
 
-<svelte:head>
-  <title>UGC NET CS Subjects | CS India Tests</title>
-</svelte:head>
+<SEO title="UGC NET CS Subjects" description="Browse UGC NET Computer Science subjects." />
 
 <main class="min-h-screen bg-background flex flex-col">
   

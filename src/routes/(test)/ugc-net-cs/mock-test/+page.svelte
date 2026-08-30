@@ -1,4 +1,5 @@
 <script lang="ts">
+  import SEO from "$lib/components/SEO.svelte";
   import { onMount } from "svelte";
   import { goto } from "$app/navigation";
   import { ugcNetConfig } from "$lib/features/exams/config/ugc-net-cs";
@@ -86,9 +87,7 @@
   }
 </script>
 
-<svelte:head>
-  <title>Mock Test | UGC NET CS</title>
-</svelte:head>
+<SEO title="Mock Test | UGC NET CS" />
 
 {#if showConflict && conflictSession}
   <SessionConflictDialog 

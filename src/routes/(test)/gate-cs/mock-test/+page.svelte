@@ -1,4 +1,5 @@
 <script lang="ts">
+  import SEO from "$lib/components/SEO.svelte";
   import { onMount } from "svelte";
   import { goto } from "$app/navigation";
   import { gateConfig } from "$lib/features/exams/config/gate-cs";
@@ -86,9 +87,7 @@
   }
 </script>
 
-<svelte:head>
-  <title>Mock Test | GATE CS</title>
-</svelte:head>
+<SEO title="Mock Test | GATE CS" />
 
 {#if showConflict && conflictSession}
   <SessionConflictDialog 

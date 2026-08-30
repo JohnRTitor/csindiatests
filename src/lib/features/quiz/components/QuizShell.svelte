@@ -165,12 +165,18 @@ import type { QuizMode } from "$lib/features/quiz/types";
         metadata: null
       }).catch(console.error);
       
-      if (settingsState.values.autoAdvance && quiz.state.currentIndex < quiz.state.questions.length - 1) {
-        setTimeout(() => {
-          if (!reviewMode && quiz.state.answers[currentQ.id]) {
-            handleNext();
-          }
-        }, 1000);
+      const currentQIndex = quiz.state.currentIndex;
+      
+      if (settingsState.values.autoAdvance && currentQIndex < quiz.state.questions.length - 1) {
+        const willShowFeedback = settingsState.values.showExplanation || forceShowAnswerForCurrent;
+        
+        if (!(willShowFeedback && !isCorrect)) {
+          setTimeout(() => {
+            if (!reviewMode && quiz.state.answers[currentQ.id] && quiz.state.currentIndex === currentQIndex) {
+              handleNext();
+            }
+          }, 1000);
+        }
       }
     }
   };

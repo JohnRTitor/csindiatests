@@ -1,6 +1,8 @@
-<svelte:head>
-  <title>Privacy Policy — CS India Tests</title>
-</svelte:head>
+<script lang="ts">
+  import SEO from "$lib/components/SEO.svelte";
+</script>
+
+<SEO title="Privacy Policy" description="Read the privacy policy for CS India Tests." />
 
 <div class="container mx-auto max-w-3xl py-12 md:py-20 px-4 sm:px-6">
 

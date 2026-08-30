@@ -4,6 +4,7 @@
   import { ModeWatcher } from "mode-watcher";
   import { Toaster } from "$lib/components/ui/sonner/index.js";
   import { settingsState } from "$lib/features/preferences";
+  import SEO from "$lib/components/SEO.svelte";
 
   let { children } = $props();
 
@@ -32,4 +33,5 @@
 <svelte:head><link rel="icon" href={favicon} /></svelte:head>
 <ModeWatcher />
 <Toaster />
+<SEO />
 {@render children()}

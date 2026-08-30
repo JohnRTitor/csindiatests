@@ -1,4 +1,5 @@
 <script lang="ts">
+  import SEO from "$lib/components/SEO.svelte";
   import { onMount } from "svelte";
   import { toast } from "svelte-sonner";
   import { Separator } from "$lib/components/ui/separator/index.js";
@@ -54,6 +55,8 @@
     return `${minutes}:${seconds.toString().padStart(2, '0')}`;
   });
 </script>
+
+<SEO title="Settings" noindex={true} />
 
   <main class="grow container mx-auto px-4 sm:px-8 max-w-4xl py-8">
     <div class="flex items-center justify-between mb-8">

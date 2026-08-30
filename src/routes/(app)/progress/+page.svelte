@@ -1,4 +1,5 @@
 <script lang="ts">
+  import SEO from "$lib/components/SEO.svelte";
   import { onMount } from "svelte";
   import ProgressOverview from "$lib/features/dashboard/components/progress-overview.svelte";
   import SubjectPerformanceCard from "$lib/features/progress/components/SubjectPerformanceCard.svelte";
@@ -51,9 +52,7 @@
   });
 </script>
 
-<svelte:head>
-  <title>Progress & Diagnostics | CS India Tests</title>
-</svelte:head>
+<SEO title="Progress & Diagnostics" noindex={true} />
 
 <main class="grow py-12 md:py-16">
   <div class="container mx-auto px-4 sm:px-8 max-w-6xl">

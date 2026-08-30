@@ -2,11 +2,10 @@
       import * as Card from "$lib/components/ui/card/index.js";
   import { Button } from "$lib/components/ui/button/index.js";
   import { Clock, BrainCircuit, BookOpen } from "@lucide/svelte";
+  import SEO from "$lib/components/SEO.svelte";
 </script>
 
-<svelte:head>
-  <title>Mock Tests | CS India Tests</title>
-</svelte:head>
+<SEO title="Mock Tests" description="Practice full-length mock tests for UGC NET and GATE Computer Science." />
 
 <main class="grow py-12 md:py-16">
     <div class="container mx-auto px-4 max-w-5xl">
