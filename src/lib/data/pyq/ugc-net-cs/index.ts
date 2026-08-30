@@ -2,6 +2,54 @@ import type { PyqPaperManifest } from "$lib/features/pyq/types";
 
 export const ugcNetPyqManifest: PyqPaperManifest[] = [
   {
+    year: 2018,
+    paper: "Paper II",
+    shift: "Default",
+    questionCount: 100,
+    file: "2018/december.json",
+    title: "UGC NET CS December 2018"
+  },
+  {
+    year: 2018,
+    paper: "Paper II",
+    shift: "Default",
+    questionCount: 100,
+    file: "2018/july.json",
+    title: "UGC NET CS July 2018"
+  },
+  {
+    year: 2019,
+    paper: "Paper II",
+    shift: "Default",
+    questionCount: 100,
+    file: "2019/december.json",
+    title: "UGC NET CS December 2019"
+  },
+  {
+    year: 2019,
+    paper: "Paper II",
+    shift: "Default",
+    questionCount: 100,
+    file: "2019/june.json",
+    title: "UGC NET CS June 2019"
+  },
+  {
+    year: 2020,
+    paper: "Paper II",
+    shift: "Default",
+    questionCount: 100,
+    file: "2020/november.json",
+    title: "UGC NET CS November 2020"
+  },
+  {
+    year: 2021,
+    paper: "Paper II",
+    shift: "Default",
+    questionCount: 100,
+    file: "2021/november.json",
+    title: "UGC NET CS November 2021"
+  },
+  {
     year: 2022,
     paper: "Paper II",
     shift: "II",
