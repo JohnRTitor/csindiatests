@@ -37,6 +37,19 @@ export const dashboardDataService = {
     const items: ActivityItem[] = paginatedSessions.map(mapSessionToActivity);
 
     return { items, totalCount };
+  },
+
+  async getQuestionsSolvedToday(): Promise<number> {
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    const todayMs = today.getTime();
+    
+    // Using Dexie's db object imported locally or from repo
+    // Wait, testAnswersRepo doesn't export db directly, but dashboard-data does not import db.
+    // Let's import it
+    return await (await import('$lib/infrastructure/storage/database')).db.testAnswers
+      .filter(a => a.answeredAt ? new Date(a.answeredAt).getTime() >= todayMs : false)
+      .count();
   }
 };
 

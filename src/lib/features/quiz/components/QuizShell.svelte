@@ -11,6 +11,7 @@ import type { QuizMode } from "$lib/features/quiz/types";
   import QuizSidebar from "$lib/features/quiz/components/quiz-sidebar.svelte";
   import QuizResults from "$lib/features/quiz/components/quiz-results.svelte";
   import QuestionNavigator from "$lib/features/quiz/components/question-navigator.svelte";
+  import { settingsState } from "$lib/features/preferences";
 
   import { quizPersistenceService } from "$lib/features/quiz/services/quiz-persistence";
   import { testHistoryRepo } from "$lib/features/tests/repositories/test-history";
@@ -21,6 +22,7 @@ import type { QuizMode } from "$lib/features/quiz/types";
 
   import { Button } from "$lib/components/ui/button/index.js";
   import * as Drawer from "$lib/components/ui/drawer/index.js";
+  import SubmitConfirmDialog from "./submit-confirm-dialog.svelte";
   import { ArrowRight, LayoutGrid, CircleCheck } from "@lucide/svelte";
 
   import { page } from "$app/state";
@@ -138,6 +140,8 @@ import type { QuizMode } from "$lib/features/quiz/types";
     };
   });
 
+  let showConfirmSubmitDialog = $state(false);
+
   const handleAnswerSelect = (optionId: string) => {
     if (reviewMode) return;
     const currentQ = quiz.currentQuestion;
@@ -160,6 +164,14 @@ import type { QuizMode } from "$lib/features/quiz/types";
         explanationSeen: true,
         metadata: null
       }).catch(console.error);
+      
+      if (settingsState.values.autoAdvance && quiz.state.currentIndex < quiz.state.questions.length - 1) {
+        setTimeout(() => {
+          if (!reviewMode && quiz.state.answers[currentQ.id]) {
+            handleNext();
+          }
+        }, 1000);
+      }
     }
   };
 
@@ -168,22 +180,30 @@ import type { QuizMode } from "$lib/features/quiz/types";
       if (reviewMode) {
         onExit();
       } else {
-        quiz.complete();
-        
-        // Finalize the session and save analytics
-        testCompletionService.completeTest(
-          sessionId,
-          quiz.state.questions,
-          quiz.state.answers,
-          quiz.state.score,
-          quiz.state.startTime,
-          mode,
-          examConfig.id
-        ).catch(console.error);
+        if (settingsState.values.confirmEndTest) {
+          showConfirmSubmitDialog = true;
+        } else {
+          submitTest();
+        }
       }
     } else {
       quiz.nextQuestion();
     }
+  };
+
+  const submitTest = () => {
+    quiz.complete();
+    
+    // Finalize the session and save analytics
+    testCompletionService.completeTest(
+      sessionId,
+      quiz.state.questions,
+      quiz.state.answers,
+      quiz.state.score,
+      quiz.state.startTime,
+      mode,
+      examConfig.id
+    ).catch(console.error);
   };
 
   const handleCancelTest = async () => {
@@ -244,6 +264,7 @@ import type { QuizMode } from "$lib/features/quiz/types";
       currentIndex={quiz.state.currentIndex}
       totalQuestions={quiz.state.questions.length}
       timeRemaining={quiz.state.timeRemaining}
+      elapsedTime={quiz.state.elapsedTime}
       isTimerPaused={quiz.state.isTimerPaused}
       onPauseTimer={() => quiz.pauseTimer()}
       onResumeTimer={() => quiz.resumeTimer()}
@@ -260,7 +281,7 @@ import type { QuizMode } from "$lib/features/quiz/types";
       <main class="grow container mx-auto px-4 py-6 md:py-8 flex gap-8 relative items-start">
         
         <!-- Left Column: Question Area -->
-        <div class="w-full lg:w-[65%] xl:w-[70%] max-w-3xl mx-auto lg:mx-0">
+        <div class="w-full {settingsState.values.showNavigator ? 'lg:w-[65%] xl:w-[70%]' : 'max-w-4xl'} max-w-3xl mx-auto lg:mx-0">
           
           {#if reviewMode}
             <div class="mb-4 text-sm font-medium text-amber-600 bg-amber-50 px-4 py-2 rounded-md border border-amber-200">
@@ -268,18 +289,18 @@ import type { QuizMode } from "$lib/features/quiz/types";
             </div>
           {/if}
 
-          <div class="bg-card rounded-2xl border shadow-sm p-6 sm:p-8 md:p-10 transition-all">
+          <div class="bg-card rounded-2xl border shadow-sm p-6 sm:p-8 md:p-10 compact:p-4 transition-all">
             <QuestionCard 
               question={quiz.currentQuestion}
               index={quiz.state.currentIndex}
             />
 
-            <div class="space-y-3 mt-8">
+            <div class="space-y-3 compact:space-y-2 mt-8 compact:mt-4">
               {#each quiz.currentQuestion.options as option}
                 <AnswerOption 
                   {option}
                   isSelected={quiz.state.answers[quiz.currentQuestion.id] === option.id}
-                  isEvaluated={reviewMode || forceShowAnswerForCurrent || quiz.state.answers[quiz.currentQuestion.id] !== undefined}
+                  isEvaluated={reviewMode || forceShowAnswerForCurrent || (settingsState.values.showExplanation && quiz.state.answers[quiz.currentQuestion.id] !== undefined)}
                   isCorrect={option.id === quiz.currentQuestion.correctOptionId}
                   isAnswerUnavailable={quiz.currentQuestion.correctOptionId === null}
                   onSelect={handleAnswerSelect}
@@ -288,7 +309,7 @@ import type { QuizMode } from "$lib/features/quiz/types";
             </div>
 
             {#if !reviewMode && !forceShowAnswerForCurrent && !quiz.state.answers[quiz.currentQuestion.id]}
-              <div class="mt-8 flex justify-end">
+              <div class="mt-8 compact:mt-4 flex justify-end">
                 <Button variant="outline" onclick={handleShowAnswer}>
                   Show Answer
                 </Button>
@@ -296,47 +317,51 @@ import type { QuizMode } from "$lib/features/quiz/types";
             {/if}
 
             {#if reviewMode || forceShowAnswerForCurrent || quiz.state.answers[quiz.currentQuestion.id]}
-              {#if quiz.currentQuestion.correctOptionId !== null || quiz.currentQuestion.explanation !== null}
-                <ExplanationCard 
-                  isCorrect={quiz.state.answers[quiz.currentQuestion.id] === quiz.currentQuestion.correctOptionId}
-                  explanation={quiz.currentQuestion.explanation}
-                  correctAnswerId={quiz.currentQuestion.correctOptionId}
-                />
-              {:else}
-                <div class="mt-6 p-4 rounded-xl border border-muted bg-muted/20 text-center text-sm text-muted-foreground">
-                  Answer key unavailable for this paper. Your selection has been recorded for this session.
-                </div>
+              {#if settingsState.values.showExplanation || reviewMode || forceShowAnswerForCurrent}
+                {#if quiz.currentQuestion.correctOptionId !== null || quiz.currentQuestion.explanation !== null}
+                  <ExplanationCard 
+                    isCorrect={quiz.state.answers[quiz.currentQuestion.id] === quiz.currentQuestion.correctOptionId}
+                    explanation={quiz.currentQuestion.explanation}
+                    correctAnswerId={quiz.currentQuestion.correctOptionId}
+                  />
+                {:else}
+                  <div class="mt-6 compact:mt-4 p-4 rounded-xl border border-muted bg-muted/20 text-center text-sm text-muted-foreground">
+                    Answer key unavailable for this paper. Your selection has been recorded for this session.
+                  </div>
+                {/if}
               {/if}
               
-              <div class="mt-8 flex flex-col sm:flex-row items-center justify-between gap-4 pt-6 border-t animate-in fade-in">
+              <div class="mt-8 compact:mt-4 flex flex-col sm:flex-row items-center justify-between gap-4 pt-6 compact:pt-4 border-t animate-in fade-in">
                 
-                <Drawer.Root bind:open={isMobileNavigatorOpen}>
-                  <Drawer.Trigger>
-                    {#snippet child({ props }: { props: Record<string, unknown> })}
-                      <Button variant="outline" class="w-full sm:w-auto lg:hidden" {...props}>
-                        <LayoutGrid class="mr-2 h-4 w-4" />
-                        Navigator
-                      </Button>
-                    {/snippet}
-                  </Drawer.Trigger>
-                  <Drawer.Content class="h-[80vh] sm:h-auto sm:max-h-[85vh]">
-                    <Drawer.Header>
-                      <Drawer.Title>Question Navigator</Drawer.Title>
-                      <Drawer.Description>Jump to any question in the test</Drawer.Description>
-                    </Drawer.Header>
-                    <div class="py-6 overflow-y-auto">
-                      <QuestionNavigator 
-                        questions={quiz.state.questions}
-                        currentIndex={quiz.state.currentIndex}
-                        answers={quiz.state.answers}
-                        onGoToQuestion={(idx) => {
-                          quiz.goToQuestion(idx);
-                          isMobileNavigatorOpen = false;
-                        }}
-                      />
-                    </div>
-                  </Drawer.Content>
-                </Drawer.Root>
+                {#if settingsState.values.showNavigator}
+                  <Drawer.Root bind:open={isMobileNavigatorOpen}>
+                    <Drawer.Trigger>
+                      {#snippet child({ props }: { props: Record<string, unknown> })}
+                        <Button variant="outline" class="w-full sm:w-auto lg:hidden" {...props}>
+                          <LayoutGrid class="mr-2 h-4 w-4" />
+                          Navigator
+                        </Button>
+                      {/snippet}
+                    </Drawer.Trigger>
+                    <Drawer.Content class="h-[80vh] sm:h-auto sm:max-h-[85vh]">
+                      <Drawer.Header>
+                        <Drawer.Title>Question Navigator</Drawer.Title>
+                        <Drawer.Description>Jump to any question in the test</Drawer.Description>
+                      </Drawer.Header>
+                      <div class="py-6 overflow-y-auto">
+                        <QuestionNavigator 
+                          questions={quiz.state.questions}
+                          currentIndex={quiz.state.currentIndex}
+                          answers={quiz.state.answers}
+                          onGoToQuestion={(idx) => {
+                            quiz.goToQuestion(idx);
+                            isMobileNavigatorOpen = false;
+                          }}
+                        />
+                      </div>
+                    </Drawer.Content>
+                  </Drawer.Root>
+                {/if}
 
                 <Button 
                   size="lg" 
@@ -355,16 +380,24 @@ import type { QuizMode } from "$lib/features/quiz/types";
         </div>
 
         <!-- Right Column: Sidebar (Desktop only) -->
-        <div class="hidden lg:block lg:w-[35%] xl:w-[30%] shrink-0 sticky top-22">
-          <QuizSidebar 
-            questions={quiz.state.questions}
-            currentIndex={quiz.state.currentIndex}
-            answers={quiz.state.answers}
-            onGoToQuestion={quiz.goToQuestion}
-          />
-        </div>
+        {#if settingsState.values.showNavigator}
+          <div class="hidden lg:block lg:w-[35%] xl:w-[30%] shrink-0 sticky top-22">
+            <QuizSidebar 
+              questions={quiz.state.questions}
+              currentIndex={quiz.state.currentIndex}
+              answers={quiz.state.answers}
+              onGoToQuestion={quiz.goToQuestion}
+            />
+          </div>
+        {/if}
 
       </main>
     {/if}
   {/if}
 </div>
+
+<SubmitConfirmDialog
+  bind:open={showConfirmSubmitDialog}
+  hasUnansweredQuestions={Object.keys(quiz.state.answers).length < quiz.state.questions.length}
+  onSubmit={submitTest}
+/>

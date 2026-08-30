@@ -9,6 +9,7 @@ export function createQuizStore(initialQuestions: Question[] = [], mode: QuizMod
     status: "idle",
     mode: mode,
     timeRemaining: mode === "timed" ? durationMinutes * 60 : null,
+    elapsedTime: 0,
     isTimerPaused: false,
     score: 0,
     startTime: 0,
@@ -23,9 +24,7 @@ export function createQuizStore(initialQuestions: Question[] = [], mode: QuizMod
     state.startTime = Date.now();
     state.isTimerPaused = false;
     
-    if (state.mode === "timed" && state.timeRemaining !== null) {
-      startTimer();
-    }
+    startTimer();
   }
 
   function startTimer() {
@@ -33,6 +32,8 @@ export function createQuizStore(initialQuestions: Question[] = [], mode: QuizMod
     timerInterval = setInterval(() => {
       if (state.isTimerPaused || state.status !== "in-progress") return;
       
+      state.elapsedTime += 1;
+
       if (state.timeRemaining !== null) {
         state.timeRemaining -= 1;
         if (state.timeRemaining <= 0) {
@@ -111,6 +112,7 @@ export function createQuizStore(initialQuestions: Question[] = [], mode: QuizMod
     state.status = "idle";
     state.mode = mode;
     state.timeRemaining = mode === "timed" ? durationMinutes * 60 : null;
+    state.elapsedTime = 0;
     state.isTimerPaused = false;
     state.score = 0;
     state.startTime = 0;

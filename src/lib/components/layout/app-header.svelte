@@ -112,16 +112,17 @@
       </NavigationMenu.Root>
     </nav>
 
-    <!-- Right Side Actions -->
     <div class="ml-auto flex items-center space-x-2 sm:space-x-4">
-      <Button
-        variant="ghost"
-        size="icon"
-        class="text-muted-foreground hidden sm:inline-flex"
-      >
-        <Search class="h-5 w-5" />
-        <span class="sr-only">Search</span>
-      </Button>
+      <a href="/search">
+        <Button
+          variant="ghost"
+          size="icon"
+          class="text-muted-foreground hidden sm:inline-flex"
+        >
+          <Search class="h-5 w-5" />
+          <span class="sr-only">Search</span>
+        </Button>
+      </a>
 
       <ModeToggle />
 

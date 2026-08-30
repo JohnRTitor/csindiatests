@@ -4,18 +4,22 @@
   import ExamSelection from "$lib/features/dashboard/components/exam-selection.svelte";
   import RecentActivity from "$lib/features/dashboard/components/recent-activity.svelte";
   import ProgressOverview from "$lib/features/dashboard/components/progress-overview.svelte";
+  import QuickPractice from "$lib/features/dashboard/components/quick-practice.svelte";
   import { dashboardDataService } from "$lib/features/dashboard/services/dashboard-data";
   import { testHistoryRepo } from "$lib/features/tests/repositories/test-history";
   import { testAnswersRepo } from "$lib/features/tests/repositories/test-answers";
   import type { ActivityItem, UserProgress } from "$lib/features/progress/types";
+  import { mockQuickPracticeOptions } from "$lib/features/progress/data/user-progress";
 
   let activityFeed = $state<ActivityItem[]>([]);
   let hasMoreActivity = $state(false);
   let userProgress = $state<UserProgress | null>(null);
+  let questionsSolvedToday = $state(0);
 
   const loadData = async () => {
     const stats = await dashboardDataService.getStats();
     const recent = await dashboardDataService.getRecentActivity(5);
+    questionsSolvedToday = await dashboardDataService.getQuestionsSolvedToday();
     
     if (recent.length > 4) {
       hasMoreActivity = true;
@@ -50,6 +54,9 @@
       {#if userProgress}
         <ProgressOverview progress={userProgress} />
       {/if}
+
+      <QuickPractice options={mockQuickPracticeOptions} {questionsSolvedToday} />
+
       <ExamSelection />
       
       <div class="mt-8 mb-16">

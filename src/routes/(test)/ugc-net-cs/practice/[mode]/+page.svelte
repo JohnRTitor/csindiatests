@@ -40,6 +40,9 @@
   let conflictSession = $state<TestSession | null>(null);
   let showConflict = $state(false);
 
+  import { settingsState } from "$lib/features/preferences";
+  import { questionAttemptsRepo } from "$lib/features/progress/repositories/question-attempts";
+
   async function loadQuestions(id: string | null) {
     const data = modeData();
     if (!data) return;
@@ -54,8 +57,42 @@
         selectedQuestions = await pyqService.getRandomQuestions("ugc-net-cs", data.count);
       }
     } else {
-      // New session: get random questions
-      selectedQuestions = await pyqService.getRandomQuestions("ugc-net-cs", data.count);
+      // New session: generate questions
+      if (settingsState.values.reviewIncorrect) {
+        const attempts = await questionAttemptsRepo.getForExam("ugc-net-cs");
+        // Sort by attemptedAt descending to get the latest attempt per question
+        attempts.sort((a, b) => new Date(b.attemptedAt).getTime() - new Date(a.attemptedAt).getTime());
+        
+        const latestAttempts = new Map<string, typeof attempts[0]>();
+        for (const attempt of attempts) {
+          if (!latestAttempts.has(attempt.questionId)) {
+            latestAttempts.set(attempt.questionId, attempt);
+          }
+        }
+        
+        const incorrectQuestionIds = Array.from(latestAttempts.values())
+          .filter(a => a.isAnswered && !a.isCorrect)
+          .map(a => a.questionId);
+          
+        if (incorrectQuestionIds.length > 0) {
+          const shuffledIncorrect = incorrectQuestionIds.sort(() => 0.5 - Math.random());
+          const incorrectToFetch = shuffledIncorrect.slice(0, data.count);
+          
+          const incorrectQuestions = await pyqService.getQuestionsByIds("ugc-net-cs", incorrectToFetch);
+          
+          if (incorrectQuestions.length < data.count) {
+            const remaining = data.count - incorrectQuestions.length;
+            const randomQuestions = await pyqService.getRandomQuestions("ugc-net-cs", remaining, undefined, incorrectToFetch);
+            selectedQuestions = [...incorrectQuestions, ...randomQuestions];
+          } else {
+            selectedQuestions = incorrectQuestions;
+          }
+        } else {
+          selectedQuestions = await pyqService.getRandomQuestions("ugc-net-cs", data.count);
+        }
+      } else {
+        selectedQuestions = await pyqService.getRandomQuestions("ugc-net-cs", data.count);
+      }
     }
   }
 

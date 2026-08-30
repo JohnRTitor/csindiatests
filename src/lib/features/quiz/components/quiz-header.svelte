@@ -4,6 +4,7 @@
   import { Pause, Play, Settings } from "@lucide/svelte";
   import * as DropdownMenu from "$lib/components/ui/dropdown-menu/index.js";
   import * as AlertDialog from "$lib/components/ui/alert-dialog/index.js";
+  import { settingsState } from "$lib/features/preferences";
 
   let {
     examName,
@@ -11,6 +12,7 @@
     currentIndex,
     totalQuestions,
     timeRemaining,
+    elapsedTime,
     isTimerPaused,
     onPauseTimer,
     onResumeTimer,
@@ -30,7 +32,13 @@
     return `${m}:${s}`;
   };
 
-  const isLowTime = $derived(timeRemaining !== null && timeRemaining < 300); // < 5 mins
+  const isLowTime = $derived(
+    settingsState.values.enableTimerWarning && 
+    timeRemaining !== null && 
+    timeRemaining <= settingsState.values.timerWarningThreshold
+  );
+  
+  const showElapsed = $derived(timeRemaining === null && settingsState.values.showElapsedTime);
 </script>
 
 <header
@@ -85,6 +93,30 @@
             class={`font-mono font-medium tracking-tighter w-12 text-right ${isLowTime && !isTimerPaused ? "text-destructive animate-pulse" : ""} ${isTimerPaused ? "text-muted-foreground" : ""}`}
           >
             {formatTime(timeRemaining)}
+          </div>
+        </div>
+      {:else if showElapsed}
+        <div class="flex items-center gap-2">
+          <Button
+            variant="ghost"
+            size="icon"
+            class="h-8 w-8 text-muted-foreground"
+            onclick={() => (isTimerPaused ? onResumeTimer() : onPauseTimer())}
+          >
+            {#if isTimerPaused}
+              <Play class="h-4 w-4" />
+            {:else}
+              <Pause class="h-4 w-4" />
+            {/if}
+            <span class="sr-only"
+              >{isTimerPaused ? "Resume" : "Pause"} Timer</span
+            >
+          </Button>
+
+          <div
+            class={`font-mono font-medium tracking-tighter w-12 text-right ${isTimerPaused ? "text-muted-foreground" : "text-muted-foreground/80"}`}
+          >
+            {formatTime(elapsedTime)}
           </div>
         </div>
       {/if}

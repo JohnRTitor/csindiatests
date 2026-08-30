@@ -4,6 +4,7 @@
 @import "@fontsource-variable/inter";
 
 @custom-variant dark (&:is(.dark *));
+@custom-variant compact (&:is([data-compact="true"] *));
 
 :root {
 	--background: oklch(1 0 0);
@@ -126,4 +127,13 @@
 	html {
 		@apply font-sans;
 	}
+    
+    body[data-reduce-animations="true"] *,
+    body[data-reduce-animations="true"] ::before,
+    body[data-reduce-animations="true"] ::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
 }

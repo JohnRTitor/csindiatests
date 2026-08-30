@@ -9,6 +9,7 @@ export interface QuizState {
   status: "idle" | "in-progress" | "completed";
   mode: QuizMode;
   timeRemaining: number | null; // null if untimed, seconds otherwise
+  elapsedTime: number; // seconds spent in quiz
   isTimerPaused: boolean;
   score: number;
   startTime: number;

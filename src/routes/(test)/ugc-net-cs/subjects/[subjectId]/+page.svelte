@@ -28,6 +28,9 @@
   let conflictSession = $state<TestSession | null>(null);
   let showConflict = $state(false);
 
+  import { settingsState } from "$lib/features/preferences";
+  import { questionAttemptsRepo } from "$lib/features/progress/repositories/question-attempts";
+
   async function loadQuestions(id: string | null) {
     if (id) {
       const session = await testHistoryRepo.get(id);
@@ -37,7 +40,34 @@
         selectedQuestions = data.questions;
       }
     } else {
-      selectedQuestions = data.questions;
+      if (settingsState.values.reviewIncorrect) {
+        const attempts = await questionAttemptsRepo.getForExam(data.examConfig.id);
+        attempts.sort((a, b) => new Date(b.attemptedAt).getTime() - new Date(a.attemptedAt).getTime());
+        
+        const latestAttempts = new Map<string, typeof attempts[0]>();
+        for (const attempt of attempts) {
+          if (!latestAttempts.has(attempt.questionId)) {
+            latestAttempts.set(attempt.questionId, attempt);
+          }
+        }
+        
+        const incorrectQuestionIds = new Set(Array.from(latestAttempts.values())
+          .filter(a => a.isAnswered && !a.isCorrect)
+          .map(a => a.questionId));
+          
+        if (incorrectQuestionIds.size > 0) {
+          const incorrect = data.questions.filter(q => incorrectQuestionIds.has(q.id));
+          const others = data.questions.filter(q => !incorrectQuestionIds.has(q.id));
+          // Shuffle others so they aren't always the same order
+          const shuffledOthers = others.sort(() => 0.5 - Math.random());
+          selectedQuestions = [...incorrect, ...shuffledOthers];
+        } else {
+          selectedQuestions = [...data.questions].sort(() => 0.5 - Math.random());
+        }
+      } else {
+        // Just shuffle them if no prioritization
+        selectedQuestions = [...data.questions].sort(() => 0.5 - Math.random());
+      }
     }
   }
 

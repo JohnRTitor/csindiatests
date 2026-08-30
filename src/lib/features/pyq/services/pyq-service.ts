@@ -76,16 +76,18 @@ export const pyqService = {
     return questions;
   },
 
-  async getRandomQuestions(examId: string, count: number, subjectId?: string): Promise<Question[]> {
+  async getRandomQuestions(examId: string, count: number, subjectId?: string, excludeIds: string[] = []): Promise<Question[]> {
     if (examId !== "ugc-net-cs") return [];
     
     let allQuestions: PyqQuestion[] = [];
+    const excludeSet = new Set(excludeIds);
+
     for (const manifest of ugcNetPyqManifest) {
       const data = await this.getPyqPaper(manifest.file);
       if (subjectId) {
-        allQuestions.push(...data.questions.filter(q => q.subjectId === subjectId));
+        allQuestions.push(...data.questions.filter(q => q.subjectId === subjectId && !excludeSet.has(q.id)));
       } else {
-        allQuestions.push(...data.questions);
+        allQuestions.push(...data.questions.filter(q => !excludeSet.has(q.id)));
       }
     }
     
