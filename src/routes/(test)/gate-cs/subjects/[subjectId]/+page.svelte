@@ -1,38 +1,109 @@
 <script lang="ts">
-  import QuizShell from "$lib/features/quiz/components/QuizShell.svelte";
+  import { onMount } from "svelte";
+  import { page } from "$app/state";
+  import { goto } from "$app/navigation";
   import type { PageData } from "./$types";
+  import type { TestSession } from "$lib/infrastructure/storage/db.types";
+  import QuizShell from "$lib/features/quiz/components/QuizShell.svelte";
+  import SessionConflictDialog from "$lib/features/tests/components/session-conflict-dialog.svelte";
+  import { testHistoryRepo } from "$lib/features/tests/repositories/test-history";
+  import { sessionManager } from "$lib/features/tests/services/session-manager";
+  import type { TestContext } from "$lib/features/tests/types";
+  import { pyqService } from "$lib/features/pyq/services/pyq-service";
 
   let { data }: { data: PageData } = $props();
 
+  let sessionId = $derived(page.url.searchParams.get('session'));
+  let isLoading = $state(true);
+  let selectedQuestions = $state<typeof data.questions>([]);
+  
+  let currentContext = $derived<TestContext>({
+    examId: data.examConfig.id,
+    testType: "practice",
+    scope: "subject",
+    subjectId: data.subject.id,
+    title: `${data.subject.name} Practice`
+  });
+  
+  let conflictSession = $state<TestSession | null>(null);
+  let showConflict = $state(false);
+
+  async function loadQuestions(id: string | null) {
+    if (id) {
+      const session = await testHistoryRepo.get(id);
+      if (session && session.questionIds) {
+        selectedQuestions = await pyqService.getQuestionsByIds(data.examConfig.id, session.questionIds);
+      } else {
+        selectedQuestions = data.questions;
+      }
+    } else {
+      selectedQuestions = data.questions;
+    }
+  }
+
+  onMount(async () => {
+    if (!sessionId) {
+      const conflict = await sessionManager.findActiveSession(currentContext);
+      if (conflict) {
+        conflictSession = conflict;
+        showConflict = true;
+        isLoading = false;
+        return;
+      }
+    }
+
+    await loadQuestions(sessionId);
+    isLoading = false;
+  });
+
+  async function handleResume() {
+    if (!conflictSession) return;
+    const url = new URL(page.url.href);
+    url.searchParams.set('session', conflictSession.id);
+    goto(url, { replaceState: true, keepFocus: true });
+    
+    showConflict = false;
+    isLoading = true;
+    await loadQuestions(conflictSession.id);
+    isLoading = false;
+  }
+
+  async function handleDiscard() {
+    if (!conflictSession) return;
+    await testHistoryRepo.update(conflictSession.id, { status: 'abandoned' });
+    showConflict = false;
+    isLoading = true;
+    await loadQuestions(null);
+    isLoading = false;
+  }
+
   const handleExit = () => {
-    window.location.href = "/gate-cs/subjects";
+    window.location.href = `/${data.examConfig.id}/subjects`;
   };
 </script>
 
 <svelte:head>
-  <title>{data.subject.name} | GATE CS</title>
+  <title>{data.subject.name} | {data.examConfig.shortName}</title>
 </svelte:head>
 
-{#if data.questions.length > 0}
-  <QuizShell
-    questions={data.questions}
-    examConfig={data.examConfig}
-    mode="practice"
-    onExit={handleExit}
+{#if showConflict && conflictSession}
+  <SessionConflictDialog 
+    session={conflictSession}
+    onResume={handleResume}
+    onDiscard={handleDiscard}
+    onCancel={handleExit}
   />
-{:else}
-  <div
-    class="flex flex-col items-center justify-center min-h-[50vh] p-8 text-center"
-  >
-    <h2 class="text-2xl font-bold mb-4">No questions available</h2>
-    <p class="text-muted-foreground mb-8">
-      We couldn't find any questions for {data.subject.name} yet.
-    </p>
-    <button
-      class="px-4 py-2 bg-primary text-primary-foreground rounded-md"
-      onclick={handleExit}
-    >
-      Back to Subjects
-    </button>
+{:else if isLoading}
+  <div class="min-h-screen flex items-center justify-center bg-muted/20">
+    <div class="text-muted-foreground animate-pulse">Loading subject practice session...</div>
   </div>
+{:else}
+  <QuizShell 
+    examConfig={data.examConfig} 
+    questions={selectedQuestions} 
+    mode="practice"
+    context={currentContext}
+    {sessionId}
+    onExit={handleExit} 
+  />
 {/if}

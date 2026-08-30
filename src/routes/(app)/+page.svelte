@@ -10,11 +10,20 @@
   import type { ActivityItem, UserProgress } from "$lib/features/progress/types";
 
   let activityFeed = $state<ActivityItem[]>([]);
+  let hasMoreActivity = $state(false);
   let userProgress = $state<UserProgress | null>(null);
 
   const loadData = async () => {
     const stats = await dashboardDataService.getStats();
-    activityFeed = await dashboardDataService.getRecentActivity(5);
+    const recent = await dashboardDataService.getRecentActivity(5);
+    
+    if (recent.length > 4) {
+      hasMoreActivity = true;
+      activityFeed = recent.slice(0, 4);
+    } else {
+      hasMoreActivity = false;
+      activityFeed = recent;
+    }
     
     userProgress = {
       totalQuestionsSolved: stats.questionsAttempted,
@@ -44,7 +53,7 @@
       <ExamSelection />
       
       <div class="mt-8 mb-16">
-        <RecentActivity activities={activityFeed} onDeleteActivity={handleDeleteActivity} />
+        <RecentActivity activities={activityFeed} onDeleteActivity={handleDeleteActivity} hasMore={hasMoreActivity} />
       </div>
     </div>
   </main>

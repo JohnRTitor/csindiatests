@@ -18,6 +18,10 @@ export const testHistoryRepo = {
     await db.testSessions.delete(id);
   },
 
+  async deleteAll(): Promise<void> {
+    await db.testSessions.clear();
+  },
+
   async list(options?: ListTestSessionsOptions): Promise<TestSession[]> {
     let collection = db.testSessions.toCollection();
 

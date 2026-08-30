@@ -5,7 +5,17 @@
   import { CircleCheck, LayoutGrid, Timer, Clock, Trash } from "@lucide/svelte";
   import type { ActivityItem } from "$lib/features/progress/types";
 
-  let { activities, onDeleteActivity }: { activities: ActivityItem[], onDeleteActivity?: (id: string) => void } = $props();
+  let { 
+    activities, 
+    onDeleteActivity,
+    hasMore = false,
+    viewMoreHref = "/activity"
+  }: { 
+    activities: ActivityItem[], 
+    onDeleteActivity?: (id: string) => void,
+    hasMore?: boolean,
+    viewMoreHref?: string
+  } = $props();
 
   let itemToDelete = $state<string | null>(null);
 
@@ -132,6 +142,13 @@
             </p>
             <Button href="/gate-cs/practice/quick">
               Start Practice
+            </Button>
+          </div>
+        {/if}
+        {#if hasMore}
+          <div class="p-4 border-t bg-muted/10 text-center">
+            <Button variant="ghost" href={viewMoreHref} class="w-full sm:w-auto text-muted-foreground hover:text-foreground">
+              View More Activity
             </Button>
           </div>
         {/if}

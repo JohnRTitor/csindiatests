@@ -15,6 +15,9 @@ import type { QuizMode } from "$lib/features/quiz/types";
   import { quizPersistenceService } from "$lib/features/quiz/services/quiz-persistence";
   import { testHistoryRepo } from "$lib/features/tests/repositories/test-history";
   import { testAnswersRepo } from "$lib/features/tests/repositories/test-answers";
+  import { testCompletionService } from "$lib/features/tests/services/test-completion";
+  import type { TestContext } from "$lib/features/tests/types";
+
 
   import { Button } from "$lib/components/ui/button/index.js";
   import * as Drawer from "$lib/components/ui/drawer/index.js";
@@ -27,12 +30,14 @@ import type { QuizMode } from "$lib/features/quiz/types";
     examConfig, 
     questions, 
     mode = "practice",
+    context,
     sessionId: initialSessionId,
     onExit
   }: { 
     examConfig: ExamConfig, 
     questions: Question[], 
     mode?: QuizMode,
+    context: TestContext,
     sessionId?: string | null,
     onExit: () => void 
   } = $props();
@@ -94,7 +99,12 @@ import type { QuizMode } from "$lib/features/quiz/types";
       await testHistoryRepo.create({
         id: sessionId,
         examId: examConfig.id,
-        title: `${examConfig.shortName} Practice`,
+        testType: context.testType,
+        scope: context.scope,
+        subjectId: context.subjectId,
+        topicId: context.topicId,
+        paperId: context.paperId,
+        title: context.title || `${examConfig.shortName} Practice`,
         mode: mode,
         startedAt: new Date().toISOString(),
         lastActiveAt: new Date().toISOString(),
@@ -160,15 +170,16 @@ import type { QuizMode } from "$lib/features/quiz/types";
       } else {
         quiz.complete();
         
-        // Finalize the session
-        const duration = Math.floor((Date.now() - quiz.state.startTime) / 1000);
-        testHistoryRepo.update(sessionId, {
-          status: 'completed',
-          completedAt: new Date().toISOString(),
-          durationSeconds: duration,
-          score: quiz.state.score,
-          percentage: (quiz.state.score / quiz.state.questions.length) * 100
-        }).catch(console.error);
+        // Finalize the session and save analytics
+        testCompletionService.completeTest(
+          sessionId,
+          quiz.state.questions,
+          quiz.state.answers,
+          quiz.state.score,
+          quiz.state.startTime,
+          mode,
+          examConfig.id
+        ).catch(console.error);
       }
     } else {
       quiz.nextQuestion();

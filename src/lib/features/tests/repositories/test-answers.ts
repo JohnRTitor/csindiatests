@@ -20,5 +20,9 @@ export const testAnswersRepo = {
   async deleteForTest(testSessionId: string): Promise<void> {
     const answers = await this.getForTest(testSessionId);
     await db.testAnswers.bulkDelete(answers.map(a => a.id));
+  },
+
+  async deleteAll(): Promise<void> {
+    await db.testAnswers.clear();
   }
 };

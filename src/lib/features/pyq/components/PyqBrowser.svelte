@@ -2,7 +2,7 @@
   import { pyqService } from "$lib/features/pyq/services/pyq-service";
   import * as Card from "$lib/components/ui/card/index.js";
   import { Button } from "$lib/components/ui/button/index.js";
-  import { BookOpen, Calendar, Clock, ArrowRight } from "@lucide/svelte";
+  import { BookOpen, Calendar, Clock, ArrowRight, SquareCheck } from "@lucide/svelte";
 
   let { examId = "ugc-net-cs" } = $props<{ examId?: string }>();
 
@@ -54,14 +54,23 @@
                 <Clock class="mr-1 h-4 w-4" /> Untimed Practice
               </div>
             </Card.Content>
-            <Card.Footer class="pt-0">
+            <Card.Footer class="pt-0 flex gap-2">
               <Button
+                variant="outline"
                 href="/{examId}/pyq/{paper.year}/{encodeURIComponent(
                   paper.shift,
                 )}"
-                class="w-full justify-between"
+                class="flex-1 justify-center"
               >
-                View Paper <ArrowRight class="h-4 w-4 ml-2" />
+                View Paper
+              </Button>
+              <Button
+                href="/{examId}/pyq/{paper.year}/{encodeURIComponent(
+                  paper.shift,
+                )}?start=true"
+                class="flex-1 justify-center"
+              >
+                Start Quiz <SquareCheck class="h-4 w-4 ml-2" />
               </Button>
             </Card.Footer>
           </Card.Root>

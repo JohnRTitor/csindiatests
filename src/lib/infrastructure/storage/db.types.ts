@@ -7,6 +7,11 @@ export interface Preference {
 export type TestSessionStatus = 'in_progress' | 'completed' | 'abandoned' | 'expired';
 
 export interface TestSession {
+  testType?: "practice" | "mock-test" | "pyq";
+  scope?: "mixed" | "subject" | "topic" | "paper";
+  subjectId?: string;
+  topicId?: string;
+  paperId?: string;
   id: string;
   examId: string;
   title: string;
@@ -75,4 +80,18 @@ export interface ListTestSessionsOptions {
   limit?: number;
   offset?: number;
   status?: TestSessionStatus;
+}
+
+export interface QuestionAttempt {
+  id: string; // Unique identifier for the attempt
+  sessionId: string; // ID of the test session
+  questionId: string; // ID of the question
+  testType: string; // e.g. "practice", "timed", "mock", "pyq"
+  examId?: string; // e.g. "ugc-net-cs"
+  subjectId?: string;
+  topicId?: string;
+  isCorrect: boolean;
+  isAnswered: boolean;
+  timeSpentSeconds?: number;
+  attemptedAt: string; // ISO date string
 }
