@@ -52,7 +52,7 @@
     {#snippet ExamCard(exam: typeof exams[0])}
       {@const Icon = exam.icon}
       <Card.Root class="overflow-hidden border-2 hover:border-primary/50 transition-all duration-300 shadow-md hover:shadow-lg">
-        <div class={`h-2 w-full bg-gradient-to-r ${exam.gradientClass}`}></div>
+        <div class={`h-2 w-full bg-linear-to-r ${exam.gradientClass}`}></div>
         <Card.Header class="pb-4">
           <div class={`mb-4 inline-flex p-3 rounded-xl ${exam.iconBgClass}`}>
             <Icon class="h-8 w-8" />

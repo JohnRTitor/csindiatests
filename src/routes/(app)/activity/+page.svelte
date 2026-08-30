@@ -1,26 +1,71 @@
 <script lang="ts">
   import { onMount } from "svelte";
+  import { page } from "$app/state";
+  import { goto } from "$app/navigation";
+  
   import RecentActivity from "$lib/features/dashboard/components/recent-activity.svelte";
   import { dashboardDataService } from "$lib/features/dashboard/services/dashboard-data";
   import { testHistoryRepo } from "$lib/features/tests/repositories/test-history";
   import { testAnswersRepo } from "$lib/features/tests/repositories/test-answers";
   import type { ActivityItem } from "$lib/features/progress/types";
+  import * as Pagination from "$lib/components/ui/pagination/index.js";
 
   let activityFeed = $state<ActivityItem[]>([]);
+  let totalCount = $state(0);
+  const pageSize = 10;
+  
+  let currentPage = $state(parseInt(page.url.searchParams.get("page") || "1", 10) || 1);
+  let totalPages = $derived(Math.max(1, Math.ceil(totalCount / pageSize)));
 
-  const loadData = async () => {
-    // Fetch a larger number of activities for the dedicated page
-    activityFeed = await dashboardDataService.getRecentActivity(50);
-  };
-
-  onMount(() => {
-    loadData();
+  // Sync from URL to local state when URL changes (e.g., browser back/forward)
+  $effect(() => {
+    const p = parseInt(page.url.searchParams.get("page") || "1", 10) || 1;
+    if (currentPage !== p) {
+      currentPage = p;
+    }
   });
+
+  // Load data and sync URL when currentPage changes
+  $effect(() => {
+    const p = currentPage;
+    
+    // Check out of bounds (only if we've loaded the total count)
+    if (totalCount > 0 && p > totalPages) {
+       const url = new URL(page.url);
+       url.searchParams.set("page", totalPages.toString());
+       goto(url, { keepFocus: true, replaceState: true, noScroll: true });
+       return;
+    }
+
+    // Sync to URL if different
+    const currentUrlPage = parseInt(page.url.searchParams.get("page") || "1", 10) || 1;
+    if (p !== currentUrlPage) {
+       const url = new URL(page.url);
+       url.searchParams.set("page", p.toString());
+       goto(url, { keepFocus: true, noScroll: true });
+    }
+    
+    // load data for the new page
+    loadData(p);
+  });
+
+  const loadData = async (pageNum: number) => {
+    const res = await dashboardDataService.getRecentActivityPaginated(pageNum, pageSize);
+    activityFeed = res.items;
+    totalCount = res.totalCount;
+  };
 
   const handleDeleteActivity = async (id: string) => {
     await testHistoryRepo.delete(id);
     await testAnswersRepo.deleteForTest(id);
-    await loadData();
+    
+    // If we deleted the last item on the page, go to previous page
+    let p = currentPage;
+    if (activityFeed.length === 1 && p > 1) {
+      currentPage = p - 1;
+    } else {
+      await loadData(p);
+    }
   };
 </script>
 
@@ -39,6 +84,42 @@
       </p>
     </div>
 
-    <RecentActivity activities={activityFeed} onDeleteActivity={handleDeleteActivity} />
+    {#if activityFeed.length === 0 && totalCount === 0}
+      <div class="text-center py-16 px-4 bg-card rounded-2xl border border-dashed">
+        <p class="text-muted-foreground">No recent activity found. Start a test to see your history here!</p>
+      </div>
+    {:else}
+      <RecentActivity activities={activityFeed} onDeleteActivity={handleDeleteActivity} />
+      
+      {#if totalPages > 1}
+        <div class="mt-8 mb-4">
+          <Pagination.Root count={totalCount} perPage={pageSize} bind:page={currentPage}>
+            {#snippet children({ pages, currentPage })}
+              <Pagination.Content>
+                <Pagination.Item>
+                  <Pagination.PrevButton />
+                </Pagination.Item>
+                {#each pages as pageItem (pageItem.key)}
+                  {#if pageItem.type === "ellipsis"}
+                    <Pagination.Item>
+                      <Pagination.Ellipsis />
+                    </Pagination.Item>
+                  {:else}
+                    <Pagination.Item>
+                      <Pagination.Link page={pageItem} isActive={currentPage === pageItem.value}>
+                        {pageItem.value}
+                      </Pagination.Link>
+                    </Pagination.Item>
+                  {/if}
+                {/each}
+                <Pagination.Item>
+                  <Pagination.NextButton />
+                </Pagination.Item>
+              </Pagination.Content>
+            {/snippet}
+          </Pagination.Root>
+        </div>
+      {/if}
+    {/if}
   </div>
 </main>

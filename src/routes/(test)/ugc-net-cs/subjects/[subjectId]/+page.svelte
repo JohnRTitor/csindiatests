@@ -14,7 +14,7 @@
 </svelte:head>
 
 <PyqViewer 
-  questions={data.questions} 
+  questions={data.questions as any} 
   manifest={data.manifest} 
   examConfig={data.examConfig} 
   onExit={handleExit} 

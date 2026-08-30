@@ -17,7 +17,7 @@ import type { QuizMode } from "$lib/features/quiz/types";
   import { testAnswersRepo } from "$lib/features/tests/repositories/test-answers";
 
   import { Button } from "$lib/components/ui/button/index.js";
-  import * as Sheet from "$lib/components/ui/sheet/index.js";
+  import * as Drawer from "$lib/components/ui/drawer/index.js";
   import { ArrowRight, LayoutGrid, CircleCheck } from "@lucide/svelte";
 
   import { page } from "$app/state";
@@ -299,20 +299,20 @@ import type { QuizMode } from "$lib/features/quiz/types";
               
               <div class="mt-8 flex flex-col sm:flex-row items-center justify-between gap-4 pt-6 border-t animate-in fade-in">
                 
-                <Sheet.Root bind:open={isMobileNavigatorOpen}>
-                  <Sheet.Trigger>
-                    {#snippet child({ props })}
+                <Drawer.Root bind:open={isMobileNavigatorOpen}>
+                  <Drawer.Trigger>
+                    {#snippet child({ props }: { props: Record<string, unknown> })}
                       <Button variant="outline" class="w-full sm:w-auto lg:hidden" {...props}>
                         <LayoutGrid class="mr-2 h-4 w-4" />
                         Navigator
                       </Button>
                     {/snippet}
-                  </Sheet.Trigger>
-                  <Sheet.Content side="bottom" class="h-[80vh] rounded-t-xl sm:h-auto sm:max-h-[85vh]">
-                    <Sheet.Header>
-                      <Sheet.Title>Question Navigator</Sheet.Title>
-                      <Sheet.Description>Jump to any question in the test</Sheet.Description>
-                    </Sheet.Header>
+                  </Drawer.Trigger>
+                  <Drawer.Content class="h-[80vh] sm:h-auto sm:max-h-[85vh]">
+                    <Drawer.Header>
+                      <Drawer.Title>Question Navigator</Drawer.Title>
+                      <Drawer.Description>Jump to any question in the test</Drawer.Description>
+                    </Drawer.Header>
                     <div class="py-6 overflow-y-auto">
                       <QuestionNavigator 
                         questions={quiz.state.questions}
@@ -324,8 +324,8 @@ import type { QuizMode } from "$lib/features/quiz/types";
                         }}
                       />
                     </div>
-                  </Sheet.Content>
-                </Sheet.Root>
+                  </Drawer.Content>
+                </Drawer.Root>
 
                 <Button 
                   size="lg" 
